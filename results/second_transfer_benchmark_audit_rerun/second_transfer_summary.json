@@ -1,0 +1,11 @@
+{
+  "caveat": "KDDCup99 is a real network telemetry transfer check; claims should remain external-validation scoped.",
+  "models": [
+    "logistic",
+    "random_forest",
+    "hgb",
+    "isolation_forest"
+  ],
+  "n_rows": 28377,
+  "run_completed_utc": "2026-06-15T17:58:37Z"
+}

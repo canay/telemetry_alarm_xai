@@ -1,0 +1,9 @@
+test,test_family,stat,p,bh_q,effect,effect_label,n_blocks
+friedman_event_f1,detector_f1_global,37.25714285714284,5.318962664807482e-07,5.318962664807482e-07,0.7451428571428568,kendall_w,10
+priority_additive_ndcg_gain_wilcoxon_pooled,priority_ndcg_gain,394.0,0.00021051160371620081,0.0014735812260134058,-0.07448864945728777,mean_gain,60
+priority_additive_ndcg_gain_wilcoxon_lr,priority_ndcg_gain,23.0,0.6953125,0.76953125,0.01035077849059594,mean_gain,10
+priority_additive_ndcg_gain_wilcoxon_dtree,priority_ndcg_gain,15.0,0.42578125,0.59609375,-0.03388637366248314,mean_gain,10
+priority_additive_ndcg_gain_wilcoxon_iforest,priority_ndcg_gain,24.0,0.76953125,0.76953125,0.008537682547312297,mean_gain,10
+priority_additive_ndcg_gain_wilcoxon_hgb,priority_ndcg_gain,0.0,0.001953125,0.0068359375,-0.17614044785367203,mean_gain,10
+priority_additive_ndcg_gain_wilcoxon_pca,priority_ndcg_gain,2.0,0.005859375,0.013671875,-0.1561513236785411,mean_gain,10
+priority_additive_ndcg_gain_wilcoxon_ae,priority_ndcg_gain,4.0,0.013671875,0.02392578125,-0.09964221258693857,mean_gain,10

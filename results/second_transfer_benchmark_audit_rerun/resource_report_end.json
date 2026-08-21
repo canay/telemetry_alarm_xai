@@ -1,0 +1,7 @@
+{
+  "cpu_percent": 1.2,
+  "platform": "Linux-6.17.0-1016-oracle-aarch64-with-glibc2.39",
+  "rss_mb": 283.185152,
+  "timestamp_utc": "2026-06-15T17:58:37Z",
+  "virtual_memory_percent": 13.8
+}
