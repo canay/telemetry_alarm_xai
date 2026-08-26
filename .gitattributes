@@ -3,3 +3,5 @@
 *.png binary
 *.pdf binary
 *.zip binary
+# Preserve the byte-level hash bound by confirmatory_failure.json.
+results/scenario_utility_v1_2/replication_property_tests.json binary

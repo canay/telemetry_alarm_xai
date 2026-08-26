@@ -1,16 +1,17 @@
 cff-version: 1.2.0
 message: "If you use this replication package, please cite the associated article and this software release."
-title: "Replication package for Beyond anomaly scores: An episode-aligned evaluation framework for explainable alarm triage in spacecraft telemetry"
+title: "Replication package for From salience to decisions: A scenario-conditioned benchmark for explainable spacecraft-telemetry alarm review"
 type: software
 authors:
   - family-names: Canay
     given-names: Ozkan
 repository-code: "https://github.com/canay/telemetry_alarm_xai"
-version: 1.1.0
+version: 1.2.0
 date-released: 2026-08-26
 license: MIT
 keywords:
   - anomaly detection
   - explainable artificial intelligence
   - spacecraft telemetry
-  - alarm prioritization
+  - scenario-conditioned alarm review
+  - decision utility

@@ -1,8 +1,10 @@
-# Beyond anomaly scores: An episode-aligned evaluation framework for explainable alarm triage in spacecraft telemetry
+# From salience to decisions: A scenario-conditioned benchmark for explainable spacecraft-telemetry alarm review
 
-Curated replication and public-freeze package for the study “Beyond anomaly scores: An episode-aligned evaluation framework for explainable alarm triage in spacecraft telemetry.”
+Curated replication and public-freeze package for the study “From salience to decisions: A scenario-conditioned benchmark for explainable spacecraft-telemetry alarm review.”
 
-This repository separates anomaly detection, fault-channel salience, explanation stability, and operational alarm-review utility over aligned episodes. Release `v1.1.0` additionally freezes, before any confirmatory generation, the exact V4 scenario-heterogeneity protocol, code, seed range, five-condition decision rule, null calibrations, joint-power calculation, and provenance driver. The bundled V3 outputs are explicitly exploratory; they are not confirmatory evidence.
+This repository separates anomaly detection, fault-channel salience, explanation stability, and operational alarm-review utility over aligned episodes. Release `v1.1.0` froze, before any confirmatory generation, the exact V4 scenario-heterogeneity protocol, code, seed range, five-condition decision rule, null calibrations, joint-power calculation, and provenance driver. The bundled V3 outputs are explicitly exploratory; they are not confirmatory evidence.
+
+Release `v1.2.0` publishes the outcome without changing that freeze. The seeds 10--29 replication stopped before policy or null endpoint analysis because seed 12 isolation forest produced 9 alarm episodes against the preregistered minimum of 10. The property suite passed 1,248 of 1,249 checks, the run closed as `NOT_CONFIRMED_PROPERTY_GATE`, and no threshold reduction, replacement seed, model exclusion, or other rescue was performed. The result therefore reports an analyzability failure, not a zero effect and not a successful replication.
 
 The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and OPSSAT-AD. These datasets support detection or within-model feature-signature repeatability only; they do not establish spacecraft fault-channel attribution correctness or operational deployment validity.
 
@@ -17,6 +19,7 @@ The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and
 - `CONFIRMATORY_PLAN.json`: machine-readable required files, hashes, seeds, models, endpoints, and decision method.
 - `POWER_PLAN_V4.json`: deterministic joint-power design artifact.
 - `code/run_confirmation_v4.py`: remote-tag-bound driver that refuses pre-release or unregistered artifacts.
+- `results/scenario_utility_v1_2/`: exploratory manuscript aggregates, model-level figure, and the preregistered replication property-gate closure.
 - `checksums.sha256`: SHA-256 inventory for the released payload.
 
 ## Quick verification
@@ -38,7 +41,7 @@ python code/run_confirmation_v4.py \
   --max-workers 2
 ```
 
-The driver verifies the remote GitHub tag commit, release publication time, release-body plan hash, clean checkout, complete frozen-file hash set, amplitude scale, and every resumable artifact. A nonzero final exit can be a valid `NOT_CONFIRMED` scientific outcome; inspect `metrics/confirmatory_decision.json`.
+The driver verifies the remote GitHub tag commit, release publication time, release-body plan hash, clean checkout, complete frozen-file hash set, amplitude scale, and every resumable artifact. A nonzero final exit can be a valid `NOT_CONFIRMED` scientific outcome; inspect `metrics/confirmatory_failure.json` or `metrics/confirmatory_decision.json`, depending on which frozen gate closed the run.
 
 ## Full reproduction
 
@@ -54,7 +57,7 @@ See `CITATION.cff`.
 
 ## Release provenance
 
-Prepared: 2026-08-26 17:57 +03:00  
-Tool: Codex  
-Model: GPT-5  
-Operation ID: `f07-criticality-v4-pre-freeze-repair-20260826`
+Updated: 2026-08-26 18:28 +03:00
+Tool: Codex
+Model: GPT-5
+Operation ID: `f07-scenario-utility-results-release-20260826`

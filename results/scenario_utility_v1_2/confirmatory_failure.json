@@ -1,0 +1,38 @@
+{
+  "closed_at_utc": "2026-08-26T15:13:07.866186Z",
+  "endpoint_analysis_performed": false,
+  "failed_property_checks": [
+    "minimum_episode_count_seed12_iforest"
+  ],
+  "interpretation": "The pre-registered confirmation stopped before policy/null endpoint analysis because at least one frozen primary-model seed cell had fewer than ten detected alarm episodes.",
+  "operation_id": "f07-criticality-v4-property-failure-closure-20260826",
+  "property_tests_sha256": "a34a099c9baf4b6562d89302c691dff32c0f9ad84b8392e5b8138123168e5eb6",
+  "release_commit": "61c16e01bace85319dcb9cee4c5e35f4ab1f2900",
+  "release_tag": "v1.1.0",
+  "release_url": "https://github.com/canay/telemetry_alarm_xai/releases/tag/v1.1.0",
+  "rescue_change_performed": false,
+  "schema_version": 1,
+  "seeds": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "status": "NOT_CONFIRMED_PROPERTY_GATE"
+}

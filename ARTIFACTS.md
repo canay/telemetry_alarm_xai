@@ -1,9 +1,9 @@
 # Artifact Map
 
-Date/time: 2026-08-26 17:57 +03:00  
-Tool: Codex  
-Model: GPT-5  
-Operation ID: `f07-criticality-v4-pre-freeze-repair-20260826`
+Date/time: 2026-08-26 18:28 +03:00
+Tool: Codex
+Model: GPT-5
+Operation ID: `f07-scenario-utility-results-release-20260826`
 
 | Evidence layer | Frozen artifact | Reproduction entry point | Valid interpretation |
 | --- | --- | --- | --- |
@@ -15,5 +15,7 @@ Operation ID: `f07-criticality-v4-pre-freeze-repair-20260826`
 | OPSSAT-AD transfer audit | `results/opssat_transfer_benchmark/` | `code/run_opssat_transfer_benchmark.py` | Real spacecraft-telemetry detection and within-model signature repeatability; not causal fault-channel correctness |
 | V3 scenario-utility discovery | `results/v3_discovery_*` | `code/criticality_analysis_v4.py` only for the public V4 definitions; the bundled V3 files remain historical | Exploratory design/null evidence; not confirmation |
 | V4 public freeze | `PROTOCOL_V1_1.md`; `CONFIRMATORY_PLAN.json`; `POWER_PLAN_V4.json` | `code/run_confirmation_v4.py` | Outcome-blind protocol/code/provenance freeze; release contains no seeds 10--29 outcomes |
+| V1.1 replication closure | `results/scenario_utility_v1_2/replication_property_tests.json`; `results/scenario_utility_v1_2/confirmatory_failure.json` | Frozen V4 property suite and fail-closed driver | `NOT_CONFIRMED_PROPERTY_GATE`; 1,248/1,249 checks passed; no policy/null endpoint analysis and no rescue |
+| Scenario-utility manuscript support | `results/scenario_utility_v1_2/manuscript_summary.json`; `results/scenario_utility_v1_2/scenario_model_gains.*` | Exploratory seeds 0--9 frozen outputs | Exploratory raw and above-null estimates plus model heterogeneity; not confirmatory evidence |
 
 The package intentionally excludes manuscript sources, submission files, internal workflow state, private logs, generated dataset caches, and third-party dataset files.
