@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this replication package, please cite the associated article and this software release."
-title: "Reliability-Aware Explainable Alarm Triage for Spacecraft Telemetry: Replication Package"
+title: "Replication package for Beyond anomaly scores: An episode-aligned evaluation framework for explainable alarm triage in spacecraft telemetry"
 type: software
 authors:
   - family-names: Canay
     given-names: Ozkan
 repository-code: "https://github.com/canay/telemetry_alarm_xai"
-version: 1.0.0
-date-released: 2026-08-21
+version: 1.1.0
+date-released: 2026-08-26
 license: MIT
 keywords:
   - anomaly detection

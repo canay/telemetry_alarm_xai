@@ -15,9 +15,14 @@ REQUIRED = [
     "requirements.txt",
     "ARTIFACTS.md",
     "REPRODUCE.md",
+    "PROTOCOL_V1_1.md",
+    "CONFIRMATORY_PLAN.json",
+    "POWER_PLAN_V4.json",
     "code/aggregate.py",
     "code/run_unit.py",
     "code/run_opssat_transfer_benchmark.py",
+    "code/run_confirmation_v4.py",
+    "code/confirmatory_analysis_v4.py",
     "results/results_summary.json",
     "results/openml_results.json",
     "results/opssat_transfer_benchmark/opssat_manifest.json",
@@ -38,6 +43,10 @@ def main() -> None:
         "results/openml_results.json",
         "results/opssat_transfer_benchmark/opssat_manifest.json",
         "results/second_transfer_benchmark_audit_rerun/second_transfer_manifest.json",
+        "CONFIRMATORY_PLAN.json",
+        "POWER_PLAN_V4.json",
+        "results/v3_discovery_construct_validity.json",
+        "results/v3_discovery_property_tests.json",
     ]:
         with (ROOT / relative).open(encoding="utf-8") as handle:
             json.load(handle)

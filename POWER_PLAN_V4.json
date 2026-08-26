@@ -1,0 +1,56 @@
+{
+  "base_endpoint_means": {
+    "payload_harm_raw": 0.076706884888288,
+    "payload_information": 0.04420307743260885,
+    "platform_information": 0.07019247767050305,
+    "platform_raw": 0.031463154041120024
+  },
+  "base_endpoint_names": [
+    "platform_raw",
+    "payload_harm_raw",
+    "platform_information",
+    "payload_information"
+  ],
+  "base_endpoint_observed_sd": {
+    "payload_harm_raw": 0.04201383121021832,
+    "payload_information": 0.03794786247444741,
+    "platform_information": 0.03194355949716007,
+    "platform_raw": 0.02246169473882731
+  },
+  "covariance_inflation": 2.70667505879263,
+  "curve": [
+    {
+      "joint_power": 0.60845,
+      "n": 12
+    },
+    {
+      "joint_power": 0.66265,
+      "n": 13
+    },
+    {
+      "joint_power": 0.71075,
+      "n": 14
+    },
+    {
+      "joint_power": 0.7564,
+      "n": 15
+    },
+    {
+      "joint_power": 0.79265,
+      "n": 16
+    },
+    {
+      "joint_power": 0.8299,
+      "n": 17
+    }
+  ],
+  "decision_rule": "all five one-sided Student-t lower bounds exceed zero",
+  "discovery_seed_count": 10,
+  "outer_simulations_per_n": 20000,
+  "recommended_n": 17,
+  "schema_version": 1,
+  "sd_upper_multiplier": 1.6451975743942215,
+  "simulation_seed": 20304826,
+  "status": "TARGET_REACHED",
+  "target_joint_power": 0.8
+}

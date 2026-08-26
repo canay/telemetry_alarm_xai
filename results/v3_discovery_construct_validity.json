@@ -1,0 +1,108 @@
+{
+  "frozen_constants": {
+    "bootstrap_b": 10000,
+    "bootstrap_seed": 20260826,
+    "confirmatory_lower_quantile": 0.05,
+    "minimum_episodes": 10,
+    "tie_draws": 100
+  },
+  "kill_switches": {
+    "metric_redundancy_without_scenario_disagreement": false,
+    "no_positive_primary_omnibus_for_power": true,
+    "no_positive_tie_eligible_sensitivity_for_power": true,
+    "null_omnibus_false_gain_rate_gt_0_05": false,
+    "systematic_native_occlusion_conflict": false,
+    "within_type_null_ratio_ge_0_50": false
+  },
+  "native_occlusion_conflict_cells": [],
+  "native_omnibus": {
+    "lower_95_one_sided": -0.018945730892135887,
+    "mean": -0.01096648912766576,
+    "pass": false
+  },
+  "not_confirmatory_evidence": true,
+  "null_omnibus_false_gain_rates": {
+    "noise_attribution_context": 0.0,
+    "permuted_context": 0.0
+  },
+  "power_plan": {
+    "recommended_n": null,
+    "status": "NO_POSITIVE_EFFECT_FOR_POWER"
+  },
+  "primary_omnibus": {
+    "lower_95_one_sided": -0.018440736664842406,
+    "mean": -0.010869584515072464,
+    "pass": false
+  },
+  "repaired_redundancy": {
+    "dedup_vs_muc_tau_ci_high": 0.6444444444444445,
+    "dedup_vs_muc_tau_ci_low": 0.4622222222222222,
+    "dedup_vs_muc_tau_mean": 0.56,
+    "platform_vs_payload_tau_ci_high": 0.9466666666666665,
+    "platform_vs_payload_tau_ci_low": 0.7999999999999999,
+    "platform_vs_payload_tau_mean": 0.8666666666666665
+  },
+  "scenario_vectors": {
+    "payload_first": {
+      "i_batt": 2.0,
+      "i_load": 4.0,
+      "i_sa": 1.0,
+      "t_batt": 2.0,
+      "t_obc": 2.0,
+      "t_pl": 4.0,
+      "t_rad": 1.0,
+      "t_rwx": 1.0,
+      "t_sa": 1.0,
+      "v_bus": 2.0,
+      "w_rwx": 1.0,
+      "w_rwy": 1.0
+    },
+    "platform_survival": {
+      "i_batt": 4.0,
+      "i_load": 2.0,
+      "i_sa": 2.0,
+      "t_batt": 4.0,
+      "t_obc": 4.0,
+      "t_pl": 1.0,
+      "t_rad": 2.0,
+      "t_rwx": 4.0,
+      "t_sa": 2.0,
+      "v_bus": 4.0,
+      "w_rwx": 4.0,
+      "w_rwy": 4.0
+    },
+    "uniform": {
+      "i_batt": 1.0,
+      "i_load": 1.0,
+      "i_sa": 1.0,
+      "t_batt": 1.0,
+      "t_obc": 1.0,
+      "t_pl": 1.0,
+      "t_rad": 1.0,
+      "t_rwx": 1.0,
+      "t_sa": 1.0,
+      "v_bus": 1.0,
+      "w_rwx": 1.0,
+      "w_rwy": 1.0
+    }
+  },
+  "status": "DISCOVERY_COMPLETE",
+  "tie_eligible_models": [
+    "lr",
+    "iforest",
+    "hgb",
+    "pca",
+    "ae"
+  ],
+  "tie_eligible_power_plan": {
+    "recommended_n": null,
+    "status": "NO_POSITIVE_EFFECT_FOR_POWER"
+  },
+  "tie_eligible_sensitivity_omnibus": {
+    "lower_95_one_sided": -0.031218122925392368,
+    "mean": -0.02262186542358398,
+    "pass": false
+  },
+  "within_type_null_to_real_ratio": null,
+  "within_type_utility_null_gain_mean": -0.06814436605804959
+}
