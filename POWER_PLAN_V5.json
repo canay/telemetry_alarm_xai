@@ -1,0 +1,136 @@
+{
+  "analysis_schema_version": 5,
+  "base_endpoint_covariance": [
+    [
+      0.0001195334582694249,
+      7.989166063961448e-05,
+      1.1565148026315977e-06,
+      -7.298374665497745e-05
+    ],
+    [
+      7.989166063961448e-05,
+      0.0011713509043819752,
+      0.00012402694847463676,
+      -0.00031572743541903847
+    ],
+    [
+      1.1565148026315977e-06,
+      0.00012402694847463676,
+      4.881905576225026e-05,
+      -1.557368423034833e-05
+    ],
+    [
+      -7.298374665497745e-05,
+      -0.00031572743541903847,
+      -1.557368423034833e-05,
+      0.0002980163500043704
+    ]
+  ],
+  "base_endpoint_means": {
+    "payload_harm_raw": 0.06489993514702518,
+    "payload_information": 0.052493343179378926,
+    "platform_information": 0.05676188892017854,
+    "platform_raw": 0.032963970025170215
+  },
+  "base_endpoint_names": [
+    "platform_raw",
+    "payload_harm_raw",
+    "platform_information",
+    "payload_information"
+  ],
+  "base_endpoint_observed_sd": {
+    "payload_harm_raw": 0.034225004081547966,
+    "payload_information": 0.0172631500602981,
+    "platform_information": 0.006987063457723155,
+    "platform_raw": 0.010933135793057035
+  },
+  "confirmation_n": 20,
+  "covariance_inflation": 2.70667505879263,
+  "decision_rule": "all five one-sided Student-t lower bounds exceed zero",
+  "discovery_seed_count": 10,
+  "discovery_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "fixed_mean_curve": [
+    {
+      "joint_power": 0.17485,
+      "n": 3
+    },
+    {
+      "joint_power": 0.41365,
+      "n": 4
+    },
+    {
+      "joint_power": 0.6249,
+      "n": 5
+    },
+    {
+      "joint_power": 0.7585,
+      "n": 6
+    },
+    {
+      "joint_power": 0.84495,
+      "n": 7
+    }
+  ],
+  "fixed_mean_recommended_n": 7,
+  "maximum_n_searched": 80,
+  "minimum_n_searched": 3,
+  "not_confirmatory_evidence": true,
+  "outer_simulations_per_n": 20000,
+  "predictive_assurance_curve": [
+    {
+      "joint_assurance": 0.1694,
+      "n": 3
+    },
+    {
+      "joint_assurance": 0.4064,
+      "n": 4
+    },
+    {
+      "joint_assurance": 0.6018,
+      "n": 5
+    },
+    {
+      "joint_assurance": 0.7292,
+      "n": 6
+    },
+    {
+      "joint_assurance": 0.81475,
+      "n": 7
+    }
+  ],
+  "predictive_assurance_recommended_n": 7,
+  "predictive_mean_model": "latent four-endpoint mean ~ N(discovery mean, observed covariance / 10)",
+  "primary_estimand": "pooled episode queue after within-replicate segmentation",
+  "primary_models": [
+    "lr",
+    "iforest",
+    "hgb",
+    "pca",
+    "ae"
+  ],
+  "protocol_floor_n": 20,
+  "recommended_n": 7,
+  "schema_version": 2,
+  "sd_upper_multiplier": 1.6451975743942215,
+  "simulation_seed": 20315830,
+  "source_metrics_sha256": {
+    "policy_summary.csv": "e516454e84b222ed7300dde28e72749777c91ae76886bff993160bf212703838",
+    "utility_permutation_null.csv": "39481b9e196fcdfdad340d678df58b69c16b8d6efd54aef02ca22fb822aa9a38"
+  },
+  "source_run_contract_sha256": "7dcad5411b17d2333aad81832efda84abc5cef210811ad7fc405a7aade04a64a",
+  "source_run_manifest_sha256": "f17103acf3d33359dac6553b32245973aa27dfccb212159d1ee9de3d2d039527",
+  "status": "TARGET_REACHED",
+  "target_joint_power_or_assurance": 0.8,
+  "test_replicates_per_seed": 7
+}

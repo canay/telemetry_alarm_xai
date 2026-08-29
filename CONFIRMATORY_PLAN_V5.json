@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "status": "FROZEN_PENDING_PUBLIC_RELEASE",
+  "release_tag": "v2.0.0",
+  "confirmation_n": 20,
+  "seeds": [300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319],
+  "primary_models": ["lr", "iforest", "hgb", "pca", "ae"],
+  "all_models": ["lr", "dtree", "iforest", "hgb", "pca", "ae"],
+  "n_test_replicates": 7,
+  "test_orbits_per_replicate": 130,
+  "minimum_pooled_episodes": 20,
+  "null_draws": 200,
+  "decision_method": "one_sample_student_t_lower_bound",
+  "confidence_rule": "all five one-sided 95% Student-t lower bounds must exceed zero",
+  "primary_population": "five-model episode-weighted pooled queue",
+  "mandatory_sensitivities": [
+    "six-model episode-weighted pooled queue",
+    "five-model trajectory-weighted mean"
+  ],
+  "endpoints": [
+    "scenario_contrast_raw",
+    "platform_raw",
+    "payload_harm_raw",
+    "platform_information",
+    "payload_information"
+  ],
+  "discovery_power_recommended_n": 7,
+  "predictive_assurance_recommended_n": 7,
+  "protocol_floor_n": 20,
+  "source_discovery_manifest_sha256": "f17103acf3d33359dac6553b32245973aa27dfccb212159d1ee9de3d2d039527",
+  "source_discovery_contract_sha256": "7dcad5411b17d2333aad81832efda84abc5cef210811ad7fc405a7aade04a64a",
+  "code_sha256": {
+    ".gitattributes": "826e134cb58b75fbd30a9e1f4fe6f5555fa75b2612ada91976707f935c2978a9",
+    "code/common.py": "9f327b6536b094b659983efaa5823d325dacf2ffaebbfe1f71d012fa75ceeb12",
+    "code/models.py": "f4d6b23560ca511e9299fddf2dadaed79f9979d7f8c69e5e06318f9983a7d05a",
+    "code/telemetry_generator.py": "544128bf98b67c1ddc8ddfe76dbcaa2ff2c3867a429ca82cc140e08f14106fd0",
+    "code/criticality_generator.py": "a4899d0e195e046608c4ec1e8258bf28893ae6cea7a45e4f9366fbfc4232ef03",
+    "code/criticality_generator_v5.py": "f4491654683311af8a64bc2c430d259966534549697b6c6f539bdab5b781dc3f",
+    "code/run_criticality_unit.py": "493485372f9e708d300137f37099cb66091e933384fa54fb52be42a63ab8bdc2",
+    "code/run_criticality_unit_v5.py": "cf1e5bd99ee130cc050907b32b4962e7fc947ca7b137e0a00f5e773eae6f89fc",
+    "code/criticality_analysis_v4.py": "af37d9f118d52cec8d2c2d597126267ff87d0747c8b32d0c83cb9a73b67120ce",
+    "code/criticality_property_v5.py": "d5c59c94d8ec7fd22f885f7c40af689bca3bdc94ad1ef16dfb67356078e5d7ca",
+    "code/criticality_analysis_v5.py": "51a4b34df4480fc8aaa5f607769cde7fb2eabf314d2fcf49c2102dfe42ea2bfc",
+    "code/confirmatory_analysis_v5.py": "59c23b2bfbba2e7c9b890a7c43b1363a2c11a31ba82776c0b78a3c3516867a45",
+    "code/run_v5_development.py": "c61fb587b115ccfa3a103f74e99944d1e6e4ac2d890b17c324effef8120b6480",
+    "code/power_freeze_v5.py": "199d1f3806fd7f902776fe6cac36284ea992184101af4b193b74fccfa6681c18",
+    "code/test_v5_contract.py": "8aeafa150efb42507d29ed7ee447f73e6dd857dcb9ccba4ef37faa2fd57e80db",
+    "PROTOCOL_V2_0.md": "ea074b35ab203159d618ba940fb6c1fa45eeec1a82af0151da03e51a5aa69ecd",
+    "POWER_PLAN_V5.json": "aea9daae262f6f48dd92079bdf1f6c140aac243889ef71cd73f43811fdaaa207",
+    "PILOT_PROPERTY_V5.json": "32eb1ad12fa5e1d5f678b54e4dd94323cf4ff74e7b835ba998cdbb11cdcdfedb"
+  }
+}

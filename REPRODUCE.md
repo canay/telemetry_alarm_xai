@@ -58,6 +58,30 @@ body, pins amplitude scale `1.0`, registers every resumable artifact, and runs
 property, null, analysis, and five-endpoint decision gates. Reusing a partial
 unregistered run is forbidden; start a distinct empty run directory instead.
 
+## Public-frozen V5 confirmation
+
+`PROTOCOL_V2_0.md` and `CONFIRMATORY_PLAN_V5.json` are the controlling V5
+records. Do not generate seeds 300--319 before GitHub release `v2.0.0` is
+published. After publication, use a new empty output directory outside this
+checkout:
+
+```bash
+python code/run_v5_development.py \
+  --mode confirmation \
+  --release-root . \
+  --run-root ../criticality_confirmation_v5 \
+  --seeds 300-319 \
+  --max-workers 2 \
+  --null-draws 200
+```
+
+The launcher binds the remote tag and release-body plan hash, verifies the
+clean checkout and frozen SHA-256 inventory, requires every reusable artifact
+to postdate the release, and permits only the exact confirmation seed block.
+All five primary one-sided Student-t lower bounds must exceed zero. Six-model
+episode-weighted and five-model trajectory-weighted results are mandatory
+sensitivities and cannot upgrade the primary decision.
+
 ## External transfer checks
 
 OpenML 40900 is fetched through the OpenML/scikit-learn path used by `run_openml.py`. KDDCup99 is fetched by `sklearn.datasets.fetch_kddcup99` when `run_second_transfer_benchmark.py` is executed.
@@ -77,3 +101,8 @@ The legacy `results/` files support the earlier evidence layers. Files prefixed
 no seed 10--29 outcomes by construction. Do not interpret OpenML, KDDCup99, or
 OPSSAT-AD as evidence of causal spacecraft fault-channel attribution or live
 operational validation.
+
+Date/time: 2026-08-30 01:21 +03:00
+Tool: Codex
+Model: GPT-5
+Operation ID: `f07-v5-public-freeze-20260830`

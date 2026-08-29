@@ -6,6 +6,15 @@ This repository separates anomaly detection, fault-channel salience, explanation
 
 Release `v1.2.0` publishes the outcome without changing that freeze. The seeds 10--29 replication stopped before policy or null endpoint analysis because seed 12 isolation forest produced 9 alarm episodes against the preregistered minimum of 10. The property suite passed 1,248 of 1,249 checks, the run closed as `NOT_CONFIRMED_PROPERTY_GATE`, and no threshold reduction, replacement seed, model exclusion, or other rescue was performed. The result therefore reports an analyzability failure, not a zero effect and not a successful replication.
 
+Release `v2.0.0` prospectively freezes a distinct V5 confirmation that repairs
+the general analyzability defect by using seven independently generated test
+trajectories per seed and a pooled-queue gate of 20 episodes. The endpoint-blind
+R=7 pilot passed 397/397 checks, discovery-only planning retained the protocol
+floor of 20 seeds after both fixed-mean power and predictive assurance reached
+0.80 at seven seeds, and confirmation is restricted to untouched seeds
+300--319. This release contains the plan, pilot summary, code, and hashes; it
+does not contain the V5 confirmation outcome.
+
 The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and OPSSAT-AD. These datasets support detection or within-model feature-signature repeatability only; they do not establish spacecraft fault-channel attribution correctness or operational deployment validity.
 
 ## Contents
@@ -19,6 +28,10 @@ The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and
 - `CONFIRMATORY_PLAN.json`: machine-readable required files, hashes, seeds, models, endpoints, and decision method.
 - `POWER_PLAN_V4.json`: deterministic joint-power design artifact.
 - `code/run_confirmation_v4.py`: remote-tag-bound driver that refuses pre-release or unregistered artifacts.
+- `PROTOCOL_V2_0.md`, `CONFIRMATORY_PLAN_V5.json`, `POWER_PLAN_V5.json`, and
+  `PILOT_PROPERTY_V5.json`: public V5 freeze and planning evidence.
+- `code/run_v5_development.py`: release-bound, resumable V5 confirmation
+  launcher; `code/confirmatory_analysis_v5.py` owns its five-endpoint decision.
 - `results/scenario_utility_v1_2/`: exploratory manuscript aggregates, model-level figure, and the preregistered replication property-gate closure.
 - `checksums.sha256`: SHA-256 inventory for the released payload.
 
@@ -43,6 +56,23 @@ python code/run_confirmation_v4.py \
 
 The driver verifies the remote GitHub tag commit, release publication time, release-body plan hash, clean checkout, complete frozen-file hash set, amplitude scale, and every resumable artifact. A nonzero final exit can be a valid `NOT_CONFIRMED` scientific outcome; inspect `metrics/confirmatory_failure.json` or `metrics/confirmatory_decision.json`, depending on which frozen gate closed the run.
 
+For the V5 confirmation, only after public release `v2.0.0`, use a new empty
+directory outside the repository:
+
+```bash
+python code/run_v5_development.py \
+  --mode confirmation \
+  --release-root . \
+  --run-root ../criticality_confirmation_v5 \
+  --seeds 300-319 \
+  --max-workers 2 \
+  --null-draws 200
+```
+
+The launcher refuses a dirty or release-mismatched checkout, pre-release or
+unregistered artifacts, a different seed block, and a release body that does
+not bind the exact V5 plan hash.
+
 ## Full reproduction
 
 See `REPRODUCE.md`. The synthetic data are generated deterministically from fixed seeds. External datasets remain at their original sources and are downloaded or fetched by the documented steps.
@@ -57,7 +87,7 @@ See `CITATION.cff`.
 
 ## Release provenance
 
-Updated: 2026-08-26 18:28 +03:00
+Updated: 2026-08-30 01:21 +03:00
 Tool: Codex
 Model: GPT-5
-Operation ID: `f07-scenario-utility-results-release-20260826`
+Operation ID: `f07-v5-public-freeze-20260830`

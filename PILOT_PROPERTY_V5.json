@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "not_endpoint_evidence": true,
+  "endpoint_blind": true,
+  "policy_scores_computed": false,
+  "utility_or_null_endpoints_computed": false,
+  "seeds": [200, 201, 202, 203, 204, 205, 206, 207, 208, 209],
+  "models": ["lr", "dtree", "iforest", "hgb", "pca", "ae"],
+  "n_test_replicates": 7,
+  "test_orbits_per_replicate": 130,
+  "minimum_pooled_episodes": 20,
+  "minimum_observed_pooled_episodes": 64,
+  "minimum_observed_cell": {
+    "seed": 208,
+    "model": "iforest",
+    "per_replicate_episode_count": [4, 3, 5, 11, 11, 16, 14],
+    "pooled_episode_count": 64
+  },
+  "property_checks": 397,
+  "property_failures": 0,
+  "r3_nested_reproduction_checks": 60,
+  "r3_nested_reproduction_failures": 0,
+  "source_run_contract_sha256": "53da3c512fb0ab7468c8c2627936c778c2c792406351924edf87b34b3af40424",
+  "source_run_manifest_sha256": "c12cbed7a1736f06b915671e328f8625458afd7afb477892f54fbadfe8617f2c",
+  "source_property_result_sha256": "4bdc390ba614c6c9c0cd3392eb0e101b4a5e24912350f96e1bfd47104688d67e"
+}
