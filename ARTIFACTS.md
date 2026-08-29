@@ -20,6 +20,7 @@ Operation ID: `f07-scenario-utility-results-release-20260826`
 | V5 endpoint-blind pilot | `PILOT_PROPERTY_V5.json` | `code/property_pilot_v5.py` | R=7 analyzability and nesting evidence only; no policy or endpoint evidence |
 | V5 discovery-only planning | `POWER_PLAN_V5.json` | `code/power_freeze_v5.py` | Five-endpoint fixed-mean power and predictive assurance; not confirmation |
 | V5 public freeze | `PROTOCOL_V2_0.md`; `CONFIRMATORY_PLAN_V5.json` | `code/run_v5_development.py`; `code/confirmatory_analysis_v5.py` | Outcome-blind V5 protocol/code/provenance freeze for untouched seeds 300--319 |
+| V5 confirmation closure | `results/scenario_utility_v2_1/v5_property_tests.json`; `v5_run_manifest.json`; `v5_confirmatory_failure.json` | Frozen V5 property suite and release-bound launcher | `NOT_CONFIRMED_PROPERTY_GATE`; 3,087/3,089 checks passed; fixed gate misspecification; no endpoint analysis or rescue |
 
 The package intentionally excludes manuscript sources, submission files, internal workflow state, private logs, generated dataset caches, and third-party dataset files.
 

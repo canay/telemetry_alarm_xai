@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "status": "NOT_CONFIRMED_PROPERTY_GATE",
+  "classification": "FIXED_GATE_MISSPECIFIED",
+  "inference_status": "INCONCLUSIVE_GATE_DEFECT",
+  "closed_at": "2026-08-30T02:02:58.153951+03:00",
+  "operation_id": "f07-v5-confirmation-r7-20260830",
+  "release_tag": "v2.0.0",
+  "release_commit": "12d071f54ac23fbc32308c94173e8f40adeb76cf",
+  "release_url": "https://github.com/canay/telemetry_alarm_xai/releases/tag/v2.0.0",
+  "release_published_at_utc": "2026-08-29T22:44:44Z",
+  "plan_sha256": "db0437d6c24f32e205e799e1cb1173d3c203b3f58c25f996aeea0ead3fa2b48b",
+  "seeds": [300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319],
+  "property_checks": 3089,
+  "failed_property_checks": [
+    "generated_episode_at_most_one_event_seed303_pca",
+    "generated_episode_at_most_one_event_seed303_ae"
+  ],
+  "shared_failure_source": {
+    "seed": 303,
+    "test_replicate": 5,
+    "alarm_episode_sample_span": [2510, 3140],
+    "linked_event_sample_spans": [[2536, 2618], [2750, 2918], [2987, 3080]],
+    "linked_event_ids": [188, 206, 207],
+    "models": ["pca", "ae"]
+  },
+  "root_cause": "A persistent detector alarm remained above threshold across three non-overlapping injected events. The frozen at-most-one-event predicate constrains segmentation cardinality, although the frozen estimand and maximum-weight one-to-one matcher support multi-event alarm episodes.",
+  "endpoint_analysis_performed": false,
+  "policy_scores_computed": false,
+  "null_analysis_performed": false,
+  "hypothesis_interpretation": "No V5 endpoint exists; this outcome neither supports nor refutes the criticality-conditioned scenario-reversal hypothesis.",
+  "rescue_change_performed": false,
+  "artifact_count": 2241,
+  "artifact_hash_failures": 0,
+  "artifacts_predating_public_release": 0,
+  "source_run_manifest_sha256": "2b5215c050d717e892d2ee99b7a03d9f1eda23f974edb2fa15e695267e2ed91c",
+  "source_property_tests_sha256": "ba0df08d0cc5795e0a501d3104877c9fca6697d61c62ac19973394e6cb6a22f0",
+  "published_run_manifest_sha256": "e9e6f169577c20378ce153a08b179c648856464432c8be3090406770ceecc1dc",
+  "published_property_tests_sha256": "a21f29d1f31871b9725af466ac9ac425aa20703fc3dfdcfd924b0e92ac93da0f"
+}

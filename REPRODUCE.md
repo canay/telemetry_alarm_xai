@@ -82,6 +82,11 @@ All five primary one-sided Student-t lower bounds must exceed zero. Six-model
 episode-weighted and five-model trajectory-weighted results are mandatory
 sensitivities and cannot upgrade the primary decision.
 
+The recorded V5 run closed at the property gate. Reproduction may verify the
+complete property result in `results/scenario_utility_v2_1/`, but must not be
+used to compute or disclose seed 300--319 endpoints: doing so would violate the
+public terminal rule after an observed gate failure.
+
 ## External transfer checks
 
 OpenML 40900 is fetched through the OpenML/scikit-learn path used by `run_openml.py`. KDDCup99 is fetched by `sklearn.datasets.fetch_kddcup99` when `run_second_transfer_benchmark.py` is executed.

@@ -15,6 +15,15 @@ floor of 20 seeds after both fixed-mean power and predictive assurance reached
 300--319. This release contains the plan, pilot summary, code, and hashes; it
 does not contain the V5 confirmation outcome.
 
+Release `v2.1.0` publishes that outcome without altering the freeze. The
+confirmation stopped before any policy, null, construct, or endpoint analysis:
+two of 3,089 property checks failed when one persistent seed-303 alarm episode
+spanned three non-overlapping injected events in both PCA and autoencoder
+outputs. Because the frozen matcher already supports multi-event episodes, the
+failure is classified as `FIXED_GATE_MISSPECIFIED`; nevertheless the public
+protocol makes it terminal. V5 therefore closes as
+`NOT_CONFIRMED_PROPERTY_GATE`, with no endpoint and no rescue.
+
 The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and OPSSAT-AD. These datasets support detection or within-model feature-signature repeatability only; they do not establish spacecraft fault-channel attribution correctness or operational deployment validity.
 
 ## Contents
@@ -33,6 +42,8 @@ The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and
 - `code/run_v5_development.py`: release-bound, resumable V5 confirmation
   launcher; `code/confirmatory_analysis_v5.py` owns its five-endpoint decision.
 - `results/scenario_utility_v1_2/`: exploratory manuscript aggregates, model-level figure, and the preregistered replication property-gate closure.
+- `results/scenario_utility_v2_1/`: complete V5 property result, hash-bound run
+  manifest, and gate-misspecification closure.
 - `checksums.sha256`: SHA-256 inventory for the released payload.
 
 ## Quick verification
