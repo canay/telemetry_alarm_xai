@@ -1,9 +1,9 @@
 # Artifact Map
 
-Date/time: 2026-08-26 18:28 +03:00
+Date/time: 2026-08-30 04:08 +03:00
 Tool: Codex
-Model: GPT-5
-Operation ID: `f07-scenario-utility-results-release-20260826`
+Model: GPT-5.6
+Operation ID: `f07-v5-round-d-final-corrections-20260830`
 
 | Evidence layer | Frozen artifact | Reproduction entry point | Valid interpretation |
 | --- | --- | --- | --- |
@@ -11,8 +11,8 @@ Operation ID: `f07-scenario-utility-results-release-20260826`
 | Priority sensitivity, ablation, and uncertainty | `results/q1_audit_revision/`; `results/q1_seed_expansion/` | `code/q1_audit_revision_stats.py` | Sensitivity and bounded statistical evidence; no universal priority-gain claim |
 | Supervised label-budget sensitivity | `results/q1_audit_revision/label_budget_sensitivity*.csv` | `code/q1_audit_label_budget.py` | Synthetic supervised sensitivity only |
 | OpenML satellite-image transfer | `results/openml_results.json` | `code/run_openml.py` | Detection/signature transfer; not spacecraft telemetry attribution |
-| KDDCup99 transfer audit | `results/second_transfer_benchmark_audit_rerun/` | `code/run_second_transfer_benchmark.py` | Network-telemetry diagnostic transfer only |
-| OPSSAT-AD transfer audit | `results/opssat_transfer_benchmark/` | `code/run_opssat_transfer_benchmark.py` | Real spacecraft-telemetry detection and within-model signature repeatability; not causal fault-channel correctness |
+| KDDCup99 transfer audit | `results/second_transfer_benchmark_audit_rerun/`; `signature_repair_provenance.json` | `code/run_second_transfer_benchmark.py`; repaired signature artifacts are hash-bound in the provenance record | Network-telemetry diagnostic transfer only; zero-norm pairs are excluded from cosine summaries |
+| OPSSAT-AD transfer audit | `results/opssat_transfer_benchmark/`; `signature_repair_provenance.json` | `code/run_opssat_transfer_benchmark.py`; repaired signature artifacts are hash-bound in the provenance record | Real spacecraft-telemetry detection and within-model signature repeatability; not causal fault-channel correctness |
 | V3 scenario-utility discovery | `results/v3_discovery_*` | `code/criticality_analysis_v4.py` only for the public V4 definitions; the bundled V3 files remain historical | Exploratory design/null evidence; not confirmation |
 | V4 public freeze | `PROTOCOL_V1_1.md`; `CONFIRMATORY_PLAN.json`; `POWER_PLAN_V4.json` | `code/run_confirmation_v4.py` | Outcome-blind protocol/code/provenance freeze; release contains no seeds 10--29 outcomes |
 | V1.1 replication closure | `results/scenario_utility_v1_2/replication_property_tests.json`; `results/scenario_utility_v1_2/confirmatory_failure.json` | Frozen V4 property suite and fail-closed driver | `NOT_CONFIRMED_PROPERTY_GATE`; 1,248/1,249 checks passed; no policy/null endpoint analysis and no rescue |
@@ -24,7 +24,7 @@ Operation ID: `f07-scenario-utility-results-release-20260826`
 
 The package intentionally excludes manuscript sources, submission files, internal workflow state, private logs, generated dataset caches, and third-party dataset files.
 
-Date/time: 2026-08-30 01:21 +03:00
+Date/time: 2026-08-30 04:08 +03:00
 Tool: Codex
-Model: GPT-5
-Operation ID: `f07-v5-public-freeze-20260830`
+Model: GPT-5.6
+Operation ID: `f07-v5-round-d-final-corrections-20260830`

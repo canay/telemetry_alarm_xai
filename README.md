@@ -24,12 +24,20 @@ failure is classified as `FIXED_GATE_MISSPECIFIED`; nevertheless the public
 protocol makes it terminal. V5 therefore closes as
 `NOT_CONFIRMED_PROPERTY_GATE`, with no endpoint and no rescue.
 
+Release `v2.2.0` is a provenance-only transfer-artifact correction. It carries
+the already frozen 2026-07-28 OPSSAT-AD and KDDCup99 signature repairs into the
+public `results/` tree: isolation-forest signatures use raw anomaly-score
+perturbations, and zero-norm signature pairs are explicitly excluded. Detection
+predictions, V4/V5 protocols, V4/V5 property outcomes, manuscript estimates,
+and the no-endpoint/no-rescue conclusions are unchanged. Each corrected transfer
+directory contains a hash-bound `signature_repair_provenance.json` record.
+
 The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and OPSSAT-AD. These datasets support detection or within-model feature-signature repeatability only; they do not establish spacecraft fault-channel attribution correctness or operational deployment validity.
 
 ## Contents
 
 - `code/`: synthetic telemetry generation, resumable detector work units, aggregation, statistical analyses, transfer checks, and figure scripts.
-- `results/`: frozen JSON/CSV outputs used by the study, including primary synthetic results, ten-seed sensitivity analyses, KDDCup99 audit-rerun results, and OPSSAT-AD results.
+- `results/`: frozen JSON/CSV outputs used by the study, including primary synthetic results, ten-seed sensitivity analyses, KDDCup99 audit-rerun results, and OPSSAT-AD results with hash-bound signature-repair provenance.
 - `data/README.md`: dataset acquisition and redistribution boundaries. Third-party datasets and generated caches are not bundled.
 - `REPRODUCE.md`: environment setup and reproduction commands.
 - `ARTIFACTS.md`: claim-to-artifact map and scope limitations.
@@ -98,7 +106,7 @@ See `CITATION.cff`.
 
 ## Release provenance
 
-Updated: 2026-08-30 01:21 +03:00
+Updated: 2026-08-30 04:08 +03:00
 Tool: Codex
-Model: GPT-5
-Operation ID: `f07-v5-public-freeze-20260830`
+Model: GPT-5.6
+Operation ID: `f07-v5-round-d-final-corrections-20260830`

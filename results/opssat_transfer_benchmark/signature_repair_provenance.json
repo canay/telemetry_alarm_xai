@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-30T04:06:00+03:00",
+  "operation_id": "f07-v5-round-d-final-corrections-20260830",
+  "scope": "OPSSAT-AD feature-signature recomputation only; detection predictions and dataset split are unchanged",
+  "repair": "Isolation-forest signatures use raw anomaly-score perturbations and HGB zero-contribution entries remain exact zeros before within-model cosine calculation.",
+  "artifacts": {
+    "benchmark_results.csv": "22617C765B0287B12C44B972DBCE97E4552D9206720CDED2AD2EC15A69F29495",
+    "feature_signature_audit.csv": "CA6740CBDF51BE7DEB730A3480EEE1914BA24323988F850204B43DC2E3AAC188",
+    "signature_stability.csv": "C6171426AC9E75E5C4EE649FD0B194CB92E2229C45BFF0C5FABE45C2952AB74B"
+  },
+  "reported_check": {
+    "isolation_forest_mean_signature_cosine": 0.9834087765899527,
+    "isolation_forest_valid_pairs": 10,
+    "total_pairs": 10
+  }
+}

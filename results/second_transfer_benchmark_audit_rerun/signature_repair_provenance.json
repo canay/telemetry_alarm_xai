@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-30T04:06:00+03:00",
+  "operation_id": "f07-v5-round-d-final-corrections-20260830",
+  "scope": "KDDCup99 feature-signature recomputation only; detection predictions and dataset split are unchanged",
+  "repair": "Zero-norm signatures are marked degenerate and excluded from within-model cosine summaries instead of being counted as valid pairs.",
+  "artifacts": {
+    "benchmark_results.csv": "B3BF8CE98161023344C4E7D53831ED7EC6242CEBE5D09BA7AAA5E0A929E00813",
+    "feature_signature_audit.csv": "B4630FE300FBCDDE5FE87EFCF8C1067E4B772550DC3C30E9F0B25CF0A58C9F86",
+    "signature_stability.csv": "54F7669D754B2619A4E518A385066C2B2134CDE8E564F0571F2FFA5AF89B9AB5"
+  },
+  "reported_check": {
+    "random_forest_mean_signature_cosine": 0.4226229954179248,
+    "random_forest_valid_pairs": 6,
+    "random_forest_degenerate_pairs": 4,
+    "total_pairs": 10
+  }
+}

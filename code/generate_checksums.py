@@ -1,6 +1,6 @@
 """Regenerate the public package SHA-256 inventory from Git-visible files.
 
-Operation: f07-v5-results-release-20260830
+Operation: f07-v5-round-d-final-corrections-20260830
 """
 
 from __future__ import annotations

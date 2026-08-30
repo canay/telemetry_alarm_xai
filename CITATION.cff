@@ -6,8 +6,8 @@ authors:
   - family-names: Canay
     given-names: Ozkan
 repository-code: "https://github.com/canay/telemetry_alarm_xai"
-version: 1.2.0
-date-released: 2026-08-26
+version: 2.2.0
+date-released: 2026-08-30
 license: MIT
 keywords:
   - anomaly detection
