@@ -32,6 +32,13 @@ predictions, V4/V5 protocols, V4/V5 property outcomes, manuscript estimates,
 and the no-endpoint/no-rescue conclusions are unchanged. Each corrected transfer
 directory contains a hash-bound `signature_repair_provenance.json` record.
 
+Release `v2.2.1` is a release-hygiene patch. It normalizes the six corrected
+transfer CSVs to LF and regenerates both provenance records from those exact
+released bytes, so `signature_repair_provenance.json` and `checksums.sha256`
+agree in fresh clones. Scientific values, predictions, protocols, property-gate
+outcomes, manuscript estimates, and the no-endpoint/no-rescue conclusions are
+unchanged.
+
 The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and OPSSAT-AD. These datasets support detection or within-model feature-signature repeatability only; they do not establish spacecraft fault-channel attribution correctness or operational deployment validity.
 
 ## Contents
