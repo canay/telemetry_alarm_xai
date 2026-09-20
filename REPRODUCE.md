@@ -111,3 +111,7 @@ Date/time: 2026-08-30 01:21 +03:00
 Tool: Codex
 Model: GPT-5
 Operation ID: `f07-v5-public-freeze-20260830`
+
+## Fresh MTA results without refitting
+
+Download all four assets from release `f07-fresh-mta-results-20260920`, verify their hashes against `results/f07-fresh-mta-20260920/PUBLIC_RESULTS_MANIFEST.json`, and extract to a new common directory. Run `python results/f07-fresh-mta-20260920/reproduce_fresh_summary.py --run-dir /path/to/extracted/run`. The script verifies the 40 endpoint file hashes and reproduces summaries within disclosed floating-point tolerances. It does not train models, reconstruct policies, or evaluate them again. Raw synthetic data and all planned scientific outputs are available in the assets.

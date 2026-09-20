@@ -1,6 +1,6 @@
-# From salience to decisions: A scenario-conditioned benchmark for explainable spacecraft-telemetry alarm review
+# When explanations help alarm review: Scenario-conditioned utility in spacecraft telemetry
 
-Curated replication and public-freeze package for the study “From salience to decisions: A scenario-conditioned benchmark for explainable spacecraft-telemetry alarm review.”
+Curated replication and public-freeze package for the study “When explanations help alarm review: Scenario-conditioned utility in spacecraft telemetry.”
 
 This repository separates anomaly detection, fault-channel salience, explanation stability, and operational alarm-review utility over aligned episodes. Release `v1.1.0` froze, before any confirmatory generation, the exact V4 scenario-heterogeneity protocol, code, seed range, five-condition decision rule, null calibrations, joint-power calculation, and provenance driver. The bundled V3 outputs are explicitly exploratory; they are not confirmatory evidence.
 
@@ -41,11 +41,13 @@ unchanged.
 
 The package also contains bounded transfer checks on OpenML 40900, KDDCup99, and OPSSAT-AD. These datasets support detection or within-model feature-signature repeatability only; they do not establish spacecraft fault-channel attribution correctness or operational deployment validity.
 
+Release `f07-fresh-mta-results-20260920` adds the completed, prospectively frozen 40-seed MTA internal replication. The exact 20 sources and result tables are in [results/f07-fresh-mta-20260920](results/f07-fresh-mta-20260920/README.md); four downloadable release assets contain all 4,920 planned scientific outputs and 400 atomic checkpoint records, including generated synthetic data and fitted-model artifacts. The independent unit is the seed (n=40), and the four primary intervals use Bonferroni adjustment. See the package for the full directional decision, mandatory sensitivity results, scope limits, and registry timing disclosure. Earlier V4/V5 gate stops remain unchanged.
+
 ## Contents
 
 - `code/`: synthetic telemetry generation, resumable detector work units, aggregation, statistical analyses, transfer checks, and figure scripts.
 - `results/`: frozen JSON/CSV outputs used by the study, including primary synthetic results, ten-seed sensitivity analyses, KDDCup99 audit-rerun results, and OPSSAT-AD results with hash-bound signature-repair provenance.
-- `data/README.md`: dataset acquisition and redistribution boundaries. Third-party datasets and generated caches are not bundled.
+- `data/README.md`: dataset acquisition and redistribution boundaries. Third-party raw datasets are not bundled; generated synthetic data for the new MTA replication are supplied as release assets.
 - `REPRODUCE.md`: environment setup and reproduction commands.
 - `ARTIFACTS.md`: claim-to-artifact map and scope limitations.
 - `PROTOCOL_V1_1.md`: human-readable public-frozen confirmation protocol.

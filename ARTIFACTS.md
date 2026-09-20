@@ -28,3 +28,7 @@ Date/time: 2026-08-30 04:32 +03:00
 Tool: Codex
 Model: GPT-5.6
 Operation ID: `f07-v2-2-1-hash-portability-20260830`
+
+## Fresh MTA internal replication
+
+Release `f07-fresh-mta-results-20260920` and `results/f07-fresh-mta-20260920/PUBLIC_RESULTS_MANIFEST.json` bind the four assets, all 4,920 scientific outputs, 400 atomic checkpoints, exact source snapshot, and 40-seed summary. `analysis/primary_contrasts.csv` contains C1–C4 with 98.75% intervals; `secondary_contrasts.csv` contains all-six-model and per-model descriptive 95% intervals. `policy_endpoints.csv` retains every policy/profile/target cell. The fresh internal replication does not reopen V4/V5 endpoints or establish external operational validity.
