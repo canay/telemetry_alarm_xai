@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_integration_20260920/REPORT.json",
+    "sha256": "a0e9f08d2d0531821e8c9006e9d37ba00fca7890ed22ebdd049c2488eb31f03d",
+    "size_bytes": 1310
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "at": "2026-09-20T17:04:17.632249+00:00",
+    "boundary": "adapter mock; actual policy subprocess/evaluator; no OS sandbox claim",
+    "checks": [
+      "actual_policy_unit_nested_path_and_subprocess",
+      "complete_synthetic_policy_grid",
+      "known_small_queue_0",
+      "known_small_queue_1",
+      "known_small_queue_2",
+      "known_small_queue_3",
+      "known_small_queue_4",
+      "known_small_queue_5",
+      "observable_only_serialized_policy",
+      "actual_priority_entry_rejects_evaluation_field",
+      "fresh_contract_rejects_seed_0",
+      "fresh_contract_rejects_seed_999",
+      "fresh_contract_rejects_seed_1040",
+      "fresh_contract_rejects_seed_True"
+    ],
+    "code_sha256": {
+      "fresh_owned_worker.py": "ac169d4053f0c4734f6c3cff492f941c75fc79c673e594c7d0cea5c395794c8b",
+      "fresh_policy_artifacts.py": "3b51171b28054240e2769e0fd162e1ab6678008d7e021f43f764f5f91516c726",
+      "fresh_worker.py": "c00c9c020b147545c684370627dfd8c30b2d1ed5dec7e0d3e71c8ec00eca8d36",
+      "test_fresh_integration.py": "10b6e854492fc914fab10d9a002524666c6163b7ff63cc9c5e87678dba8b6e63"
+    },
+    "count": 14,
+    "model": "gpt-6-astra / xhigh",
+    "model_fit_executed": false,
+    "operation_id": "f07-auto-preflight-20260919",
+    "scientific_data_read": false,
+    "status": "PASS_SYNTHETIC_FRESH_POLICY_INTEGRATION_ONLY",
+    "tool": "Codex"
+  },
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_integration_20260920/REPORT.json",
+    "sha256": "f87c81281f1a0649e19c73ab56ae556d2f99a241263d844372c69eb8985632de",
+    "size_bytes": 2019
+  }
+}

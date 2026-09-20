@@ -1,0 +1,49 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+    "sha256": "04b1ea6259bf0dff6a84bd53e7ab53201e57560c21ea5f873657ca801802fb1c",
+    "size_bytes": 1335
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "status": "PASS_SYNTHETIC_SUPERVISOR_LIFECYCLE_ONLY",
+    "checks": [
+      "controlled_stop_exit_75",
+      "resume_preserves_completed_unit_exactly",
+      "heartbeat_reports_cpu_advancement_inside_unit",
+      "corrupt_completed_artifact_rejected_before_resume",
+      "abrupt_stop_leaves_lock_and_blocks_blind_restart",
+      "dead_process_identity_checked_recovery_preserves_old_lock"
+    ],
+    "count": 6,
+    "at": "2026-09-20T17:09:26.680736+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-auto-preflight-20260919",
+    "supervisor_sha256": "4195fc675d4b9a23dea969f03df157503fe436a86e3a74ede44949bd8decbaa8",
+    "test_sha256": "81646521e56f63d90c384260c3a156bbc852aac19c03684bdff7ec1e164ad61c",
+    "scientific_worker_executed": false,
+    "model_fit_executed": false,
+    "completed_unit_hashes_preserved": {
+      "<experiment-home>/experiments/SCI-f07-telemetry_alarm_xai/2026-09-20/package/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_clean/checkpoints/fixture_0.json": "8aa59f71fecd93fa9cc17cffe94d7606685aea0ef18471d7fd36cdcd7ba4ed19",
+      "<experiment-home>/experiments/SCI-f07-telemetry_alarm_xai/2026-09-20/package/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_clean/fixture_0.json": "3b9ea5cc7926e7177f44ed3f33ff44d04a31ff4a9b554e65291c9a03afc73d7b"
+    }
+  },
+  "publication_view_created_at": "2026-09-20T17:56:20.720418+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+    "sha256": "f6a7972c035fe1d182268bb752905c3d1530ffcbf1b74759524176ed013d8b71",
+    "size_bytes": 2027
+  },
+  "superseded_public_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+    "sha256": "754cc80ad48edfc0ff1f6b1f072ca745c030b1950fa1ca385e4be4aee2235c6a",
+    "size_bytes": 2465
+  },
+  "projection_note": "Absolute checkpoint paths in JSON object keys are pseudonymized as well as string values. Original scientific/control output hashes are unchanged."
+}

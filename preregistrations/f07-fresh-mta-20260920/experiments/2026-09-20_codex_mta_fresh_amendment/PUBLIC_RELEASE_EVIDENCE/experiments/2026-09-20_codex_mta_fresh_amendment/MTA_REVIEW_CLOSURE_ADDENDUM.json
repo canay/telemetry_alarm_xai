@@ -1,0 +1,228 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+    "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+    "size_bytes": 13232
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "at": "2026-09-20T17:37:54.573184+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-mta-fresh-to-round-f-20260920",
+    "status": "PROSPECTIVE_OPERATIONAL_CLARIFICATIONS",
+    "candidate_ref": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PROTOCOL_CANDIDATE_V1.json",
+      "sha256": "1ba8ac6bb9aea8e35921fc2850c71922bc53f4723a73051bde7fea7df442a94e",
+      "size_bytes": 45409
+    },
+    "actual_review_result_ref": {
+      "path": ".orchestrator/runs/run-20260920-da3024e2db13/rounds/002-independent_mta_amendment_review/attempts/attempt-003/claude_result.json",
+      "sha256": "43005e1ec12737ba542d805adb713aa01afbdfa7128829f554e513f75a82a1d1",
+      "size_bytes": 44248
+    },
+    "resource_basis": {
+      "historical_candidate_free_disk_bytes": 53231251456,
+      "historical_measurement_host": "author-workstation (Windows); inherited historical planning evidence, not MTA headroom",
+      "current_mta_observation_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+        "sha256": "0a35435538f5af6259bf15357ceb0a46bbf156fb5fb1d5ac4c8cd267bda770d8",
+        "size_bytes": 724
+      },
+      "current_mta_observation": {
+        "at": "2026-09-20T17:30:59.183413+00:00",
+        "tool": "Codex",
+        "model": "gpt-6-astra / xhigh",
+        "operation_id": "f07-mta-fresh-to-round-f-20260920",
+        "host": "mta-experiment-host",
+        "execution_host": "mta-cuda",
+        "package_root": "<experiment-home>/experiments/SCI-f07-telemetry_alarm_xai/2026-09-20/package",
+        "free_disk_bytes": 15944871936,
+        "available_ram_bytes": 29591392256,
+        "total_ram_bytes": 33411940352,
+        "logical_cpu_count": 28,
+        "physical_cpu_count": 20,
+        "prior_discovery_disk_observation_host": "Windows author machine; not an MTA measurement",
+        "minimum_disk_bytes": 10737418240,
+        "minimum_available_ram_bytes": 3221225472,
+        "scientific_compute": false,
+        "admission_pass": true
+      },
+      "runtime_admission": "Rechecked by actual supervisor before each unit; hard floors and ceilings unchanged"
+    },
+    "receipt_roles": [
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920/REPORT.json",
+        "sha256": "fc3c1de066cb3309c555b08e5eb51d576b9f30267fa8d3f0e0c782d525f61ef9",
+        "size_bytes": 791,
+        "role": "pass_receipt",
+        "repaired_adapter_installed": true,
+        "produced_by": "mta_guard_checks.py with explicit subprocess/path adapter",
+        "scope": "Synthetic engineering control only; no scientific inference or model fitting"
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+        "sha256": "04b1ea6259bf0dff6a84bd53e7ab53201e57560c21ea5f873657ca801802fb1c",
+        "size_bytes": 1335,
+        "role": "pass_receipt",
+        "repaired_adapter_installed": true,
+        "produced_by": "mta_guard_checks.py with explicit subprocess/path adapter",
+        "scope": "Synthetic engineering control only; no scientific inference or model fitting"
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_integration_20260920/REPORT.json",
+        "sha256": "a0e9f08d2d0531821e8c9006e9d37ba00fca7890ed22ebdd049c2488eb31f03d",
+        "size_bytes": 1310,
+        "role": "pass_receipt",
+        "repaired_adapter_installed": true,
+        "produced_by": "remaining_checks.py / test_fresh_integration.main after adapter.configure",
+        "scope": "Synthetic engineering control only; no scientific inference or model fitting"
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_GUARD_CHECKS/REPORT.json",
+        "sha256": "4f3ce2b8707f89ef6b7ee47672f648f6b728e44f41a90a7f5e0310403a8fcdcf",
+        "size_bytes": 614,
+        "role": "pass_receipt",
+        "repaired_adapter_installed": true,
+        "produced_by": "mta_guard_checks.py with explicit subprocess/path adapter",
+        "scope": "Synthetic engineering control only; no scientific inference or model fitting"
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_parent_trace_20260920/TRACE.json",
+        "sha256": "2a828122d92d12a8e5ee3b6911b2139cdb5cd13509b7c4adf754069459f8ad8f",
+        "size_bytes": 1312,
+        "role": "preserved_failure_control",
+        "repaired_adapter_installed": false,
+        "produced_by": "pre-repair parent_trace.py",
+        "scope": "Synthetic engineering control only; no scientific inference or model fitting"
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/WATCHDOG_PROBE.jsonl",
+        "sha256": "8a1be22c7a390ba791a959cbe7e629477a17c0298d566be220eafa1771267c62",
+        "size_bytes": 354,
+        "role": "preserved_failure_control",
+        "repaired_adapter_installed": false,
+        "produced_by": "pre-repair watchdog_probe.py",
+        "scope": "Synthetic engineering control only; no scientific inference or model fitting"
+      }
+    ],
+    "actual_runtime_source_sha256": {
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code/boundary_evaluator.py": "012e15e9d68572049e6ac8fb89853bf1e2300d7e21410ce0452ca2fab1d8e00a",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/common.py": "9f327b6536b094b659983efaa5823d325dacf2ffaebbfe1f71d012fa75ceeb12",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/criticality_generator.py": "a4899d0e195e046608c4ec1e8258bf28893ae6cea7a45e4f9366fbfc4232ef03",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/criticality_generator_v5.py": "f4491654683311af8a64bc2c430d259966534549697b6c6f539bdab5b781dc3f",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/models.py": "f4d6b23560ca511e9299fddf2dadaed79f9979d7f8c69e5e06318f9983a7d05a",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/run_criticality_unit.py": "493485372f9e708d300137f37099cb66091e933384fa54fb52be42a63ab8bdc2",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/run_criticality_unit_v5.py": "cf1e5bd99ee130cc050907b32b4962e7fc947ca7b137e0a00f5e773eae6f89fc",
+      "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/telemetry_generator.py": "544128bf98b67c1ddc8ddfe76dbcaa2ff2c3867a429ca82cc140e08f14106fd0",
+      "experiments/2026-09-05_codex_local_fresh_driver/code/policy_api.py": "ea99327a1601d900ffdb9830f612bee8502f0699c30dc38680f7c2ff4a744e0c",
+      "experiments/2026-09-19_codex_local_fresh_preflight/fresh_execution_plan.py": "b8d92e71e27fad4f5ca4bb39799db93c6fb09b5d24aca1180e3b4bad80290050",
+      "experiments/2026-09-19_codex_local_fresh_preflight/fresh_owned_worker.py": "ac169d4053f0c4734f6c3cff492f941c75fc79c673e594c7d0cea5c395794c8b",
+      "experiments/2026-09-19_codex_local_fresh_preflight/fresh_policy_artifacts.py": "3b51171b28054240e2769e0fd162e1ab6678008d7e021f43f764f5f91516c726",
+      "experiments/2026-09-19_codex_local_fresh_preflight/fresh_producer_adapter.py": "1e4a47d86b3768fd8f65b1a349ee43982a2a2f693e3d4446ead39a19a3986123",
+      "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+      "experiments/2026-09-19_codex_local_fresh_preflight/fresh_worker.py": "c00c9c020b147545c684370627dfd8c30b2d1ed5dec7e0d3e71c8ec00eca8d36",
+      "experiments/2026-09-19_codex_local_fresh_preflight/producer_policy_adapter.py": "4516d3da8f3abf001cbadedc9356f050ee64628da63381a1f07b29522d3ec44b",
+      "experiments/2026-09-19_codex_local_fresh_preflight/seed_level_reducer.py": "985f0b4d275f7c18dcac56ff65aa4feb9552c0a6a3dd459ffffddd935f0dd358",
+      "experiments/2026-09-20_codex_mta_fresh_amendment/mta_supervisor.py": "4195fc675d4b9a23dea969f03df157503fe436a86e3a74ede44949bd8decbaa8",
+      "experiments/2026-09-20_codex_mta_fresh_amendment/mta_owned_worker.py": "d25c54b309906727f30a3c8f5d2c9955ed9d90299d8eb8b7fd828dd697065ae2",
+      "experiments/2026-09-20_codex_mta_fresh_amendment/mta_process_tree.py": "dd5da9cf4e10a95fe639da3df6894e8fad79ab1a372e8b8de4bcfdb5fbae7bd3"
+    },
+    "test_bootstrap_refs": [
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/mta_guard_checks.py",
+        "sha256": "48e9986c0a16e5a72cd2f4e7873d68cb89ea39081a6e786bfb30905a6f623919",
+        "size_bytes": 2243
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/mta_guard_checks.sh",
+        "sha256": "6c5c1c3d3568ebd81eb63fdb3e16a517d01de6de2cee139ed7c65472c6940633",
+        "size_bytes": 464
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/remaining_checks.py",
+        "sha256": "9c9f85b4aa0e2e4d35b1c3bfb830aed9c7a1288de16058a194fb7560643e8412",
+        "size_bytes": 2308
+      },
+      {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/remaining_checks.sh",
+        "sha256": "c038bf12b22ce0d3789eea69030389d6be912149e91b4a074735f7a322839088",
+        "size_bytes": 464
+      }
+    ],
+    "test_source_refs": [
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_runtime_guards.py",
+        "sha256": "48c0d68635a085556be5181c206eb02186dd9ec662377f0f71020ea6d2fadb61",
+        "size_bytes": 5694
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_supervisor_lifecycle.py",
+        "sha256": "81646521e56f63d90c384260c3a156bbc852aac19c03684bdff7ec1e164ad61c",
+        "size_bytes": 5113
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_fresh_integration.py",
+        "sha256": "10b6e854492fc914fab10d9a002524666c6163b7ff63cc9c5e87678dba8b6e63",
+        "size_bytes": 5040
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/supervisor_fixture_worker.py",
+        "sha256": "981b9b91f7de38f04e1ca723f0b1a3d98e633850592f4e276c2dc389dbca24f6",
+        "size_bytes": 960
+      }
+    ],
+    "guard_receipt_attribution": "The unchanged test reports name original requested command/source hashes. mta_guard_checks.py replaces both the supervisor command and original owned-wrapper command with the three exact MTA sources. The report is evidence for that actual adapted path, not an unmodified wrapper PASS.",
+    "runtime_command_mapping": {
+      "fresh_supervisor.py": "mta_supervisor.py (test adapter)",
+      "fresh_owned_worker.py": "mta_owned_worker.py (actual SubprocessAdapter)"
+    },
+    "publication_classification": {
+      "private_hash_only_refs": [
+        "launch_config.central_prelaunch_receipt",
+        "launch_config.public_approval"
+      ],
+      "reason": "Author-host workflow receipt and user-authorization record contain local central infrastructure paths/conversation provenance; these are private administrative evidence, not scientific data, code, or outputs.",
+      "verification": "The exact receipt bytes/hash are checked locally by the MTA launcher; the public package supplies its SHA/size after finalization. Receipt is not fetched by the public-bound loop. No independently portable central prelaunch certification is claimed."
+    },
+    "repair_scope_exclusions": [
+      {
+        "interpreter": "fresh_worker.py priority subprocess",
+        "unchanged_path": "Uses its original parent watcher and psutil recursive enumeration; the MTA helper is installed only in supervisor and owned wrapper.",
+        "known_limit": "Abrupt loss of the owned wrapper can briefly leave a priority child or partial priority artifact; supervisor and normal parent-loss handling remain covered. Existing attempt recovery preserves partial outputs. Review classified this narrow path nonblocking."
+      }
+    ],
+    "manifest_equivalence_ref": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+      "sha256": "308e94bd465b56800ecd00936ed385ec18e50968beff99ed70173bc16d66bf8b",
+      "size_bytes": 1956
+    },
+    "launch_contract_closure": {
+      "writer_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/materialize_mta_lineage.py",
+        "sha256": "d7b3757d248d79303af34cdbbdabc731fb0a0943698096f08eef6bbe7b1e1d2a",
+        "size_bytes": 6926
+      },
+      "obligations": "Writer creates top-level unresolved_blockers=[], complete path/hash/size references, schema-v3 threshold/timebase keys, and actual central prelaunch receipt. Publication writer records existing author authorization against exact final contract before public release. Actual launch refuses any missing or changed binding.",
+      "negative_binding_checks_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_NEGATIVE_BINDING/REPORT.json",
+        "sha256": "6e254c3040a69c599a129e3360a17344e8a03d7b3a0605db8ef2f5ef5722c108",
+        "size_bytes": 1933
+      }
+    },
+    "scientific_source_changes": 0,
+    "scientific_compute": false,
+    "cross_platform_numerical_equivalence_claimed": false
+  },
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+    "sha256": "018050cb122ed80a9bfcd6130f6e64e66c9233824d975caa1a989df19b7a9c44",
+    "size_bytes": 14237
+  }
+}

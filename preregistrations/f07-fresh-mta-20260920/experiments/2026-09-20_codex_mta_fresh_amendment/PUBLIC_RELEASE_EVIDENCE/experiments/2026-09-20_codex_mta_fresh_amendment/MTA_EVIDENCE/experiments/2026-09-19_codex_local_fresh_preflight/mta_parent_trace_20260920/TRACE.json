@@ -1,0 +1,138 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_parent_trace_20260920/TRACE.json",
+    "sha256": "2a828122d92d12a8e5ee3b6911b2139cdb5cd13509b7c4adf754069459f8ad8f",
+    "size_bytes": 1312
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": [
+    {
+      "born": 1789923934.52,
+      "phase": "parent",
+      "pid": 17264,
+      "t": 0.0004534520012384746
+    },
+    {
+      "phase": "ticket",
+      "pid": 17265,
+      "t": 0.007978368001204217
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.008047279001402785,
+      "user": 0.0
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.033300954000878846,
+      "user": 0.02
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.0585542720000376,
+      "user": 0.05
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.08379466900078114,
+      "user": 0.08
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.1090380660007213,
+      "user": 0.1
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.13428856000064116,
+      "user": 0.12
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.15955138300159888,
+      "user": 0.15
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.18479941100122232,
+      "user": 0.18
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.21004154800175456,
+      "user": 0.2
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.23529640300148458,
+      "user": 0.23
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.2605470190010237,
+      "user": 0.25
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.28579689800062624,
+      "user": 0.28
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.310996497000815,
+      "user": 0.3
+    },
+    {
+      "phase": "cpu",
+      "system": 0.0,
+      "t": 0.3362522200004605,
+      "user": 0.33
+    },
+    {
+      "output_exists": false,
+      "phase": "prekill",
+      "t": 0.33629447000021173
+    },
+    {
+      "phase": "signal_sent",
+      "t": 0.33630614200046693
+    },
+    {
+      "phase": "parent_reaped",
+      "pid_exists": false,
+      "t": 0.3375019950017304
+    },
+    {
+      "err": "",
+      "out": "",
+      "output_exists": true,
+      "phase": "child_exit",
+      "rc": 0,
+      "t": 2.0311218200004078
+    }
+  ],
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_parent_trace_20260920/TRACE.json",
+    "sha256": "8e79df7d8e90ce3644a90aaa9358a6f9ba36d144ec415fe6c4d1008aaa6752b4",
+    "size_bytes": 2776
+  }
+}

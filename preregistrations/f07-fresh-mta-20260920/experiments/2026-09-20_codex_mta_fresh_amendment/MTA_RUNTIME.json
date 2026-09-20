@@ -1,0 +1,60 @@
+{
+  "architecture": "x86_64",
+  "os_family": "Linux",
+  "os_release": "7.0.0-31-generic",
+  "packages": {
+    "numpy": "2.5.2",
+    "psutil": "7.2.2",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.18.0",
+    "shap": "0.52.0",
+    "threadpoolctl": "3.6.0",
+    "torch": "2.11.0+cpu"
+  },
+  "python": "3.12.3",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "threadpools": [
+    {
+      "architecture": "Haswell",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "threading_layer": "pthreads",
+      "user_api": "blas",
+      "version": "0.3.34.0.0"
+    },
+    {
+      "architecture": "Haswell",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "threading_layer": "pthreads",
+      "user_api": "blas",
+      "version": "0.3.31.dev"
+    },
+    {
+      "architecture": null,
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "threading_layer": null,
+      "user_api": "openmp",
+      "version": null
+    },
+    {
+      "architecture": null,
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "threading_layer": null,
+      "user_api": "openmp",
+      "version": null
+    }
+  ],
+  "torch_threads": 1
+}

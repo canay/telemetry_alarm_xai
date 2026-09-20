@@ -1,0 +1,97 @@
+{
+  "at": "2026-09-20T17:55:05.577477+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "schema_version": 3,
+  "freeze_id": "F07-FRESH-MTA-INTERNAL-20260920-V2",
+  "run_id": "2026-09-20_codex_mta_fresh_internal_replication_v1",
+  "status": "PROSPECTIVE_FROZEN_PUBLICATION_PENDING",
+  "lineage": {
+    "candidate": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PROTOCOL_CANDIDATE_V2.json",
+      "sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+      "size_bytes": 45893
+    },
+    "review": {
+      "path": "MD/03_experiments/FRESH_FREEZE_MTA_20260920_V2/REVIEW.json",
+      "sha256": "fabe0d016cf275bcb645e58cde8c5e3e724ea3b9913e50e9e45420238c23a60f",
+      "size_bytes": 19838,
+      "binds_candidate_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa"
+    },
+    "decision": {
+      "path": "MD/03_experiments/FRESH_FREEZE_MTA_20260920_V2/DECISION.json",
+      "sha256": "5d79f9b73d19ea2706c5e1e5777eecaf0c3dd75d9a75fac30807c49ff7e64bc8",
+      "size_bytes": 1165,
+      "binds_review_sha256": "fabe0d016cf275bcb645e58cde8c5e3e724ea3b9913e50e9e45420238c23a60f"
+    },
+    "final": {
+      "path": "MD/03_experiments/FRESH_FREEZE_MTA_20260920_V2/FINAL.json",
+      "sha256": "7a7fd7db6bf3329d21abb5f1b6fe11f53b5ea97fb8500184cca82c48406c9b91",
+      "size_bytes": 27289,
+      "binds_candidate_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+      "binds_decision_sha256": "5d79f9b73d19ea2706c5e1e5777eecaf0c3dd75d9a75fac30807c49ff7e64bc8"
+    }
+  },
+  "design_contract": {
+    "required_metrics": [
+      "muc_auc_0_40",
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "required_baselines": [
+      "score_only",
+      "native",
+      "occlusion",
+      "raw_nominal_deviation",
+      "feature_nominal_deviation",
+      "permuted_occlusion"
+    ],
+    "evaluator_semantics": {
+      "applicability": "not_applicable",
+      "not_applicable_reason": "Fixed-queue alarm ordering and constrained reference-event coverage; no physical intervention, failure-aversion mechanism, or averted-failure credit is modeled. The policy cannot alter generation, detector alarms or the reference universe."
+    }
+  },
+  "post_gate_continuation": {
+    "confirmatory_on_primary_fail": "forbidden",
+    "primary_verdict_immutable": true,
+    "exploratory_result_may_upgrade_primary_verdict": false,
+    "exploratory_result_may_raise_claim_level": false,
+    "hard_stops": [
+      "ethics",
+      "license",
+      "leakage",
+      "invalid_data",
+      "resource_ceiling",
+      "hash_drift"
+    ],
+    "exploratory_non_rescue": {
+      "authorization": "none"
+    },
+    "prospective_contract_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa"
+  },
+  "confirmatory_binding": {
+    "source_artifact_id": "prospective_candidate",
+    "source_artifact_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+    "threshold_id": "four_primary_Bonferroni_intervals_exclude_zero_in_prespecified_directions",
+    "threshold_value": "{\"expected_directions\": {\"C1\": 1, \"C2\": -1, \"C3\": 1, \"C4\": -1}, \"family_alpha\": 0.05, \"primary_ci_level\": 0.9875}",
+    "locked_final_sha256": "7a7fd7db6bf3329d21abb5f1b6fe11f53b5ea97fb8500184cca82c48406c9b91",
+    "reuse_policy": "forbidden",
+    "reused_artifacts": []
+  },
+  "timebase_binding": {
+    "design_timebase": "synthetic_sample_dt_30s_orbit_5700s"
+  },
+  "postrun_obligations_pending": [
+    "run_manifest",
+    "artifact_inventory_and_cardinality",
+    "produced_metrics_and_baselines",
+    "calibration_evidence",
+    "timebase_equivalence_evidence",
+    "terminal_status_and_registry"
+  ],
+  "scientific_execution_started": false,
+  "manuscript_A_F_complete": false
+}

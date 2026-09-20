@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+    "sha256": "0a35435538f5af6259bf15357ceb0a46bbf156fb5fb1d5ac4c8cd267bda770d8",
+    "size_bytes": 724
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "at": "2026-09-20T17:30:59.183413+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-mta-fresh-to-round-f-20260920",
+    "host": "mta-experiment-host",
+    "execution_host": "mta-cuda",
+    "package_root": "<experiment-home>/experiments/SCI-f07-telemetry_alarm_xai/2026-09-20/package",
+    "free_disk_bytes": 15944871936,
+    "available_ram_bytes": 29591392256,
+    "total_ram_bytes": 33411940352,
+    "logical_cpu_count": 28,
+    "physical_cpu_count": 20,
+    "prior_discovery_disk_observation_host": "Windows author machine; not an MTA measurement",
+    "minimum_disk_bytes": 10737418240,
+    "minimum_available_ram_bytes": 3221225472,
+    "scientific_compute": false,
+    "admission_pass": true
+  },
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+    "sha256": "a9b1c58d4f3d4cb2534060dc8f8b35e0a815dcc03e3ba086e2d12d4a11a7000f",
+    "size_bytes": 1401
+  }
+}

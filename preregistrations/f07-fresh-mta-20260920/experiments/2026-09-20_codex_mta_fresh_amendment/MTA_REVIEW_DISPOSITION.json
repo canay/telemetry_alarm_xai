@@ -1,0 +1,149 @@
+{
+  "at": "2026-09-20T17:37:54.581755+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "status": "ACCEPT_FOR_PROSPECTIVE_FREEZE",
+  "binds_candidate_sha256": "1ba8ac6bb9aea8e35921fc2850c71922bc53f4723a73051bde7fea7df442a94e",
+  "actual_review_result_ref": {
+    "path": ".orchestrator/runs/run-20260920-da3024e2db13/rounds/002-independent_mta_amendment_review/attempts/attempt-003/claude_result.json",
+    "sha256": "43005e1ec12737ba542d805adb713aa01afbdfa7128829f554e513f75a82a1d1",
+    "size_bytes": 44248
+  },
+  "unresolved_blockers": [],
+  "actual_review_status_preserved": "ACTION_REQUIRED",
+  "model_substitution": "Fable quota exhausted on two accounts; live MODEL_ROUTING.md standing quota policy authorizes Claude Opus 5 / max. Effective model recorded, no Fable attribution.",
+  "finding_dispositions": {
+    "MTA-01-launch-contract-field-gap": {
+      "status": "CLOSED",
+      "blocks_prospective_freeze": false,
+      "rationale": "Gerçek final üreticisi eksik sözleşme alanlarını oluşturur ve merkez prelaunch çıktısını kaydeder; yayından ve bilimsel başlatmadan önce actual bağ denetlenir. İnceleme öncesi olmayan final kanıtı varmış gibi gösterilmez.",
+      "evidence_refs": [
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+          "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+          "size_bytes": 13232
+        },
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/materialize_mta_lineage.py",
+          "sha256": "d7b3757d248d79303af34cdbbdabc731fb0a0943698096f08eef6bbe7b1e1d2a",
+          "size_bytes": 6926
+        },
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_NEGATIVE_BINDING/REPORT.json",
+          "sha256": "6e254c3040a69c599a129e3360a17344e8a03d7b3a0605db8ef2f5ef5722c108",
+          "size_bytes": 1933
+        }
+      ]
+    },
+    "MTA-02-resource-basis-host-mismatch": {
+      "status": "CLOSED",
+      "blocks_prospective_freeze": false,
+      "rationale": "Adaydaki 53 GB tarihsel Windows ölçümü olarak açıkça etiketlendi. Hash doğrulamalı yeni MTA disk/RAM ölçümü ve değişmeyen çalışma anı admission sınırları ayrı kayıttadır.",
+      "evidence_refs": [
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+          "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+          "size_bytes": 13232
+        },
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+          "sha256": "0a35435538f5af6259bf15357ceb0a46bbf156fb5fb1d5ac4c8cd267bda770d8",
+          "size_bytes": 724
+        }
+      ]
+    },
+    "MTA-03-receipt-attribution-and-failure-control-labeling": {
+      "status": "CLOSED",
+      "blocks_prospective_freeze": false,
+      "rationale": "Eski rapor baytları korundu. Gerçekte yürütülen MTA kaynakları ve test bootstrap eşlemesi yeni kapak kaydına bağlandı; başarısız iki kontrol korunmuş failure control olarak etiketlendi.",
+      "evidence_refs": [
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+          "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+          "size_bytes": 13232
+        },
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_TECHNICAL_CUSTODY.json",
+          "sha256": "da11f4704756f113a4fc349d073540727ba46fd2f9e6ddf9a389090ff841be29",
+          "size_bytes": 2124
+        },
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/mta_guard_checks.py",
+          "sha256": "48e9986c0a16e5a72cd2f4e7873d68cb89ea39081a6e786bfb30905a6f623919",
+          "size_bytes": 2243
+        }
+      ]
+    },
+    "MTA-04-central-prelaunch-receipt-publication-class": {
+      "status": "CLOSED",
+      "blocks_prospective_freeze": false,
+      "rationale": "İncelemenin izin verdiği hash-only özel sınıf seçildi. Yazar makinesinin merkez doğrulama ve konuşma yetki kayıtları bilimsel paketten ayrı idari kanıttır; exact hash ve bağımlılık kamuda açıklanır.",
+      "evidence_refs": [
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+          "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+          "size_bytes": 13232
+        }
+      ]
+    },
+    "MTA-05-priority-subprocess-unrepaired-watchdog": {
+      "status": "NONBLOCKING_LIMIT",
+      "blocks_prospective_freeze": false,
+      "rationale": "İncelemenin nonblocking bulduğu üçüncü interpreter kapsamı açıkça sınırlandı. Tüm süreçlere onarım uygulanmış gibi iddia edilmez; bilimsel kaynaklar ve partial-output koruması değişmez.",
+      "evidence_refs": [
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+          "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+          "size_bytes": 13232
+        }
+      ]
+    },
+    "MTA-06-local-manifest-writer-equivalence-unverified": {
+      "status": "CLOSED",
+      "blocks_prospective_freeze": false,
+      "rationale": "Gerçek MTA sentetik RUN_MANIFEST hash ile alındı. Ölçülmüş zarf merkezi writer build_record/validate_envelope ile aynı çekirdek alanları üretiyor; gerçek merkez manifest-check PASS verdi.",
+      "evidence_refs": [
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+          "sha256": "308e94bd465b56800ecd00936ed385ec18e50968beff99ed70173bc16d66bf8b",
+          "size_bytes": 1956
+        },
+        {
+          "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920_inventory/RUN_MANIFEST.json",
+          "sha256": "867f3a1886c1db0bae5c5430cb56d6a0b99ecf64487969c2b09c07873d091548",
+          "size_bytes": 2152
+        }
+      ]
+    }
+  },
+  "supplemental_evidence_refs": [
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+      "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+      "size_bytes": 13232
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+      "sha256": "308e94bd465b56800ecd00936ed385ec18e50968beff99ed70173bc16d66bf8b",
+      "size_bytes": 1956
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+      "sha256": "0a35435538f5af6259bf15357ceb0a46bbf156fb5fb1d5ac4c8cd267bda770d8",
+      "size_bytes": 724
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920_inventory/RUN_MANIFEST.json",
+      "sha256": "867f3a1886c1db0bae5c5430cb56d6a0b99ecf64487969c2b09c07873d091548",
+      "size_bytes": 2152
+    }
+  ],
+  "operational_closure_addendum_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+    "sha256": "bdd6ea175cb5af77fac2eab1671ce0a17e084e7692217ce4a261a0409f993a4b",
+    "size_bytes": 13232
+  },
+  "scientific_compute": false,
+  "historical_pass_inherited": false
+}

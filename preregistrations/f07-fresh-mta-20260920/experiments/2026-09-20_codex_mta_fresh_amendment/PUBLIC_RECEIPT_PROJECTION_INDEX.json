@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-20T17:56:20.721417+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "superseded_private_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+    "sha256": "754cc80ad48edfc0ff1f6b1f072ca745c030b1950fa1ca385e4be4aee2235c6a",
+    "size_bytes": 2465
+  },
+  "published_corrected_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_LIFECYCLE_PUBLIC_VIEW.json",
+    "sha256": "ea924a95844db5bcf0117e6856b36f1fde65dae13fe628a9c01629240829022c",
+    "size_bytes": 3031
+  },
+  "scope": "Administrative path keys only; original immutable receipt and earlier projections are retained privately."
+}

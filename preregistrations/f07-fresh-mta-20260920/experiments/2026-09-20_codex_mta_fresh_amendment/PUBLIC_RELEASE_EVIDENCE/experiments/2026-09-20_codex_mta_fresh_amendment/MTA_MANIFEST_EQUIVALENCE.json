@@ -1,0 +1,60 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+    "sha256": "308e94bd465b56800ecd00936ed385ec18e50968beff99ed70173bc16d66bf8b",
+    "size_bytes": 1956
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "at": "2026-09-20T17:37:54.566202+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-mta-fresh-to-round-f-20260920",
+    "status": "PASS_MEASURED_ENVELOPE_AND_CENTRAL_CONSUMER",
+    "fixture_ref": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920_inventory/RUN_MANIFEST.json",
+      "sha256": "867f3a1886c1db0bae5c5430cb56d6a0b99ecf64487969c2b09c07873d091548",
+      "size_bytes": 2152
+    },
+    "central_writer_sha256": "98937469bf5cfb3fdc8c20557d2042ad6ab66fcfd27847c753b9b45f5c4beef3",
+    "compared_keys": [
+      "run_id",
+      "environment",
+      "hostname"
+    ],
+    "measured_environment": {
+      "arch": "x86_64",
+      "host": "mta-experiment-host",
+      "os_family": "linux",
+      "python": "3.12.3"
+    },
+    "required_fields_missing": [],
+    "creation_time_validation": "UTC format and subsecond agreement; central comparison creation time necessarily later, not required equal",
+    "extra_adapter_fields": "Expected experiment lifecycle fields; no central code installed on MTA",
+    "central_consumer": {
+      "command": [
+        "<author-profile>\\miniforge3\\python.exe",
+        "<controlled-workspace>\\AkademikAkisMerkezi\\Akis1_AnaPipeline\\tools\\experiment_lineage_preflight.py",
+        "manifest-check",
+        "<controlled-workspace>\\CALISMALAR\\20_TASLAK_CALISMALAR\\SCI-f07-telemetry_alarm_xai",
+        "--manifest",
+        "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920_inventory/RUN_MANIFEST.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"arch\": \"x86_64\",\n  \"code_sha256\": \"f906967088f1c5c91cb5a50958fbb35abb86511a067e85ee813b93ab5d717fa4\",\n  \"host\": \"mta-experiment-host\",\n  \"os_family\": \"linux\",\n  \"python\": \"3.12\"\n}\n",
+      "stderr": ""
+    },
+    "scientific_compute": false
+  },
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+    "sha256": "5852e6308fb382beb1d9081268b5745b62ee3577f479dce10ea97f82611c6dd7",
+    "size_bytes": 2619
+  }
+}

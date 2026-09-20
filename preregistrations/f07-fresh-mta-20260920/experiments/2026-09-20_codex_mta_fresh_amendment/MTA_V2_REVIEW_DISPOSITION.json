@@ -1,0 +1,43 @@
+{
+  "at": "2026-09-20T17:55:05.564538+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "status": "ACCEPT_FOR_PROSPECTIVE_FREEZE",
+  "binds_candidate_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+  "actual_review_result_ref": {
+    "path": ".orchestrator/runs/run-20260920-85e1c836864b/rounds/002-independent_mta_metadata_delta_review/attempts/attempt-003/claude_result.json",
+    "sha256": "4e88d4410f643c1b959066b1bcf84cec20db0acceda0176e3cb81b5a988fe9de",
+    "size_bytes": 35982
+  },
+  "unresolved_blockers": [],
+  "prior_actual_runtime_review_ref": {
+    "path": "MD/03_experiments/FRESH_FREEZE_MTA_20260920/REVIEW.json",
+    "sha256": "e3997fbb0c0cf0aaef8497ffec8ede783c6d10e691c2bab34d9989b02e0e30bd",
+    "size_bytes": 31427
+  },
+  "prior_six_finding_disposition_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_DISPOSITION.json",
+    "sha256": "70158ec61268ccd2fbde13b4059deae31f86f7e72ec4a8b035853a51675165fb",
+    "size_bytes": 7658
+  },
+  "metadata_delta_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PUBLIC_METADATA_DELTA.json",
+    "sha256": "b102a47e01c23e0fea25a17f2425aa90768f23cbfea3549080fb02041341144e",
+    "size_bytes": 1987
+  },
+  "public_closure_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+    "sha256": "156fd816cae4eeedee768d80490b877a8bba8d1758aba2eaf0fa396906ffb904",
+    "size_bytes": 14588
+  },
+  "v2_closure_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_V2_CLOSURE.json",
+    "sha256": "b737e875b66823440d28cb454f6700c98ce6a038328bfc0671364b9ef9bbd91c",
+    "size_bytes": 4543
+  },
+  "compute_gate": "New V2 central prelaunch receipt plus exact public binding required before any scientific unit",
+  "scientific_code_changes": 0,
+  "scientific_compute": false,
+  "historical_manuscript_pass_inherited": false
+}

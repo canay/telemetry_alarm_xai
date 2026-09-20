@@ -1,0 +1,59 @@
+{
+  "at": "2026-09-20T17:53:29.801125+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "views": {
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+      "sha256": "156fd816cae4eeedee768d80490b877a8bba8d1758aba2eaf0fa396906ffb904",
+      "size_bytes": 14588
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+      "sha256": "a598fb72148576b22ab2b3f1ccbcc4963c748be88ace628c58afb995f14dcb45",
+      "size_bytes": 2947
+    },
+    "MD/03_experiments/FRESH_MTA_DURABILITY_20260920.md": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/MD/03_experiments/FRESH_MTA_DURABILITY_20260920.md",
+      "sha256": "d570aff1109d26cb25dadf4803276555a5e9a751ad3bdc6cacf4d34d0be53909",
+      "size_bytes": 10232
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920/REPORT.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920/REPORT.json",
+      "sha256": "9b489d7ac84fcdc7de9abc65887d99ce0c12e17e814b0d96d02648bd406e52d2",
+      "size_bytes": 2000
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+      "sha256": "754cc80ad48edfc0ff1f6b1f072ca745c030b1950fa1ca385e4be4aee2235c6a",
+      "size_bytes": 2465
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_integration_20260920/REPORT.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_integration_20260920/REPORT.json",
+      "sha256": "749f522f300d95e86450a4ab0e1dc1d0d2aef8e6d193dcf570cbe01a7cf16a14",
+      "size_bytes": 2456
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_GUARD_CHECKS/REPORT.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_GUARD_CHECKS/REPORT.json",
+      "sha256": "5847b462e9eeba5bbe279a5a2e999482644b9ad9e6d7120b7f398013995a816f",
+      "size_bytes": 1743
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_parent_trace_20260920/TRACE.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_parent_trace_20260920/TRACE.json",
+      "sha256": "ba7aad6b44de19e322e4e8e1d5a9d0b5fea0bd7a88b2c00dbd573204e0495d5b",
+      "size_bytes": 3213
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/WATCHDOG_PROBE.jsonl": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/WATCHDOG_PROBE.jsonl",
+      "sha256": "06f0f98bed4e45060838571a5c8a6e5919ae65e07b584ba5eeec08d74ffcc4ba",
+      "size_bytes": 701
+    },
+    "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json": {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+      "sha256": "69d3a2efbd3e00dfd10ccc6efedae795cc28eee54ad8f9f86f61bb4125498b89",
+      "size_bytes": 1810
+    }
+  },
+  "scientific_source_changes": 0
+}

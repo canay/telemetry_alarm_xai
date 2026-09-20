@@ -1,0 +1,56 @@
+{
+  "at": "2026-09-20T17:20:43.621119+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "status": "PASS_SYNTHETIC_MTA_BINDING_REJECTIONS",
+  "scope": "read_ref is injected with synthetic lineage; actual public positive path remains untested before publication",
+  "scientific_compute": false,
+  "checks": [
+    {
+      "case": "wrong_seed_set",
+      "rejected": true,
+      "reason": "Exact prospective MTA configuration required"
+    },
+    {
+      "case": "wrong_freeze_identity",
+      "rejected": true,
+      "reason": "Wrong MTA freeze identity"
+    },
+    {
+      "case": "broken_review_lineage",
+      "rejected": true,
+      "reason": "MTA independent lineage mismatch"
+    },
+    {
+      "case": "unresolved_blocker",
+      "rejected": true,
+      "reason": "MTA independent lineage mismatch"
+    },
+    {
+      "case": "missing_adapter_source",
+      "rejected": true,
+      "reason": "MTA runtime source inventory mismatch"
+    },
+    {
+      "case": "runtime_drift",
+      "rejected": true,
+      "reason": "Reviewed MTA runtime differs from launch"
+    },
+    {
+      "case": "central_validation_failed",
+      "rejected": true,
+      "reason": "Missing exact local central prelaunch receipt"
+    },
+    {
+      "case": "wrong_contract_receipt",
+      "rejected": true,
+      "reason": "Missing exact local central prelaunch receipt"
+    }
+  ],
+  "sources": {
+    "experiments/2026-09-20_codex_mta_fresh_amendment/mta_owned_worker.py": "d25c54b309906727f30a3c8f5d2c9955ed9d90299d8eb8b7fd828dd697065ae2",
+    "experiments/2026-09-20_codex_mta_fresh_amendment/mta_process_tree.py": "dd5da9cf4e10a95fe639da3df6894e8fad79ab1a372e8b8de4bcfdb5fbae7bd3",
+    "experiments/2026-09-20_codex_mta_fresh_amendment/mta_supervisor.py": "4195fc675d4b9a23dea969f03df157503fe436a86e3a74ede44949bd8decbaa8"
+  }
+}

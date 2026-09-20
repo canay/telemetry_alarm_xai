@@ -1,0 +1,27 @@
+{
+  "at": "2026-09-20T17:55:05.573282+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "schema_version": 1,
+  "status": "ACCEPT_FOR_PROSPECTIVE_FREEZE",
+  "binds_candidate_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+  "binds_review_sha256": "fabe0d016cf275bcb645e58cde8c5e3e724ea3b9913e50e9e45420238c23a60f",
+  "unresolved_blockers": [],
+  "disposition_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_V2_REVIEW_DISPOSITION.json",
+    "sha256": "0a9ebb57b580ea25235dbe3f406dc5ff073633979e8d4fed680559a229212f24",
+    "size_bytes": 2063
+  },
+  "v2_closure_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_V2_CLOSURE.json",
+    "sha256": "b737e875b66823440d28cb454f6700c98ce6a038328bfc0671364b9ef9bbd91c",
+    "size_bytes": 4543
+  },
+  "scientific_results_available": false,
+  "prior_private_disposition_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_DISPOSITION.json",
+    "sha256": "70158ec61268ccd2fbde13b4059deae31f86f7e72ec4a8b035853a51675165fb",
+    "size_bytes": 7658
+  }
+}

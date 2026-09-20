@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-20T17:11:48.172093+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "status": "HASH_VERIFIED_MTA_SYNTHETIC_ONLY",
+  "scientific_compute": false,
+  "receipts": [
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920/REPORT.json",
+      "sha256": "fc3c1de066cb3309c555b08e5eb51d576b9f30267fa8d3f0e0c782d525f61ef9",
+      "size_bytes": 791
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_lifecycle_v3_20260920_REPORT.json",
+      "sha256": "04b1ea6259bf0dff6a84bd53e7ab53201e57560c21ea5f873657ca801802fb1c",
+      "size_bytes": 1335
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_integration_20260920/REPORT.json",
+      "sha256": "a0e9f08d2d0531821e8c9006e9d37ba00fca7890ed22ebdd049c2488eb31f03d",
+      "size_bytes": 1310
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_GUARD_CHECKS/REPORT.json",
+      "sha256": "4f3ce2b8707f89ef6b7ee47672f648f6b728e44f41a90a7f5e0310403a8fcdcf",
+      "size_bytes": 614
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_parent_trace_20260920/TRACE.json",
+      "sha256": "2a828122d92d12a8e5ee3b6911b2139cdb5cd13509b7c4adf754069459f8ad8f",
+      "size_bytes": 1312
+    },
+    {
+      "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/WATCHDOG_PROBE.jsonl",
+      "sha256": "8a1be22c7a390ba791a959cbe7e629477a17c0298d566be220eafa1771267c62",
+      "size_bytes": 354
+    }
+  ],
+  "failed_controls_preserved": true,
+  "repair": "MTA process-local Linux task/children traversal replaces system-wide descendant scan; scientific sources unchanged."
+}

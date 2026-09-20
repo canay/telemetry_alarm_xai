@@ -1,0 +1,71 @@
+{
+  "at": "2026-09-20T17:55:05.561826+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "candidate_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PROTOCOL_CANDIDATE_V2.json",
+    "sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+    "size_bytes": 45893
+  },
+  "review_result_ref": {
+    "path": ".orchestrator/runs/run-20260920-85e1c836864b/rounds/002-independent_mta_metadata_delta_review/attempts/attempt-003/claude_result.json",
+    "sha256": "4e88d4410f643c1b959066b1bcf84cec20db0acceda0176e3cb81b5a988fe9de",
+    "size_bytes": 35982
+  },
+  "finding_dispositions": {
+    "F07-V2-01-prelaunch-receipt-binds-superseded-candidate": {
+      "status": "CLOSED_BY_PROSPECTIVE_V2_MATERIALIZATION",
+      "blocks_compute_until_receipt": true,
+      "action": "This writer creates new candidate-V2/review/decision/final/schema-v3 contract, then actually runs the central prelaunch validator. No launch configuration exists before the new PASS receipt. The old V1 contract/receipt is preserved as superseded history, never a launch substitute.",
+      "writer_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/materialize_mta_lineage_v2.py",
+        "sha256": "12dd4d0dcaad97cfd0d735b2be16c8e85a68a97eb958144672c8cc75f097bca9",
+        "size_bytes": 9764
+      },
+      "superseded_v1_receipt_ref": {
+        "path": "MD/03_experiments/FRESH_FREEZE_MTA_20260920/PRELAUNCH_VALIDATION.json",
+        "sha256": "bfe8d4432a009d462f5a9da0ab680af5b471afeb9314d34c1adea577040bd4f4",
+        "size_bytes": 1343
+      }
+    },
+    "F07-V2-02-measured-mta-headroom-does-not-clear-mta-02": {
+      "status": "KNOWN_RESOURCE_MARGIN_ACCEPTED_WITH_STOP_AND_PRESERVE",
+      "measured_free_disk_bytes": 15944871936,
+      "required_floor_bytes": 10737418240,
+      "usable_headroom_bytes": 5207453696,
+      "model_artifact_projection_bytes": 4198748888,
+      "additional_artifact_planning_allowance_bytes": 536870912,
+      "planning_total_bytes": 4735619800,
+      "remaining_planning_margin_bytes": 471833896,
+      "qualification": "The additional 0.5 GiB is a planning allowance for policy JSON, checkpoints, heartbeat/logs and aggregate, not a measured upper bound or disk guarantee. Reviewer-allowed stop-and-preserve consequence is accepted within existing MTA execution authority; source/resource limits unchanged. Admission is remeasured before every unit. No unrelated files deleted.",
+      "historical_candidate_53GB_measurement": "Windows author workstation only; explicitly labeled in the final operational closure view, not MTA headroom.",
+      "resource_receipt_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_RESOURCE_OBSERVATION.json",
+        "sha256": "69d3a2efbd3e00dfd10ccc6efedae795cc28eee54ad8f9f86f61bb4125498b89",
+        "size_bytes": 1810
+      }
+    },
+    "F07-V2-03-mta-06-closed-label-wider-than-evidence": {
+      "status": "LAUNCH_ENVELOPE_VERIFIED_POSTRUN_VALIDATION_PENDING",
+      "scope": "Actual measured MTA fixture core envelope matches the central writer and manifest-check passed. Full scientific schema-v3 closure, registry, timebase and artifact inventory remain postrun obligations; the earlier blanket CLOSED label is narrowed here.",
+      "evidence_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+        "sha256": "a598fb72148576b22ab2b3f1ccbcc4963c748be88ace628c58afb995f14dcb45",
+        "size_bytes": 2947
+      }
+    },
+    "F07-V2-04-public-redaction-scope-declares-more-than-applied": {
+      "status": "CLOSED_PUBLIC_VIEW_ONLY_PSEUDONYMIZATION",
+      "scope": "Release views now pseudonymize the MTA hostname as well as user/workspace paths. Equivalence validation used the immutable original measured manifest, not this public view; no provenance field in the original is changed.",
+      "evidence_index_ref": {
+        "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_RELEASE_EVIDENCE_INDEX.json",
+        "sha256": "3946cc87d9b091638a860be06d936679f72366679fe7ad176136a349d18f3d56",
+        "size_bytes": 4805
+      }
+    }
+  },
+  "scientific_compute": false,
+  "scientific_source_changes": 0,
+  "review_actual_status": "ACTION_REQUIRED"
+}

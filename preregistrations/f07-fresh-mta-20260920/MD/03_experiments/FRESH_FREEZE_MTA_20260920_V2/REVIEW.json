@@ -1,0 +1,138 @@
+{
+  "at": "2026-09-20T17:55:05.567728+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "schema_version": 1,
+  "status": "ACTION_REQUIRED",
+  "binds_candidate_sha256": "3985adba9135beae76d819beef785cf81ca20fcfed89b0ce1f3ad86cbc2a0dfa",
+  "scope": "Actual independent V2 metadata delta and verification of prior runtime-review dispositions",
+  "actual_provider_result_ref": {
+    "path": ".orchestrator/runs/run-20260920-85e1c836864b/rounds/002-independent_mta_metadata_delta_review/attempts/attempt-003/claude_result.json",
+    "sha256": "4e88d4410f643c1b959066b1bcf84cec20db0acceda0176e3cb81b5a988fe9de",
+    "size_bytes": 35982
+  },
+  "model_selection": {
+    "step": "independent_mta_metadata_delta_review",
+    "round_number": 2,
+    "agent": "claude",
+    "requested_model": "",
+    "requested_effort": "",
+    "effective_model": "claude-opus-5",
+    "effective_effort": "max",
+    "model_source": "account_chain_quota_continuation",
+    "effort_source": "account_chain_quota_continuation",
+    "observed_models": [
+      "claude-opus-5"
+    ],
+    "observed_effort": "not_reported",
+    "attested": true
+  },
+  "review": {
+    "schema_version": "1.0",
+    "status": "ACTION_REQUIRED",
+    "summary": "V2-BOUND HÜKÜM: KOŞULLU KABUL (prospective freeze). Bağlı aday `experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PROTOCOL_CANDIDATE_V2.json`, SHA256 3985adba…c2a0dfa, 45893 B — manifest ve `MTA_PUBLIC_METADATA_DELTA.json:new_candidate_ref` ile üçlü eşleşti. Bilimsel içerikte sıfır değişiklik doğrulandı; yeni bilimsel kusur bulunmadı. Bir somut prelaunch blocker açık (F07-V2-01).\n\nDELTA (ölçüt 1 — doğrulandı). V1→V2 arasında bağımsız anahtar-anahtar karşılaştırma tam olarak dört farkı verdi: `at` (17:11:48.172093 → 17:42:36.270501), `protocol_ref` (…_20260920.md a5264f7d/16412 → …_PUBLIC_V2.md ee0af425/17148; ikisi de manifest ile birebir), `amendment.remote_package_root` (mutlak uzak kök → `<experiment-home>` takma adı) ve yeni `publication_metadata_revision` bloğu. Başka hiçbir üst anahtar değişmedi. 20 runtime kaynak hash'inin tamamı satır satır karşılaştırıldı: 20/20 aynı ve kapanış ekindeki `actual_runtime_source_sha256` ile de aynı. Seed 1000–1039 (40), altı model ve beş-model birincil aile, altı baseline, 12 profil, üç hedef, muc_auc_0_40 + C1–C4 tanım/yön/yorum, `inference` (n=40, ddof=1, df=39, %98.75, Bonferroni-4, secondary %95), `evaluator_semantics`, `post_gate_continuation`, `hard_stop_triggers`, `resources` (1 worker, 1 thread, 10 GiB disk, 3 GiB RAM, 4 GiB RSS, 900 s, 12 h, 0.5 s), `planned_artifacts` (400/4920/51840, UNITS e8e80674), `resource_basis` ve `prior_confirmatory_attempts` değişmedi. Protokol MD farkı da yalnız iki kalem: tek \"MTA kökü\" satırının takma adlandırılması ve sonda eklenen idari yol-gösterimi bölümü; +736 B bu ikisiyle tutarlı, gizli içerik değişimi yok. `MTA_PUBLIC_METADATA_DELTA.json` beyanları (4 anahtar, `unchanged_source_count: 20`, `scientific_design_equal: true`, `changed_amendment_fields: [\"remote_package_root\"]`) bağımsız diff ile tam ve doğru; içindeki beş ref (review, disposition, closure addendum, prior prelaunch, iki aday) manifest ile byte-exact eşleşti.\n\nDİSPOZİSYON (ölçüt 2 — büyük ölçüde karşılandı). MTA-01 gerçek yazıcı + negatif bağlama raporuna, MTA-03 `receipt_roles` (per-receipt `role`/`repaired_adapter_installed`/`produced_by`) + `guard_receipt_attribution` + `runtime_command_mapping`'e, MTA-04 incelemenin açıkça izin verdiği `private_hash_only_refs` dalına, MTA-05 `repair_scope_exclusions` + public protokolün yeni kapsam cümlesine bağlanmış; dördü de kabul edilebilir. Değişmez hash'li `MTA_TECHNICAL_CUSTODY.json`'ı bozmamak için etiketlemenin ayrı bir kapak kaydına alınması savunulabilir mühendislik tercihidir. Ölçülmüş MTA kaynak makbuzu ve gerçek manifest-writer eşdeğerlik kanıtı fiilen mevcut. Disposition'ın `actual_review_status_preserved: \"ACTION_REQUIRED\"` ile incelemenin hükmünü yeniden yazmaması doğru. Kalan üç kalem F07-V2-02/03/04'te; hiçbiri yeni bilim, yeni eşik veya yazar kararı gerektirmez.\n\nKAPSAM/PROVENANCE. Salt-okunur, text-only; komut çalıştırılmadı, dosya yazılmadı, kaynak kodu yeniden denetlenmedi, tamamlanmış hiçbir deney tekrarlanmadı, endpoint/sonuç verisine erişilmedi. Sağlayıcı Claude, model claude-opus-5; efor mekanik doğrulanamadı (unknown). Cevapta yazar dosya sistemi yolları ve makine kimlikleri kullanılmadı.",
+    "findings": [
+      {
+        "id": "F07-V2-01-prelaunch-receipt-binds-superseded-candidate",
+        "severity": "P1",
+        "classification": "verified",
+        "confidence": 0.9,
+        "description": "Pakette tek merkez PASS'i olan prelaunch makbuzu, V2'nin değil V1'in hash'ine bağlı ve V2'den ~4.5 dakika ÖNCE üretilmiş. V2 kendini V1'in halefi ilan ediyor (`publication_metadata_revision.previous_candidate_ref` → V1, hash+boyut birebir), delta dosyası da V1'in yayımlanamamasının gerekçesini yazıyor. Yani freeze/launch anında geçerli olması gereken merkez doğrulaması, artık aday olmayan bir belgeyi doğruluyor. Prior review'ın alıntıladığı launcher kodu makbuzu yalnız `status` üzerinden kontrol ediyor; iki dal da kötü: candidate_sha256 karşılaştırılmıyorsa bayat bir makbuzla sessizce başlatılır (provenance kusuru), karşılaştırılıyorsa fail-closed durur ve 12 saatlik pencere yanar. Ayrıca makbuz bir de `freeze_contract_sha256` taşıyor; sözleşme V2'ye yeniden kurulduğunda o bağ da bayatlar. Allowlist'teki hiçbir artefakt V2'ye bağlı bir freeze sözleşmesi ya da yeniden koşulmuş bir makbuz kaydetmiyor; delta dosyası makbuzu zaten `prior_prelaunch_ref` diye adlandırıyor ve aynı nesnede `historical_pass_inherited: false` beyan ediyor — bu iki şey launch anında birlikte doğru olamaz. Bilimsel geçerliği etkilemez; temiz prospective freeze'i engeller.",
+        "evidence": "MD/03_experiments/FRESH_FREEZE_MTA_20260920/PRELAUNCH_VALIDATION.json: \"candidate_sha256\": \"1ba8ac6b…f442a94e\", \"freeze_contract_sha256\": \"ca65084d…5cd2e2088\", \"at\": \"2026-09-20T17:38:03.911619+00:00\". Aday V2: \"at\": \"2026-09-20T17:42:36.270501+00:00\", sha 3985adba…bc2a0dfa. Aynı klasörde REVIEW.json: \"binds_candidate_sha256\": \"1ba8ac6b…\". MTA_PUBLIC_METADATA_DELTA.json: \"prior_prelaunch_ref\": {… bfe8d443…} ile birlikte \"historical_pass_inherited\": false.",
+        "recommended_action": "Dondurmadan önce freeze sözleşmesini V2 üzerine yeniden kur ve merkez prelaunch doğrulayıcısını yazar makinesinde YENİDEN koş; yeni makbuz V2'nin candidate_sha256'sını ve yeni freeze_contract_sha256'yı taşısın, final lineage'a (candidate→review→decision→final) o makbuz bağlansın. Eski V1 makbuzu silinmez, tarihsel kayıt olarak korunur ve final belgede açıkça 'superseded' etiketlenir. Deterministik kalemdir: yeni bilim, yeni eşik veya yazar kararı gerekmez."
+      },
+      {
+        "id": "F07-V2-02-measured-mta-headroom-does-not-clear-mta-02",
+        "severity": "P2",
+        "classification": "verified",
+        "confidence": 0.85,
+        "description": "MTA-02'yi kapatan ölçüm artık var, fakat ölçümün kendisi kapatmaya çalıştığı riski gidermiyor. Ölçülen boş disk ile supervisor'ın her birimden önce uyguladığı taban arasındaki KULLANILABİLİR pay 5.207.453.696 B'dir. Adayın kendi doğrusal projeksiyonu 4.198.748.888 B olup bu payın ~%81'ini tüketir — ve bu projeksiyon adayın kendi ifadesiyle yalnız model artefaktlarıdır, disk garantisi değildir. Üstüne `planned_artifacts.additional_artifacts` (birim başına checkpoint + aggregate, deneme başına komut/stdout/exit logu, heartbeat, RUN_MANIFEST, terminal_status, envanter), 4920 birim çıktısı ve 51.840 policy satırı gelir; projeksiyonun dayandığı discovery koşumunda 1141 artefakt vardı ve policy fazı hiç yoktu. Sonuç, prior review'ın adını koyduğu maliyettir: ileri bir birimde disk reddi 12 saatlik sayacı yakar ve adayın kendi `deadline_exhaustion_action` kuralı gereği devam yeni bir incelenmiş+yayımlanmış amendment gerektirir. İlgili ikinci kalem: adayın `resource_basis` bloğu (delta sözleşmesi gereği doğru biçimde) değişmeden kaldığı için içindeki host'a özgü 53 GB hâlâ etiketsizdir; 'tarihsel Windows ölçümü' etiketi yalnız adayın işaret etmediği kapak kaydındadır.",
+        "evidence": "MTA_REVIEW_CLOSURE_ADDENDUM.json → resource_basis.current_mta_observation: \"free_disk_bytes\": 15944871936, \"minimum_disk_bytes\": 10737418240, \"admission_pass\": true. Aday V2 → resource_basis: \"linear_40_seed_artifact_bytes\": 4198748888, \"artifact_count\": 1141, \"timing_and_volume_limitation\": \"Linear model-only/time and artifact-size projections; not a full-run ETA, disk guarantee…\", \"free_disk_bytes_at_candidate_creation\": 53231251456. planned_artifacts: \"unit_output_count\": 4920, \"policy_result_rows\": 51840.",
+        "recommended_action": "Adaya dokunma (dokunmak V3 ve yeni inceleme doğurur). Bunun yerine final lineage/decision kaydına tek satırlık headroom mutabakatı yaz: ölçülen kullanılabilir pay, model-dışı artefaktlar dahil beklenen hacim ve iki sonuçtan hangisinin kabul edildiği — ya koşum öncesi disk açılır/paket kökü taşınır, ya risk ve 'stop-and-preserve' sonucu açıkça kabul edilir. Aynı kayıtta adayın 53 GB değerinin tarihsel Windows ölçümü olduğunu ve etiketin hangi kapak kaydında durduğunu göster. Tavanlar (10 GiB / 3 GiB / 4 GiB RSS / 900 s / 12 h) değişmez."
+      },
+      {
+        "id": "F07-V2-03-mta-06-closed-label-wider-than-evidence",
+        "severity": "P3",
+        "classification": "verified",
+        "confidence": 0.8,
+        "description": "MTA-06 için gerçek ölçüm üretilmiş ve kanıt dosyası kendi kapsamını dürüstçe adlandırıyor: zarf + BİR merkez tüketicisi. Karşılaştırma üç çekirdek anahtar üzerinde yapılmış, zorunlu alan eksiği yok ve gerçek merkez tüketicisi sentetik MTA manifestini exit 0 ile kabul etmiş — yani launch tarafındaki risk fiilen kapanmış. Ancak orijinal bulgunun adını koyduğu risk KOŞU SONRASI kapanış yoluydu (schema-v3 sertifikası, registry, timebase, artefakt envanteri) ve o yol hiçbir artefaktta ölçülmedi. Disposition rationale'ı 'aynı çekirdek alanları' diyerek doğru kapsamı yazıyor, fakat kalem `status: \"CLOSED\"` ile kanıttan bir adım geniş etiketlenmiş. Akis2 kapanış-kapsam kuralı, teşhisten dar bir kapanışın kalıntıyı açıkça taşımasını ister. Pratik önemi şudur: bu kalıntı gerçekleşirse bedeli koşu bittikten sonra, tamamlanmış bir 12 saatlik koşunun sertifikalandırılması aşamasında ödenir.",
+        "evidence": "MTA_MANIFEST_EQUIVALENCE.json: \"status\": \"PASS_MEASURED_ENVELOPE_AND_CENTRAL_CONSUMER\", \"compared_keys\": [\"run_id\",\"environment\",\"hostname\"], \"required_fields_missing\": [], central_consumer → experiment_lineage_preflight.py manifest-check, \"exit_code\": 0. MTA_REVIEW_DISPOSITION.json → MTA-06: \"status\": \"CLOSED\", rationale \"…aynı çekirdek alanları üretiyor\".",
+        "recommended_action": "Final lineage'da MTA-06'yı 'launch tarafı için kapalı, kapanış yolu için kalıntı açık' biçiminde yeniden etiketle ve kalıntıyı tek cümleyle adıyla yaz; ya da aynı fixture manifest üzerinde kapanış tarafındaki tüketiciyi yazar makinesinde bir kez koşup sonucu mevcut eşdeğerlik kaydına ekle. Bilimsel içerik değişmez."
+      },
+      {
+        "id": "F07-V2-04-public-redaction-scope-declares-more-than-applied",
+        "severity": "P3",
+        "classification": "verified",
+        "confidence": 0.85,
+        "description": "V2 revizyonunun tek amacı kamuya açık idari yol temizliğidir; bu yüzden temizliğin kendi beyanıyla tutarlı olması bu turun kapsamındadır. Kapanış ekinin kamuya açık projeksiyonu, kapsamını 'yerel kullanıcı/çalışma kökleri VE yazar makine etiketleri' olarak ilan ediyor ve Windows iş istasyonu etiketini takma adla, uzak kökü `<experiment-home>` ile değiştiriyor. Buna karşılık aynı projeksiyonda yürütme düğümünün tam makine adı (`content.resource_basis.current_mta_observation.host`) olduğu gibi duruyor; aynı ad manifest-eşdeğerlik görünümünde de (`measured_environment.host`) kalıyor. Orada kalması teknik olarak doğrudur, çünkü hostname kanonik RUN_MANIFEST zarfının zorunlu provenance alanıdır ve silinmesi eşdeğerliği bozar. Kusur temizlikte değil, BEYANDAdır: ilan edilen kapsam uygulanandan geniştir, ve bir dış denetçi bunu tutarsızlık olarak okur. Projeksiyonun geri kalanı sadıktır: kapak `at` değeri revizyon anını, içerik `at` değeri özgün anı taşıyor ve özgün hash korunmuş.",
+        "evidence": "PUBLIC_EVIDENCE/…/MTA_REVIEW_CLOSURE_ADDENDUM.json: \"view_kind\": \"ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW\", \"redaction_scope\": \"Local user/workspace paths and author machine labels only; original immutable hash retained\"; aynı dosyada historical_measurement_host \"author-workstation (Windows)\" olarak takma adlandırılmış fakat current_mta_observation içindeki \"host\" alanı tam makine adını korumuş. PUBLIC_EVIDENCE_INDEX.json manifest-eşdeğerlik görünümünü de listeliyor (5852e630…, 2619 B).",
+        "recommended_action": "İki deterministik seçenekten birini uygula: (a) kamuya açık görünümlerde yürütme düğümü adını da takma adlandır — ancak bu manifest provenance alanını değiştireceği için eşdeğerlik kaydında karşılığı ayrıca not edilmeli; (b) daha ucuz ve tavsiye edilen yol: `redaction_scope` ifadesini uygulanan kapsamla eşitle ('yollar ve yazar iş istasyonu etiketleri; yürütme düğümü hostname'i zorunlu manifest provenance olarak korunur'). Sayı, iddia, yöntem, sonuç veya hash-bağlı bilimsel alan değişmez; yalnız beyan cümlesi ve ilgili görünüm hash'i güncellenir."
+      }
+    ],
+    "not_run_handoff": [
+      {
+        "capability": "live_validators",
+        "item": "V2'ye bağlı freeze sözleşmesi üzerinde merkez prelaunch doğrulayıcısının yeniden koşulması; experiment_lineage_preflight.py manifest-check; guard/lifecycle/integration test paketleri",
+        "reason": "Salt-okunur text-only rol; run_experiments ve execute_model_command yasak. Bütün makbuzlar yalnız metin ve hash düzeyinde incelendi."
+      },
+      {
+        "capability": "other",
+        "item": "EXPERIMENT_FREEZE_CONTRACT.json, materialize_mta_lineage.py, MTA_TECHNICAL_CUSTODY.json, MTA_NEGATIVE_BINDING/REPORT.json, MTA_RESOURCE_OBSERVATION.json dosya baytları, mta_supervisor.py / mta_owned_worker.py / mta_process_tree.py ve 17 bilimsel kaynak",
+        "reason": "Allowlist dışı; yalnız hash düzeyinde doğrulandı. Bu nedenle freeze sözleşmesinin V2'ye yeniden kurulup kurulmadığı okunamadı (F07-V2-01 bu belirsizlik sınırıyla yazıldı) ve kaynak içerik denetimi yapılmadı — hedef zaten source re-audit istemiyor."
+      },
+      {
+        "capability": "other",
+        "item": "GitHub public release/tag byte doğrulaması ve V1 ağacının gerçekten yayımlanmamış olduğunun teyidi",
+        "reason": "Ağ erişimi yok; `public_metadata_gate_failure` beyanı yalnız paket içi kayıtla tutarlı bulundu, bağımsız olarak doğrulanamadı."
+      }
+    ],
+    "next_action": {
+      "status": "COMPLETE",
+      "next_agent": "none",
+      "role": "orchestrator",
+      "task": "MTA aday V2 (3985adba…bc2a0dfa) için bağımsız, V2-bağlı prospective metadata delta incelemesi tamamlandı. Hüküm: KOŞULLU KABUL. V1→V2 farkı tam olarak dört kalemdir (creation time, protocol_ref, tek idari uzak-kök gösterimi, publication_metadata_revision); 20 kaynak hash'i, seed kümesi, modeller, baseline'lar, profiller, hedefler, metrikler, kontrastlar, çıkarım ailesi, kaynak tavanları ve planlanan artefaktlar değişmemiştir. Önceki turun altı bulgusundan MTA-01/03/04/05 kabul edilebilir biçimde kapanmış veya nonblocking kapsam sınırı olarak beyan edilmiştir; MTA-02 ve MTA-06 için gerçek ölçümler artık mevcuttur fakat kalıntıları F07-V2-02 ve F07-V2-03'te adlandırılmıştır. Sıradaki deterministik iş: freeze sözleşmesini V2 üzerine kurup merkez prelaunch makbuzunu yeniden üretmek (F07-V2-01), sonra V2-bağlı decision/final lineage'ı yazmak ve ancak ondan sonra yayın ile koşuya geçmek.",
+      "reason": "Bilimsel tasarımda hiçbir değişiklik yok ve bilimsel geçerliği etkileyen kusur bulunmadı; dört bulgunun tamamı sözleşme bağlama, kaynak payı mutabakatı, kapanış kapsamı etiketi ve yayın beyanı ile ilgili deterministik kalemlerdir. Hiçbiri yeni iddia, yeni deney, yeni istatistik, yeni atıf kimliği veya yeni yazar kararı gerektirmez; mevcut yayın ve MTA compute yetkisi sürdüğü için bu turda insan kapısı açılmadı. Sınırlı salt-okunur görev tamamlandığı için kontrol sabit workflow'a geri veriliyor.",
+      "input_files": [
+        "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PROTOCOL_CANDIDATE_V2.json",
+        "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_PUBLIC_METADATA_DELTA.json",
+        "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_DISPOSITION.json",
+        "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_REVIEW_CLOSURE_ADDENDUM.json",
+        "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_MANIFEST_EQUIVALENCE.json",
+        "MD/03_experiments/FRESH_FREEZE_MTA_20260920/PRELAUNCH_VALIDATION.json",
+        "MD/02_design/FRESH_MTA_RUNTIME_AMENDMENT_20260920_PUBLIC_V2.md"
+      ],
+      "expected_outputs": [
+        "V2 aday hash'ine bağlı bağımsız prospective-freeze hükmü ve dört somut kalan bulgu, lineage review artefaktı olarak kayda geçer",
+        "F07-V2-01 kapanış kanıtı: V2'ye bağlı freeze sözleşmesi ve yeniden üretilmiş merkez prelaunch makbuzu final lineage'a hash ile bağlanır",
+        "F07-V2-02 ve F07-V2-03 kalıntıları decision/final kaydında açıkça beyan edilir; F07-V2-04 kamuya açık görünüm beyanında düzeltilir"
+      ],
+      "allowed_actions": [
+        "report"
+      ],
+      "human_required": false,
+      "human_question": null,
+      "risk_level": "medium",
+      "stop_condition": "Her bulgu evidence, confidence ve action ile sınıflandı; V2 aday hash'ine bağlı salt-okunur delta incelemesi ve prospective-freeze hükmü verildi.",
+      "estimated_scope": "bounded"
+    }
+  },
+  "administrative_path_pseudonymization": "Only literal author-home/workspace/machine identifiers are pseudonymized in this view; exact raw provider output remains hash-bound private administrative evidence.",
+  "prior_runtime_review_ref": {
+    "path": "MD/03_experiments/FRESH_FREEZE_MTA_20260920/REVIEW.json",
+    "sha256": "e3997fbb0c0cf0aaef8497ffec8ede783c6d10e691c2bab34d9989b02e0e30bd",
+    "size_bytes": 31427
+  },
+  "disposition_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_V2_REVIEW_DISPOSITION.json",
+    "sha256": "0a9ebb57b580ea25235dbe3f406dc5ff073633979e8d4fed680559a229212f24",
+    "size_bytes": 2063
+  },
+  "actual_context_manifest_ref": {
+    "path": ".orchestrator/runs/run-20260920-85e1c836864b/rounds/002-independent_mta_metadata_delta_review/context/manifest.json",
+    "sha256": "1db1c896e833df0ffe4c8e3f3677c4c90ded71f338daa8c2ce34e3fe24e88161",
+    "size_bytes": 15583
+  },
+  "scientific_execution_certified": false,
+  "manuscript_A_F_certified": false
+}

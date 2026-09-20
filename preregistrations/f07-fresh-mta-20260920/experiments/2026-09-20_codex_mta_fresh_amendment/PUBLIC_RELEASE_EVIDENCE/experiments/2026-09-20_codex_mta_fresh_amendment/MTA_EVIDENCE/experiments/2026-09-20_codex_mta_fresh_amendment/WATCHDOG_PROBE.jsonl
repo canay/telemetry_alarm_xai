@@ -1,0 +1,16 @@
+Publication view created at: 2026-09-20T17:53:29.801125+00:00
+
+Date/time: 2026-09-20T17:42:36.270501+00:00
+Tool: Codex
+Model: gpt-6-astra / xhigh
+Operation ID: f07-mta-fresh-to-round-f-20260920
+Original private SHA256: 8a1be22c7a390ba791a959cbe7e629477a17c0298d566be220eafa1771267c62
+View: administrative paths pseudonymized; original preserved.
+
+{"at": 14988.905705016, "note": "thread_enter"}
+{"at": 14989.031868059, "note": "before_create_time"}
+{"at": 14989.114893539, "note": {"live": true}}
+{"at": 14989.256528272, "note": "before_create_time"}
+{"at": 14989.328951837, "note": {"live": false}}
+{"at": 14989.349719732, "note": "before_children"}
+{"at": 14993.895336571, "note": "completed_main"}

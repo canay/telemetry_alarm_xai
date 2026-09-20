@@ -1,0 +1,41 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920/REPORT.json",
+    "sha256": "fc3c1de066cb3309c555b08e5eb51d576b9f30267fa8d3f0e0c782d525f61ef9",
+    "size_bytes": 791
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "at": "2026-09-20T17:09:17.112411+00:00",
+    "checks": [
+      "kernel_mutex_excludes_second_process_then_releases",
+      "authoritative_checkpoint_inventory_runs_under_mutex",
+      "resume_does_not_reset_fixed_run_deadline",
+      "unrecorded_unarmed_worker_never_executes",
+      "armed_worker_stops_on_parent_loss"
+    ],
+    "count": 5,
+    "model": "gpt-6-astra / xhigh",
+    "model_fit_executed": false,
+    "operation_id": "f07-auto-preflight-20260919",
+    "scientific_worker_executed": false,
+    "source_sha256": {
+      "fresh_owned_worker.py": "ac169d4053f0c4734f6c3cff492f941c75fc79c673e594c7d0cea5c395794c8b",
+      "fresh_supervisor.py": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+      "test_runtime_guards.py": "48c0d68635a085556be5181c206eb02186dd9ec662377f0f71020ea6d2fadb61"
+    },
+    "status": "PASS_SYNTHETIC_RACE_AND_PARENT_OWNERSHIP_ONLY",
+    "tool": "Codex"
+  },
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-19_codex_local_fresh_preflight/mta_guards_v3_20260920/REPORT.json",
+    "sha256": "e06c733afd1b6735397a86936927ce37fb7a8ea7584cfcfed2495d508c96f405",
+    "size_bytes": 1565
+  }
+}

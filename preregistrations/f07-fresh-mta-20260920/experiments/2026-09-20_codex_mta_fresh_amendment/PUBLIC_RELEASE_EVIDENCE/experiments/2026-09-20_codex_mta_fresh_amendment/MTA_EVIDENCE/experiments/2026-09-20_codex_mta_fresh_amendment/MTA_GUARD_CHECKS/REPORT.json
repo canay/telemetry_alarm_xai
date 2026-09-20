@@ -1,0 +1,31 @@
+{
+  "at": "2026-09-20T17:42:36.270501+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "view_kind": "ADMINISTRATIVE_PATH_PSEUDONYMIZED_VIEW",
+  "original_private_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_GUARD_CHECKS/REPORT.json",
+    "sha256": "4f3ce2b8707f89ef6b7ee47672f648f6b728e44f41a90a7f5e0310403a8fcdcf",
+    "size_bytes": 614
+  },
+  "redaction_scope": "Local user/workspace paths and author machine labels only; original immutable hash retained",
+  "content": {
+    "at": "2026-09-20T17:09:26.680870+00:00",
+    "scientific_compute": false,
+    "sources": {
+      "experiments/2026-09-20_codex_mta_fresh_amendment/mta_owned_worker.py": "d25c54b309906727f30a3c8f5d2c9955ed9d90299d8eb8b7fd828dd697065ae2",
+      "experiments/2026-09-20_codex_mta_fresh_amendment/mta_process_tree.py": "dd5da9cf4e10a95fe639da3df6894e8fad79ab1a372e8b8de4bcfdb5fbae7bd3",
+      "experiments/2026-09-20_codex_mta_fresh_amendment/mta_supervisor.py": "4195fc675d4b9a23dea969f03df157503fe436a86e3a74ede44949bd8decbaa8"
+    },
+    "status": "PASS_MTA_SUBTREE_AND_WRAPPER_GUARDS",
+    "thread_spawned_child_detected": true,
+    "unrelated_processes_returned": false
+  },
+  "publication_view_created_at": "2026-09-20T17:53:29.801125+00:00",
+  "predecessor_view_ref": {
+    "path": "experiments/2026-09-20_codex_mta_fresh_amendment/PUBLIC_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_EVIDENCE/experiments/2026-09-20_codex_mta_fresh_amendment/MTA_GUARD_CHECKS/REPORT.json",
+    "sha256": "35cfa47926950b766232589bd4dd6806d02f1fd0aa28602d78a278d5b77a51ef",
+    "size_bytes": 1316
+  }
+}
