@@ -11,7 +11,9 @@ BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--output", default=os.path.join(BASE, "results", "results_summary.json"))
 parser.add_argument("--versions-output", default=None)
+parser.add_argument("--checkpoint-dir", default=os.path.join(BASE, "results", "raw"))
 args = parser.parse_args()
+CHECKPOINT_DIR = Path(args.checkpoint_dir).resolve()
 OUTPUT = Path(args.output).resolve()
 VERSIONS_OUTPUT = (
     Path(args.versions_output).resolve()
@@ -25,9 +27,9 @@ FAMILY = {"lr": "interpretable", "dtree": "interpretable",
 TYPES = ["stuck", "dropout", "bias", "drift", "coupling", "runaway"]
 SEEDS = range(5)
 
-R = {m: [json.load(open(f"{BASE}/ckpt/model_seed{s}_{m}.json")) for s in SEEDS]
+R = {m: [json.load(open(CHECKPOINT_DIR / f"model_seed{s}_{m}.json")) for s in SEEDS]
      for m in MODELS}
-cross = [json.load(open(f"{BASE}/ckpt/cross_seed{s}.json")) for s in SEEDS]
+cross = [json.load(open(CHECKPOINT_DIR / f"cross_seed{s}.json")) for s in SEEDS]
 
 def ms(v):
     values = np.asarray(v, dtype=float)

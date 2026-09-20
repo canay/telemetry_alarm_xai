@@ -32,3 +32,43 @@ Operation ID: `f07-v2-2-1-hash-portability-20260830`
 ## Fresh MTA internal replication
 
 Release `f07-fresh-mta-results-20260920` and `results/f07-fresh-mta-20260920/PUBLIC_RESULTS_MANIFEST.json` bind the four assets, all 4,920 scientific outputs, 400 atomic checkpoints, exact source snapshot, and 40-seed summary. `analysis/primary_contrasts.csv` contains C1–C4 with 98.75% intervals; `secondary_contrasts.csv` contains all-six-model and per-model descriptive 95% intervals. `policy_endpoints.csv` retains every policy/profile/target cell. The fresh internal replication does not reopen V4/V5 endpoints or establish external operational validity.
+
+## Current figure and summary reproduction (2026-09-20 correction)
+
+Date/time: 2026-09-20T23:19:20+03:00
+Tool: Codex
+Model: gpt-6-astra / xhigh
+Operation ID: f07-mta-fresh-to-round-f-20260920
+
+The current five-seed summary uses sample SD (ddof=1). Pooled detector-seed
+priority gains are descriptive only (five independent seeds). The earlier
+public summary contained population SD and a superseded pooled Wilcoxon
+result; it has been replaced from the already-saved corrected reduction.
+No model was refitted. Original producer versions.txt is preserved; a new
+consumer writes its own aggregation_versions.txt separately.
+
+Run from the repository root into a new output directory:
+
+```bash
+python code/reproduce_curated_artifacts.py --output-dir rebuilt-curated
+```
+
+This verifies the full summary against the 30 saved detector/seed outputs
+and five cross-model records, rebuilds signature-pair validity from saved
+vectors, and renders current Figure 5 (scenario-conditioned utility) and
+Figure S1 (KDD signature pairs). It uses only stored outputs; neither
+training nor V4/V5 endpoint analysis runs. Floating-point comparisons use
+rtol=1e-10 and atol=1e-12; rendered PDF bytes may differ by metadata/fonts.
+
+Figure 5 inputs are in results/scenario_utility_v1_2/figure_inputs. The
+original generator is code/build_criticality_manuscript_artifacts.py; its
+build_figure function is used by the portable consumer. Supplement Figure
+S1 uses code/plot_round_b_kdd_signature_pairs.py and the complete saved
+results/signature_pair_audit tables. OPSSAT has 10 valid and zero degenerate
+pairs for each model; the current stability CSV includes these counts.
+Legacy figures.py option e now writes fig_legacy_ndcg_priority, preventing
+an NDCG plot from overwriting current fig_prioritization.
+
+Fresh MTA runtime pins are also supplied explicitly at
+results/f07-fresh-mta-20260920/MTA_RUNTIME.json, copied byte-for-byte from the
+prospective runtime record. The fresh four result archives are unchanged.

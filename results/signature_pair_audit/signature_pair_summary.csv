@@ -1,0 +1,9 @@
+dataset,model,signature_estimator,feature_space,n_seeds,n_pairs_total,n_pairs_valid,n_pairs_degenerate,mean_signature_cosine,population_sd_signature_cosine,sample_sd_signature_cosine
+kddcup99,hgb,permutation importance using average precision,41 original KDDCup99 tabular features,5,10,10,0,0.9859185291212631,0.015136739554184804,0.015955524446661894
+kddcup99,isolation_forest,mean absolute raw anomaly-score change after feature permutation,41 original KDDCup99 tabular features,5,10,10,0,0.9878972631948228,0.003927317800910504,0.0041397564487336315
+kddcup99,logistic,permutation importance using average precision,41 original KDDCup99 tabular features,5,10,10,0,0.6969075221933732,0.18911962721280376,0.19934959074480707
+kddcup99,random_forest,permutation importance using average precision,41 original KDDCup99 tabular features,5,10,6,4,0.4226229954179248,0.2271773754216842,0.24886034614655228
+opssat_ad,hgb,normalized mean absolute raw score change after feature permutation,20 original OPSSAT-AD extracted features,5,10,10,0,0.9566229063704617,0.016420887604389894,0.017309135343832674
+opssat_ad,isolation_forest,normalized mean absolute raw anomaly-score change after feature permutation,20 original OPSSAT-AD extracted features,5,10,10,0,0.9834087765899527,0.007901865566140058,0.008329297651152822
+opssat_ad,logistic,normalized absolute fitted coefficients,preprocessed numeric plus one-hot categorical features,5,10,10,0,0.931270809646519,0.0249422039567851,0.02629139145596829
+opssat_ad,random_forest,normalized intrinsic impurity-based feature importance,preprocessed numeric plus one-hot categorical features,5,10,10,0,0.9907699800056877,0.004739854916912936,0.004996245772064343

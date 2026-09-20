@@ -1,0 +1,77 @@
+{
+  "date_time": "2026-09-20T23:23:52+03:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-mta-fresh-to-round-f-20260920",
+  "scope": "B04/B05/B06/B07 saved-output curation and no-fit reproduction; current root files updated, fixed releases and fresh archives unchanged",
+  "supersedes_commit": "1498a51e8c463b277eb97f96318298d1d5602d8e",
+  "files": [
+    {
+      "path": "ARTIFACTS.md",
+      "sha256": "471e17c2bc1f150ad615584552c0f25ba6f2848b243f1267962ee1b37eb31828"
+    },
+    {
+      "path": "code/aggregate.py",
+      "sha256": "f85ff53109cd6fa0f49021eca984b7b96c72362d5fc390df9def172c614c0043"
+    },
+    {
+      "path": "code/build_criticality_manuscript_artifacts.py",
+      "sha256": "b16a5adc9b8d2b4e85b0b182c7fa5e820a96c9bf6c4a04331385a0f7542784ce"
+    },
+    {
+      "path": "code/figures.py",
+      "sha256": "016c841b77bae599610d1c2c17155b77ee6a8e0e176cef3d6a5312dff206a0cc"
+    },
+    {
+      "path": "code/plot_round_b_kdd_signature_pairs.py",
+      "sha256": "f0dcb51b0e6d0328ef014e20f63669ff9f085e6fe5a1d0364f81f167e34c4a40"
+    },
+    {
+      "path": "code/reproduce_curated_artifacts.py",
+      "sha256": "739d7813f450c437e0e4b9f6d61c2a4ac5e20431928a117e464ebed6b591e1b5"
+    },
+    {
+      "path": "results/f07-fresh-mta-20260920/MTA_RUNTIME.json",
+      "sha256": "40df6270629495cca51e75ccc024959c1ede322d610da46819c2b7b96df068c0"
+    },
+    {
+      "path": "results/opssat_transfer_benchmark/signature_repair_provenance.json",
+      "sha256": "017bed9541d8f6f50d43e7e414cb45f2a79f264c1e2050059c3150cdbf427608"
+    },
+    {
+      "path": "results/opssat_transfer_benchmark/signature_stability.csv",
+      "sha256": "eb3723c1575d06a30082f8fd67e8d6077cb0290c074ba4c60eb543d06ab22ffe"
+    },
+    {
+      "path": "results/results_summary.json",
+      "sha256": "8c51bf1ead6fb5b39f9fc04a54490d6ee71c63a702c4dc6f045f6bd554e5ef2f"
+    },
+    {
+      "path": "results/scenario_utility_v1_2/figure_inputs/cell_decisions.csv",
+      "sha256": "051a767597adc301fa3e178b2694e1ceb790e3abafcc2631332074ab85ae2919"
+    },
+    {
+      "path": "results/scenario_utility_v1_2/figure_inputs/policy_summary.csv",
+      "sha256": "832fda1fcc10d3fbdbd9409e6c6d3e31facd3ac5e90984364f0b0deb1795b403"
+    },
+    {
+      "path": "results/scenario_utility_v1_2/figure_inputs/utility_permutation_null.csv",
+      "sha256": "f10cc1eab4b2f3e4d57bbbdb72b7e58ddd45c43fe5219519828dbfa8c23eb2d9"
+    },
+    {
+      "path": "results/signature_pair_audit/signature_pair_audit.csv",
+      "sha256": "f366ddaaae22a76c286efdcc9eb441d92f7e67a11c516d3df59a79241f53e34d"
+    },
+    {
+      "path": "results/signature_pair_audit/signature_pair_summary.csv",
+      "sha256": "1d4459c518c5e90c276727f5c480fb1061a35e2b7954451e33ca30593fd505b3"
+    }
+  ],
+  "summary_source_sha256": "3c817cbf04d534c730de882180a2e3ba36aff61cc6c7ae25695625d609a0e214",
+  "consumer_status": "VERIFIED",
+  "consumer_comparison_rtol": 1e-10,
+  "consumer_comparison_atol": 1e-12,
+  "model_fits": 0,
+  "old_terminal_endpoints_reopened": false,
+  "line_ending_normalization": "New/updated public text payloads use LF; canonical scientific values unchanged. Source and released-byte hashes are recorded separately."
+}

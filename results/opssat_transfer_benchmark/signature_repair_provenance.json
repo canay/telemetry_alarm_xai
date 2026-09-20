@@ -1,17 +1,29 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-30T04:32:00+03:00",
+  "updated_at": "2026-09-20T23:23:52+03:00",
   "operation_id": "f07-v2-2-1-hash-portability-20260830",
   "scope": "OPSSAT-AD feature-signature recomputation only; detection predictions and dataset split are unchanged",
   "repair": "Isolation-forest signatures use raw anomaly-score perturbations and HGB zero-contribution entries remain exact zeros before within-model cosine calculation.",
   "artifacts": {
     "benchmark_results.csv": "F3A5EECDAF5B5869BE6A832233E57E93D28790F2FBB4C143F47E362A14568DA2",
     "feature_signature_audit.csv": "A2B463ED5A29D2266FDE230B1FBE17001FFBBF985A733D9E4056FAF879AF005D",
-    "signature_stability.csv": "1E3A44220EA0D6BF4F4878EE91FD6FD17D88A2DBD77E893E060F2A3E2CD87148"
+    "signature_stability.csv": "EB3723C1575D06A30082F8FD67E8D6077CB0290C074BA4C60EB543D06AB22FFE"
   },
   "reported_check": {
     "isolation_forest_mean_signature_cosine": 0.9834087765899527,
     "isolation_forest_valid_pairs": 10,
     "total_pairs": 10
+  },
+  "schema_extension_20260920": {
+    "at": "2026-09-20T23:23:52+03:00",
+    "operation_id": "f07-mta-fresh-to-round-f-20260920",
+    "previous_artifacts": {
+      "benchmark_results.csv": "F3A5EECDAF5B5869BE6A832233E57E93D28790F2FBB4C143F47E362A14568DA2",
+      "feature_signature_audit.csv": "A2B463ED5A29D2266FDE230B1FBE17001FFBBF985A733D9E4056FAF879AF005D",
+      "signature_stability.csv": "1E3A44220EA0D6BF4F4878EE91FD6FD17D88A2DBD77E893E060F2A3E2CD87148"
+    },
+    "scope": "Saved-vector pair validity added; no model fit, detection or split change.",
+    "pair_audit": "../signature_pair_audit/signature_pair_audit.csv",
+    "pair_summary": "../signature_pair_audit/signature_pair_summary.csv"
   }
 }

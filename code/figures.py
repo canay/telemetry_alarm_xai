@@ -185,7 +185,7 @@ def fig_e():
         ax.set_ylabel(lab); ax.set_xlabel("detector")
     axes[0].legend(frameon=False, loc="upper center",
                    bbox_to_anchor=(0.5, 1.18), ncol=2)
-    save(fig, "fig_prioritization")
+    save(fig, "fig_legacy_ndcg_priority")
 
 
 def fig_f():
