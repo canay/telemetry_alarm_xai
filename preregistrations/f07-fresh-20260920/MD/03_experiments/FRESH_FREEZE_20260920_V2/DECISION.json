@@ -1,0 +1,172 @@
+{
+  "at": "2026-09-19T23:35:24.195145+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-auto-preflight-20260919",
+  "schema_version": 1,
+  "status": "ACCEPT_FOR_PROSPECTIVE_FREEZE",
+  "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+  "binds_review_sha256": "bcbb034f63cfd8ec18436e305fc331a76d12e213b17b0dd109578eac7fbd2a28",
+  "disposition_ref": {
+    "path": "experiments/2026-09-19_codex_local_fresh_preflight/R3_DISPOSITION_20260920.json",
+    "sha256": "5f3ae6a4ef4ed75a473f279b9caddba88f0cf862714351e2e2f4e5a0bbad6ce7",
+    "size_bytes": 10972
+  },
+  "disposition": {
+    "at": "2026-09-19T23:35:23.966697+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-auto-preflight-20260919",
+    "status": "ACCEPT_FOR_PROSPECTIVE_FREEZE",
+    "independent_delta_status_preserved": "ACTION_REQUIRED",
+    "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+    "binds_delta_result_sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+    "unresolved_prepublication_blockers": [],
+    "author_publication_approval": false,
+    "finding_dispositions": {
+      "F07-FRESH-R3-01-stale-separation-receipt": {
+        "status": "CLOSED",
+        "rationale": "19 sentetik ayrım kontrolü güncel fresh_policy_artifacts hashinde geçti. İki adapter için yalnız ilan edilen giriş adı/docstring/seed-guard farkları normalleştirildikten sonra AST eşitliği doğrulandı. Eski receipt frozen adayda tarihsel kalır; bu iki yeni hashli receipt karar/final lineage içinde güncel kanıttır.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+            "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+            "size_bytes": 1242
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+            "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+            "size_bytes": 2732
+          }
+        ]
+      },
+      "F07-FRESH-R3-02-manifest-operation-id-hardcoded": {
+        "status": "NONBLOCKING_LIMIT",
+        "rationale": "Donmuş RUN_MANIFEST.operation_id hazırlık lineage operasyonunu adlandırır. Gerçek launch operasyonu aynı run_id ve final/config hashleriyle TOOL_RUN_LOG olayında ayrıca kaydedilecektir. Bu P3 provenance etiketi bilimsel hesaplamayı değiştirmez; yeni runtime aday açılmadı.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+            "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+            "size_bytes": 3514
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+            "sha256": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+            "size_bytes": 36083
+          }
+        ]
+      },
+      "F07-FRESH-R3-03-premanifest-failure-blocks-fixed-root": {
+        "status": "NONBLOCKING_LIMIT",
+        "rationale": "Ön-manifest arızasında aynı kökte attempts altına taşıma boş-kök koşulunu çözmez. Runbook sıfır bilimsel çıktı ve ölü process kimlikleri doğrulandıktan sonra başarısız kökün tamamını proje içindeki yeni arşive hash/üye-kümesi kanıtıyla taşımayı tanımlar. Manifestli koşuda bu yol yasaktır; tamamlanmış birimler veya deadline sıfırlanmaz.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+            "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+            "size_bytes": 3514
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+            "sha256": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+            "size_bytes": 36083
+          }
+        ]
+      },
+      "F07-FRESH-R3-04-lineage-fields-required-by-launch": {
+        "status": "CLOSED",
+        "rationale": "Lineage yazıcısı freeze_id/run_id, timezone-aware FINAL.at, adayın family_alpha/CI/yön kuralından türeyen threshold_id/value ve donmuş generator DT=30 s/orbit=5700 s design_timebase alanlarını yazar. Koşu sonrası timebase/artifact/registry kanıtları prospective PASS olarak uydurulmaz; gerçek yazar onayı henüz yoktur.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+            "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+            "size_bytes": 3514
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+            "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+            "size_bytes": 10743
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V2.json",
+            "sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+            "size_bytes": 43765
+          }
+        ]
+      }
+    },
+    "supplemental_private_evidence_refs": [
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+        "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+        "size_bytes": 1242
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_fresh_policy_artifact_contract.py",
+        "sha256": "a1a184f2be45c238f317c72469a5bbb800317e336c80cd822827e109ba7d6a1e",
+        "size_bytes": 4758
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+        "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+        "size_bytes": 2732
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/verify_adapter_equivalence.py",
+        "sha256": "60585ffde564f8c66ad3b0cc8bfced67d74d6cbb7e9a041827bcb52851f69f15",
+        "size_bytes": 3979
+      },
+      {
+        "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+        "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+        "size_bytes": 3514
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/PUBLIC_PREPARATION_CHECKS_V2_20260920.json",
+        "sha256": "c4647be3e48554765c7c62d28c70153b562fc238e0c322bad70f0cb13eb3ee58",
+        "size_bytes": 1771
+      },
+      {
+        "path": "MD/03_experiments/FRESH_DURABILITY_PLAN_20260920.md",
+        "sha256": "2bc44e32483ba8afd3c7ccf0614153055dbca2258ef549dfde633f073a0ed2e4",
+        "size_bytes": 9040
+      },
+      {
+        "path": ".orchestrator/runs/run-20260919-00eb8478b24a/rounds/002-independent_delta_protocol_review/attempts/attempt-002/claude_result.json",
+        "sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+        "size_bytes": 29005
+      },
+      {
+        "path": "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+        "sha256": "e5d33bee842bf771ce708707cdce009f0a82461ea3ab6bbb0347ed39c8114aad",
+        "size_bytes": 19859
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+        "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+        "size_bytes": 10743
+      }
+    ],
+    "operational_runbook": "# Yeni-seed önkayıt: launch kimliği ve sınırlı kurtarma\n\nDate/time: 2026-09-20 02:34 +03:00  \nTool: Codex  \nModel: gpt-6-astra / xhigh  \nOperation ID: `f07-auto-preflight-20260919`\n\nBu ek yalnız R3-02–04 operasyonel kalıntılarını açıklar. V2 adayının bilimsel\ntasarımı, 17 kaynak hash'i, seed kümesi ve kaynak tavanları değişmez. Yeni\nbilimsel koşu henüz başlamadı; tamamlanmış deneyler yeniden çalıştırılmaz.\n\nRUN_MANIFEST.operation_id, donmuş supervisor kaynağında hazırlık operasyonunu\ngösterir. Gerçek başlangıç operasyonu, başlatma zamanındaki TOOL_RUN_LOG olayına\naynı run_id, freeze_id, final/decision/config hashleri ve gerçek zaman damgasıyla\nyazılır. Hazırlık kimliği, ayrı launch olayının yerine geçmez.\n\nManifest oluşmadan başarısız olan bir başlangıç aynı kökte attempts ve terminal\nkayıtları bırakabilir; boş-kök kontrolü bu dizini yeniden kabul etmez. İçeriği\naynı kökteki attempts altına taşımak bu kontrolü çözmez. Böyle bir arızada ajan\nşu sınırlı kurtarmayı uygular:\n\n1. RUN_MANIFEST.json bulunmadığını; sıfır bilimsel checkpoint, sıfır raw/data/\n   features/ckpt/policy çıktısı olduğunu ve kayıtlı supervisor/worker PID ile\n   process creation time kimliklerinin artık canlı olmadığını doğrular.\n   Herhangi bir bilimsel çıktı veya belirsiz process kimliği varsa bu yol kapanır.\n2. Başarısız kökün bütün dosyalarını yol/hash/boyut envanteriyle kaydeder. Kaynak\n   ve hedefin çözümlenmiş mutlak yollarının bu proje içinde kaldığını doğrular.\n   Hedef, var olmayan `archive/run_prelaunch_failures/<zaman>__<run_id>` olur.\n3. Başarısız kökü bütünüyle bu arşive taşır; arşivde tam üye kümesini ve bütün\n   hashleri yeniden doğrular. Dosya silmez, tamamlanmış birimi yeniden üretmez.\n4. Başarısızlığın salt launch ortamı/sözleşme sunumu sorunu olduğunu kanıtlar.\n   Kaynak, aday, protokol, runtime veya public binding değişirse bu kurtarma\n   yetmez; yeni prospective değişiklik–inceleme–yayın zinciri gerekir.\n5. Aynı run_id için yeni ve boş kökü yalnız exact public onay/yayın, güncel\n   binding ve kaynak kontrolleri tekrar sağlandığında oluşturur. Başarısız\n   deneme, arşiv ve gerekçe TOOL_RUN_LOG olayında korunur.\n\nBu yol yalnız durable ilk manifestten önce ve bilimsel veri üretimi başlamadan\nönceki arızalara aittir. Manifest varsa olağan hash-bound resume uygulanır;\nilk manifest zamanı ve 12 saatlik deadline korunur. Deadline tükendiyse bu\narşivleme yolu kullanılarak süre sıfırlanamaz; otomatik tam yeniden koşu yoktur.\n\nProspective sözleşmede freeze_id, run_id, confirmatory_binding.threshold_id/\nthreshold_value ve timebase_binding.design_timebase bulunur. Eşik metni adayın\n%98.75 aralık, aile alpha=0.05 ve C1/C2/C3/C4 yön kuralından mekanik türetilir;\nyeni eşik veya istatistik kararı değildir. Tasarım timebase'i donmuş generator\nkaynağındaki DT=30 s ve orbit=5700 s değerleridir. Gerçek çıktı timebase ve\nartifact/registry/terminal bağları koşu sonrası ölçülür; şimdiden üretilmiş gibi\nyazılmaz. FINAL.at timezone-aware ISO'dur. Yazar onayının approved_at alanı\nancak gerçek kullanıcı yanıtından sonra, yanıtın kendisiyle birlikte yazılır.\n\nPublic release oluşturulmadan önce onaylı exact paket gerekir; prelaunch PASS\nyazar onayı, bilimsel sonuç, bağımsız sonuç doğrulaması veya A–F kapanışı değildir.\n",
+    "scope_limits": [
+      "No scientific generation or fitting",
+      "No completed experiment rerun",
+      "No manuscript A-F PASS inherited",
+      "Exact public publication remains an author gate",
+      "Real V5 producer execution under this harness remains untested until the prospective run",
+      "Policy runtime and total completion ETA remain unknown"
+    ]
+  },
+  "authorization_scope": "Existing DIRECT_EDIT_FULL preparation and evidence-bounded repairs",
+  "author_publication_approval": false,
+  "scientific_results_available": false,
+  "remaining_gates": [
+    "exact public publication approval and verified publication",
+    "new-seed execution and post-run artifact certification",
+    "independent result verification and external validation",
+    "fresh manuscript A-F and exact-PDF/author/portal gates"
+  ]
+}

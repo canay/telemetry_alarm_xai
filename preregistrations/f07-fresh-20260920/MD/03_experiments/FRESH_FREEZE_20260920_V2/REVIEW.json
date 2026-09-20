@@ -1,0 +1,441 @@
+{
+  "at": "2026-09-19T23:35:24.193425+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-auto-preflight-20260919",
+  "schema_version": 1,
+  "status": "ACTION_REQUIRED",
+  "scope": "ACTUAL_R2_REVIEW_WITH_INDEPENDENT_V2_DELTA_AND_EXPLICIT_LOCAL_DISPOSITION",
+  "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+  "delta_origin_ref": {
+    "path": ".orchestrator/runs/run-20260919-00eb8478b24a/rounds/002-independent_delta_protocol_review/attempts/attempt-002/claude_result.json",
+    "sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+    "size_bytes": 29005
+  },
+  "delta_model_selection": {
+    "step": "independent_delta_protocol_review",
+    "round_number": 2,
+    "agent": "claude",
+    "requested_model": "",
+    "requested_effort": "",
+    "effective_model": "claude-fable-5-1",
+    "effective_effort": "max",
+    "model_source": "account_chain_quota_continuation",
+    "effort_source": "account_chain_quota_continuation",
+    "observed_models": [
+      "claude-fable-5-1"
+    ],
+    "observed_effort": "not_reported",
+    "attested": true
+  },
+  "delta_review": {
+    "schema_version": "1.0",
+    "status": "ACTION_REQUIRED",
+    "summary": "Bağlı aday: FRESH_PROTOCOL_CANDIDATE_20260920_V2.json SHA256 c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75; protokol MD eaa4b45c…92cee; 17 runtime kaynağının hash'i manifest, aday runtime_source_sha256 ve required_source_paths() kümesiyle birebir eşleşti. Üç değişen kaynak (fresh_supervisor 414226de…, fresh_worker c00c9c02…, seed_level_reducer 985f0b4d…) RUNTIME_DELTA.diff ve bütün test receipt'lerindeki hash'lerle uyumlu.\n\nR2 mutabakatı: R2-01 resource_basis 60 discovery gözlemi (toplam 705.8 s, max 35.04 s, lineer 40-seed 2823 s / 4.20 GB, 53.2 GB boş disk) ile metadata-dayanaklı; gen/feat/policy süreleri ve toplam ETA dürüstçe unknown; deadline aşımında STOP+koruma, yeni-kök yeniden koşusu run_id/boş-kök kuralıyla yalnız yeni sözleşmeyle mümkün — KAPANDI. R2-02 eksik artefaktlar sağlandı; launch_binding artık experiment_freeze prelaunch stdout'unun ilk satırını 'PASS experiment freeze PRELAUNCH: <contract>' ile eşliyor (snapshot main() çıktısıyla tutarlı) — KAPANDI. R2-03 prior_confirmatory_attempts (10–29 ve 300–319, terminal NOT_CONFIRMED_PROPERTY_GATE, endpoint okunmadı, unknown hash'ler açık) — KAPANDI. R2-04 hard_stop_triggers eşlemesi kodla uyumlu — KAPANDI. R2-05 remote_files = kaynaklar + sözleşme + 4 lineage + protocol_ref + runtime_observation_ref + unit_inventory_ref; public/private ref ayrımı adayda yazılı — KAPANDI. R2-06 tz-aware ISO ayrıştırma ve final≤approved≤published≤now≤manifest sırası; 3 negatif test — KAPANDI. R2-07 reducer'a sensitivity_direction_agreement, zero_capacity_cell_count, n_episodes_by_model; worker satırlarına curve; 16 sentetik test — KAPANDI. R2-08 contrast_interpretation ve MD başlığı 'yeni-seed içsel replikasyon' — KAPANDI. R2-09 tipografi — KAPANDI.\n\nDelta regresyon okuması: snapshot kurulumu kesintiye dayanıklı ve hash-bağlı; record_status manifest/terminal kimliğini final validator'ın beklediği küçük-harf 'completed' ile yazıyor; RUN_MANIFEST.freeze bloğu assess_freeze_contract'ın expected_freeze anahtarlarıyla aynı; reducer kuyruk/status tutarlılık kontrolü boundary_evaluator çıktısıyla uyumlu; yeni bir bilimsel aritmetik değişikliği yok. UNITS.json'dan 400 birim / 4920 çıktı / 51840 satır yeniden sayıldı. DESIGN_PRECISION_EXTRACT'ın 80 satırından C1–C4 seed-0 değerleri elle yeniden hesaplandı; projeksiyon RESEARCH_PREFLIGHT ile 1 ulp içinde aynı; diğer CSV satırları incelenmedi.\n\nKARAR: Hazırlık, c07c24ed…'yi bağlayan gerçek schema-v3 lineage'e (candidate→bu inceleme→decision→final) ve ardından prelaunch validator'a GEÇEBİLİR. Koşullar deterministiktir: R3-01 receipt yenilemesi (private kanıt; decision/final lineage'de bağlanır, aday rehash gerekmez), R3-02/R3-03 ya sınırlı V3 ya da lineage'de belgelenir, R3-04 lineage yazım listesi. Exact public yayın onayı prelaunch PASS ve somut paket sonrasındaki bir sonraki gerçek insan kapısıdır; bu turda yazar kararı gerekmez. Eski tamamlanmış birimlerin yeniden koşulması için gerekçe yok.\n\nKabul edilen kalıntılar (bulgu değil): fresh_execution_plan.py içindeki eski 'NOT_IMPLEMENTED' policy metni supervisor.scientific_plan() ve public UNITS.json tarafından ezilir (hash churn'e değmez); policy fazı süresi ölçülmemiş ve 900 s birim timeout'una tabi (adayda unknown olarak beyanlı; aşım STOP üretir, sessiz kısmi sonuç üretmez); değişmez V5 producer bu harness altında ilk kez bilimsel koşuda çalışacak.\n\nProvenance: provider Claude, gözlenen model claude-fable-5-1; efor mekanik doğrulanamadı (unknown); salt-okunur, text-only; komut çalıştırılmadı, dosya yazılmadı; previous_result null.",
+    "findings": [
+      {
+        "id": "F07-FRESH-R3-01-stale-separation-receipt",
+        "severity": "P2",
+        "classification": "verified",
+        "confidence": 0.9,
+        "description": "Adayın technical_evidence_refs ile bağladığı POLICY_SEPARATION_TESTS_V2 receipt'i, dondurulan fresh_policy_artifacts.py'nin DEĞİL önceki bir revizyonunun hash'ini taşıyor; 19 sızıntı-sınırı negatif kontrolü (bool şema, header enjeksiyonu, foreign binding, NaN impact, duplicate/out-of-range event, non-overwrite) güncel hash'e bağlı receipt olmadan kalıyor. Güncel hash'e bağlı fresh_integration_v2 yalnız 4 sınır özelliğini kapsıyor. Ayrıca fresh_producer_adapter.py (1e4a47d8…) kendi hash'ine bağlı hiçbir receipt taşımıyor; replay/corruption kanıtı producer_policy_adapter.py'ye (4516d3da…) ait ve integration testi build_fresh_seed'i mock'luyor. Kaynağı okuyarak sınır özellikleri doğrulandı; kusur kanıt-bağlama hijyenidir, iddia veya yöntem etkilenmez.",
+        "evidence": "POLICY_SEPARATION_TESTS_V2_20260920.json `\"receipt\":{\"contract_sha256\":\"f8752908c17a…\"}`, `\"at\":\"2026-09-19T21:25:11\"` vs manifest fresh_policy_artifacts.py sha256 3b51171b2805…, dosya başlığı `Date/time: 2026-09-20 00:35 +03:00` (21:35Z). fresh_policy_artifacts.py write_pair `'contract_sha256': digest_bytes(Path(__file__).read_bytes())`. test_fresh_integration.py ≈L46 `patch.object(adapter, 'build_fresh_seed', ...)`. fresh_producer_adapter.py 10143 B vs producer_policy_adapter.py 10139 B; gövde fark yalnız seed aralığı/docstring.",
+        "recommended_action": "Ayrı sınırlı Codex turunda: (a) ayırma testini mevcut fresh_policy_artifacts.py (3b51171b…) üzerinde yeniden koşup V3 receipt üret; (b) iki adapter arasında unified-diff tabanlı deterministik eşdeğerlik receipt'i yaz (yalnız seed-guard ve docstring farkı beklenir); (c) bu receipt'leri schema-v3 decision/final lineage belgesinde hash ile bağla. Runtime kaynağı değişmez, aday rehash gerekmez; yazar kararı gerekmez."
+      },
+      {
+        "id": "F07-FRESH-R3-02-manifest-operation-id-hardcoded",
+        "severity": "P3",
+        "classification": "verified",
+        "confidence": 0.85,
+        "description": "V2'de yeni eklenen new_manifest(), gerçek bilimsel koşunun RUN_MANIFEST'ine hazırlık turunun operation ID'sini sabit yazıyor; koşu farklı bir operasyon altında başlatılacağı için manifest operation_id'si launch operasyonunu değil hazırlık operasyonunu gösterir. Provenance etiketleme kalıntısı; bilimsel içerik veya validator kabulü etkilenmez (provenance_v3 PASS).",
+        "evidence": "fresh_supervisor.py new_manifest ≈L364 `'operation_id': 'f07-auto-preflight-20260919',` (record.update içinde sabit literal); launch config veya CLI'dan operation kimliği alınmıyor.",
+        "recommended_action": "Başka bir runtime kaynağı düzeltmesi zaten V3 aday gerektirirse aynı turda operation_id'yi launch config'ten (binding'e dahil) al; aksi halde schema-v3 final lineage belgesine 'RUN_MANIFEST.operation_id hazırlık lineage operasyonunu gösterir; launch operasyonu TOOL_RUN_LOG olayında kayıtlıdır' notu yaz. Yazar kararı gerekmez."
+      },
+      {
+        "id": "F07-FRESH-R3-03-premanifest-failure-blocks-fixed-root",
+        "severity": "P3",
+        "classification": "verified",
+        "confidence": 0.8,
+        "description": "Manifest yazılmadan önce oluşan bir arıza (ör. new_manifest içinde validate_envelope hatası) finally bloğunda root/terminal_status.json ve attempts/ üretir; run_id sabit olduğu için aynı kök zorunludur, fakat manifest yokken 'New run root must be empty' kuralı her yeniden başlatmayı reddeder. Kurtarma yalnız kök içinde elle silme ile mümkün; MD'nin 'log ve kısmi çıktılar korunur' beyanı bu ön-manifest durumu için araç yolu tanımlamıyor. Fail-closed olduğu için bilimsel risk yok; operasyonel kilitlenme.",
+        "evidence": "fresh_supervisor.py run_locked ≈L477 `if not manifest_path.exists() and any(p.name != 'supervisor.mutex.lock' for p in root.iterdir()): raise RuntimeError('New run root must be empty')`; finally ≈L670 `atomic(root / 'attempts' / attempt / 'terminal_status.json', terminal_record)` ve `record_status(root, manifest_path, terminal_record)` manifest yokken de root/terminal_status.json yazar; main ≈L453 `if binding['run_id'] != root.name: raise`.",
+        "recommended_action": "Sınırlı V3'te: manifest yokken boşluk kontrolünün yalnız attempts/, terminal_status.json ve mutex dosyasını tolere etmesi ya da ön-manifest terminal kaydının yalnız attempts/ altına yazılması. V3 açılmazsa lineage/runbook'a 'ön-manifest arızasında kök içeriği attempt'e taşınır, sonra yeniden başlatılır' adımı yazılır. Yazar kararı gerekmez."
+      },
+      {
+        "id": "F07-FRESH-R3-04-lineage-fields-required-by-launch",
+        "severity": "P3",
+        "classification": "verified",
+        "confidence": 0.85,
+        "description": "V2 launch_binding, prelaunch validator'ın ZORUNLU kılmadığı sözleşme alanlarını KeyError üretecek biçimde okuyor: freeze_id, run_id, confirmatory_binding.threshold_id/threshold_value, timebase_binding.design_timebase ve lineage final belgesinin tz-aware 'at' alanı; ayrıca approval kaydı tz-aware approved_at ister. Prelaunch PASS almış bir schema-v3 sözleşmesi bu alanlar eksikse launch'ta tanısız çöker. Bu alanlar final validator'ın RUN_MANIFEST.freeze beklentisiyle uyumludur (doğru hizalama), fakat aday bir eşik kavramı taşımadığı için threshold_id/value'nun adayın mevcut inference parametrelerinden (family_alpha 0.05, primary_ci_level 0.9875, yön kuralı) mekanik türetilmesi gerekir; yeni bilim değildir.",
+        "evidence": "fresh_supervisor.py launch_binding ≈L139 `final_document['at']`, ≈L196-203 `confirmatory = frozen['confirmatory_binding']` … `'timebase': frozen['timebase_binding']['design_timebase']`, `frozen['freeze_id']`, `frozen['run_id']`. experiment_freeze_owner_snapshot.py assess_prelaunch_contract yalnız schema_version/freeze_id/run_id/status, lineage zinciri, required_metrics/baselines, evaluator_semantics (prospective) ve post_gate_continuation'ı denetler; confirmatory_binding/timebase_binding final fazdadır.",
+        "recommended_action": "Schema-v3 sözleşmesi yazılırken bu alanları prospective olarak doldur (threshold_id/value adayın inference bloğundan sabit metin; design/artifact/external timebase eş değer ve kanıt artefaktı; final ve approval belgelerinde tz-aware ISO 'at'/'approved_at'). İsteğe bağlı sınırlı V3: eksik anahtarda açık ValueError mesajı. Yazar kararı gerekmez."
+      }
+    ],
+    "next_action": {
+      "status": "COMPLETE",
+      "next_agent": "none",
+      "role": "orchestrator",
+      "task": "V2 aday c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75 için bağımsız delta incelemesi tamamlandı: R2-01…R2-09 kapanışı doğrulandı, üç değişen runtime kaynağında regresyon bulunmadı, 4 sınırlı deterministik bulgu raporlandı. Sıradaki deterministik iş: bu incelemeyi bağlayan schema-v3 lineage (candidate→review→decision→final), R3-01 receipt yenilemesinin lineage'de bağlanması, ardından experiment_freeze --phase prelaunch; exact public yayın onayı somut paketten sonra açılacak insan kapısıdır.",
+      "reason": "Koşu-öldürücü veya bilimsel kusur yok; kalan kalemler kanıt-bağlama hijyeni, provenance etiketi, operasyonel kurtarma ve lineage yazım listesidir. Hiçbiri yeni iddia, deney, istatistik veya yazar kararı gerektirmez; bu turda insan kapısı açılmadı.",
+      "input_files": [
+        "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V2.json",
+        "MD/02_design/FRESH_VALIDATION_PROTOCOL_CANDIDATE_20260920.md",
+        "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+        "experiments/2026-09-19_codex_local_fresh_preflight/fresh_worker.py",
+        "experiments/2026-09-19_codex_local_fresh_preflight/seed_level_reducer.py",
+        "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+        "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/RUNTIME_DELTA.diff"
+      ],
+      "expected_outputs": [
+        "V2 hash'ine bağlı bağımsız delta hükmü ve 4 bulgu, schema-v3 lineage review artefaktı olarak kayıt altına alınır",
+        "R3-01 için yenilenmiş receipt'lerin decision/final lineage'de hash ile bağlanması; R3-02/03/04 için sınırlı V3 ya da lineage notu"
+      ],
+      "allowed_actions": [
+        "report"
+      ],
+      "human_required": false,
+      "human_question": null,
+      "risk_level": "medium",
+      "stop_condition": "Her bulgu evidence, confidence ve action ile sınıflandı; salt-okunur delta incelemesi bitti.",
+      "estimated_scope": "bounded"
+    },
+    "not_run_handoff": [
+      {
+        "capability": "live_validators",
+        "item": "experiment_freeze.py --phase prelaunch, test_*.py suite'leri, fresh_supervisor --plan/--fixture ve fresh_worker runtime yürütmesi",
+        "reason": "Text-only salt-okunur worker; run_experiments/execute_model_command yasak. Receipt'ler yalnız metin ve hash düzeyinde incelendi."
+      },
+      {
+        "capability": "other",
+        "item": "replay_identity_hardened tam dizileri, paired_seed_differences.csv'nin 80 satır dışındaki hücreleri ve discovery raw/model_seed*.json dosyaları",
+        "reason": "Yalnız hash-bağlı metadata/estimand extract'i sağlandı; tam dizi okuması veya CSV geneli iddia edilmez."
+      },
+      {
+        "capability": "other",
+        "item": "Değişmez V5 producer'ın fresh harness altında gerçek çalışması (ör. raw/cross_seed*.json içinde schema_check'in beklediği üst düzey 'seed' alanı)",
+        "reason": "run_criticality_unit_v5.py allowlist'te değil; ilk yürütme bilimsel koşu olacak, arıza fail-closed STOP üretir."
+      },
+      {
+        "capability": "other",
+        "item": "Policy fazı birim süresi ile 900 s timeout ve 12 h tavan uyumu",
+        "reason": "Adayda new_policy_seconds/total_eta unknown olarak beyanlı; ölçüm yalnız gerçek koşuda mümkün, projeksiyon üretilmedi."
+      }
+    ]
+  },
+  "r2_record_ref": {
+    "path": "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+    "sha256": "e5d33bee842bf771ce708707cdce009f0a82461ea3ab6bbb0347ed39c8114aad",
+    "size_bytes": 19859
+  },
+  "r2_record": {
+    "at": "2026-09-19T23:03:21.821329+00:00",
+    "scope": "EXACT_STRUCTURED_OUTPUT_EXTRACT",
+    "origin_ref": {
+      "path": ".orchestrator/runs/run-20260919-63c91e62f564/rounds/002-independent_final_protocol_review/attempts/attempt-002/claude_result.json",
+      "sha256": "c7d50d7e56c35164ae6cdc3cec0e9cd848c3685f6c2d91baf27a05d933d9d862",
+      "size_bytes": 38195
+    },
+    "binds_candidate_sha256": "9f04e976d53efd3521b078c50b2f062a066f67774d6a3ec7f67ba0760745fea6",
+    "provider": "Claude",
+    "effective_model": "claude-fable-5-1",
+    "effective_effort": "max",
+    "observed_model": "claude-fable-5-1",
+    "observed_effort": "not_reported",
+    "review": {
+      "schema_version": "1.0",
+      "status": "ACTION_REQUIRED",
+      "summary": "Bağlı aday: FRESH_PROTOCOL_CANDIDATE_20260920_V1.json SHA256 9f04e976d53efd3521b078c50b2f062a066f67774d6a3ec7f67ba0760745fea6; protokol MD e9f4c56b…5ae54; 17 runtime kaynağının hash'i manifestle birebir eşleşti. Önceki reviewer sonucu okunmadı (blind=false olsa da previous_result null); tarihsel PASS devralınmadı; eski/kullanılmayan confirmatory endpoint verisine (seed 10–29, 300–319) erişilmedi.\n\nHazırlık kararı: TASARIM VE UYGULAMA TUTARLI, KOŞULLU İLERLEME. Kod doğruluğu düzeyinde P0/koşu-öldürücü kusur bulunmadı. Dondurma öncesi kapatılması gereken kalemler: F01 (kaynak tavanlarının ölçülmüş dayanağı), F02 (eksik bağımlılıklar/not_run), F03 (önceki confirmatory girişimlerin yapısal beyanı); F04–F09 sınırlı ve anlam-nötr/iddia-daraltıcı düzeltmelerdir. Hiçbir bulgu yeni yazar kararı gerektirmez; hepsi mevcut DIRECT_EDIT_FULL/evidence_conservative_revision yetkisiyle kapanır.\n\nDoğrulanan (özet): (1) RNG/ayrım: V5 SeedSequence 26 çocuk; sigma/feature standardizasyonu yalnız train, eşik validation q0.99, denetimli fit labeled-development, test hiçbir fit'e girmiyor; 7 replicate refit aynı SeedSequence([seed, model_idx, k, 501]) ile ve mean_val bit-eşitliği zorlanıyor. (2) Beş-model birincil + zorunlu altı-model duyarlılığı reducer'da sabit; sonuç-güdümlü dışlama yok. (3) Seed-düzeyi estimand: model ortalaması → seed farkı → n=40, ddof=1, df=39, iki taraflı %98.75 t (Bonferroni 4); test dosyasındaki el hesapları (C1=.0205, C3=.03075, SD kapalı form) formülle uyumlu. (4) Altı policy, 12 profil (PLATFORM/PAYLOAD vektörleri), üç hedef, 1296 satır/seed, 51840 toplam, 4920 çıktı aritmetiği doğru. (5) Matching: Hungarian bire bir; realized-load k=min(n,max(1,floor(fn))), son nokta 0.4'e taşınır; n<3→0/VALID_ZERO_REVIEW_CAPACITY, boş evren→None; legacy eğri n>=3 için aynen korunur. (6) Tie: exact float eşitliği, 100 ortak draw, tie seed 20260826+100000*seed+1000*model_idx+sid (sid 0/1/2/100+i) kod=MD=JSON; float64 JSON round-trip kayıpsız. (7) Bilgi akışı: priority alt süreci yalnız policy_inputs.json alır; evaluation anahtarı UID kümesiyle birleşir ve policy hash'ine bağlıdır (API sınırı, OS sandbox değil). (8) Checkpoint: binding+hash+şema doğrulanan birim atlanır; kısmi çıktı attempts'e taşınır; deadline restart'ta sıfırlanmaz; kernel mutex; owned-worker ticket ve parent-loss; public bayt doğrulaması kaynak+lineage+protocol için var. (9) Evaluator-semantics not_applicable gerekçesi geçerli (F10).\n\nAyrım: F01, F02, F05, F06 operasyonel/kod; F03, F08, F10 bilimsel yorum/şeffaflık; dış geçerlik: tasarım sentetik aynı-generator yeni-seed içsel replikasyonudur, gerçek veri/operatör faydası iddiası taşımaz (MD bunu beyan ediyor).\n\nKalan kapsam (tamamlanmamış): yeni exact public önkayıt onayı ve yayını; 40-seed bilimsel üretim ve bağımsız sonuç doğrulaması; ESA-ADB dış veri kolu; manuscript A–F zinciri. Fixture/mock PASS'ler gerçek bilimsel yürütme sertifikası değildir.\n\nProvenance: provider Claude; requested/effective model manifestte boş → workflow yüksek katmanı; observed claude-fable-5-1; effort mekanik doğrulanamadı → unknown. Salt-okunur, text-only; hiçbir dosya yazılmadı, hiçbir komut çalıştırılmadı.",
+      "findings": [
+        {
+          "id": "F07-FRESH-R2-01-resource-ceiling-basis",
+          "severity": "P1",
+          "classification": "uncertain",
+          "confidence": 0.55,
+          "description": "Birim timeout 900 s ve ilk başlangıçtan duraklamalar dahil 12 saatlik sabit tavan, pakette ölçülmüş süre/hacim dayanağı olmadan dondurulmuş. 240 model birimi (her biri 7 replicate x 3 fit + SHAP/occlusion) tek thread'te koşar; birim başına ~3 dk bile 12 saati doldurur. Deterministik birim aşımı aynı seed/kodla tekrarında yine aşar; tavan değişimi hash_drift hard-stop'u tetikler ve yeni önkayıt gerektirir. Deadline aşımında resume_resets_deadline=false ve boş-kök kuralı 400 birimin yeni kökte yeniden koşulmasını zorlar; bu MD'nin 'önceki tamamlanmış birimler tekrar koşulmaz' beyanıyla çelişir. RESEARCH_PREFLIGHT 2.5 GB boş disk ölçmüş; 10 GiB rezerv + ~3 GB artefakt için canlı hacim öngörüsü yok. Sınıf: operasyonel; estimand etkilenmez, koşu-sonrası protokol amendment riski doğar.",
+          "evidence": "fresh_supervisor.py run_locked ≈L470 `limit = 30 if args.fixture else 900`; ≈L400 `'deadline_at': (created + timedelta(hours=12))`; ≈L373 `raise RuntimeError('New run root must be empty')`. Aday JSON resources: `unit_timeout_seconds: 900`, `run_deadline_hours_from_first_start_including_downtime: 12`, `resume_resets_deadline: false`. MD ≈L118 'Teknik arıza aynı seed ve aynı hashli kodla kurtarılır; önceki tamamlanmış birimler tekrar koşulmaz'. RESEARCH_PREFLIGHT `disk_free_bytes: 2517004288`. Tedarik edilen hiçbir artefakt runtime_seconds ölçümü taşımıyor.",
+          "recommended_action": "Dondurmadan önce değişmez discovery V5 çıktılarındaki runtime_seconds (replicate raw/model_seed*_*.json) ve gen/feat sürelerinden birim başına maksimumu türet; adaya `resource_basis` alanı ekle (kaynak hash'leri, ölçüm, güvenlik çarpanı, öngörülen toplam süre ve artefakt hacmi). Yetersizse tavanları dondurma öncesi mühendislik amendment'ı olarak değiştir ve deadline aşımı kurtarma kuralını (yeni kök, deterministik yeniden üretim, deviation kaydı) protokole yaz. Yeni yazar kararı gerekmez."
+        },
+        {
+          "id": "F07-FRESH-R2-02-missing-dependencies",
+          "severity": "P2",
+          "classification": "uncertain",
+          "confidence": 0.9,
+          "description": "Adayın atıf yaptığı şu artefaktlar pakette yok, ilgili hükümler not_run: FRESH_PROTOCOL_CANDIDATE_20260920_V1_UNITS.json (envanterin supervisor scientific_plan() ile eklenen integrity/5 policy çıktılarıyla uyumu doğrulanamadı; 4920 aritmetik olarak tutuyor), POLICY_SEPARATION_TESTS_V2, producer_small_injected/REPORT, producer_empty_injected/REPORT, replay_identity_hardened/REPORT, CORRUPTION_CONTROLS.json, RESEARCH_PREFLIGHT design_csv (precision projeksiyonunun aynı kontrast tanımıyla üretildiği doğrulanamadı), merkez experiment_freeze.py (prelaunch hükmü yalnız exit code ile bağlı), schema-v3 lineage belgeleri (henüz yok). Gerçek V5 producer yolu fresh_worker/supervisor altında tasarım gereği hiç çalışmamış; ilk yürütme bilimsel koşu olacak.",
+          "evidence": "Aday JSON technical_evidence_refs ve unit_inventory_ref yolları manifest project_files'ta yok. fresh_supervisor.py launch_binding ≈L101 `subprocess.run([... 'experiment_freeze.py', ..., '--phase', 'prelaunch'], check=True)` sonrası çıktı ayrıştırılmıyor. fresh_worker.py main ≈L190 `int(parts[1]) not in range(1000, 1040)` → discovery seed ile smoke imkânsız.",
+          "recommended_action": "Sonraki turda bu artefaktları allowlist'e ekle ya da adayda `not_reviewed_in_round2` olarak işaretle. experiment_freeze.py çıktısındaki yapısal PASS alanını launch_binding'de zorunlu kıl (Codex kod değişikliği, dondurma öncesi). İlk gerçek birimde saf harness arızası için önceden tanımlı yol yaz: kod düzeltmesi = hash_drift = yeni aday/inceleme/yayın; tohum verisi alıkonulmaz. Yazar kararı gerekmez."
+        },
+        {
+          "id": "F07-FRESH-R2-03-prior-confirmatory-disclosure",
+          "severity": "P2",
+          "classification": "verified",
+          "confidence": 0.85,
+          "description": "MD, eski confirmation endpoint'lerinin (seed 10–29, 300–319) kapalı ve V4/V5 koşularının başarısız olduğunu söylüyor; yayınlanacak makine sözleşmesi (JSON aday) bu önceki doğrulayıcı girişimleri yapısal olarak beyan etmiyor. 40-seed koşusu ilk doğrulayıcı deneme gibi okunabilir; forking-paths şeffaflığı ve yorumlanabilirlik için eksik.",
+          "evidence": "MD ≈L33 'Eski confirmation seed10–29 ve300–319 endpointleri kapalıdır'; ≈L30 'eski başarısız V4/V5 koşuları tekrarlanmaz'. Aday JSON historical_design_refs yalnız V1.1 protokolü, RESEARCH_PREFLIGHT ve SOURCE_SNAPSHOT taşıyor; önceki confirmatory statü alanı yok. confirmatory_heterogeneity_protocol_v1_1.md ≈L13 'The original universal-uplift omnibus failed'.",
+          "recommended_action": "Adaya `prior_confirmatory_attempts` alanı ekle: her set için seed aralığı, protokol/kod hash'i, kapanış statüsü, değişmez kayıt yolu; MD'ye tek cümlelik özet. Yalnız mevcut değişmez kayıtlardan aktarım; iddia güçlendirmez. Yazar kararı gerekmez."
+        },
+        {
+          "id": "F07-FRESH-R2-04-hard-stop-operational-definition",
+          "severity": "P3",
+          "classification": "verified",
+          "confidence": 0.8,
+          "description": "hard_stops içindeki leakage ve invalid_data için runtime'da tanımlı tetik yok; yalnız hash_drift (verify_sources) ve resource_ceiling (RSS/disk/RAM/timeout) mekanik. schema_check sonluluk/şekil/sayım ile sınırlı; V1.1 property/tie-pair gate'leri taşınmamış (birincil kontrastlar bunlara dayanmadığı için sonuç etkilenmez). Aday hangi kontrolün hangi hard-stop'u ürettiğini söylemiyor.",
+          "evidence": "Aday JSON `hard_stops: [ethics, license, leakage, invalid_data, resource_ceiling, hash_drift]`. fresh_supervisor.py schema_check ≈L218-245 yalnız `np.isfinite`, shape[1]==12, n_episodes, 1296 satır. fresh_worker.py verify_model ≈L70 yalnız mean_val eşitliği.",
+          "recommended_action": "Adaya `hard_stop_triggers` eşlemesi ekle: her hard stop için mekanik kontrol adı/dosya ya da 'manuel inceleme kararı; koşu durur' ifadesi. Mevcut durumu açıklar, bilim eklemez."
+        },
+        {
+          "id": "F07-FRESH-R2-05-public-bytes-scope",
+          "severity": "P3",
+          "classification": "verified",
+          "confidence": 0.85,
+          "description": "Prelaunch public-byte doğrulaması kaynak dosyalar, freeze sözleşmesi, lineage ve protocol_ref ile sınırlı; unit_inventory_ref, runtime_observation_ref ve technical_evidence_refs yalnız aday JSON içindeki hash ile bağlı, yayınlanmış bayt olarak zorunlu değil. Yayın paketi bu dosyaları içermese de kapı geçer.",
+          "evidence": "fresh_supervisor.py launch_binding ≈L150-158 `for ref in [config['freeze_contract'], *[frozen['lineage'][k] for k in (...)], candidate['protocol_ref']]: ... remote_files[ref['path']] = ref['sha256']`.",
+          "recommended_action": "remote_files kümesine candidate unit_inventory_ref, runtime_observation_ref ve technical_evidence_refs ekle ya da MD'de bunların hash-only bağlı olduğunu açıkça yaz. Codex kod değişikliği; hash drift doğuracağı için dondurma öncesi."
+        },
+        {
+          "id": "F07-FRESH-R2-06-approval-timestamp-binding",
+          "severity": "P3",
+          "classification": "verified",
+          "confidence": 0.8,
+          "description": "Yazar onayı ve yayın zamanı yalnız truthy kontrolüyle kabul ediliyor; ISO-8601 ayrıştırma ve sıra (final lineage → onay → yayın → ilk birim) doğrulanmıyor; mock testte 'SYNTHETIC' değeri geçiyor.",
+          "evidence": "fresh_supervisor.py launch_binding ≈L106-108 `or not approval.get('verbatim_user_instruction') or not approval.get('approved_at')`; ≈L128 `if not release.get('published_at')`. test_launch_binding.py ≈L44 `'approved_at': 'SYNTHETIC'` ile valid_mock PASS.",
+          "recommended_action": "datetime.fromisoformat ile ayrıştır; final lineage zamanı < approved_at < published_at < manifest created_at sırasını zorunlu kıl ve manifeste yaz. Codex kod değişikliği, dondurma öncesi."
+        },
+        {
+          "id": "F07-FRESH-R2-07-aggregate-reporting-gaps",
+          "severity": "P3",
+          "classification": "verified",
+          "confidence": 0.8,
+          "description": "Aggregate, birincil beş-model ile altı-model duyarlılığı arasındaki yön/karar uyumsuzluğunu mekanik işaretlemiyor; VALID_ZERO_REVIEW_CAPACITY hücre sayısı ve model başına n_episodes dağılımı aggregate'e taşınmıyor (satırlarda var); evaluate() ürettiği curve noktaları results.json'a yazılmıyor (discovery satırları eğriyi saklıyordu).",
+          "evidence": "seed_level_reducer.py reduce_rows ≈L83-100 yalnız birincil `family_verdict`. fresh_worker.py policy_unit ≈L135 `rows.append({... 'muc_auc_0_40': answer['auc'], 'evaluation_status': answer['status']})` (curve yok). run_policies.py ≈L150 `\"curve\":curve` saklıyordu.",
+          "recommended_action": "Aggregate'e `sensitivity_direction_agreement` (C1–C4 primary vs six-model verdict), `zero_capacity_cells` sayacı ve n_episodes özeti ekle; results.json satırlarına curve ekle. Mevcut veriyi raporlar; çıkarım değişmez."
+        },
+        {
+          "id": "F07-FRESH-R2-08-contrast-interpretation-tags",
+          "severity": "P3",
+          "classification": "verified",
+          "confidence": 0.75,
+          "description": "C1/C3'te politika kütlesi (|z| sapmasının kanal normalizasyonu) ile channel_criticality_only hedefi (olayın kanal impact normalizasyonu) aynı c ile aynı yapısal aileden türüyor; C1'in beklenen pozitif yönü büyük ölçüde yapısaldır. MD simetriyi açıklıyor, fakat yayınlanacak JSON primary_contrasts alanında kontrast başına yorum sınırı yok; MD başlığındaki 'bağımsız doğrulama' gövdedeki 'teori düzeyinde bağımsızlık kanıtı değil' sınırıyla gerilimli.",
+          "evidence": "fresh_worker.py policy_unit ≈L120 `masses = impact / impact.sum(axis=1, keepdims=True)` ve `'channel_criticality_only': masses @ c`; fresh_producer_adapter.py observable_window_masses ≈L33-38 `z = np.abs((test - train.mean(axis=0)) / ...)` → mass(raw). MD ≈L84 'Policy ve utility aynı c'yi kullanır; bu simetri açıklanır'; MD L1 'Yeni bağımsız doğrulama'.",
+          "recommended_action": "JSON primary_contrasts her kontrasta `interpretation` etiketi ekle (C1 yapısal kalibrasyon/tutarlılık; C2 eşit-olay maliyeti; C3 açıklama vs yalın sapma; C4 profil etkileşimi) ve manuscript'te C1'in uplift kanıtı olarak sunulmayacağı kaydı; MD başlığını 'yeni-seed içsel replikasyon' olarak daralt. İddiayı daraltır; yazar kararı gerekmez."
+        },
+        {
+          "id": "F07-FRESH-R2-09-protocol-md-typography",
+          "severity": "P3",
+          "classification": "verified",
+          "confidence": 0.95,
+          "decision_class": "B",
+          "description": "Protokol MD'de sayı-birim/aralık arasında boşluk düşmüş yerler var; anlam değişmez, yayınlanacak önkayıt metninde okunabilirliği bozar.",
+          "evidence": "MD ≈L33 'seed10–29 ve300–319'; ≈L34 'seed1000–1039'; ≈L100 'sid uniform0, platform1, payload2'; ≈L111 'ddof1, df39'; ≈L119 'n10'; ≈L131 'thread1; 10GiB', '3GiB', 'child-tree4GiB'; ≈L132 'timeout900s'.",
+          "recommended_action": "Boşlukları geri koy; sayı, iddia veya hedge değişmez."
+        },
+        {
+          "id": "F07-FRESH-R2-10-evaluator-semantics-na-valid",
+          "severity": "INFO",
+          "classification": "verified",
+          "confidence": 0.9,
+          "description": "evaluator_semantics.applicability=not_applicable gerekçesi geçerli: politika yalnız donmuş alarm kuyruğunu sıralar; endpoint bütçe altında bire bir eşlemeli referans-olay kapsamıdır; müdahale, arıza önleme veya averted-failure kredisi modeli yoktur, dolayısıyla schema-v3 multi-mode averted-failure semantiği uygulanamaz ve şema doldurmak için mekanizma üretilmemesi doğrudur. Geçerlilik koşulu: bütün iddialar kapsam düzeyinde kalır; original_impact etiketi fiziksel zarar olarak yorumlanmaz.",
+          "evidence": "Aday JSON not_applicable_reason: 'Fixed-queue alarm ordering ... The policy cannot alter generation, detector alarms or the reference universe.' boundary_evaluator.py captured() `linear_sum_assignment(-matrix)`; policy_api.py policy_values yalnız scores/mass/profile alır; MD ≈L137 'Kapsam kazanımı arıza önlenmiş gibi sayılmaz'.",
+          "recommended_action": "Değişiklik gerekmez; manuscript A–F zincirinde kapsam-düzeyi iddia sınırı korunur."
+        }
+      ],
+      "next_action": {
+        "status": "COMPLETE",
+        "next_agent": "none",
+        "role": "orchestrator",
+        "task": "Round 2 bağımsız protokol incelemesi tamamlandı; aday SHA 9f04e976…5fea6 için koşullu ilerleme kararı ve 10 bulgu rapor edildi. Bulgu F01–F09 dondurma öncesi hazırlık aracının mevcut DIRECT_EDIT_FULL/evidence_conservative_revision yetkisiyle kapanır; ardından schema-v3 lineage ve exact public önkayıt onayı sıradadır.",
+        "reason": "Kod doğruluğu düzeyinde koşu-öldürücü kusur yok; kaynak tavanı dayanağı, eksik bağımlılıklar ve önceki confirmatory girişim beyanı dondurma öncesi kapanmalı. Hiçbir bulgu yeni bilimsel karar, yeni deney veya iddia güçlendirmesi gerektirmediği için insan kapısı açılmadı.",
+        "input_files": [
+          "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V1.json",
+          "MD/02_design/FRESH_VALIDATION_PROTOCOL_CANDIDATE_20260920.md",
+          "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+          "experiments/2026-09-19_codex_local_fresh_preflight/fresh_worker.py",
+          "experiments/2026-09-19_codex_local_fresh_preflight/seed_level_reducer.py"
+        ],
+        "expected_outputs": [
+          "Round 2 bağımsız inceleme bulguları ve koşullu hazırlık kararı, aday SHA256'ya bağlı olarak kayıt altına alınır",
+          "F01–F09 için sınırlı düzeltme ve eksik artefaktların sonraki inceleme allowlist'ine eklenmesi"
+        ],
+        "allowed_actions": [
+          "report"
+        ],
+        "human_required": false,
+        "human_question": null,
+        "risk_level": "medium",
+        "stop_condition": "Her bulgu evidence, confidence ve action ile sınıflandı; salt-okunur inceleme bitti.",
+        "estimated_scope": "bounded"
+      },
+      "not_run_handoff": [
+        {
+          "capability": "live_validators",
+          "item": "experiment_freeze.py prelaunch, test_*.py suite'leri ve fresh_supervisor --plan/--fixture yürütmesi",
+          "reason": "Text-only, salt-okunur worker; run_experiments/execute_model_command yasak. Raporlar yalnız metin olarak incelendi."
+        },
+        {
+          "capability": "other",
+          "item": "Tedarik edilmeyen artefaktlar: FRESH_PROTOCOL_CANDIDATE_20260920_V1_UNITS.json, POLICY_SEPARATION_TESTS_V2, producer_small_injected/REPORT, producer_empty_injected/REPORT, replay_identity_hardened/REPORT, CORRUPTION_CONTROLS.json, RESEARCH_PREFLIGHT design_csv",
+          "reason": "Allowlist dışında; ilgili hükümler not_run (bkz. F02)."
+        },
+        {
+          "capability": "other",
+          "item": "Discovery V5 runtime_seconds ölçümlerinden kaynak tavanı doğrulaması",
+          "reason": "Discovery çıktıları allowlist'te değil; F01 bu nedenle uncertain."
+        }
+      ]
+    }
+  },
+  "disposition_ref": {
+    "path": "experiments/2026-09-19_codex_local_fresh_preflight/R3_DISPOSITION_20260920.json",
+    "sha256": "5f3ae6a4ef4ed75a473f279b9caddba88f0cf862714351e2e2f4e5a0bbad6ce7",
+    "size_bytes": 10972
+  },
+  "disposition": {
+    "at": "2026-09-19T23:35:23.966697+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-auto-preflight-20260919",
+    "status": "ACCEPT_FOR_PROSPECTIVE_FREEZE",
+    "independent_delta_status_preserved": "ACTION_REQUIRED",
+    "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+    "binds_delta_result_sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+    "unresolved_prepublication_blockers": [],
+    "author_publication_approval": false,
+    "finding_dispositions": {
+      "F07-FRESH-R3-01-stale-separation-receipt": {
+        "status": "CLOSED",
+        "rationale": "19 sentetik ayrım kontrolü güncel fresh_policy_artifacts hashinde geçti. İki adapter için yalnız ilan edilen giriş adı/docstring/seed-guard farkları normalleştirildikten sonra AST eşitliği doğrulandı. Eski receipt frozen adayda tarihsel kalır; bu iki yeni hashli receipt karar/final lineage içinde güncel kanıttır.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+            "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+            "size_bytes": 1242
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+            "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+            "size_bytes": 2732
+          }
+        ]
+      },
+      "F07-FRESH-R3-02-manifest-operation-id-hardcoded": {
+        "status": "NONBLOCKING_LIMIT",
+        "rationale": "Donmuş RUN_MANIFEST.operation_id hazırlık lineage operasyonunu adlandırır. Gerçek launch operasyonu aynı run_id ve final/config hashleriyle TOOL_RUN_LOG olayında ayrıca kaydedilecektir. Bu P3 provenance etiketi bilimsel hesaplamayı değiştirmez; yeni runtime aday açılmadı.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+            "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+            "size_bytes": 3514
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+            "sha256": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+            "size_bytes": 36083
+          }
+        ]
+      },
+      "F07-FRESH-R3-03-premanifest-failure-blocks-fixed-root": {
+        "status": "NONBLOCKING_LIMIT",
+        "rationale": "Ön-manifest arızasında aynı kökte attempts altına taşıma boş-kök koşulunu çözmez. Runbook sıfır bilimsel çıktı ve ölü process kimlikleri doğrulandıktan sonra başarısız kökün tamamını proje içindeki yeni arşive hash/üye-kümesi kanıtıyla taşımayı tanımlar. Manifestli koşuda bu yol yasaktır; tamamlanmış birimler veya deadline sıfırlanmaz.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+            "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+            "size_bytes": 3514
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+            "sha256": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+            "size_bytes": 36083
+          }
+        ]
+      },
+      "F07-FRESH-R3-04-lineage-fields-required-by-launch": {
+        "status": "CLOSED",
+        "rationale": "Lineage yazıcısı freeze_id/run_id, timezone-aware FINAL.at, adayın family_alpha/CI/yön kuralından türeyen threshold_id/value ve donmuş generator DT=30 s/orbit=5700 s design_timebase alanlarını yazar. Koşu sonrası timebase/artifact/registry kanıtları prospective PASS olarak uydurulmaz; gerçek yazar onayı henüz yoktur.",
+        "blocks_prospective_freeze": false,
+        "evidence_refs": [
+          {
+            "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+            "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+            "size_bytes": 3514
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+            "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+            "size_bytes": 10743
+          },
+          {
+            "path": "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V2.json",
+            "sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+            "size_bytes": 43765
+          }
+        ]
+      }
+    },
+    "supplemental_private_evidence_refs": [
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+        "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+        "size_bytes": 1242
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_fresh_policy_artifact_contract.py",
+        "sha256": "a1a184f2be45c238f317c72469a5bbb800317e336c80cd822827e109ba7d6a1e",
+        "size_bytes": 4758
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+        "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+        "size_bytes": 2732
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/verify_adapter_equivalence.py",
+        "sha256": "60585ffde564f8c66ad3b0cc8bfced67d74d6cbb7e9a041827bcb52851f69f15",
+        "size_bytes": 3979
+      },
+      {
+        "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+        "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+        "size_bytes": 3514
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/PUBLIC_PREPARATION_CHECKS_V2_20260920.json",
+        "sha256": "c4647be3e48554765c7c62d28c70153b562fc238e0c322bad70f0cb13eb3ee58",
+        "size_bytes": 1771
+      },
+      {
+        "path": "MD/03_experiments/FRESH_DURABILITY_PLAN_20260920.md",
+        "sha256": "2bc44e32483ba8afd3c7ccf0614153055dbca2258ef549dfde633f073a0ed2e4",
+        "size_bytes": 9040
+      },
+      {
+        "path": ".orchestrator/runs/run-20260919-00eb8478b24a/rounds/002-independent_delta_protocol_review/attempts/attempt-002/claude_result.json",
+        "sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+        "size_bytes": 29005
+      },
+      {
+        "path": "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+        "sha256": "e5d33bee842bf771ce708707cdce009f0a82461ea3ab6bbb0347ed39c8114aad",
+        "size_bytes": 19859
+      },
+      {
+        "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+        "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+        "size_bytes": 10743
+      }
+    ],
+    "operational_runbook": "# Yeni-seed önkayıt: launch kimliği ve sınırlı kurtarma\n\nDate/time: 2026-09-20 02:34 +03:00  \nTool: Codex  \nModel: gpt-6-astra / xhigh  \nOperation ID: `f07-auto-preflight-20260919`\n\nBu ek yalnız R3-02–04 operasyonel kalıntılarını açıklar. V2 adayının bilimsel\ntasarımı, 17 kaynak hash'i, seed kümesi ve kaynak tavanları değişmez. Yeni\nbilimsel koşu henüz başlamadı; tamamlanmış deneyler yeniden çalıştırılmaz.\n\nRUN_MANIFEST.operation_id, donmuş supervisor kaynağında hazırlık operasyonunu\ngösterir. Gerçek başlangıç operasyonu, başlatma zamanındaki TOOL_RUN_LOG olayına\naynı run_id, freeze_id, final/decision/config hashleri ve gerçek zaman damgasıyla\nyazılır. Hazırlık kimliği, ayrı launch olayının yerine geçmez.\n\nManifest oluşmadan başarısız olan bir başlangıç aynı kökte attempts ve terminal\nkayıtları bırakabilir; boş-kök kontrolü bu dizini yeniden kabul etmez. İçeriği\naynı kökteki attempts altına taşımak bu kontrolü çözmez. Böyle bir arızada ajan\nşu sınırlı kurtarmayı uygular:\n\n1. RUN_MANIFEST.json bulunmadığını; sıfır bilimsel checkpoint, sıfır raw/data/\n   features/ckpt/policy çıktısı olduğunu ve kayıtlı supervisor/worker PID ile\n   process creation time kimliklerinin artık canlı olmadığını doğrular.\n   Herhangi bir bilimsel çıktı veya belirsiz process kimliği varsa bu yol kapanır.\n2. Başarısız kökün bütün dosyalarını yol/hash/boyut envanteriyle kaydeder. Kaynak\n   ve hedefin çözümlenmiş mutlak yollarının bu proje içinde kaldığını doğrular.\n   Hedef, var olmayan `archive/run_prelaunch_failures/<zaman>__<run_id>` olur.\n3. Başarısız kökü bütünüyle bu arşive taşır; arşivde tam üye kümesini ve bütün\n   hashleri yeniden doğrular. Dosya silmez, tamamlanmış birimi yeniden üretmez.\n4. Başarısızlığın salt launch ortamı/sözleşme sunumu sorunu olduğunu kanıtlar.\n   Kaynak, aday, protokol, runtime veya public binding değişirse bu kurtarma\n   yetmez; yeni prospective değişiklik–inceleme–yayın zinciri gerekir.\n5. Aynı run_id için yeni ve boş kökü yalnız exact public onay/yayın, güncel\n   binding ve kaynak kontrolleri tekrar sağlandığında oluşturur. Başarısız\n   deneme, arşiv ve gerekçe TOOL_RUN_LOG olayında korunur.\n\nBu yol yalnız durable ilk manifestten önce ve bilimsel veri üretimi başlamadan\nönceki arızalara aittir. Manifest varsa olağan hash-bound resume uygulanır;\nilk manifest zamanı ve 12 saatlik deadline korunur. Deadline tükendiyse bu\narşivleme yolu kullanılarak süre sıfırlanamaz; otomatik tam yeniden koşu yoktur.\n\nProspective sözleşmede freeze_id, run_id, confirmatory_binding.threshold_id/\nthreshold_value ve timebase_binding.design_timebase bulunur. Eşik metni adayın\n%98.75 aralık, aile alpha=0.05 ve C1/C2/C3/C4 yön kuralından mekanik türetilir;\nyeni eşik veya istatistik kararı değildir. Tasarım timebase'i donmuş generator\nkaynağındaki DT=30 s ve orbit=5700 s değerleridir. Gerçek çıktı timebase ve\nartifact/registry/terminal bağları koşu sonrası ölçülür; şimdiden üretilmiş gibi\nyazılmaz. FINAL.at timezone-aware ISO'dur. Yazar onayının approved_at alanı\nancak gerçek kullanıcı yanıtından sonra, yanıtın kendisiyle birlikte yazılır.\n\nPublic release oluşturulmadan önce onaylı exact paket gerekir; prelaunch PASS\nyazar onayı, bilimsel sonuç, bağımsız sonuç doğrulaması veya A–F kapanışı değildir.\n",
+    "scope_limits": [
+      "No scientific generation or fitting",
+      "No completed experiment rerun",
+      "No manuscript A-F PASS inherited",
+      "Exact public publication remains an author gate",
+      "Real V5 producer execution under this harness remains untested until the prospective run",
+      "Policy runtime and total completion ETA remain unknown"
+    ]
+  },
+  "historical_pass_inherited": false,
+  "scientific_execution_certified": false,
+  "manuscript_A_F_certified": false
+}

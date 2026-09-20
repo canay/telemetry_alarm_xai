@@ -1,0 +1,150 @@
+{
+  "at": "2026-09-19T23:35:24.196858+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-auto-preflight-20260919",
+  "schema_version": 3,
+  "freeze_id": "F07-FRESH-INTERNAL-20260920-V2",
+  "run_id": "2026-09-20_codex_local_fresh_internal_replication_v1",
+  "status": "PROSPECTIVE_FROZEN_PENDING_AUTHOR_PUBLICATION",
+  "lineage": {
+    "candidate": {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V2.json",
+      "sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+      "size_bytes": 43765
+    },
+    "review": {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/REVIEW.json",
+      "sha256": "bcbb034f63cfd8ec18436e305fc331a76d12e213b17b0dd109578eac7fbd2a28",
+      "size_bytes": 47429,
+      "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75"
+    },
+    "decision": {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/DECISION.json",
+      "sha256": "4695ae66cba1e67694e993827529c9b8c775f0a7ee41c32362daf7e1f5f5fa51",
+      "size_bytes": 12375,
+      "binds_review_sha256": "bcbb034f63cfd8ec18436e305fc331a76d12e213b17b0dd109578eac7fbd2a28"
+    },
+    "final": {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/FINAL.json",
+      "sha256": "38df7ba1df9039eeb67cfb4c08b17e53b68af6d18043cb9749000b15c8f0afd1",
+      "size_bytes": 12429,
+      "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+      "binds_decision_sha256": "4695ae66cba1e67694e993827529c9b8c775f0a7ee41c32362daf7e1f5f5fa51"
+    }
+  },
+  "design_contract": {
+    "required_metrics": [
+      "muc_auc_0_40",
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "required_baselines": [
+      "score_only",
+      "native",
+      "occlusion",
+      "raw_nominal_deviation",
+      "feature_nominal_deviation",
+      "permuted_occlusion"
+    ],
+    "evaluator_semantics": {
+      "applicability": "not_applicable",
+      "not_applicable_reason": "Fixed-queue alarm ordering and constrained reference-event coverage; no physical intervention, failure-aversion mechanism, or averted-failure credit is modeled. The policy cannot alter generation, detector alarms or the reference universe."
+    }
+  },
+  "post_gate_continuation": {
+    "confirmatory_on_primary_fail": "forbidden",
+    "primary_verdict_immutable": true,
+    "exploratory_result_may_upgrade_primary_verdict": false,
+    "exploratory_result_may_raise_claim_level": false,
+    "hard_stops": [
+      "ethics",
+      "license",
+      "leakage",
+      "invalid_data",
+      "resource_ceiling",
+      "hash_drift"
+    ],
+    "exploratory_non_rescue": {
+      "authorization": "none"
+    },
+    "prospective_contract_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75"
+  },
+  "supplemental_private_evidence_refs": [
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+      "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+      "size_bytes": 1242
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_fresh_policy_artifact_contract.py",
+      "sha256": "a1a184f2be45c238f317c72469a5bbb800317e336c80cd822827e109ba7d6a1e",
+      "size_bytes": 4758
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+      "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+      "size_bytes": 2732
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/verify_adapter_equivalence.py",
+      "sha256": "60585ffde564f8c66ad3b0cc8bfced67d74d6cbb7e9a041827bcb52851f69f15",
+      "size_bytes": 3979
+    },
+    {
+      "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+      "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+      "size_bytes": 3514
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/PUBLIC_PREPARATION_CHECKS_V2_20260920.json",
+      "sha256": "c4647be3e48554765c7c62d28c70153b562fc238e0c322bad70f0cb13eb3ee58",
+      "size_bytes": 1771
+    },
+    {
+      "path": "MD/03_experiments/FRESH_DURABILITY_PLAN_20260920.md",
+      "sha256": "2bc44e32483ba8afd3c7ccf0614153055dbca2258ef549dfde633f073a0ed2e4",
+      "size_bytes": 9040
+    },
+    {
+      "path": ".orchestrator/runs/run-20260919-00eb8478b24a/rounds/002-independent_delta_protocol_review/attempts/attempt-002/claude_result.json",
+      "sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+      "size_bytes": 29005
+    },
+    {
+      "path": "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+      "sha256": "e5d33bee842bf771ce708707cdce009f0a82461ea3ab6bbb0347ed39c8114aad",
+      "size_bytes": 19859
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+      "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+      "size_bytes": 10743
+    }
+  ],
+  "confirmatory_binding": {
+    "source_artifact_id": "prospective_candidate",
+    "source_artifact_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+    "threshold_id": "four_primary_Bonferroni_intervals_exclude_zero_in_prespecified_directions",
+    "threshold_value": "{\"expected_directions\": {\"C1\": 1, \"C2\": -1, \"C3\": 1, \"C4\": -1}, \"family_alpha\": 0.05, \"primary_ci_level\": 0.9875}",
+    "locked_final_sha256": "38df7ba1df9039eeb67cfb4c08b17e53b68af6d18043cb9749000b15c8f0afd1",
+    "reuse_policy": "forbidden",
+    "reused_artifacts": []
+  },
+  "timebase_binding": {
+    "design_timebase": "synthetic_sample_dt_30s_orbit_5700s"
+  },
+  "postrun_obligations_pending": [
+    "run_manifest",
+    "artifact_inventory_and_cardinality",
+    "produced_metrics_and_baselines",
+    "calibration_evidence",
+    "timebase_equivalence_evidence",
+    "terminal_status_and_registry"
+  ],
+  "author_approval": false,
+  "scientific_execution_started": false,
+  "manuscript_A_F_complete": false
+}

@@ -1,0 +1,227 @@
+{
+  "at": "2026-09-19T23:35:24.195724+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-auto-preflight-20260919",
+  "schema_version": 1,
+  "status": "PROSPECTIVE_PROTOCOL_FROZEN_PUBLICATION_PENDING",
+  "binds_candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+  "binds_decision_sha256": "4695ae66cba1e67694e993827529c9b8c775f0a7ee41c32362daf7e1f5f5fa51",
+  "protocol_ref": {
+    "path": "MD/02_design/FRESH_VALIDATION_PROTOCOL_CANDIDATE_20260920.md",
+    "sha256": "eaa4b45c5adb041513256b82f943f7d0edc63d4e43ea0413d49206d5c7b92cee",
+    "size_bytes": 13324
+  },
+  "seed_ids": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
+    1039
+  ],
+  "runtime_source_sha256": {
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code/boundary_evaluator.py": "012e15e9d68572049e6ac8fb89853bf1e2300d7e21410ce0452ca2fab1d8e00a",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/common.py": "9f327b6536b094b659983efaa5823d325dacf2ffaebbfe1f71d012fa75ceeb12",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/criticality_generator.py": "a4899d0e195e046608c4ec1e8258bf28893ae6cea7a45e4f9366fbfc4232ef03",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/criticality_generator_v5.py": "f4491654683311af8a64bc2c430d259966534549697b6c6f539bdab5b781dc3f",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/models.py": "f4d6b23560ca511e9299fddf2dadaed79f9979d7f8c69e5e06318f9983a7d05a",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/run_criticality_unit.py": "493485372f9e708d300137f37099cb66091e933384fa54fb52be42a63ab8bdc2",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/run_criticality_unit_v5.py": "cf1e5bd99ee130cc050907b32b4962e7fc947ca7b137e0a00f5e773eae6f89fc",
+    "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/telemetry_generator.py": "544128bf98b67c1ddc8ddfe76dbcaa2ff2c3867a429ca82cc140e08f14106fd0",
+    "experiments/2026-09-05_codex_local_fresh_driver/code/policy_api.py": "ea99327a1601d900ffdb9830f612bee8502f0699c30dc38680f7c2ff4a744e0c",
+    "experiments/2026-09-19_codex_local_fresh_preflight/fresh_execution_plan.py": "b8d92e71e27fad4f5ca4bb39799db93c6fb09b5d24aca1180e3b4bad80290050",
+    "experiments/2026-09-19_codex_local_fresh_preflight/fresh_owned_worker.py": "ac169d4053f0c4734f6c3cff492f941c75fc79c673e594c7d0cea5c395794c8b",
+    "experiments/2026-09-19_codex_local_fresh_preflight/fresh_policy_artifacts.py": "3b51171b28054240e2769e0fd162e1ab6678008d7e021f43f764f5f91516c726",
+    "experiments/2026-09-19_codex_local_fresh_preflight/fresh_producer_adapter.py": "1e4a47d86b3768fd8f65b1a349ee43982a2a2f693e3d4446ead39a19a3986123",
+    "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+    "experiments/2026-09-19_codex_local_fresh_preflight/fresh_worker.py": "c00c9c020b147545c684370627dfd8c30b2d1ed5dec7e0d3e71c8ec00eca8d36",
+    "experiments/2026-09-19_codex_local_fresh_preflight/producer_policy_adapter.py": "4516d3da8f3abf001cbadedc9356f050ee64628da63381a1f07b29522d3ec44b",
+    "experiments/2026-09-19_codex_local_fresh_preflight/seed_level_reducer.py": "985f0b4d275f7c18dcac56ff65aa4feb9552c0a6a3dd459ffffddd935f0dd358"
+  },
+  "runtime": {
+    "architecture": "AMD64",
+    "os_family": "Windows",
+    "os_release": "11",
+    "packages": {
+      "numpy": "2.5.2",
+      "psutil": "7.2.2",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "shap": "0.52.0",
+      "threadpoolctl": "3.6.0",
+      "torch": "2.11.0"
+    },
+    "python": "3.12.12",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "threadpools": [
+      {
+        "architecture": "Haswell",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "threading_layer": "pthreads",
+        "user_api": "blas",
+        "version": "0.3.34.0.0"
+      },
+      {
+        "architecture": null,
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "vcomp",
+        "threading_layer": null,
+        "user_api": "openmp",
+        "version": null
+      },
+      {
+        "architecture": "Haswell",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "threading_layer": "pthreads",
+        "user_api": "blas",
+        "version": "0.3.31.dev"
+      },
+      {
+        "architecture": null,
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "threading_layer": null,
+        "user_api": "openmp",
+        "version": null
+      },
+      {
+        "architecture": null,
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "threading_layer": null,
+        "user_api": "openmp",
+        "version": null
+      }
+    ],
+    "torch_threads": 1
+  },
+  "inference": {
+    "n": 40,
+    "sample_sd_ddof": 1,
+    "df": 39,
+    "primary_ci_level": 0.9875,
+    "family_alpha": 0.05,
+    "multiplicity": "Bonferroni_four_two_sided_intervals",
+    "secondary_ci_level": 0.95,
+    "secondary_scope": "descriptive_unadjusted",
+    "seed_extension_or_replacement_allowed": false,
+    "missing_cell_imputation_allowed": false,
+    "practical_importance_or_equivalence_claim": false,
+    "SESOI": null
+  },
+  "supplemental_private_evidence_refs": [
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+      "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+      "size_bytes": 1242
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_fresh_policy_artifact_contract.py",
+      "sha256": "a1a184f2be45c238f317c72469a5bbb800317e336c80cd822827e109ba7d6a1e",
+      "size_bytes": 4758
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+      "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+      "size_bytes": 2732
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/verify_adapter_equivalence.py",
+      "sha256": "60585ffde564f8c66ad3b0cc8bfced67d74d6cbb7e9a041827bcb52851f69f15",
+      "size_bytes": 3979
+    },
+    {
+      "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+      "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+      "size_bytes": 3514
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/PUBLIC_PREPARATION_CHECKS_V2_20260920.json",
+      "sha256": "c4647be3e48554765c7c62d28c70153b562fc238e0c322bad70f0cb13eb3ee58",
+      "size_bytes": 1771
+    },
+    {
+      "path": "MD/03_experiments/FRESH_DURABILITY_PLAN_20260920.md",
+      "sha256": "2bc44e32483ba8afd3c7ccf0614153055dbca2258ef549dfde633f073a0ed2e4",
+      "size_bytes": 9040
+    },
+    {
+      "path": ".orchestrator/runs/run-20260919-00eb8478b24a/rounds/002-independent_delta_protocol_review/attempts/attempt-002/claude_result.json",
+      "sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+      "size_bytes": 29005
+    },
+    {
+      "path": "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+      "sha256": "e5d33bee842bf771ce708707cdce009f0a82461ea3ab6bbb0347ed39c8114aad",
+      "size_bytes": 19859
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+      "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+      "size_bytes": 10743
+    }
+  ],
+  "operational_runbook": "# Yeni-seed önkayıt: launch kimliği ve sınırlı kurtarma\n\nDate/time: 2026-09-20 02:34 +03:00  \nTool: Codex  \nModel: gpt-6-astra / xhigh  \nOperation ID: `f07-auto-preflight-20260919`\n\nBu ek yalnız R3-02–04 operasyonel kalıntılarını açıklar. V2 adayının bilimsel\ntasarımı, 17 kaynak hash'i, seed kümesi ve kaynak tavanları değişmez. Yeni\nbilimsel koşu henüz başlamadı; tamamlanmış deneyler yeniden çalıştırılmaz.\n\nRUN_MANIFEST.operation_id, donmuş supervisor kaynağında hazırlık operasyonunu\ngösterir. Gerçek başlangıç operasyonu, başlatma zamanındaki TOOL_RUN_LOG olayına\naynı run_id, freeze_id, final/decision/config hashleri ve gerçek zaman damgasıyla\nyazılır. Hazırlık kimliği, ayrı launch olayının yerine geçmez.\n\nManifest oluşmadan başarısız olan bir başlangıç aynı kökte attempts ve terminal\nkayıtları bırakabilir; boş-kök kontrolü bu dizini yeniden kabul etmez. İçeriği\naynı kökteki attempts altına taşımak bu kontrolü çözmez. Böyle bir arızada ajan\nşu sınırlı kurtarmayı uygular:\n\n1. RUN_MANIFEST.json bulunmadığını; sıfır bilimsel checkpoint, sıfır raw/data/\n   features/ckpt/policy çıktısı olduğunu ve kayıtlı supervisor/worker PID ile\n   process creation time kimliklerinin artık canlı olmadığını doğrular.\n   Herhangi bir bilimsel çıktı veya belirsiz process kimliği varsa bu yol kapanır.\n2. Başarısız kökün bütün dosyalarını yol/hash/boyut envanteriyle kaydeder. Kaynak\n   ve hedefin çözümlenmiş mutlak yollarının bu proje içinde kaldığını doğrular.\n   Hedef, var olmayan `archive/run_prelaunch_failures/<zaman>__<run_id>` olur.\n3. Başarısız kökü bütünüyle bu arşive taşır; arşivde tam üye kümesini ve bütün\n   hashleri yeniden doğrular. Dosya silmez, tamamlanmış birimi yeniden üretmez.\n4. Başarısızlığın salt launch ortamı/sözleşme sunumu sorunu olduğunu kanıtlar.\n   Kaynak, aday, protokol, runtime veya public binding değişirse bu kurtarma\n   yetmez; yeni prospective değişiklik–inceleme–yayın zinciri gerekir.\n5. Aynı run_id için yeni ve boş kökü yalnız exact public onay/yayın, güncel\n   binding ve kaynak kontrolleri tekrar sağlandığında oluşturur. Başarısız\n   deneme, arşiv ve gerekçe TOOL_RUN_LOG olayında korunur.\n\nBu yol yalnız durable ilk manifestten önce ve bilimsel veri üretimi başlamadan\nönceki arızalara aittir. Manifest varsa olağan hash-bound resume uygulanır;\nilk manifest zamanı ve 12 saatlik deadline korunur. Deadline tükendiyse bu\narşivleme yolu kullanılarak süre sıfırlanamaz; otomatik tam yeniden koşu yoktur.\n\nProspective sözleşmede freeze_id, run_id, confirmatory_binding.threshold_id/\nthreshold_value ve timebase_binding.design_timebase bulunur. Eşik metni adayın\n%98.75 aralık, aile alpha=0.05 ve C1/C2/C3/C4 yön kuralından mekanik türetilir;\nyeni eşik veya istatistik kararı değildir. Tasarım timebase'i donmuş generator\nkaynağındaki DT=30 s ve orbit=5700 s değerleridir. Gerçek çıktı timebase ve\nartifact/registry/terminal bağları koşu sonrası ölçülür; şimdiden üretilmiş gibi\nyazılmaz. FINAL.at timezone-aware ISO'dur. Yazar onayının approved_at alanı\nancak gerçek kullanıcı yanıtından sonra, yanıtın kendisiyle birlikte yazılır.\n\nPublic release oluşturulmadan önce onaylı exact paket gerekir; prelaunch PASS\nyazar onayı, bilimsel sonuç, bağımsız sonuç doğrulaması veya A–F kapanışı değildir.\n",
+  "primary_contrasts": {
+    "C1": "channel_criticality_only raw-score; model mean then platform/payload mean",
+    "C2": "equal_event raw-score; model mean then platform/payload mean",
+    "C3": "channel_criticality_only raw-occlusion; model mean then platform/payload mean",
+    "C4": "channel_criticality_only (occlusion-score) payload minus platform; model mean"
+  },
+  "expected_directions": {
+    "C1": 1,
+    "C2": -1,
+    "C3": 1,
+    "C4": -1
+  },
+  "author_finalization": false,
+  "publication_approval": false,
+  "scope": "Technical prospective protocol freeze; not manuscript finalization or completed science"
+}

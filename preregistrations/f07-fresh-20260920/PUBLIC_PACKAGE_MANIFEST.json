@@ -1,0 +1,896 @@
+{
+  "schema_version": 1,
+  "scope": "preregistration_and_frozen_author_source_snapshot",
+  "at": "2026-09-19T23:35:31.796698+00:00",
+  "tool": "Codex",
+  "model": "gpt-6-astra / xhigh",
+  "operation_id": "f07-auto-preflight-20260919",
+  "freeze_contract_sha256": "511f4ae23872d376dcff29118cb9e6f47b3c8ccebd72a702129b951cfc8da507",
+  "candidate_sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+  "public_files": [
+    {
+      "path": "MD/02_design/FRESH_VALIDATION_PROTOCOL_CANDIDATE_20260920.md",
+      "sha256": "eaa4b45c5adb041513256b82f943f7d0edc63d4e43ea0413d49206d5c7b92cee",
+      "size_bytes": 13324
+    },
+    {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/DECISION.json",
+      "sha256": "4695ae66cba1e67694e993827529c9b8c775f0a7ee41c32362daf7e1f5f5fa51",
+      "size_bytes": 12375
+    },
+    {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/EXPERIMENT_FREEZE_CONTRACT.json",
+      "sha256": "511f4ae23872d376dcff29118cb9e6f47b3c8ccebd72a702129b951cfc8da507",
+      "size_bytes": 6125
+    },
+    {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/FINAL.json",
+      "sha256": "38df7ba1df9039eeb67cfb4c08b17e53b68af6d18043cb9749000b15c8f0afd1",
+      "size_bytes": 12429
+    },
+    {
+      "path": "MD/03_experiments/FRESH_FREEZE_20260920_V2/REVIEW.json",
+      "sha256": "bcbb034f63cfd8ec18436e305fc331a76d12e213b17b0dd109578eac7fbd2a28",
+      "size_bytes": 47429
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code/boundary_evaluator.py",
+      "sha256": "012e15e9d68572049e6ac8fb89853bf1e2300d7e21410ce0452ca2fab1d8e00a",
+      "size_bytes": 3159
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/common.py",
+      "sha256": "9f327b6536b094b659983efaa5823d325dacf2ffaebbfe1f71d012fa75ceeb12",
+      "size_bytes": 3565
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/criticality_generator.py",
+      "sha256": "a4899d0e195e046608c4ec1e8258bf28893ae6cea7a45e4f9366fbfc4232ef03",
+      "size_bytes": 9128
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/criticality_generator_v5.py",
+      "sha256": "f4491654683311af8a64bc2c430d259966534549697b6c6f539bdab5b781dc3f",
+      "size_bytes": 4289
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/models.py",
+      "sha256": "f4d6b23560ca511e9299fddf2dadaed79f9979d7f8c69e5e06318f9983a7d05a",
+      "size_bytes": 4772
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/run_criticality_unit.py",
+      "sha256": "493485372f9e708d300137f37099cb66091e933384fa54fb52be42a63ab8bdc2",
+      "size_bytes": 22524
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/run_criticality_unit_v5.py",
+      "sha256": "cf1e5bd99ee130cc050907b32b4962e7fc947ca7b137e0a00f5e773eae6f89fc",
+      "size_bytes": 12431
+    },
+    {
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/code_snapshot/telemetry_generator.py",
+      "sha256": "544128bf98b67c1ddc8ddfe76dbcaa2ff2c3867a429ca82cc140e08f14106fd0",
+      "size_bytes": 8174
+    },
+    {
+      "path": "experiments/2026-09-05_codex_local_fresh_driver/code/policy_api.py",
+      "sha256": "ea99327a1601d900ffdb9830f612bee8502f0699c30dc38680f7c2ff4a744e0c",
+      "size_bytes": 2566
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V2.json",
+      "sha256": "c07c24ed4739e9614a315652ee0025326aea54f97bce8628a43ad953c411fa75",
+      "size_bytes": 43765
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/FRESH_PROTOCOL_CANDIDATE_20260920_V2_UNITS.json",
+      "sha256": "e8e806743066bb6cd263d56778b8718cde4d2544729c88d98d317c606c8182a7",
+      "size_bytes": 365620
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/RUNTIME_CANDIDATE_20260920.json",
+      "sha256": "4a7921253ecf26d6fc208db6269790237279f831b8a341cc1bc29e58f7fb4a84",
+      "size_bytes": 1570
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_execution_plan.py",
+      "sha256": "b8d92e71e27fad4f5ca4bb39799db93c6fb09b5d24aca1180e3b4bad80290050",
+      "size_bytes": 7434
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_owned_worker.py",
+      "sha256": "ac169d4053f0c4734f6c3cff492f941c75fc79c673e594c7d0cea5c395794c8b",
+      "size_bytes": 3079
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_policy_artifacts.py",
+      "sha256": "3b51171b28054240e2769e0fd162e1ab6678008d7e021f43f764f5f91516c726",
+      "size_bytes": 7233
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_producer_adapter.py",
+      "sha256": "1e4a47d86b3768fd8f65b1a349ee43982a2a2f693e3d4446ead39a19a3986123",
+      "size_bytes": 10143
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_supervisor.py",
+      "sha256": "414226de9ba4d3b4604659719b76dd87c5141fbb732baf87833c39f329e2fb07",
+      "size_bytes": 36083
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_worker.py",
+      "sha256": "c00c9c020b147545c684370627dfd8c30b2d1ed5dec7e0d3e71c8ec00eca8d36",
+      "size_bytes": 11413
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/producer_policy_adapter.py",
+      "sha256": "4516d3da8f3abf001cbadedc9356f050ee64628da63381a1f07b29522d3ec44b",
+      "size_bytes": 10139
+    },
+    {
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/seed_level_reducer.py",
+      "sha256": "985f0b4d275f7c18dcac56ff65aa4feb9552c0a6a3dd459ffffddd935f0dd358",
+      "size_bytes": 7290
+    }
+  ],
+  "local_provenance_refs": [
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/0",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V2_20260920.json",
+      "sha256": "3ec4aa05745aeb19c65477f868fc5a87161574b29be6df6bbe75453f760a1579",
+      "size_bytes": 1239,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/1",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/SEED_REDUCER_TESTS_V3_20260920.json",
+      "sha256": "125b21263ad97704956e9edb453e41dc5608e7232d4fbaf093bc0f19a8c2bf80",
+      "size_bytes": 1090,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/2",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/producer_small_injected_20260920/REPORT.json",
+      "sha256": "e3c2e6c1a631e98451eb7350a6c29446a561f48d9b4138569d37d4affe27ab31",
+      "size_bytes": 11598,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/3",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/producer_empty_injected/REPORT.json",
+      "sha256": "758637019e0084ee43504dfe4ca8b12275a33b241bf93301787e6b2a9eabfd87",
+      "size_bytes": 6949,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/4",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/replay_identity_hardened/REPORT.json",
+      "sha256": "00b5be2f20c82143970c7bb0488e028c3300f69aba178919b92686f0893fbe7a",
+      "size_bytes": 1247610,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/5",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/CORRUPTION_CONTROLS.json",
+      "sha256": "073fc35899f6e7aff39a35c8e9f435ded3974797daccb8faa143c8b6a33b8845",
+      "size_bytes": 1558,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/6",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/fresh_integration_v2_20260920/REPORT.json",
+      "sha256": "329736d3658d4e0cdaf28d6102ef5ace314275f8a22f797b105247cdf253179f",
+      "size_bytes": 1310,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/7",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/lifecycle_v7_20260920_REPORT.json",
+      "sha256": "ea4b538444f8c7b3017c11a289e8a6457e817a298de08bc7d213c179dc25becd",
+      "size_bytes": 1358,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/8",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/runtime_guards_v5_20260920/REPORT.json",
+      "sha256": "7c4407eb860c3931f000967ad997edde9844e9177ee190af853b945276139e18",
+      "size_bytes": 791,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/9",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/launch_binding_v2_20260920/REPORT.json",
+      "sha256": "29c946241b90ddc4f74121461a03f93ed7d8e91a87788bcc76d707ae3906402c",
+      "size_bytes": 679,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "technical_evidence_refs",
+      "candidate_json_pointer": "/technical_evidence_refs/10",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/provenance_v3_20260920/REPORT.json",
+      "sha256": "6bbcfa083364449b4b9d47641d74cae08fd99e0296787035e6bc366fb0b7216e",
+      "size_bytes": 1346,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "historical_design_refs",
+      "candidate_json_pointer": "/historical_design_refs/0",
+      "path": "MD/03_experiments/RESEARCH_PREFLIGHT_20260904.json",
+      "sha256": "a1ae862a8ae230c414a16dfa25056450eec337c72865809f7b6729da0ecc1df3",
+      "size_bytes": 3529,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "historical_design_refs",
+      "candidate_json_pointer": "/historical_design_refs/1",
+      "path": "MD/02_design/confirmatory_heterogeneity_protocol_v1_1.md",
+      "sha256": "203dc10d1939cfe51a4189dd509ead7c4d35b1fda5aabb1d89f3f23deefde0a1",
+      "size_bytes": 7206,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "historical_design_refs",
+      "candidate_json_pointer": "/historical_design_refs/2",
+      "path": "experiments/2026-09-04_codex_local_fresh_validation_candidate/SOURCE_SNAPSHOT_MANIFEST.json",
+      "sha256": "81206e5975d96684d714c4fd1172391feb752dc394925591048250a1b4c1b510",
+      "size_bytes": 2794,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "historical_design_refs",
+      "candidate_json_pointer": "/historical_design_refs/3",
+      "path": "experiments/2026-09-04_codex_mta_utility_construct_ablation/statistics/paired_seed_differences.csv",
+      "sha256": "9589b35bafc553dd6be8e552fe42cb765ed844019d8a9b273e26c5775c2657f5",
+      "size_bytes": 1864538,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/0/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed0_lr.json",
+      "sha256": "c73145a994738c0a5de1438fe750cb6097687e3d63fcef44fec916796d6ddef4",
+      "size_bytes": 1106251,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/1/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed0_dtree.json",
+      "sha256": "3f8f60576a7900af7e1a3bfde2110de36b7f3de6cecf26c7f26e2d6d6bb8f31d",
+      "size_bytes": 424826,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/2/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed0_iforest.json",
+      "sha256": "602fffaad3b9d05c2795425304a3a00d4df9df27f3110af597d6271d03c93d81",
+      "size_bytes": 679059,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/3/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed0_hgb.json",
+      "sha256": "be97dd0878a96bebdcdf55cd7e8d388a58e7573917f260bfb002256256ed7de2",
+      "size_bytes": 1579610,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/4/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed0_pca.json",
+      "sha256": "bfb45ae938e8181b2e8aa35611eea76b6282fe958de4d56ce34b2fc9d02b1807",
+      "size_bytes": 1296392,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/5/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed0_ae.json",
+      "sha256": "cc6da3a32146488bc1943cb11386a06f9757e18beb6b02521e7c6774b3d719bf",
+      "size_bytes": 1301273,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/6/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed1_lr.json",
+      "sha256": "058cc68c2631745f0b7c35769deda51de11a7d5af33ac2760bc44b0804a5626c",
+      "size_bytes": 1017789,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/7/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed1_dtree.json",
+      "sha256": "da3d6036a76f22a388d088dc374e2997ac3931024e2286a4bd49e1a1bff40d23",
+      "size_bytes": 596202,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/8/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed1_iforest.json",
+      "sha256": "f2fa1e2802c3806d53cf8a9d82017f5fd8523b1f7b266f24ff327f709d3de528",
+      "size_bytes": 616345,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/9/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed1_hgb.json",
+      "sha256": "c95cd2800771fb7b0db51092fd74773ca8bf33286607091c781b09f4625b8359",
+      "size_bytes": 1571549,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/10/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed1_pca.json",
+      "sha256": "4578fbe5cdbbc3d6931349087221fa5026378dfeac1dba720add886b70fc2d4a",
+      "size_bytes": 1208453,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/11/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed1_ae.json",
+      "sha256": "5183784b7a1d71b36ab3efbc95374f8235c7903ee788ae28d063ae68a24acf33",
+      "size_bytes": 1347558,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/12/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed2_lr.json",
+      "sha256": "b66df0710d50629bf5efb1252e65830a4ac467afef9acd12d92e401d22ce12e9",
+      "size_bytes": 1865272,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/13/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed2_dtree.json",
+      "sha256": "3e9a449e0620a1aa7eeb1801a46b59d5c7d45bcbfe7eeedfd7452bd7ac9e4465",
+      "size_bytes": 564676,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/14/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed2_iforest.json",
+      "sha256": "11d31ffded8c03a0716bae069be615415f5e11d8c2946cfae2ac5af858834fa9",
+      "size_bytes": 650135,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/15/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed2_hgb.json",
+      "sha256": "a7f25157cf89bf47ba830d40ea992290c1079f55b114daeb107d18578d28aca9",
+      "size_bytes": 1268810,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/16/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed2_pca.json",
+      "sha256": "282cc7a5e9c1a774726067c49b075516f6f4ae69f6843a2292941c74c30675fc",
+      "size_bytes": 1379835,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/17/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed2_ae.json",
+      "sha256": "b857796f6c0e1ccef12b378737ffdeb23b62209e2cf9cca3ce9aef12b4196d29",
+      "size_bytes": 1204904,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/18/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed3_lr.json",
+      "sha256": "8b722e59935565ccb0cc6787c9be44259ac0f695a6c2c3faaa79bd8d4b812b7a",
+      "size_bytes": 1067184,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/19/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed3_dtree.json",
+      "sha256": "97ad72a1d0cb3214cbaf166c7f8e71c35eb39a6546b47aa0e32b3f939c140f99",
+      "size_bytes": 358370,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/20/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed3_iforest.json",
+      "sha256": "fd2a1f69c87b983f58ed8877617688c747da94b16c3a71434dc22f61f2080016",
+      "size_bytes": 598437,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/21/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed3_hgb.json",
+      "sha256": "c8f2e15a5ab63037cfe58da90da5f7ee40cc332c7c216208a94f5df1787f0c34",
+      "size_bytes": 1335943,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/22/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed3_pca.json",
+      "sha256": "67bdcdb07349f30a70d756a38b1822239071948afce6cdfc3c75cc3fa320436f",
+      "size_bytes": 1144025,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/23/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed3_ae.json",
+      "sha256": "3279c585c5fa184e3e3935b564cfc8e4dc167895d965c9917d07af055c711ce3",
+      "size_bytes": 1104749,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/24/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed4_lr.json",
+      "sha256": "b092c69652ab77497b211aa85f052d494c52354383466d45aa8ee4da851e49d8",
+      "size_bytes": 786144,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/25/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed4_dtree.json",
+      "sha256": "825f9e974dae364f8085ccccf90bac79840a307d98a0d041cbd12d30eb8f89ff",
+      "size_bytes": 414929,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/26/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed4_iforest.json",
+      "sha256": "6782890a4da55b8ef95e5059fa265a4eb3fac3e23c572dadb77ba164450ea819",
+      "size_bytes": 576346,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/27/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed4_hgb.json",
+      "sha256": "e600ffe2d8ef9a6d28b3398f0cb71ace73688cadd19abe32e5da834be3fa639a",
+      "size_bytes": 499714,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/28/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed4_pca.json",
+      "sha256": "9d84c2e36dbbd46468d66197435df8fed02d4ea9d72b0eb573be571258b54f6b",
+      "size_bytes": 1184441,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/29/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed4_ae.json",
+      "sha256": "8a136fb3f841d0b9ef64bb93c0fbd6c2bff4e26913991bf157338687f67b5f78",
+      "size_bytes": 1089549,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/30/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed5_lr.json",
+      "sha256": "1f4899314806560c214013be409e00a6320d5312b6c5fc995e719dcd90cfd062",
+      "size_bytes": 1081835,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/31/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed5_dtree.json",
+      "sha256": "6e334974433a1f92cad33d4e425b211c09309437e4e37ef81d4b7f6ed2c7cd53",
+      "size_bytes": 423056,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/32/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed5_iforest.json",
+      "sha256": "62a0bb47fee6d4ea8255a1f993d3e90084840af9748feef8463922e324201c6b",
+      "size_bytes": 624086,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/33/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed5_hgb.json",
+      "sha256": "976cba01b8e4736dc601fd019e3979fff75d295c1aa57fe3eb2e09849f635b39",
+      "size_bytes": 1038508,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/34/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed5_pca.json",
+      "sha256": "e89e110ca39fc8c6efa12e2d81a1f3f6790409ef9693f7255f0f099cfa6fedbe",
+      "size_bytes": 1087569,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/35/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed5_ae.json",
+      "sha256": "bf10cda869c79c23831538e228e1564077691a5a2afc138fd6681cda5a996869",
+      "size_bytes": 1128885,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/36/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed6_lr.json",
+      "sha256": "f85087e034a59e6269c30ee0e408a920946b465f1907f3d9c2ec42e65d94dc61",
+      "size_bytes": 816686,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/37/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed6_dtree.json",
+      "sha256": "a2e903250de80a760bbfbee933bf31e15170847f168460671b9838c757cb9ea6",
+      "size_bytes": 507891,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/38/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed6_iforest.json",
+      "sha256": "1547609365d0e124ffd7d07f0635252d45889d0c00e298f310d73a2ab82af58a",
+      "size_bytes": 277745,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/39/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed6_hgb.json",
+      "sha256": "17e3b3af685d0ac1f0a49064afb342506619ccad728307ba61609ec73f448e38",
+      "size_bytes": 1264176,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/40/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed6_pca.json",
+      "sha256": "3db7a8524161ea53f6f6d5a10e2d369466f3908a111d89fe9f12e70357575c60",
+      "size_bytes": 1145857,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/41/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed6_ae.json",
+      "sha256": "e817cd24f8e9093c635d5569b9deae15698a439e8de4c714d29c91c8324101a7",
+      "size_bytes": 1082287,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/42/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed7_lr.json",
+      "sha256": "722c7c4bb364ebd13b7d15ca9975891aaffef1fa574bfc7687c911cf53fca6ec",
+      "size_bytes": 1414478,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/43/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed7_dtree.json",
+      "sha256": "7f04bca18674c72a26c1cb942458ec5cf7b18bf5c784edab1b1bcab38a66f0f3",
+      "size_bytes": 531992,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/44/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed7_iforest.json",
+      "sha256": "0ad2d5d722c0b183aad47c7049ce2a1d0a7f1858c9ef54dd34ff1cbaac984d4a",
+      "size_bytes": 678060,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/45/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed7_hgb.json",
+      "sha256": "621a67e36721edca6b0e0981eb556113a99d0844b15bbbbb4109db5623e6e3c0",
+      "size_bytes": 1405036,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/46/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed7_pca.json",
+      "sha256": "5ecab266709bc430bfecd4daf037d52ef4172a75d92eba688476f18fd9340456",
+      "size_bytes": 1076598,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/47/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed7_ae.json",
+      "sha256": "aa39ac9f4c7916a35ef5523ae7268f2dce2790b018ccbe28ab9c130641cc2282",
+      "size_bytes": 1233280,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/48/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed8_lr.json",
+      "sha256": "924656e5e62d135e6febf4b86857ab4cc128019502cd8eac51dca95649f8542f",
+      "size_bytes": 1315317,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/49/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed8_dtree.json",
+      "sha256": "d35bb2aa12cf152698e04c3c0ef62c615c3a3e503a90c723bffecad59d4327ff",
+      "size_bytes": 175560,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/50/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed8_iforest.json",
+      "sha256": "6b37e1215b54ab68f15614b63c3c436e946cc4f562d5f187c4b62d205c1fe0b2",
+      "size_bytes": 413914,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/51/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed8_hgb.json",
+      "sha256": "6b811a15a8d82e3d521dc291f8584c9d43c0cd18cb05ae58929d27b2493e47b6",
+      "size_bytes": 1110555,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/52/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed8_pca.json",
+      "sha256": "cb3f1b77f93338a89c860ccf1f9b8ecd356e3ff12a57a1466ff54c04ebeb04fe",
+      "size_bytes": 1262415,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/53/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed8_ae.json",
+      "sha256": "d6e93c899d5d1731579939eb3fe7a4fd10198ec2127f272acc219b2faff5554b",
+      "size_bytes": 1185337,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/54/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed9_lr.json",
+      "sha256": "0c4a342abc87f3f5b5c483dbb9f5f57c6cd7d09b3cb2e4227c3e53505a43f79e",
+      "size_bytes": 1474849,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/55/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed9_dtree.json",
+      "sha256": "585ee0de38d1452e501558a92296199952774780da9f0775ee4cae0ee29d7b6f",
+      "size_bytes": 629372,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/56/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed9_iforest.json",
+      "sha256": "7de0d8d4b1c754d24d85634c11a72983e4be12cf6d7fac61e6192a19338de624",
+      "size_bytes": 703764,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/57/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed9_hgb.json",
+      "sha256": "982159a45d0d24ede301abce40a8dfe2d7e542c87d4f6a2e74f083f6e1242b77",
+      "size_bytes": 1387881,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/58/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed9_pca.json",
+      "sha256": "8544076713b38f6e1fa61273de3c0558d04878497ea1929dabf7fdf42d43e419",
+      "size_bytes": 1226924,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.observations.source_ref",
+      "candidate_json_pointer": "/resource_basis/observations/59/source_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/raw/model_seed9_ae.json",
+      "sha256": "af6bdf8beb230d081b162fde6fd470fe6f1d714023f2ce16fa22c5dd1ba9df7e",
+      "size_bytes": 1303180,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "resource_basis.manifest_ref",
+      "candidate_json_pointer": "/resource_basis/manifest_ref",
+      "path": "experiments/2026-08-28_codex_local_criticality_v5_discovery_r7_v4/RUN_MANIFEST.json",
+      "sha256": "f17103acf3d33359dac6553b32245973aa27dfccb212159d1ee9de3d2d039527",
+      "size_bytes": 131476,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "prior_confirmatory_attempts.evidence_refs",
+      "candidate_json_pointer": "/prior_confirmatory_attempts/0/evidence_refs/0",
+      "path": "experiments/2026-08-26_codex_local_criticality_heterogeneity_confirmation_v1_1/RUN_MANIFEST.json",
+      "sha256": "390cea963007f665137f8c3f911044deb2904f74fe0c20d2f4738b9d6959d13a",
+      "size_bytes": 31696,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "prior_confirmatory_attempts.evidence_refs",
+      "candidate_json_pointer": "/prior_confirmatory_attempts/0/evidence_refs/1",
+      "path": "experiments/2026-08-26_codex_local_criticality_heterogeneity_confirmation_v1_1/STATUS.md",
+      "sha256": "bd203ecfbcede849bbaf42746320ae057dcda13d49527be9a06fafdb22fe4642",
+      "size_bytes": 1037,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "prior_confirmatory_attempts.evidence_refs",
+      "candidate_json_pointer": "/prior_confirmatory_attempts/0/evidence_refs/2",
+      "path": "experiments/EXPERIMENT_REGISTRY.csv",
+      "sha256": "f8877b9285b1f2b10152a2ea471d94d39f27365fa15d83cc90871c90c7ab3bb8",
+      "size_bytes": 9853,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "prior_confirmatory_attempts.evidence_refs",
+      "candidate_json_pointer": "/prior_confirmatory_attempts/1/evidence_refs/0",
+      "path": "experiments/2026-08-30_codex_local_criticality_v5_confirmation_r7/RUN_MANIFEST.json",
+      "sha256": "2b5215c050d717e892d2ee99b7a03d9f1eda23f974edb2fa15e695267e2ed91c",
+      "size_bytes": 261655,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "prior_confirmatory_attempts.evidence_refs",
+      "candidate_json_pointer": "/prior_confirmatory_attempts/1/evidence_refs/1",
+      "path": "experiments/2026-08-30_codex_local_criticality_v5_confirmation_r7/STATUS.md",
+      "sha256": "bc415ffddd3bd6ce50e22d0b3b96fa72e96a6d8a0827386a31c3b9acdd7cb45c",
+      "size_bytes": 286,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "prior_confirmatory_attempts.evidence_refs",
+      "candidate_json_pointer": "/prior_confirmatory_attempts/1/evidence_refs/2",
+      "path": "experiments/EXPERIMENT_REGISTRY.csv",
+      "sha256": "f8877b9285b1f2b10152a2ea471d94d39f27365fa15d83cc90871c90c7ab3bb8",
+      "size_bytes": 9853,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/0",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/POLICY_SEPARATION_TESTS_V3_20260920.json",
+      "sha256": "4022ecba52147410affe13cc829955704b0658230d2d23eacae0e67a7b8d7433",
+      "size_bytes": 1242,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/1",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/test_fresh_policy_artifact_contract.py",
+      "sha256": "a1a184f2be45c238f317c72469a5bbb800317e336c80cd822827e109ba7d6a1e",
+      "size_bytes": 4758,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/2",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/ADAPTER_EQUIVALENCE_20260920.json",
+      "sha256": "1999f15636fb890be4e0d11345dc6c6a8127b37500306da9b362189bc9bd27aa",
+      "size_bytes": 2732,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/3",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/verify_adapter_equivalence.py",
+      "sha256": "60585ffde564f8c66ad3b0cc8bfced67d74d6cbb7e9a041827bcb52851f69f15",
+      "size_bytes": 3979,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/4",
+      "path": "MD/03_experiments/FRESH_PRELAUNCH_RUNBOOK_20260920.md",
+      "sha256": "22c77f96fd51858836b70d4ff5342b8391004b69bd8f1f6724ef88f0373208ed",
+      "size_bytes": 3514,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/5",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/PUBLIC_PREPARATION_CHECKS_V2_20260920.json",
+      "sha256": "c4647be3e48554765c7c62d28c70153b562fc238e0c322bad70f0cb13eb3ee58",
+      "size_bytes": 1771,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/6",
+      "path": "MD/03_experiments/FRESH_DURABILITY_PLAN_20260920.md",
+      "sha256": "2bc44e32483ba8afd3c7ccf0614153055dbca2258ef549dfde633f073a0ed2e4",
+      "size_bytes": 9040,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/7",
+      "path": ".orchestrator/runs/run-20260919-00eb8478b24a/rounds/002-independent_delta_protocol_review/attempts/attempt-002/claude_result.json",
+      "sha256": "7fe2894f74a4b01a65ef0ffe9f294d1e844024e6daac8da566488077d2f901a4",
+      "size_bytes": 29005,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/8",
+      "path": "MD/09_audit_revision/FRESH_R2_CLOSURE_20260920/R2_REVIEW.json",
+      "sha256": "e5d33bee842bf771ce708707cdce009f0a82461ea3ab6bbb0347ed39c8114aad",
+      "size_bytes": 19859,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    },
+    {
+      "category": "schema3_supplemental_private_evidence_refs",
+      "contract_json_pointer": "/supplemental_private_evidence_refs/9",
+      "path": "experiments/2026-09-19_codex_local_fresh_preflight/prepare_reviewed_lineage.py",
+      "sha256": "28487e2c005028d1b1374a0c414a50cdc4a0e10892df769444f409dc5dd5ca0e",
+      "size_bytes": 10743,
+      "availability": "local_hash_bound_provenance_not_in_public_package"
+    }
+  ],
+  "scientific_data_generated": false,
+  "model_fit_executed": false,
+  "author_approval_included": false,
+  "publication_executed": false,
+  "scope_limits": [
+    "private author-workflow dependency",
+    "exact pinned runtime",
+    "no completed experiment rerun authorization",
+    "no portable reproduction claim"
+  ],
+  "git_delivery": {
+    "at": "2026-09-19T23:39:17.862757+00:00",
+    "tool": "Codex",
+    "model": "gpt-6-astra / xhigh",
+    "operation_id": "f07-auto-preflight-20260919",
+    "attributes_file": ".gitattributes",
+    "attributes_sha256": "ece797f716e9be49128549fe7e26f19cb04bd65dd20bcb3ae3b07910c38542c4",
+    "scope": "Explicit exact-file allowlist; Git normalization disabled for this frozen package",
+    "source_or_lineage_bytes_changed": false,
+    "publication_executed": false
+  }
+}
