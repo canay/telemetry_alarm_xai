@@ -1,0 +1,3902 @@
+[
+ {
+  "name": "ESA-Mission1/anomaly_types.csv",
+  "file_size": 13299,
+  "compress_size": 1103
+ },
+ {
+  "name": "ESA-Mission1/channels.csv",
+  "file_size": 3782,
+  "compress_size": 416
+ },
+ {
+  "name": "ESA-Mission1/channels/",
+  "file_size": 0,
+  "compress_size": 0
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_1.zip",
+  "file_size": 49309218,
+  "compress_size": 49309218
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_10.zip",
+  "file_size": 17983810,
+  "compress_size": 17983810
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_11.zip",
+  "file_size": 17973322,
+  "compress_size": 17973322
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_12.zip",
+  "file_size": 68102060,
+  "compress_size": 68102060
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_13.zip",
+  "file_size": 68164831,
+  "compress_size": 68164831
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_14.zip",
+  "file_size": 26546481,
+  "compress_size": 26546481
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_15.zip",
+  "file_size": 26647827,
+  "compress_size": 26647827
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_16.zip",
+  "file_size": 26439992,
+  "compress_size": 26439992
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_17.zip",
+  "file_size": 68367825,
+  "compress_size": 68367825
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_18.zip",
+  "file_size": 68622193,
+  "compress_size": 68622193
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_19.zip",
+  "file_size": 68615662,
+  "compress_size": 68615662
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_2.zip",
+  "file_size": 49264349,
+  "compress_size": 49264349
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_20.zip",
+  "file_size": 68352449,
+  "compress_size": 68352449
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_21.zip",
+  "file_size": 26594478,
+  "compress_size": 26594478
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_22.zip",
+  "file_size": 26426476,
+  "compress_size": 26426476
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_23.zip",
+  "file_size": 26636117,
+  "compress_size": 26636117
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_24.zip",
+  "file_size": 26429623,
+  "compress_size": 26429623
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_25.zip",
+  "file_size": 68617780,
+  "compress_size": 68617780
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_26.zip",
+  "file_size": 68595311,
+  "compress_size": 68595311
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_27.zip",
+  "file_size": 68463629,
+  "compress_size": 68463629
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_28.zip",
+  "file_size": 68618350,
+  "compress_size": 68618350
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_29.zip",
+  "file_size": 26497708,
+  "compress_size": 26497708
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_3.zip",
+  "file_size": 49793655,
+  "compress_size": 49793655
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_30.zip",
+  "file_size": 26470872,
+  "compress_size": 26470872
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_31.zip",
+  "file_size": 26473704,
+  "compress_size": 26473704
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_32.zip",
+  "file_size": 26448960,
+  "compress_size": 26448960
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_33.zip",
+  "file_size": 26563098,
+  "compress_size": 26563098
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_34.zip",
+  "file_size": 68371615,
+  "compress_size": 68371615
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_35.zip",
+  "file_size": 68660877,
+  "compress_size": 68660877
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_36.zip",
+  "file_size": 68652778,
+  "compress_size": 68652778
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_37.zip",
+  "file_size": 68539078,
+  "compress_size": 68539078
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_38.zip",
+  "file_size": 26483886,
+  "compress_size": 26483886
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_39.zip",
+  "file_size": 26467974,
+  "compress_size": 26467974
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_4.zip",
+  "file_size": 18001425,
+  "compress_size": 18001425
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_40.zip",
+  "file_size": 26533933,
+  "compress_size": 26533933
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_41.zip",
+  "file_size": 83216184,
+  "compress_size": 83216184
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_42.zip",
+  "file_size": 85752416,
+  "compress_size": 85752416
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_43.zip",
+  "file_size": 83202471,
+  "compress_size": 83202471
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_44.zip",
+  "file_size": 85209141,
+  "compress_size": 85209141
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_45.zip",
+  "file_size": 83395435,
+  "compress_size": 83395435
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_46.zip",
+  "file_size": 85564289,
+  "compress_size": 85564289
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_47.zip",
+  "file_size": 73067793,
+  "compress_size": 73067793
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_48.zip",
+  "file_size": 72939166,
+  "compress_size": 72939166
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_49.zip",
+  "file_size": 72978527,
+  "compress_size": 72978527
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_5.zip",
+  "file_size": 17995616,
+  "compress_size": 17995616
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_50.zip",
+  "file_size": 25693020,
+  "compress_size": 25693020
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_51.zip",
+  "file_size": 25654814,
+  "compress_size": 25654814
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_52.zip",
+  "file_size": 25664721,
+  "compress_size": 25664721
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_53.zip",
+  "file_size": 72835215,
+  "compress_size": 72835215
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_54.zip",
+  "file_size": 72234536,
+  "compress_size": 72234536
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_55.zip",
+  "file_size": 72118896,
+  "compress_size": 72118896
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_56.zip",
+  "file_size": 73428153,
+  "compress_size": 73428153
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_57.zip",
+  "file_size": 73445711,
+  "compress_size": 73445711
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_58.zip",
+  "file_size": 73397223,
+  "compress_size": 73397223
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_59.zip",
+  "file_size": 73310160,
+  "compress_size": 73310160
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_6.zip",
+  "file_size": 18005576,
+  "compress_size": 18005576
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_60.zip",
+  "file_size": 73419613,
+  "compress_size": 73419613
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_61.zip",
+  "file_size": 2644244,
+  "compress_size": 2644244
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_62.zip",
+  "file_size": 2644247,
+  "compress_size": 2644247
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_63.zip",
+  "file_size": 2643865,
+  "compress_size": 2643865
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_64.zip",
+  "file_size": 22687286,
+  "compress_size": 22687286
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_65.zip",
+  "file_size": 22733515,
+  "compress_size": 22733515
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_66.zip",
+  "file_size": 23148991,
+  "compress_size": 23148991
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_67.zip",
+  "file_size": 23441566,
+  "compress_size": 23441566
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_68.zip",
+  "file_size": 23027243,
+  "compress_size": 23027243
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_69.zip",
+  "file_size": 22734765,
+  "compress_size": 22734765
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_7.zip",
+  "file_size": 18002199,
+  "compress_size": 18002199
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_70.zip",
+  "file_size": 80478464,
+  "compress_size": 80478464
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_71.zip",
+  "file_size": 79759647,
+  "compress_size": 79759647
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_72.zip",
+  "file_size": 80059251,
+  "compress_size": 80059251
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_73.zip",
+  "file_size": 80415987,
+  "compress_size": 80415987
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_74.zip",
+  "file_size": 106489224,
+  "compress_size": 106489224
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_75.zip",
+  "file_size": 80042256,
+  "compress_size": 80042256
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_76.zip",
+  "file_size": 79717520,
+  "compress_size": 79717520
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_8.zip",
+  "file_size": 17976890,
+  "compress_size": 17976890
+ },
+ {
+  "name": "ESA-Mission1/channels/channel_9.zip",
+  "file_size": 17976656,
+  "compress_size": 17976656
+ },
+ {
+  "name": "ESA-Mission1/labels.csv",
+  "file_size": 245564,
+  "compress_size": 27950
+ },
+ {
+  "name": "ESA-Mission1/telecommands.csv",
+  "file_size": 13176,
+  "compress_size": 1633
+ },
+ {
+  "name": "ESA-Mission1/telecommands/",
+  "file_size": 0,
+  "compress_size": 0
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_1.zip",
+  "file_size": 820,
+  "compress_size": 820
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_10.zip",
+  "file_size": 5228,
+  "compress_size": 5228
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_100.zip",
+  "file_size": 705,
+  "compress_size": 705
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_101.zip",
+  "file_size": 1473,
+  "compress_size": 1473
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_102.zip",
+  "file_size": 830,
+  "compress_size": 830
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_103.zip",
+  "file_size": 753,
+  "compress_size": 753
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_104.zip",
+  "file_size": 753,
+  "compress_size": 753
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_105.zip",
+  "file_size": 1011,
+  "compress_size": 1011
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_106.zip",
+  "file_size": 1013,
+  "compress_size": 1013
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_107.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_108.zip",
+  "file_size": 682,
+  "compress_size": 682
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_109.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_11.zip",
+  "file_size": 1203,
+  "compress_size": 1203
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_110.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_111.zip",
+  "file_size": 807,
+  "compress_size": 807
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_112.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_113.zip",
+  "file_size": 1240,
+  "compress_size": 1240
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_114.zip",
+  "file_size": 1021,
+  "compress_size": 1021
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_115.zip",
+  "file_size": 763,
+  "compress_size": 763
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_116.zip",
+  "file_size": 1296,
+  "compress_size": 1296
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_117.zip",
+  "file_size": 3567,
+  "compress_size": 3567
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_118.zip",
+  "file_size": 3552,
+  "compress_size": 3552
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_119.zip",
+  "file_size": 24119,
+  "compress_size": 24119
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_12.zip",
+  "file_size": 877,
+  "compress_size": 877
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_120.zip",
+  "file_size": 988,
+  "compress_size": 988
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_121.zip",
+  "file_size": 1007,
+  "compress_size": 1007
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_122.zip",
+  "file_size": 1028,
+  "compress_size": 1028
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_123.zip",
+  "file_size": 1043,
+  "compress_size": 1043
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_124.zip",
+  "file_size": 746,
+  "compress_size": 746
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_125.zip",
+  "file_size": 744,
+  "compress_size": 744
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_126.zip",
+  "file_size": 743,
+  "compress_size": 743
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_127.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_128.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_129.zip",
+  "file_size": 735,
+  "compress_size": 735
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_13.zip",
+  "file_size": 776,
+  "compress_size": 776
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_130.zip",
+  "file_size": 724,
+  "compress_size": 724
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_131.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_132.zip",
+  "file_size": 746,
+  "compress_size": 746
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_133.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_134.zip",
+  "file_size": 1053,
+  "compress_size": 1053
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_135.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_136.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_137.zip",
+  "file_size": 713,
+  "compress_size": 713
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_138.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_139.zip",
+  "file_size": 1472,
+  "compress_size": 1472
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_14.zip",
+  "file_size": 1988,
+  "compress_size": 1988
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_140.zip",
+  "file_size": 1705,
+  "compress_size": 1705
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_141.zip",
+  "file_size": 969,
+  "compress_size": 969
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_142.zip",
+  "file_size": 1205,
+  "compress_size": 1205
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_143.zip",
+  "file_size": 1431,
+  "compress_size": 1431
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_144.zip",
+  "file_size": 732,
+  "compress_size": 732
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_145.zip",
+  "file_size": 1263,
+  "compress_size": 1263
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_146.zip",
+  "file_size": 713,
+  "compress_size": 713
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_147.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_148.zip",
+  "file_size": 732,
+  "compress_size": 732
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_149.zip",
+  "file_size": 730,
+  "compress_size": 730
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_15.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_150.zip",
+  "file_size": 726,
+  "compress_size": 726
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_151.zip",
+  "file_size": 728,
+  "compress_size": 728
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_152.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_153.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_154.zip",
+  "file_size": 727,
+  "compress_size": 727
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_155.zip",
+  "file_size": 745,
+  "compress_size": 745
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_156.zip",
+  "file_size": 837,
+  "compress_size": 837
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_157.zip",
+  "file_size": 837,
+  "compress_size": 837
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_158.zip",
+  "file_size": 771,
+  "compress_size": 771
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_159.zip",
+  "file_size": 777,
+  "compress_size": 777
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_16.zip",
+  "file_size": 767,
+  "compress_size": 767
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_160.zip",
+  "file_size": 722,
+  "compress_size": 722
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_161.zip",
+  "file_size": 734,
+  "compress_size": 734
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_162.zip",
+  "file_size": 824,
+  "compress_size": 824
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_163.zip",
+  "file_size": 826,
+  "compress_size": 826
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_164.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_165.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_166.zip",
+  "file_size": 793,
+  "compress_size": 793
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_167.zip",
+  "file_size": 757,
+  "compress_size": 757
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_168.zip",
+  "file_size": 698,
+  "compress_size": 698
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_169.zip",
+  "file_size": 2563,
+  "compress_size": 2563
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_17.zip",
+  "file_size": 704,
+  "compress_size": 704
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_170.zip",
+  "file_size": 2123,
+  "compress_size": 2123
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_171.zip",
+  "file_size": 808,
+  "compress_size": 808
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_172.zip",
+  "file_size": 775,
+  "compress_size": 775
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_173.zip",
+  "file_size": 720,
+  "compress_size": 720
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_174.zip",
+  "file_size": 1954,
+  "compress_size": 1954
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_175.zip",
+  "file_size": 2883,
+  "compress_size": 2883
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_176.zip",
+  "file_size": 746,
+  "compress_size": 746
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_177.zip",
+  "file_size": 1995,
+  "compress_size": 1995
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_178.zip",
+  "file_size": 937,
+  "compress_size": 937
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_179.zip",
+  "file_size": 21938,
+  "compress_size": 21938
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_18.zip",
+  "file_size": 861,
+  "compress_size": 861
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_180.zip",
+  "file_size": 1340,
+  "compress_size": 1340
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_181.zip",
+  "file_size": 10924,
+  "compress_size": 10924
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_182.zip",
+  "file_size": 780,
+  "compress_size": 780
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_183.zip",
+  "file_size": 977,
+  "compress_size": 977
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_184.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_185.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_186.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_187.zip",
+  "file_size": 2055,
+  "compress_size": 2055
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_188.zip",
+  "file_size": 792,
+  "compress_size": 792
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_189.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_19.zip",
+  "file_size": 944,
+  "compress_size": 944
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_190.zip",
+  "file_size": 751,
+  "compress_size": 751
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_191.zip",
+  "file_size": 799,
+  "compress_size": 799
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_192.zip",
+  "file_size": 801,
+  "compress_size": 801
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_193.zip",
+  "file_size": 800,
+  "compress_size": 800
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_194.zip",
+  "file_size": 803,
+  "compress_size": 803
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_195.zip",
+  "file_size": 23101,
+  "compress_size": 23101
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_196.zip",
+  "file_size": 9915,
+  "compress_size": 9915
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_197.zip",
+  "file_size": 15091,
+  "compress_size": 15091
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_198.zip",
+  "file_size": 1291668,
+  "compress_size": 1291668
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_199.zip",
+  "file_size": 15162,
+  "compress_size": 15162
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_2.zip",
+  "file_size": 838,
+  "compress_size": 838
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_20.zip",
+  "file_size": 759,
+  "compress_size": 759
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_200.zip",
+  "file_size": 763,
+  "compress_size": 763
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_201.zip",
+  "file_size": 715,
+  "compress_size": 715
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_202.zip",
+  "file_size": 716,
+  "compress_size": 716
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_203.zip",
+  "file_size": 1087,
+  "compress_size": 1087
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_204.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_205.zip",
+  "file_size": 764,
+  "compress_size": 764
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_206.zip",
+  "file_size": 2161,
+  "compress_size": 2161
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_207.zip",
+  "file_size": 7045,
+  "compress_size": 7045
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_208.zip",
+  "file_size": 945,
+  "compress_size": 945
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_209.zip",
+  "file_size": 2164,
+  "compress_size": 2164
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_21.zip",
+  "file_size": 2106,
+  "compress_size": 2106
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_210.zip",
+  "file_size": 829,
+  "compress_size": 829
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_211.zip",
+  "file_size": 2156,
+  "compress_size": 2156
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_212.zip",
+  "file_size": 2137,
+  "compress_size": 2137
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_213.zip",
+  "file_size": 774,
+  "compress_size": 774
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_214.zip",
+  "file_size": 1846,
+  "compress_size": 1846
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_215.zip",
+  "file_size": 713,
+  "compress_size": 713
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_216.zip",
+  "file_size": 2221,
+  "compress_size": 2221
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_217.zip",
+  "file_size": 1009,
+  "compress_size": 1009
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_218.zip",
+  "file_size": 750,
+  "compress_size": 750
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_219.zip",
+  "file_size": 15271,
+  "compress_size": 15271
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_22.zip",
+  "file_size": 680,
+  "compress_size": 680
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_220.zip",
+  "file_size": 861,
+  "compress_size": 861
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_221.zip",
+  "file_size": 2160,
+  "compress_size": 2160
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_222.zip",
+  "file_size": 720,
+  "compress_size": 720
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_223.zip",
+  "file_size": 5383,
+  "compress_size": 5383
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_224.zip",
+  "file_size": 5370,
+  "compress_size": 5370
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_225.zip",
+  "file_size": 33861,
+  "compress_size": 33861
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_226.zip",
+  "file_size": 926,
+  "compress_size": 926
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_227.zip",
+  "file_size": 690,
+  "compress_size": 690
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_228.zip",
+  "file_size": 1465,
+  "compress_size": 1465
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_229.zip",
+  "file_size": 716,
+  "compress_size": 716
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_23.zip",
+  "file_size": 734,
+  "compress_size": 734
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_230.zip",
+  "file_size": 2623,
+  "compress_size": 2623
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_231.zip",
+  "file_size": 33937,
+  "compress_size": 33937
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_232.zip",
+  "file_size": 54414,
+  "compress_size": 54414
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_233.zip",
+  "file_size": 116347,
+  "compress_size": 116347
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_234.zip",
+  "file_size": 4564,
+  "compress_size": 4564
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_235.zip",
+  "file_size": 5989,
+  "compress_size": 5989
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_236.zip",
+  "file_size": 808,
+  "compress_size": 808
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_237.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_238.zip",
+  "file_size": 716,
+  "compress_size": 716
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_239.zip",
+  "file_size": 845,
+  "compress_size": 845
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_24.zip",
+  "file_size": 737,
+  "compress_size": 737
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_240.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_241.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_242.zip",
+  "file_size": 719,
+  "compress_size": 719
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_243.zip",
+  "file_size": 780,
+  "compress_size": 780
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_244.zip",
+  "file_size": 818,
+  "compress_size": 818
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_245.zip",
+  "file_size": 717,
+  "compress_size": 717
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_246.zip",
+  "file_size": 782,
+  "compress_size": 782
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_247.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_248.zip",
+  "file_size": 719,
+  "compress_size": 719
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_249.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_25.zip",
+  "file_size": 721,
+  "compress_size": 721
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_250.zip",
+  "file_size": 714,
+  "compress_size": 714
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_251.zip",
+  "file_size": 704,
+  "compress_size": 704
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_252.zip",
+  "file_size": 736,
+  "compress_size": 736
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_253.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_254.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_255.zip",
+  "file_size": 711,
+  "compress_size": 711
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_256.zip",
+  "file_size": 711,
+  "compress_size": 711
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_257.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_258.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_259.zip",
+  "file_size": 721,
+  "compress_size": 721
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_26.zip",
+  "file_size": 1467,
+  "compress_size": 1467
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_260.zip",
+  "file_size": 1052,
+  "compress_size": 1052
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_261.zip",
+  "file_size": 734,
+  "compress_size": 734
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_262.zip",
+  "file_size": 730,
+  "compress_size": 730
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_263.zip",
+  "file_size": 729,
+  "compress_size": 729
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_264.zip",
+  "file_size": 734,
+  "compress_size": 734
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_265.zip",
+  "file_size": 733,
+  "compress_size": 733
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_266.zip",
+  "file_size": 731,
+  "compress_size": 731
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_267.zip",
+  "file_size": 1997,
+  "compress_size": 1997
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_268.zip",
+  "file_size": 1150,
+  "compress_size": 1150
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_269.zip",
+  "file_size": 775,
+  "compress_size": 775
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_27.zip",
+  "file_size": 1470,
+  "compress_size": 1470
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_270.zip",
+  "file_size": 1441210,
+  "compress_size": 1441210
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_271.zip",
+  "file_size": 848,
+  "compress_size": 848
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_272.zip",
+  "file_size": 756,
+  "compress_size": 756
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_273.zip",
+  "file_size": 736,
+  "compress_size": 736
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_274.zip",
+  "file_size": 13076,
+  "compress_size": 13076
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_275.zip",
+  "file_size": 870,
+  "compress_size": 870
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_276.zip",
+  "file_size": 16411,
+  "compress_size": 16411
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_277.zip",
+  "file_size": 15245,
+  "compress_size": 15245
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_278.zip",
+  "file_size": 720,
+  "compress_size": 720
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_279.zip",
+  "file_size": 728,
+  "compress_size": 728
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_28.zip",
+  "file_size": 3020,
+  "compress_size": 3020
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_280.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_281.zip",
+  "file_size": 39205,
+  "compress_size": 39205
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_282.zip",
+  "file_size": 720,
+  "compress_size": 720
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_283.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_284.zip",
+  "file_size": 37948,
+  "compress_size": 37948
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_285.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_286.zip",
+  "file_size": 10592,
+  "compress_size": 10592
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_287.zip",
+  "file_size": 10432,
+  "compress_size": 10432
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_288.zip",
+  "file_size": 21274,
+  "compress_size": 21274
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_289.zip",
+  "file_size": 20749,
+  "compress_size": 20749
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_29.zip",
+  "file_size": 2806,
+  "compress_size": 2806
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_290.zip",
+  "file_size": 39188,
+  "compress_size": 39188
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_291.zip",
+  "file_size": 39046,
+  "compress_size": 39046
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_292.zip",
+  "file_size": 37898,
+  "compress_size": 37898
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_293.zip",
+  "file_size": 37892,
+  "compress_size": 37892
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_294.zip",
+  "file_size": 1994,
+  "compress_size": 1994
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_295.zip",
+  "file_size": 8851,
+  "compress_size": 8851
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_296.zip",
+  "file_size": 2032,
+  "compress_size": 2032
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_297.zip",
+  "file_size": 2047,
+  "compress_size": 2047
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_298.zip",
+  "file_size": 1166,
+  "compress_size": 1166
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_299.zip",
+  "file_size": 754,
+  "compress_size": 754
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_3.zip",
+  "file_size": 689,
+  "compress_size": 689
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_30.zip",
+  "file_size": 778,
+  "compress_size": 778
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_300.zip",
+  "file_size": 716,
+  "compress_size": 716
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_301.zip",
+  "file_size": 750,
+  "compress_size": 750
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_302.zip",
+  "file_size": 738,
+  "compress_size": 738
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_303.zip",
+  "file_size": 764,
+  "compress_size": 764
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_304.zip",
+  "file_size": 779,
+  "compress_size": 779
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_305.zip",
+  "file_size": 820,
+  "compress_size": 820
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_306.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_307.zip",
+  "file_size": 816,
+  "compress_size": 816
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_308.zip",
+  "file_size": 853,
+  "compress_size": 853
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_309.zip",
+  "file_size": 770,
+  "compress_size": 770
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_31.zip",
+  "file_size": 1727,
+  "compress_size": 1727
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_310.zip",
+  "file_size": 914,
+  "compress_size": 914
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_311.zip",
+  "file_size": 905,
+  "compress_size": 905
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_312.zip",
+  "file_size": 793,
+  "compress_size": 793
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_313.zip",
+  "file_size": 790,
+  "compress_size": 790
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_314.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_315.zip",
+  "file_size": 786,
+  "compress_size": 786
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_316.zip",
+  "file_size": 786,
+  "compress_size": 786
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_317.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_318.zip",
+  "file_size": 780,
+  "compress_size": 780
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_319.zip",
+  "file_size": 783,
+  "compress_size": 783
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_32.zip",
+  "file_size": 959,
+  "compress_size": 959
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_320.zip",
+  "file_size": 781,
+  "compress_size": 781
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_321.zip",
+  "file_size": 785,
+  "compress_size": 785
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_322.zip",
+  "file_size": 782,
+  "compress_size": 782
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_323.zip",
+  "file_size": 785,
+  "compress_size": 785
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_324.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_325.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_326.zip",
+  "file_size": 781,
+  "compress_size": 781
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_327.zip",
+  "file_size": 786,
+  "compress_size": 786
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_328.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_329.zip",
+  "file_size": 782,
+  "compress_size": 782
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_33.zip",
+  "file_size": 951,
+  "compress_size": 951
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_330.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_331.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_332.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_333.zip",
+  "file_size": 783,
+  "compress_size": 783
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_334.zip",
+  "file_size": 788,
+  "compress_size": 788
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_335.zip",
+  "file_size": 786,
+  "compress_size": 786
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_336.zip",
+  "file_size": 783,
+  "compress_size": 783
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_337.zip",
+  "file_size": 783,
+  "compress_size": 783
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_338.zip",
+  "file_size": 782,
+  "compress_size": 782
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_339.zip",
+  "file_size": 784,
+  "compress_size": 784
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_34.zip",
+  "file_size": 1000,
+  "compress_size": 1000
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_340.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_341.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_342.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_343.zip",
+  "file_size": 714,
+  "compress_size": 714
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_344.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_345.zip",
+  "file_size": 724,
+  "compress_size": 724
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_346.zip",
+  "file_size": 727,
+  "compress_size": 727
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_347.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_348.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_349.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_35.zip",
+  "file_size": 1008,
+  "compress_size": 1008
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_350.zip",
+  "file_size": 1129,
+  "compress_size": 1129
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_351.zip",
+  "file_size": 1011,
+  "compress_size": 1011
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_352.zip",
+  "file_size": 1031,
+  "compress_size": 1031
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_353.zip",
+  "file_size": 1036,
+  "compress_size": 1036
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_354.zip",
+  "file_size": 1040,
+  "compress_size": 1040
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_355.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_356.zip",
+  "file_size": 711,
+  "compress_size": 711
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_357.zip",
+  "file_size": 822,
+  "compress_size": 822
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_358.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_359.zip",
+  "file_size": 724,
+  "compress_size": 724
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_36.zip",
+  "file_size": 1262,
+  "compress_size": 1262
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_360.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_361.zip",
+  "file_size": 816,
+  "compress_size": 816
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_362.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_363.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_364.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_365.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_366.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_367.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_368.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_369.zip",
+  "file_size": 756,
+  "compress_size": 756
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_37.zip",
+  "file_size": 704,
+  "compress_size": 704
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_370.zip",
+  "file_size": 812,
+  "compress_size": 812
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_371.zip",
+  "file_size": 745,
+  "compress_size": 745
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_372.zip",
+  "file_size": 3669,
+  "compress_size": 3669
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_373.zip",
+  "file_size": 915,
+  "compress_size": 915
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_374.zip",
+  "file_size": 759,
+  "compress_size": 759
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_375.zip",
+  "file_size": 764,
+  "compress_size": 764
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_376.zip",
+  "file_size": 1019,
+  "compress_size": 1019
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_377.zip",
+  "file_size": 801,
+  "compress_size": 801
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_378.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_379.zip",
+  "file_size": 762,
+  "compress_size": 762
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_38.zip",
+  "file_size": 1022,
+  "compress_size": 1022
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_380.zip",
+  "file_size": 1271,
+  "compress_size": 1271
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_381.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_382.zip",
+  "file_size": 908,
+  "compress_size": 908
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_383.zip",
+  "file_size": 901,
+  "compress_size": 901
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_384.zip",
+  "file_size": 981,
+  "compress_size": 981
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_385.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_386.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_387.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_388.zip",
+  "file_size": 779,
+  "compress_size": 779
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_389.zip",
+  "file_size": 1855,
+  "compress_size": 1855
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_39.zip",
+  "file_size": 1052,
+  "compress_size": 1052
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_390.zip",
+  "file_size": 1647,
+  "compress_size": 1647
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_391.zip",
+  "file_size": 871,
+  "compress_size": 871
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_392.zip",
+  "file_size": 815,
+  "compress_size": 815
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_393.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_394.zip",
+  "file_size": 3300,
+  "compress_size": 3300
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_395.zip",
+  "file_size": 2157,
+  "compress_size": 2157
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_396.zip",
+  "file_size": 1995,
+  "compress_size": 1995
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_397.zip",
+  "file_size": 725,
+  "compress_size": 725
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_398.zip",
+  "file_size": 2057,
+  "compress_size": 2057
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_399.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_4.zip",
+  "file_size": 5823,
+  "compress_size": 5823
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_40.zip",
+  "file_size": 1050,
+  "compress_size": 1050
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_400.zip",
+  "file_size": 719,
+  "compress_size": 719
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_401.zip",
+  "file_size": 790,
+  "compress_size": 790
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_402.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_403.zip",
+  "file_size": 3205,
+  "compress_size": 3205
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_404.zip",
+  "file_size": 1088,
+  "compress_size": 1088
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_405.zip",
+  "file_size": 802,
+  "compress_size": 802
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_406.zip",
+  "file_size": 830,
+  "compress_size": 830
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_407.zip",
+  "file_size": 815,
+  "compress_size": 815
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_408.zip",
+  "file_size": 1889,
+  "compress_size": 1889
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_409.zip",
+  "file_size": 1875,
+  "compress_size": 1875
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_41.zip",
+  "file_size": 1147,
+  "compress_size": 1147
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_410.zip",
+  "file_size": 2367,
+  "compress_size": 2367
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_411.zip",
+  "file_size": 1597,
+  "compress_size": 1597
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_412.zip",
+  "file_size": 1733,
+  "compress_size": 1733
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_413.zip",
+  "file_size": 724,
+  "compress_size": 724
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_414.zip",
+  "file_size": 763,
+  "compress_size": 763
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_415.zip",
+  "file_size": 764,
+  "compress_size": 764
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_416.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_417.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_418.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_419.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_42.zip",
+  "file_size": 1153,
+  "compress_size": 1153
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_420.zip",
+  "file_size": 14332,
+  "compress_size": 14332
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_421.zip",
+  "file_size": 758,
+  "compress_size": 758
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_422.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_423.zip",
+  "file_size": 711,
+  "compress_size": 711
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_424.zip",
+  "file_size": 721,
+  "compress_size": 721
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_425.zip",
+  "file_size": 720,
+  "compress_size": 720
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_426.zip",
+  "file_size": 808,
+  "compress_size": 808
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_427.zip",
+  "file_size": 1563,
+  "compress_size": 1563
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_428.zip",
+  "file_size": 888,
+  "compress_size": 888
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_429.zip",
+  "file_size": 755,
+  "compress_size": 755
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_43.zip",
+  "file_size": 1394,
+  "compress_size": 1394
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_430.zip",
+  "file_size": 932,
+  "compress_size": 932
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_431.zip",
+  "file_size": 887,
+  "compress_size": 887
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_432.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_433.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_434.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_435.zip",
+  "file_size": 705,
+  "compress_size": 705
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_436.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_437.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_438.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_439.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_44.zip",
+  "file_size": 1398,
+  "compress_size": 1398
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_440.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_441.zip",
+  "file_size": 3051,
+  "compress_size": 3051
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_442.zip",
+  "file_size": 3101,
+  "compress_size": 3101
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_443.zip",
+  "file_size": 3053,
+  "compress_size": 3053
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_444.zip",
+  "file_size": 4818,
+  "compress_size": 4818
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_445.zip",
+  "file_size": 4826,
+  "compress_size": 4826
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_446.zip",
+  "file_size": 3998,
+  "compress_size": 3998
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_447.zip",
+  "file_size": 3969,
+  "compress_size": 3969
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_448.zip",
+  "file_size": 698,
+  "compress_size": 698
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_449.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_45.zip",
+  "file_size": 5608,
+  "compress_size": 5608
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_450.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_451.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_452.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_453.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_454.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_455.zip",
+  "file_size": 2359,
+  "compress_size": 2359
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_456.zip",
+  "file_size": 2424,
+  "compress_size": 2424
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_457.zip",
+  "file_size": 2351,
+  "compress_size": 2351
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_458.zip",
+  "file_size": 3144,
+  "compress_size": 3144
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_459.zip",
+  "file_size": 3039,
+  "compress_size": 3039
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_46.zip",
+  "file_size": 752,
+  "compress_size": 752
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_460.zip",
+  "file_size": 3041,
+  "compress_size": 3041
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_461.zip",
+  "file_size": 3023,
+  "compress_size": 3023
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_462.zip",
+  "file_size": 1961,
+  "compress_size": 1961
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_463.zip",
+  "file_size": 2021,
+  "compress_size": 2021
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_464.zip",
+  "file_size": 1967,
+  "compress_size": 1967
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_465.zip",
+  "file_size": 2837,
+  "compress_size": 2837
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_466.zip",
+  "file_size": 2733,
+  "compress_size": 2733
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_467.zip",
+  "file_size": 2809,
+  "compress_size": 2809
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_468.zip",
+  "file_size": 2652,
+  "compress_size": 2652
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_469.zip",
+  "file_size": 1408,
+  "compress_size": 1408
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_47.zip",
+  "file_size": 1015,
+  "compress_size": 1015
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_470.zip",
+  "file_size": 726,
+  "compress_size": 726
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_471.zip",
+  "file_size": 713,
+  "compress_size": 713
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_472.zip",
+  "file_size": 1056,
+  "compress_size": 1056
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_473.zip",
+  "file_size": 786,
+  "compress_size": 786
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_474.zip",
+  "file_size": 2293,
+  "compress_size": 2293
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_475.zip",
+  "file_size": 1765,
+  "compress_size": 1765
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_476.zip",
+  "file_size": 729,
+  "compress_size": 729
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_477.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_478.zip",
+  "file_size": 1051,
+  "compress_size": 1051
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_479.zip",
+  "file_size": 2261,
+  "compress_size": 2261
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_48.zip",
+  "file_size": 1004,
+  "compress_size": 1004
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_480.zip",
+  "file_size": 753,
+  "compress_size": 753
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_481.zip",
+  "file_size": 2088,
+  "compress_size": 2088
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_482.zip",
+  "file_size": 2266256,
+  "compress_size": 2266256
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_483.zip",
+  "file_size": 2468,
+  "compress_size": 2468
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_484.zip",
+  "file_size": 746,
+  "compress_size": 746
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_485.zip",
+  "file_size": 812,
+  "compress_size": 812
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_486.zip",
+  "file_size": 1090,
+  "compress_size": 1090
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_487.zip",
+  "file_size": 824,
+  "compress_size": 824
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_488.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_489.zip",
+  "file_size": 2492,
+  "compress_size": 2492
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_49.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_490.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_491.zip",
+  "file_size": 842,
+  "compress_size": 842
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_492.zip",
+  "file_size": 718,
+  "compress_size": 718
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_493.zip",
+  "file_size": 536478,
+  "compress_size": 536478
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_494.zip",
+  "file_size": 3389,
+  "compress_size": 3389
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_495.zip",
+  "file_size": 3203,
+  "compress_size": 3203
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_496.zip",
+  "file_size": 836,
+  "compress_size": 836
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_497.zip",
+  "file_size": 1152,
+  "compress_size": 1152
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_498.zip",
+  "file_size": 797,
+  "compress_size": 797
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_499.zip",
+  "file_size": 792,
+  "compress_size": 792
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_5.zip",
+  "file_size": 3015,
+  "compress_size": 3015
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_50.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_500.zip",
+  "file_size": 27798,
+  "compress_size": 27798
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_501.zip",
+  "file_size": 26847,
+  "compress_size": 26847
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_502.zip",
+  "file_size": 554654,
+  "compress_size": 554654
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_503.zip",
+  "file_size": 1526,
+  "compress_size": 1526
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_504.zip",
+  "file_size": 734,
+  "compress_size": 734
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_505.zip",
+  "file_size": 818,
+  "compress_size": 818
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_506.zip",
+  "file_size": 830,
+  "compress_size": 830
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_507.zip",
+  "file_size": 812,
+  "compress_size": 812
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_508.zip",
+  "file_size": 812,
+  "compress_size": 812
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_509.zip",
+  "file_size": 807,
+  "compress_size": 807
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_51.zip",
+  "file_size": 731,
+  "compress_size": 731
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_510.zip",
+  "file_size": 833,
+  "compress_size": 833
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_511.zip",
+  "file_size": 810,
+  "compress_size": 810
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_512.zip",
+  "file_size": 805,
+  "compress_size": 805
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_513.zip",
+  "file_size": 809,
+  "compress_size": 809
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_514.zip",
+  "file_size": 822,
+  "compress_size": 822
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_515.zip",
+  "file_size": 827,
+  "compress_size": 827
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_516.zip",
+  "file_size": 809,
+  "compress_size": 809
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_517.zip",
+  "file_size": 811,
+  "compress_size": 811
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_518.zip",
+  "file_size": 804,
+  "compress_size": 804
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_519.zip",
+  "file_size": 837,
+  "compress_size": 837
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_52.zip",
+  "file_size": 691,
+  "compress_size": 691
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_520.zip",
+  "file_size": 809,
+  "compress_size": 809
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_521.zip",
+  "file_size": 810,
+  "compress_size": 810
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_522.zip",
+  "file_size": 810,
+  "compress_size": 810
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_523.zip",
+  "file_size": 732,
+  "compress_size": 732
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_524.zip",
+  "file_size": 814,
+  "compress_size": 814
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_525.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_526.zip",
+  "file_size": 866,
+  "compress_size": 866
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_527.zip",
+  "file_size": 737,
+  "compress_size": 737
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_528.zip",
+  "file_size": 737,
+  "compress_size": 737
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_529.zip",
+  "file_size": 736,
+  "compress_size": 736
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_53.zip",
+  "file_size": 750,
+  "compress_size": 750
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_530.zip",
+  "file_size": 733,
+  "compress_size": 733
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_531.zip",
+  "file_size": 737,
+  "compress_size": 737
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_532.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_533.zip",
+  "file_size": 730,
+  "compress_size": 730
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_534.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_535.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_536.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_537.zip",
+  "file_size": 761,
+  "compress_size": 761
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_538.zip",
+  "file_size": 751,
+  "compress_size": 751
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_539.zip",
+  "file_size": 695,
+  "compress_size": 695
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_54.zip",
+  "file_size": 761,
+  "compress_size": 761
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_540.zip",
+  "file_size": 1163,
+  "compress_size": 1163
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_541.zip",
+  "file_size": 1044,
+  "compress_size": 1044
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_542.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_543.zip",
+  "file_size": 1162,
+  "compress_size": 1162
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_544.zip",
+  "file_size": 1997,
+  "compress_size": 1997
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_545.zip",
+  "file_size": 2044,
+  "compress_size": 2044
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_546.zip",
+  "file_size": 683,
+  "compress_size": 683
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_547.zip",
+  "file_size": 745,
+  "compress_size": 745
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_548.zip",
+  "file_size": 717,
+  "compress_size": 717
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_549.zip",
+  "file_size": 1086,
+  "compress_size": 1086
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_55.zip",
+  "file_size": 1467,
+  "compress_size": 1467
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_550.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_551.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_552.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_553.zip",
+  "file_size": 739,
+  "compress_size": 739
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_554.zip",
+  "file_size": 829,
+  "compress_size": 829
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_555.zip",
+  "file_size": 1563,
+  "compress_size": 1563
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_556.zip",
+  "file_size": 14654,
+  "compress_size": 14654
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_557.zip",
+  "file_size": 14070,
+  "compress_size": 14070
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_558.zip",
+  "file_size": 17635,
+  "compress_size": 17635
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_559.zip",
+  "file_size": 745,
+  "compress_size": 745
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_56.zip",
+  "file_size": 1040,
+  "compress_size": 1040
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_560.zip",
+  "file_size": 740,
+  "compress_size": 740
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_561.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_562.zip",
+  "file_size": 777,
+  "compress_size": 777
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_563.zip",
+  "file_size": 771,
+  "compress_size": 771
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_564.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_565.zip",
+  "file_size": 33961,
+  "compress_size": 33961
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_566.zip",
+  "file_size": 804,
+  "compress_size": 804
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_567.zip",
+  "file_size": 8607,
+  "compress_size": 8607
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_568.zip",
+  "file_size": 941,
+  "compress_size": 941
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_569.zip",
+  "file_size": 4791,
+  "compress_size": 4791
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_57.zip",
+  "file_size": 729,
+  "compress_size": 729
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_570.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_571.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_572.zip",
+  "file_size": 2703,
+  "compress_size": 2703
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_573.zip",
+  "file_size": 804,
+  "compress_size": 804
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_574.zip",
+  "file_size": 814,
+  "compress_size": 814
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_575.zip",
+  "file_size": 2699,
+  "compress_size": 2699
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_576.zip",
+  "file_size": 711,
+  "compress_size": 711
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_577.zip",
+  "file_size": 802,
+  "compress_size": 802
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_578.zip",
+  "file_size": 815,
+  "compress_size": 815
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_579.zip",
+  "file_size": 5707,
+  "compress_size": 5707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_58.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_580.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_581.zip",
+  "file_size": 712,
+  "compress_size": 712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_582.zip",
+  "file_size": 806,
+  "compress_size": 806
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_583.zip",
+  "file_size": 54478,
+  "compress_size": 54478
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_584.zip",
+  "file_size": 798,
+  "compress_size": 798
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_585.zip",
+  "file_size": 822,
+  "compress_size": 822
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_586.zip",
+  "file_size": 880,
+  "compress_size": 880
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_587.zip",
+  "file_size": 2376,
+  "compress_size": 2376
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_588.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_589.zip",
+  "file_size": 697,
+  "compress_size": 697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_59.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_590.zip",
+  "file_size": 2693,
+  "compress_size": 2693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_591.zip",
+  "file_size": 790,
+  "compress_size": 790
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_592.zip",
+  "file_size": 810,
+  "compress_size": 810
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_593.zip",
+  "file_size": 2687,
+  "compress_size": 2687
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_594.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_595.zip",
+  "file_size": 796,
+  "compress_size": 796
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_596.zip",
+  "file_size": 818,
+  "compress_size": 818
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_597.zip",
+  "file_size": 5774,
+  "compress_size": 5774
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_598.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_599.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_6.zip",
+  "file_size": 1200,
+  "compress_size": 1200
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_60.zip",
+  "file_size": 10494,
+  "compress_size": 10494
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_600.zip",
+  "file_size": 54264,
+  "compress_size": 54264
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_601.zip",
+  "file_size": 791,
+  "compress_size": 791
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_602.zip",
+  "file_size": 810,
+  "compress_size": 810
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_603.zip",
+  "file_size": 878,
+  "compress_size": 878
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_604.zip",
+  "file_size": 2270,
+  "compress_size": 2270
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_605.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_606.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_607.zip",
+  "file_size": 2682,
+  "compress_size": 2682
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_608.zip",
+  "file_size": 807,
+  "compress_size": 807
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_609.zip",
+  "file_size": 827,
+  "compress_size": 827
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_61.zip",
+  "file_size": 1987,
+  "compress_size": 1987
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_610.zip",
+  "file_size": 2751,
+  "compress_size": 2751
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_611.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_612.zip",
+  "file_size": 810,
+  "compress_size": 810
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_613.zip",
+  "file_size": 816,
+  "compress_size": 816
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_614.zip",
+  "file_size": 4463,
+  "compress_size": 4463
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_615.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_616.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_617.zip",
+  "file_size": 50985,
+  "compress_size": 50985
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_618.zip",
+  "file_size": 812,
+  "compress_size": 812
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_619.zip",
+  "file_size": 829,
+  "compress_size": 829
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_62.zip",
+  "file_size": 1468,
+  "compress_size": 1468
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_620.zip",
+  "file_size": 863,
+  "compress_size": 863
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_621.zip",
+  "file_size": 869,
+  "compress_size": 869
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_622.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_623.zip",
+  "file_size": 722,
+  "compress_size": 722
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_624.zip",
+  "file_size": 2702,
+  "compress_size": 2702
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_625.zip",
+  "file_size": 825,
+  "compress_size": 825
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_626.zip",
+  "file_size": 881,
+  "compress_size": 881
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_627.zip",
+  "file_size": 4691,
+  "compress_size": 4691
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_628.zip",
+  "file_size": 753,
+  "compress_size": 753
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_629.zip",
+  "file_size": 827,
+  "compress_size": 827
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_63.zip",
+  "file_size": 1466,
+  "compress_size": 1466
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_630.zip",
+  "file_size": 814,
+  "compress_size": 814
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_631.zip",
+  "file_size": 6281,
+  "compress_size": 6281
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_632.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_633.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_634.zip",
+  "file_size": 55289,
+  "compress_size": 55289
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_635.zip",
+  "file_size": 826,
+  "compress_size": 826
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_636.zip",
+  "file_size": 885,
+  "compress_size": 885
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_637.zip",
+  "file_size": 905,
+  "compress_size": 905
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_638.zip",
+  "file_size": 5276,
+  "compress_size": 5276
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_639.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_64.zip",
+  "file_size": 1469,
+  "compress_size": 1469
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_640.zip",
+  "file_size": 719,
+  "compress_size": 719
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_641.zip",
+  "file_size": 2703,
+  "compress_size": 2703
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_642.zip",
+  "file_size": 834,
+  "compress_size": 834
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_643.zip",
+  "file_size": 894,
+  "compress_size": 894
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_644.zip",
+  "file_size": 5327,
+  "compress_size": 5327
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_645.zip",
+  "file_size": 751,
+  "compress_size": 751
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_646.zip",
+  "file_size": 849,
+  "compress_size": 849
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_647.zip",
+  "file_size": 805,
+  "compress_size": 805
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_648.zip",
+  "file_size": 6169,
+  "compress_size": 6169
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_649.zip",
+  "file_size": 731,
+  "compress_size": 731
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_65.zip",
+  "file_size": 1470,
+  "compress_size": 1470
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_650.zip",
+  "file_size": 708,
+  "compress_size": 708
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_651.zip",
+  "file_size": 54404,
+  "compress_size": 54404
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_652.zip",
+  "file_size": 838,
+  "compress_size": 838
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_653.zip",
+  "file_size": 901,
+  "compress_size": 901
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_654.zip",
+  "file_size": 919,
+  "compress_size": 919
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_655.zip",
+  "file_size": 5777,
+  "compress_size": 5777
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_656.zip",
+  "file_size": 710,
+  "compress_size": 710
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_657.zip",
+  "file_size": 722,
+  "compress_size": 722
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_658.zip",
+  "file_size": 2689,
+  "compress_size": 2689
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_659.zip",
+  "file_size": 845,
+  "compress_size": 845
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_66.zip",
+  "file_size": 1465,
+  "compress_size": 1465
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_660.zip",
+  "file_size": 897,
+  "compress_size": 897
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_661.zip",
+  "file_size": 3366,
+  "compress_size": 3366
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_662.zip",
+  "file_size": 750,
+  "compress_size": 750
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_663.zip",
+  "file_size": 844,
+  "compress_size": 844
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_664.zip",
+  "file_size": 813,
+  "compress_size": 813
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_665.zip",
+  "file_size": 6154,
+  "compress_size": 6154
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_666.zip",
+  "file_size": 709,
+  "compress_size": 709
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_667.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_668.zip",
+  "file_size": 52712,
+  "compress_size": 52712
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_669.zip",
+  "file_size": 844,
+  "compress_size": 844
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_67.zip",
+  "file_size": 1469,
+  "compress_size": 1469
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_670.zip",
+  "file_size": 895,
+  "compress_size": 895
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_671.zip",
+  "file_size": 910,
+  "compress_size": 910
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_672.zip",
+  "file_size": 3378,
+  "compress_size": 3378
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_673.zip",
+  "file_size": 722,
+  "compress_size": 722
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_674.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_675.zip",
+  "file_size": 2702,
+  "compress_size": 2702
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_676.zip",
+  "file_size": 828,
+  "compress_size": 828
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_677.zip",
+  "file_size": 882,
+  "compress_size": 882
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_678.zip",
+  "file_size": 3337,
+  "compress_size": 3337
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_679.zip",
+  "file_size": 747,
+  "compress_size": 747
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_68.zip",
+  "file_size": 1006,
+  "compress_size": 1006
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_680.zip",
+  "file_size": 828,
+  "compress_size": 828
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_681.zip",
+  "file_size": 832,
+  "compress_size": 832
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_682.zip",
+  "file_size": 6157,
+  "compress_size": 6157
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_683.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_684.zip",
+  "file_size": 723,
+  "compress_size": 723
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_685.zip",
+  "file_size": 50469,
+  "compress_size": 50469
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_686.zip",
+  "file_size": 823,
+  "compress_size": 823
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_687.zip",
+  "file_size": 881,
+  "compress_size": 881
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_688.zip",
+  "file_size": 1088,
+  "compress_size": 1088
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_689.zip",
+  "file_size": 3492,
+  "compress_size": 3492
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_69.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_690.zip",
+  "file_size": 4908,
+  "compress_size": 4908
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_691.zip",
+  "file_size": 5017,
+  "compress_size": 5017
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_692.zip",
+  "file_size": 4917,
+  "compress_size": 4917
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_693.zip",
+  "file_size": 6737,
+  "compress_size": 6737
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_694.zip",
+  "file_size": 6697,
+  "compress_size": 6697
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_695.zip",
+  "file_size": 5905,
+  "compress_size": 5905
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_696.zip",
+  "file_size": 5886,
+  "compress_size": 5886
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_697.zip",
+  "file_size": 694,
+  "compress_size": 694
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_698.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_7.zip",
+  "file_size": 1202,
+  "compress_size": 1202
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_70.zip",
+  "file_size": 707,
+  "compress_size": 707
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_71.zip",
+  "file_size": 705,
+  "compress_size": 705
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_72.zip",
+  "file_size": 720,
+  "compress_size": 720
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_73.zip",
+  "file_size": 693,
+  "compress_size": 693
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_74.zip",
+  "file_size": 696,
+  "compress_size": 696
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_75.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_76.zip",
+  "file_size": 692,
+  "compress_size": 692
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_77.zip",
+  "file_size": 998,
+  "compress_size": 998
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_78.zip",
+  "file_size": 1034,
+  "compress_size": 1034
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_79.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_8.zip",
+  "file_size": 703,
+  "compress_size": 703
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_80.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_81.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_82.zip",
+  "file_size": 703,
+  "compress_size": 703
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_83.zip",
+  "file_size": 703,
+  "compress_size": 703
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_84.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_85.zip",
+  "file_size": 704,
+  "compress_size": 704
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_86.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_87.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_88.zip",
+  "file_size": 680,
+  "compress_size": 680
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_89.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_9.zip",
+  "file_size": 35547,
+  "compress_size": 35547
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_90.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_91.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_92.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_93.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_94.zip",
+  "file_size": 681,
+  "compress_size": 681
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_95.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_96.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_97.zip",
+  "file_size": 706,
+  "compress_size": 706
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_98.zip",
+  "file_size": 704,
+  "compress_size": 704
+ },
+ {
+  "name": "ESA-Mission1/telecommands/telecommand_99.zip",
+  "file_size": 706,
+  "compress_size": 706
+ }
+]

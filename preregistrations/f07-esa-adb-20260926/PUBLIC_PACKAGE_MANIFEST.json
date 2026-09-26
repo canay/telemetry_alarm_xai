@@ -1,0 +1,382 @@
+{
+  "at": "2026-09-26T22:15:07+03:00",
+  "tool": "Cowork-Claude",
+  "model": "claude-opus-5-5",
+  "operation_id": "f07-rb4-esa-adb-revision-20260926",
+  "schema_version": 1,
+  "scope": "Prospective ESA-ADB Mission1 arm: protocol, review lineage, code snapshot, pre-freeze evidence",
+  "freeze_contract_sha256": "d07fac7fc1a50eed09be37b4d645c7559c1dec5683a96098c123770ae4ee78b3",
+  "run_id": "2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm",
+  "public_files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "size_bytes": 8
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_delta_reviewed_20260926/esa_arm.py",
+      "sha256": "60d50ea9ca18867392225d5712f23c98794887c835a98ea898dd89e99d48e171",
+      "size_bytes": 68257
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_delta_reviewed_20260926/esa_core.py",
+      "sha256": "7206f9587ac34fe2c94095ee828ae8ca328550da75017b3a6604a0e6c1b85b24",
+      "size_bytes": 27997
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_delta_reviewed_20260926/esa_property_tests.py",
+      "sha256": "78ea2da958533c8026e58739211e569770e3707b2689d6e631b4f27b7e7bd662",
+      "size_bytes": 10133
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_snapshot/CODE_SNAPSHOT_MANIFEST.json",
+      "sha256": "a099ff6695fd31228b59c85e4dcd9cd87cd63c3fbde93450a7a8e43939096937",
+      "size_bytes": 1949
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_snapshot/esa_arm.py",
+      "sha256": "938ebce51a5c39d4a0da4acfaa87288e23ff695568ad23230ab926cccf528fd5",
+      "size_bytes": 68399
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_snapshot/esa_core.py",
+      "sha256": "c9ed54434fee8d9e84bdb26177ecfbb5b28ef58f600dd5a6400b9348eb2f1732",
+      "size_bytes": 27998
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_snapshot/esa_property_tests.py",
+      "sha256": "78ea2da958533c8026e58739211e569770e3707b2689d6e631b4f27b7e7bd662",
+      "size_bytes": 10133
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V3.json",
+      "sha256": "cac0429b5a4d1e21260a9791f0313a605686c98733ef29d36784bac839006fd8",
+      "size_bytes": 38545
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/EXPERIMENT_PLAN_SECTION10.json",
+      "sha256": "344c9a4d9622fff3faa4e21665ac8bc2290678695d83ab42c5be3d361a49821f",
+      "size_bytes": 6805
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/CLOSURE_CHECK.json",
+      "sha256": "1c24c7e673d032a243dfd29b4158e85a82041462cc43391f21592aeb1137a32c",
+      "size_bytes": 12125
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/CLOSURE_CHECK.md",
+      "sha256": "9530f1487a134fe20ba2c60ba28af71f2b2646efabfceee47ae5603c9c1faf62",
+      "size_bytes": 12990
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DECISION_SPEC_20260926.json",
+      "sha256": "694a92daddbcc309cde047ae15273c5b253e9defc2e044bc83666ecc1678baca",
+      "size_bytes": 6784
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DELTA_REVIEW.json",
+      "sha256": "a6eba65678b8095d48f905ed6440844d3712b8a73f872d272baf41d0fad2af20",
+      "size_bytes": 23318
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DELTA_REVIEW.md",
+      "sha256": "38aaf71983d9e605035e769d16efd1dd91b3a8da39312ca235d3f199b5416113",
+      "size_bytes": 10934
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DISPOSITION_F1.json",
+      "sha256": "f7c3ef692e45c0a21b35a1ad64d4c32c9382add9815cfeb573c7644e200e7a46",
+      "size_bytes": 9910
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/EDITOR_FACT_CHECK.json",
+      "sha256": "d441bc8b1d78bf849ba9f7ffd2fe98412d6b77090e33ffefad73f8ad377bf765",
+      "size_bytes": 1988
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/FINAL_TEXT_EDITS_PREVIEW.json",
+      "sha256": "082d0d31a89a0248b1a60d76423b27f3f12db9c2f5baafb85ac3a325f1bd7fb7",
+      "size_bytes": 7236
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/PATH_REFACTOR_20260926.diff",
+      "sha256": "abdeecf08d55e68f11755b4ffac25177f67f1c4b2f91ea715115e19d92320810",
+      "size_bytes": 2689
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/PATH_REFACTOR_CHECK.json",
+      "sha256": "a9f717e01bcc9495aa36b7422ed3dcb14493c4467737b7bd4b6247191aec16c1",
+      "size_bytes": 2407
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/POST_REVIEW_FIXES_20260926.diff",
+      "sha256": "3928094e36f31a57763efc67d79bef0f8beb82e3c1c4e17a76ea02b5be4894fc",
+      "size_bytes": 2102
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/POST_REVIEW_FIXES_CHECK.json",
+      "sha256": "9fc88e894da5d4436c9e611b4fa9510d4c0105536f6aea4e0be3af4b16a36135",
+      "size_bytes": 2794
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/REVIEW.json",
+      "sha256": "d4032b3d151c29b5f6e81a3707c06f59fd6f49c65dd8fdff957a6a81964d1fc1",
+      "size_bytes": 28538
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/REVIEW.md",
+      "sha256": "347584de4fadd14f91cfa9671674c734642db37d15652bcb0f2ca4f6bf0e7b53",
+      "size_bytes": 21299
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/ARCHIVE_INVENTORY.json",
+      "sha256": "f0a34f9b043c76e6189dd4da4138d42ef84650a811f7028d68acf19ef8b644f0",
+      "size_bytes": 85438
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/channel_sampling.csv",
+      "sha256": "baaa1462d01499894bf82fbda8660b6afe825e288c7fb1ba7e83dd6375607073",
+      "size_bytes": 11989
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/event_schema_table.csv",
+      "sha256": "66981fb41ac2ae61ead524cd8996b36b967595e00d359c3dbe9b57ecfdb1e3df",
+      "size_bytes": 15375
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/F3_FACTS.json",
+      "sha256": "33af03449e28211388f4952886376f67f61f7161e538ea0e0c02cd6b47d124f0",
+      "size_bytes": 3414
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/property_tests/PT1_RESULT.json",
+      "sha256": "ed805cb1663275992e18cd97b069fd5c0f71bd9c28b3448742cf46ec25e0fd7d",
+      "size_bytes": 29420
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/property_tests/PT2_RESULT.json",
+      "sha256": "bc8a16f5f32fc42eb352f1066c771f05d99832c2a02beef8c66eecc0ff180c4b",
+      "size_bytes": 2027
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/property_tests/PT3_RESULT.json",
+      "sha256": "0d01a0a3dd54b94fd6aada3612fed69d039a7f15c87cad0b09acb814483a27b7",
+      "size_bytes": 1073
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/src/f3_schema_inspect.py",
+      "sha256": "ad5e64771b66afef33abbd0b9ff79e106a1c4b1a4e1ef25a5fb61cb9347d777f",
+      "size_bytes": 12907
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/src/make_section10.py",
+      "sha256": "c41fa47dfc4376e058ac46ab1d1b64f769a81b76395768364e9f968ae958ec90",
+      "size_bytes": 10962
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/src/verify_f1_facts.py",
+      "sha256": "16a459b6aa33125a502225c093ac392ae6b047e38561af58342f7ca5aebe2689",
+      "size_bytes": 5225
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/src/verify_path_refactor.py",
+      "sha256": "607d6905fc312fa3a8ac51b3f171254f9759b6419d4424f34a1e771b43e8d3fc",
+      "size_bytes": 6167
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/src/verify_post_review_fixes.py",
+      "sha256": "96bb3ea0323bd19576f8000a25a70cabb85a8d32f1dac2e6bc5ea97891b42755",
+      "size_bytes": 8008
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/TIMEOUTS.json",
+      "sha256": "aa757b33ff5c0889949de2baa54680e796aa6f54ed4b99d01e079310214f879d",
+      "size_bytes": 1324
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/UNIT_PLAN.json",
+      "sha256": "597b2f5f2a1de72a821758a8db378db3235ae0474e0679ff52bd91e99d0bcba1",
+      "size_bytes": 3665
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "77b0c416b28904375d5b49278712fb8aecd41970f2ad74aaf5f8ccc83e18b166",
+      "size_bytes": 1068
+    },
+    {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/DECISION.json",
+      "sha256": "b1b6503315201935c297e97a6280b49da38d1439db8d71764e8560925a1aecfa",
+      "size_bytes": 9795
+    },
+    {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/EXPERIMENT_FREEZE_CONTRACT.json",
+      "sha256": "d07fac7fc1a50eed09be37b4d645c7559c1dec5683a96098c123770ae4ee78b3",
+      "size_bytes": 4366
+    },
+    {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/FINAL.json",
+      "sha256": "bb15984da89c7763f3d0be44a02c5b758330207ecdd26b05ef274312fdcaed52",
+      "size_bytes": 43408
+    },
+    {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/REVIEW.json",
+      "sha256": "a6eba65678b8095d48f905ed6440844d3712b8a73f872d272baf41d0fad2af20",
+      "size_bytes": 23318
+    },
+    {
+      "path": "README.md",
+      "sha256": "322b795b7824d3833e2038585ca504c46192333a0a027ba376f0d56fb0bbffc0",
+      "size_bytes": 2649
+    }
+  ],
+  "projections": [
+    {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/REVIEW.json",
+      "sha256": "a6eba65678b8095d48f905ed6440844d3712b8a73f872d272baf41d0fad2af20",
+      "size_bytes": 23318,
+      "private_original": {
+        "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/REVIEW.json",
+        "sha256": "a73bfd8c104a1b19d85c43c37d9ca54be8114efda7bf1099aab7fc2f2660f05a",
+        "size_bytes": 23300
+      },
+      "replacements": [
+        {
+          "replaced": "physical host name",
+          "with": "author-workstation",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V3.json",
+      "sha256": "cac0429b5a4d1e21260a9791f0313a605686c98733ef29d36784bac839006fd8",
+      "size_bytes": 38545,
+      "private_original": {
+        "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V3.json",
+        "sha256": "dce48a36d693a843de08582908907bf340deb1e457276db257c9179c2cb8b03a",
+        "size_bytes": 38536
+      },
+      "replacements": [
+        {
+          "replaced": "physical host name",
+          "with": "author-workstation",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DELTA_REVIEW.json",
+      "sha256": "a6eba65678b8095d48f905ed6440844d3712b8a73f872d272baf41d0fad2af20",
+      "size_bytes": 23318,
+      "private_original": {
+        "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DELTA_REVIEW.json",
+        "sha256": "a73bfd8c104a1b19d85c43c37d9ca54be8114efda7bf1099aab7fc2f2660f05a",
+        "size_bytes": 23300
+      },
+      "replacements": [
+        {
+          "replaced": "physical host name",
+          "with": "author-workstation",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/PATH_REFACTOR_CHECK.json",
+      "sha256": "a9f717e01bcc9495aa36b7422ed3dcb14493c4467737b7bd4b6247191aec16c1",
+      "size_bytes": 2407,
+      "private_original": {
+        "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/PATH_REFACTOR_CHECK.json",
+        "sha256": "97d71edad1b05cbc6a0dc8885bbbdf1d8263e1d204a3dbaf4ab93be1a4bd339a",
+        "size_bytes": 2551
+      },
+      "replacements": [
+        {
+          "replaced": "author project root, JSON-escaped backslash form",
+          "with": "<project>",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/PATH_REFACTOR_20260926.diff",
+      "sha256": "abdeecf08d55e68f11755b4ffac25177f67f1c4b2f91ea715115e19d92320810",
+      "size_bytes": 2689,
+      "private_original": {
+        "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/PATH_REFACTOR_20260926.diff",
+        "sha256": "b1f2344b0e563d46642e887ed7777a4427211d3940b829001ef67151ad32d5d8",
+        "size_bytes": 2823
+      },
+      "replacements": [
+        {
+          "replaced": "author project root, forward-slash form",
+          "with": "<project>",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/F3_FACTS.json",
+      "sha256": "33af03449e28211388f4952886376f67f61f7161e538ea0e0c02cd6b47d124f0",
+      "size_bytes": 3414,
+      "private_original": {
+        "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/F3_FACTS.json",
+        "sha256": "cea577398906fe4ba3d23e2345b4d8d71cd4487a83adfd4b706d73ab65287f16",
+        "size_bytes": 3405
+      },
+      "replacements": [
+        {
+          "replaced": "physical host name",
+          "with": "author-workstation",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "private_hash_only_refs": [
+    {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/PRELAUNCH_VALIDATION.json",
+      "sha256": "6ed7a804bd7365369f5b8823e120e5acde4bc88f904b1e6889f0d8c827ab6837",
+      "size_bytes": 1111,
+      "reason": "author-host central prelaunch receipt (absolute paths in its command output)"
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/DELTA_ATTEMPTS_CUSTODY.json",
+      "sha256": "34cca525c576845669d7adb1b3f1b8742af7595df8f54ec4dcbfd777f3f98376",
+      "size_bytes": 5425,
+      "reason": "custody of the two failed review attempts (account links)"
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/launch_record_run-20260926-esa-f1delta-fable-03.json",
+      "sha256": "bf1adfe8e12b74446d6b17eac37f6960f61aa0b31d109d5e33b7e774cf7376df",
+      "size_bytes": 3903,
+      "reason": "reviewer launch record (local paths)"
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/launch_record_run-20260926-esa-f1closure-fable-01.json",
+      "sha256": "760d8357d9efb5d762154fd18b31c7158d3185815bcec2a86cf5062192d5c178",
+      "size_bytes": 3262,
+      "reason": "closure-check launch refused by the guard before any model call (local paths)"
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/launch_record_run-20260926-esa-f1closure-fable-02.json",
+      "sha256": "c8e7b015663e5dfd9617044a3ae0539dd3b3715448ad07365b3d24c497d450be",
+      "size_bytes": 3651,
+      "reason": "closure-check launch record (local paths)"
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_prerefactor_20260926/esa_arm.py",
+      "sha256": "5ddd177922c5a83765979fa736a6743f0c30ede48c0d9780608b16e78f9a5c45",
+      "size_bytes": 67891,
+      "reason": "pre-refactor code; embeds the private project path"
+    },
+    {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/code_prerefactor_20260926/esa_property_tests.py",
+      "sha256": "4116c440e18c194080fbb6724d0b723a1b321decc8ea65f23b4e0d4f07b977ce",
+      "size_bytes": 10099,
+      "reason": "pre-refactor code; embeds the private project path"
+    }
+  ],
+  "scientific_compute": false,
+  "test_period_scores_opened": false
+}

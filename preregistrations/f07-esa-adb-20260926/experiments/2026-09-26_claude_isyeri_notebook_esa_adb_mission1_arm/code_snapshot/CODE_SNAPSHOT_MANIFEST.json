@@ -1,0 +1,44 @@
+{
+  "at": "2026-09-26T22:14:21+03:00",
+  "tool": "Cowork-Claude",
+  "model": "claude-opus-5-5",
+  "operation_id": "f07-rb4-esa-adb-revision-20260926",
+  "run_id": "2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm",
+  "files": {
+    "esa_core.py": {
+      "sha256": "c9ed54434fee8d9e84bdb26177ecfbb5b28ef58f600dd5a6400b9348eb2f1732",
+      "size_bytes": 27998
+    },
+    "esa_arm.py": {
+      "sha256": "938ebce51a5c39d4a0da4acfaa87288e23ff695568ad23230ab926cccf528fd5",
+      "size_bytes": 68399
+    },
+    "esa_property_tests.py": {
+      "sha256": "78ea2da958533c8026e58739211e569770e3707b2689d6e631b4f27b7e7bd662",
+      "size_bytes": 10133
+    }
+  },
+  "pre_refactor_sha256": {
+    "esa_arm.py": "5ddd177922c5a83765979fa736a6743f0c30ede48c0d9780608b16e78f9a5c45",
+    "esa_core.py": "7206f9587ac34fe2c94095ee828ae8ca328550da75017b3a6604a0e6c1b85b24",
+    "esa_property_tests.py": "4116c440e18c194080fbb6724d0b723a1b321decc8ea65f23b4e0d4f07b977ce"
+  },
+  "delta_reviewed_sha256": {
+    "esa_core.py": "7206f9587ac34fe2c94095ee828ae8ca328550da75017b3a6604a0e6c1b85b24",
+    "esa_arm.py": "60d50ea9ca18867392225d5712f23c98794887c835a98ea898dd89e99d48e171",
+    "esa_property_tests.py": "78ea2da958533c8026e58739211e569770e3707b2689d6e631b4f27b7e7bd662"
+  },
+  "post_review_changes": [
+    {
+      "finding": "D-01",
+      "file": "src/esa_core.py",
+      "summary": "clip_intervals: keep = e2 >= s2"
+    },
+    {
+      "finding": "D-02",
+      "file": "src/esa_arm.py",
+      "summary": "unit_eval: per-model episode-row frames, pd.concat at write"
+    }
+  ],
+  "note": "Copied at the freeze from src/. The pre-freeze units ran with the pre-refactor hashes; the path-only refactor is verified in f1_review/PATH_REFACTOR_CHECK.json and by the independent delta review; the evaluation-only post-review changes (if any) are verified in f1_review/POST_REVIEW_FIXES_CHECK.json and by the independent closure check f1_review/CLOSURE_CHECK.json."
+}

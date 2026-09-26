@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "review_id": "F07-ESA-ADB-F1-DELTA-REVIEW",
+  "reviewer_model": "claude-fable-5-1 (independent delta reviewer; not the editor)",
+  "reviewed_at": "2026-09-26T21:29:52+03:00",
+  "operation_id": "f07-rb4-esa-adb-revision-20260926",
+  "candidate_path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V3.json",
+  "candidate_sha256": "DCE48A36D693A843DE08582908907BF340DEB1E457276DB257C9179C2CB8B03A",
+  "v2_sha256_observed": "7AC751A67F32CB1C79B4A33049D1A17EF9FF9570BC72EDA8BCDF24B99C9A7575",
+  "f3_facts_sha256_observed": "CEA577398906FE4BA3D23E2345B4D8D71CD4487A83ADFD4B706D73AB65287F16",
+  "code_sha256": {
+    "esa_core.py": "7206F9587AC34FE2C94095EE828AE8CA328550DA75017B3A6604A0E6C1B85B24",
+    "esa_arm.py": "60D50EA9CA18867392225D5712F23C98794887C835A98EA898DD89E99D48E171",
+    "esa_property_tests.py": "78EA2DA958533C8026E58739211E569770E3707B2689D6E631B4F27B7E7BD662"
+  },
+  "code_sha256_prerefactor_observed": {
+    "esa_core.py": "7206F9587AC34FE2C94095EE828AE8CA328550DA75017B3A6604A0E6C1B85B24",
+    "esa_arm.py": "5DDD177922C5A83765979FA736A6743F0C30EDE48C0D9780608B16E78F9A5C45",
+    "esa_property_tests.py": "4116C440E18C194080FBB6724D0B723A1B321DECC8EA65F23B4E0D4F07B977CE"
+  },
+  "path_refactor": {
+    "verdict": "PATH_ONLY",
+    "evidence": "My own unified diff of code_prerefactor_20260926/ against src/ is line-for-line the editor's PATH_REFACTOR_20260926.diff: esa_core.py byte-identical (same SHA-256), esa_arm.py 13 changed lines (new RAW_ROOT constant from ESA_ADB_RAW_ROOT with the unchanged default, run_dir derived from the file location with a fail-closed RuntimeError when the folder name is not RUN_ID, the three Config path arguments), esa_property_tests.py 5 changed lines (RUN and WORK derived the same way, assert on the folder name). No scientific constant, seed, chunk size, mask, model setting, metric or unit function is touched; 'import os' was already present. All 60 unit checkpoints record the pre-refactor hashes (5DDD..., 7206..., 4116...) on host author-workstation. PATH_REFACTOR_CHECK.json shows identical resolved configuration, identical 147-unit plan (UNIT_PLAN.json sha 597B2F5F... recomputed by me), and prep outputs of channels 12, 41 and 61 recomputed byte-identically; those nine hashes equal the PT2 hashes and the prep__channel_12 checkpoint hashes I read. The pre-freeze evidence (PT1-PT3, controlled-stop smoke, prep/stdz checkpoints) therefore carries over to src/; the provenance gap (two hash sets) is D-03."
+  },
+  "verdict": "APPROVE_FOR_FREEZE_WITH_REQUIRED_CHANGES",
+  "finding_counts": {"P0": 0, "P1": 0, "P2": 2, "P3": 3, "blocking": 1},
+  "f1_closure": [
+    {"id": "F1-01", "status": "CLOSED", "evidence": "v3 hypothesis_H_E1.assay_sensitivity, per_detector_test, decision_rule, decision_artifact; esa_arm.unit_decision lines 1178-1202 (assay LB seed 20260926+100+model_index, EVALUABLE iff n>=30 and assay_lb>0.5, NOT_INFORMATIVE excluded from k, ceil(0.8k)); toy decision run reproduced statuses and the LR bound by hand.", "note": "Wording adopted as required; persisted fields present."},
+    {"id": "F1-02", "status": "CLOSED", "evidence": "v3 public_freeze.when (required text verbatim), stop rules 6-7, PT1 quarantine; esa_arm.assert_frozen called at the top of unit_fit (the only scoring path); pre-freeze run used --stop-before-fit and run_status.json reads COMPLETED at 60/147 units, no fit checkpoint exists.", "note": "Freeze gate binds the executing code hashes to the freeze record."},
+    {"id": "F1-03", "status": "CLOSED", "evidence": "v3 preprocessing_label_free.staleness (age_c and 3,600 s rule as required), PT2 covers age.f32, endpoints.staleness_diagnostics, prespecified_sensitivities.stale_peak_exclusion; esa_core.window_ages (brute-force verified), unit_stdz max over channels, unit_eval stale shares and stale_excluded variants of E2/E3/E4 (MUC and counts).", "note": "Primary definitions and H-E1 unchanged, as required."},
+    {"id": "F1-04", "status": "CLOSED", "evidence": "v3 S_L_lightweight redefined as detection context (E4, E2 false-alarm concentration) with the required 62-of-65 sentence; unit_eval skips E3 for the light set and writes AUROC only for 0<m<6 events.", "note": "Redefinition option chosen."},
+    {"id": "F1-05", "status": "CLOSED", "evidence": "v3 test_subperiods (2012-07-01 from VOR Table 6, verified at line 1545 of the extract), drift_split, E4_period_and_year_context; code DRIFT_START_NS, sub_rows, year_rows (median/p90/max length, multi-event count), E2/E3 variants pre_drift/drift with remapped events.", "note": "Declared operationalization (assignment by start time; separate sub-period queues) is justified: F1 left it undefined and MUC fractions require a queue per stratum."},
+    {"id": "F1-06", "status": "CLOSED", "evidence": "v3 E4 chance event recall (esa_core.chance_recall at the realized nominal flag rate, verified) and E4_vor_corrected_event_wise; esa_core.vor_corrected_event_wise follows VOR Eq. 1-2 (lines 580-593) and the exclusion rule (lines 2424-2428) for anomalies-only.", "note": "Time-domain operationalization is justified (Eq. 1 defines FPt and Nt as durations). One code defect in the point-event case: D-01."},
+    {"id": "F1-07", "status": "CLOSED", "evidence": "v3 models.settings.pca; esa_core.build_and_fit uses svd_solver='covariance_eigh'; unit_fit records _fit_svd_solver.", "note": ""},
+    {"id": "F1-08", "status": "CLOSED", "evidence": "v3 label_usage.test_label_lock opens with the required sentence and the F3 hash CEA577... (matches my recomputation).", "note": ""},
+    {"id": "F1-09", "status": "CLOSED", "evidence": "v3 channel_masses.aggregated_masses_secondary and E2 statement; esa_core.EpisodeAggregator and combine_replicate_aggregates reproduce run_criticality_unit._aggregate_episode_attributions and prepare_inputs lines 72-77 on toy inputs (max diff 2.8e-17, identical degeneracy flags); unit_eval reports peak and aggregated E2 rows separately.", "note": ""},
+    {"id": "F1-10", "status": "CLOSED", "evidence": "v3 features float32 storage with float64 accumulation, fixed chunk sizes (200,000 / 100,000 / 50,000 / 400 / 1,000,000 in code), model_call_cap; esa_arm.episode_subsample matches the seed rule; EXPERIMENT_PLAN_SECTION10.json carries all 31 owner fields of EXPERIMENT_DURABILITY_AND_RECOVERY.md Section 10; TIMEOUTS.json derived from measured units with margin 3; RAM measured.", "note": "Declared deviation (cap extended to TreeSHAP natives of dtree/hgb/iforest) is justified: TreeSHAP cost is linear in query rows, the same fixed subsample serves native and occlusion so their E2/E3 comparisons share episodes, and the cap is reported per source."},
+    {"id": "F1-11", "status": "CLOSED", "evidence": "v3 manuscript_boundary carries the required sentence; Q-E1 no longer says 'as well as'.", "note": ""},
+    {"id": "F1-12", "status": "CLOSED", "evidence": "v3 models.standardization guard, PT3 consistency check and guarded-column report; esa_core.guarded and unit_stdz freeze guarded columns at 0; PT3_RESULT lists no guarded column or channel (minimum raw nominal sd 1.8e-5).", "note": "Extension to raw-deviation statistics is justified (same 1e-9 denominator)."},
+    {"id": "F1-13", "status": "CLOSED", "evidence": "PT1_RESULT.json: families_covered all six, 266 artifacts (174 prep, 62 stdz, 18 fit, 6 episodes, 6 attr_episode), differing_artifacts empty, pass true, three variants, 1,711 test rows edited.", "note": "The pass also shows run-to-run determinism of HGB, TreeSHAP, iforest and AE under the fixed thread settings, a check F1 had left open."},
+    {"id": "F1-14", "status": "CLOSED", "evidence": "v3 names the percentile bootstrap primary; esa_core.t_lower_bound and cluster_bootstrap_lb match the protocol text (verified by hand); unit_decision reports both and the Student-t sensitivity verdict.", "note": ""},
+    {"id": "F1-15", "status": "CLOSED", "evidence": "v3 E1_reason_for_metric_change 0.477/0.508 (my recomputation of hit_chance(58,12,3) gives 0.508); communication_gaps states no test gap labels (verified: latest gap ends 2002-10-16); E4 states 10 overlapping pairs and at-most-one matching; unit_eval reports overlap_pairs and multi_event_episodes.", "note": ""},
+    {"id": "F1-16", "status": "CLOSED", "evidence": "v3 models.model_index, window_period_rule, PT1 paired shuffle, models.threshold numpy.quantile linear; esa_core.window_periods excludes exactly 3 straddling windows per boundary (6 total, matching stats.json n_boundary); esa_property_tests.edited_label_tables moves (StartTime, EndTime) as whole values.", "note": "Declared deviation (straddling windows belong to no period) is justified: it keeps validation windows free of test samples at a cost of six windows."}
+  ],
+  "findings": [
+    {
+      "id": "D-01",
+      "severity": "P2",
+      "section": "src/esa_core.py clip_intervals (line 618) as used by vor_corrected_event_wise (lines 660, 672); protocol endpoints.E4_vor_corrected_event_wise",
+      "issue": "clip_intervals keeps only intervals with e2 > s2, so zero-length (point) event segments are dropped from the merged event union that decides FPe. An alarm that overlaps only a point event is then counted as a true positive for the event and as a false positive at the same time, contradicting the protocol's 'FPe = episodes overlapping no included event and no excluded event'. The test labels contain 108 zero-length rows in test events, three zero-duration test events (id_118, id_42, id_55) and 26 zero-length rows in five events (id_118, id_183, id_186, id_187, id_189) that no positive-length test-event segment covers.",
+      "evidence": "Toy test: alarms [150,250],[300,350],[690,710],[900,950] s against events [100,200], [400,450] (rare) and a point at 700 s returned TPe 2, FNe 1, FPe 3, Pre 0.32; with the one-line fix FPe 2, Pre 0.40 as expected. Data counts from f3_schema/meta_labels.csv and meta_anomaly_types.csv.",
+      "required_change": "In esa_core.clip_intervals replace 'keep = e2 > s2' with 'keep = e2 >= s2'. Alarm spans are never zero-length, so alarm durations, FPt and Nt are unchanged; only the FPe status of alarms overlapping a point event changes. Re-run PT1 is not needed (evaluation-only function).",
+      "blocking": true
+    },
+    {
+      "id": "D-02",
+      "severity": "P2",
+      "section": "src/esa_arm.py unit_eval, ep_rows_all accumulation (lines 1082-1093) and atomic_csv(outs[6], pd.DataFrame(ep_rows_all)) (line 1136)",
+      "issue": "Episode rows of all six models are accumulated as Python dicts with 27 keys each before one DataFrame is built. Measured on this interpreter: 300,000 such rows occupy 620 MB, with an 808 MB peak during the DataFrame conversion. The protocol anticipates more than 20,000 episodes per model (the cap), so six models can reach 120,000-300,000 rows and push the eval unit past the 700 MB floor on a host with 1.5-2 GB available. The eval unit carries no freeze gate, so a post-freeze patch would run under a code hash that differs from the freeze record.",
+      "evidence": "tracemalloc measurement in the reviewer's scratch script; Config.min_available_mb = 700; progress.jsonl shows 1.38-1.52 GB available during the pre-freeze prep units.",
+      "required_change": "In unit_eval keep a per-model list: after the 'for k in range(n_ep)' loop append pd.DataFrame(model_rows) to a list ep_frames (model_rows being that model's rows), and at write time use pd.concat(ep_frames, ignore_index=True) (or an empty frame when the list is empty) in place of pd.DataFrame(ep_rows_all). Output bytes are unchanged. Apply before the freeze so that no post-freeze code change is needed.",
+      "blocking": false
+    },
+    {
+      "id": "D-03",
+      "severity": "P3",
+      "section": "protocol execution.code_snapshot and public_freeze.what; freeze package",
+      "issue": "The 60 pre-freeze checkpoints and PT1-PT3 were produced by the pre-refactor code (esa_arm.py 5DDD1779..., esa_property_tests.py 4116C440...), while the frozen code will carry 60D50EA9... and 78EA2DA9.... The protocol sentence 'every unit checkpoint records the SHA-256 of the executing code' will therefore show two hash sets, and the refactor makes the raw root depend on ESA_ADB_RAW_ROOT.",
+      "evidence": "units/*.json code_sha256 (all 60 identical, pre-refactor); PATH_REFACTOR_CHECK.json; my diff.",
+      "required_change": "Add to execution.code_snapshot: 'Units prep:<channel>, stdz:<set> and PT1-PT3 ran under the pre-refactor code (esa_arm.py 5DDD177922C5A83765979FA736A6743F0C30EDE48C0D9780608B16E78F9A5C45, esa_core.py 7206F9587AC34FE2C94095EE828AE8CA328550DA75017B3A6604A0E6C1B85B24, esa_property_tests.py 4116C440E18C194080FBB6724D0B723A1B321DECC8EA65F23B4E0D4F07B977CE); the path-only refactor (f1_review/PATH_REFACTOR_20260926.diff, verified in PATH_REFACTOR_CHECK.json and the delta review) produced the frozen code; ESA_ADB_RAW_ROOT is unset or equal to C:/ESA_ADB_RAW at launch.' Include the diff and check files in the freeze package.",
+      "blocking": false
+    },
+    {
+      "id": "D-04",
+      "severity": "P3",
+      "section": "protocol endpoints.E4 (window AUROC/AP) and secondary_prespecified_descriptive.S_L_lightweight; esa_arm.unit_eval lines 1005-1006",
+      "issue": "Window AUROC/AP uses positives = valid test windows overlapping a scoreable event and negatives = every other valid test window not overlapping a gap. In the six-channel refit, windows of the 26 test events that touch no lightweight channel are non-scoreable and therefore count as negatives, whereas the false-alarm rule excludes them from nominal time. For the primary set every test event is scoreable, so only S_L is affected. Descriptive; the protocol does not state this.",
+      "evidence": "unit_eval: scoreable = events with m > 0; yw/sw masks; nominal_test = ~labeled_test; F3_FACTS test_lightweight_scoreable_events = 65 of 91.",
+      "required_change": "Append to endpoints.E4: 'Window AUROC/AP: positives are valid test windows overlapping a scoreable event; negatives are all other valid test windows outside gap segments, which in S_L includes windows of test events that touch no lightweight channel.' No code change.",
+      "blocking": false
+    },
+    {
+      "id": "D-05",
+      "severity": "P3",
+      "section": "protocol public_freeze.when and property_tests_fail_closed_before_freeze.PT1_test_label_independence",
+      "issue": "Two wording slips: public_freeze.when says 'the PT1-PT3 smoke on the bounded 2006-07-01..2007-06-30 subset', but PT2 runs three channels on the full grid and PT3 runs on the full standardization outputs; and the PT1 text does not state the smoke's reduced fit and background sizes (N_fit = 20,000, N_bg = 5,000 in esa_property_tests.pt1), which differ from the full-run values.",
+      "evidence": "esa_property_tests.py pt2 (full grid), pt3 (default_config outputs), pt1 base_cfg(n_fit=20_000, n_bg=5_000).",
+      "required_change": "public_freeze.when: replace 'and the PT1-PT3 smoke on the bounded 2006-07-01..2007-06-30 subset may precede the freeze' with 'and the property tests PT1 (smoke on the bounded 2006-07-01..2007-06-30 subset), PT2 and PT3 may precede the freeze'. PT1 text: after 'one replicate' insert '(N_fit = 20,000 and N_bg = 5,000 for the smoke)'.",
+      "blocking": false
+    }
+  ],
+  "label_isolation": {
+    "label_readers": "Labels are read at exactly one site, esa_arm.read_segments (grep of src/: labels.csv appears only there and in the property-test table writer). unit_stdz calls it with pre_evaluation=True (segments with StartTime < 2007-01-01, EndTime clipped at 2007-01-01 minus 1 ns); unit_eval calls it with pre_evaluation=False and is the first reader of test rows. unit_prep reads no label; unit_fit, unit_episodes and unit_attr_episode read only meta.npz, scores and episode files derived from stdz.",
+    "can_pre_evaluation_depend_on_test_rows": "No. The filter removes test rows before any use, and the period masks additionally confine nominal_fit, nominal_val, sup_y and the raw statistics to fit/validation windows and grid times. The artifacts that would change under an unfiltered read are the stored masks in meta.npz (labeled_any_pre, event_any_pre, gap_any_pre) and the pre_evaluation_segments count in stats.json, both covered by PT1.",
+    "pt1_meaningfulness": "PT1 as run edits only test rows (1,711), covers all six families, episodes and attr_episode artifacts (266 files, hashes only, quarantined) and passed; it detects any read of test rows before the filter and, as a by-product, certifies byte-level run-to-run determinism of every family. It cannot detect a reader that bypasses cfg.labels_csv, which the grep rules out. Its pass is meaningful."
+  },
+  "freeze_integrity": {
+    "gate": "assert_frozen is called at the top of unit_fit, the only function that scores windows (score_rows). episodes, attr_episode, eval and decision consume fit outputs, so none can run before a fit; property tests disable the gate only inside separate work and run folders (work/pt, property_tests/pt*_). The gate requires status PUBLIC_FREEZE_VERIFIED and equality of the code_sha256 dict with the hashes of every esa_*.py in src/.",
+    "exposure_before_freeze": "None found. run_status.json, units.jsonl, progress.jsonl, heartbeat.json, stats.json and the stdz checkpoints carry counts and geometry only (n_test_valid 1,472,829, n_boundary 6, stale_valid_windows 21,067 primary / 117 light). PT1_RESULT.json carries hashes and pass/fail only. TIMEOUTS.json and EXPERIMENT_PLAN_SECTION10.json carry unit durations; by construction of Runner.log_unit the CLI transcript prints only unit ids, attempt ids, status and elapsed seconds, never the checkpoint 'extra' fields that hold the smoke's threshold and flag rate."
+  },
+  "checks_performed": [
+    "SHA-256 of v3 (DCE48A36...), v2 (7AC751A6..., equals the F1 binding), F3_FACTS.json (CEA57739..., equals the protocol), UNIT_PLAN.json, the three src/ files, the three pre-refactor files and the PT result files; unit checkpoints (60, all completed, all pre-refactor hashes, host author-workstation).",
+    "Own unified diff pre-refactor vs src/ (13 + 5 changed lines, esa_core identical), compared with the editor's diff and check file; prep hashes cross-checked against PT2 and the prep__channel_12 checkpoint.",
+    "Full read of esa_core.py, esa_arm.py, esa_property_tests.py, verify_path_refactor.py, verify_f1_facts.py against v3 and the synthetic core (common.py, models.py, run_criticality_unit.py, criticality_analysis_v4.py, prepare_inputs.py lines 23-33 and 66-80) and the VOR text (Eq. 1-2, Table 6, exclusion rule).",
+    "43 toy tests on pure functions in a scratch directory: window features identical to common.window_features after the float32 cast (float64 differences <= 3.6e-15 from summation order); chunk independence; tail_surprisal identical to both synthetic copies; normalise_mass, mean_mass, episode aggregation and replicate combination identical to the synthetic functions including degeneracy flags; raw-deviation and feature masses identical to prepare_inputs; ranking AUROC equal to sklearn with ties and 0.5 at chance; Hit@k chance formula against Monte Carlo (0.508 at m = 12); bootstrap, Student-t and class-cluster bounds against the protocol text; MUC-AUC equal to criticality_analysis_v4._ordering_auc_only with unit utilities and identical tie orderings; VOR Eq. 1-2 closed-form toy (found D-01) including the anomalies-only exclusion; window periods on the real grid (3 straddling windows per boundary, counts 1,419,837 / 52,989 / 1,472,829 / 6 consistent with stats.json); segment-window and grid masks by brute force; zero-order hold and staleness ages by brute force; episode runs across invalid windows; occlusion, native attribution and scores bit-identical to models.py for lr, pca and hgb, and batching-invariant; model-call cap subsample; e3_block and e2_stats smoke; unit_decision on a synthetic E1 table (statuses EVALUABLE / NOT_INFORMATIVE / NOT_EVALUABLE_N, k = 3, verdict, LR bound reproduced by hand); zero-variance guard rule; event remapping.",
+    "Label-table checks on f3_schema CSVs: 3,589 rows all on target channels, no segment crossing a split boundary, 1,711 test rows, four gap labels ending 2002-10-16, zero-length rows and zero-duration test events (D-01).",
+    "Section 10 preflight: all 31 fields of EXPERIMENT_DURABILITY_AND_RECOVERY.md Section 10 present in EXPERIMENT_PLAN_SECTION10.json with a structured opaque_runtime_bound_admission line; controlled-stop smoke evidence in prefreeze_cli.log (CONTROLLED_STOP rc 75 after two units, restart, two skipped_validated, COMPLETED rc 0, STOPPED_AT_FREEZE_GATE).",
+    "Resource estimate: fit 100,000 x 232 float64 (186 MB) plus model; scoring in 50,000-row chunks (93 MB); occlusion batches of 400 x 8 draws; eval E3 about 22,000 linear assignments of at most 0.4 n_episodes x 91, roughly 0.5-1.5 h on this host; eval episode-row accumulation measured (D-02).",
+    "Manuscript claim boundary: the current manuscript mentions ESA-ADB only in Related Work and Discussion as a stronger real-telemetry validation pathway; no ESA result is claimed yet, consistent with v3 manuscript_boundary and non_claims.",
+    "Owner conformance: post_gate_continuation block matches STUDY_DESIGN_AND_EXPERIMENTS.md; independent_recomputation field matches the EXPERIMENT_EVIDENCE_REQUIREMENTS.md binding (verified_artifacts and raw_input_digest)."
+  ],
+  "checks_not_run": [
+    "PT1 smoke outputs, PT1 CLI log, work/pt and quarantine folders: not opened (quarantine); durations and hashes taken from PT1_RESULT.json, TIMEOUTS.json and Section 10 as recorded.",
+    "No model fitted and no window scored on real data; occlusion, TreeSHAP and AE paths were exercised only on random toy data (AE fit not executed; its code is byte-identical to models.py AE).",
+    "The controlled-exit supervisor script and the other src/ scaffolding (build_freeze.py, launch_full_run.py, publish_prereg.py, make_section10.py) are outside the whitelist and were not read; the freeze gate's record format was checked only against assert_frozen.",
+    "Official ESA-ADB metric implementation (kplabs-pl/ESA-ADB) not read (no network); the point-event treatment in D-01 follows the protocol's own definition of FPe.",
+    "License re-observation and archive integrity taken as recorded in F3_FACTS.json and the protocol.",
+    "Eval-unit wall clock not measured; the E3 estimate is analytic."
+  ],
+  "summary": "v3 implements all sixteen F1 changes; the five declared deviations are justified. The code matches v3 and the synthetic core in every decision-critical definition I could test (features, standardization guard, threshold, episodes, tau and window weights, aggregated masses, cap, AUROC, bootstrap bounds, assay gate, decision rule, VOR quantities), label isolation holds with a single filtered reader, the freeze gate blocks every scoring path, and the pre-freeze evidence carries over to the path-only refactored src/. One blocking defect: vor_corrected_event_wise drops zero-length event segments, so alarms on point events count as false positives (one-line fix). One memory risk in the eval unit and three wording or provenance notes. Freeze after applying D-01."
+}

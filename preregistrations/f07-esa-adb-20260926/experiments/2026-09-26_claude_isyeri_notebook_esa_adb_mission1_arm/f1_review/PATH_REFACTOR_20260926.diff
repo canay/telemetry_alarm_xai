@@ -1,0 +1,51 @@
+--- code_prerefactor_20260926/esa_arm.py
++++ src/esa_arm.py
+@@ -39,6 +39,7 @@
+ import esa_core as C  # noqa: E402
+ 
+ RUN_ID = "2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm"
++RAW_ROOT = Path(os.environ.get("ESA_ADB_RAW_ROOT", "C:/ESA_ADB_RAW"))
+ CONTROLLED_EXIT = 75
+ TREE = ("dtree", "hgb", "iforest")
+ CLOSED_FORM = ("lr", "pca", "ae")
+@@ -110,8 +111,12 @@
+ 
+ 
+ def default_config() -> Config:
+-    project = Path("<project>")
+-    run_dir = project / "experiments" / RUN_ID
++    # Path-only refactor after the pre-freeze evidence: the run folder is this file's parent folder and the raw
++    # archive root comes from ESA_ADB_RAW_ROOT (default: the author host's location), so no machine-specific
++    # project path is embedded. On the author host every resolved path is unchanged.
++    run_dir = Path(__file__).resolve().parents[1]
++    if run_dir.name != RUN_ID:
++        raise RuntimeError(f"run folder {run_dir.name!r} is not {RUN_ID!r}")
+     facts = json.loads((run_dir / "f3_schema/F3_FACTS.json").read_text(encoding="utf-8"))
+     primary = list(facts["target_channels"])
+     light = [f"channel_{i}" for i in range(41, 47)]
+@@ -119,8 +124,8 @@
+     tpath = run_dir / "TIMEOUTS.json"
+     if tpath.exists():
+         timeouts = json.loads(tpath.read_text(encoding="utf-8-sig"))["timeouts_s"]
+-    return Config(zip_path=Path("C:/ESA_ADB_RAW/ESA-Mission1.zip"), meta_dir=Path("C:/ESA_ADB_RAW/work/meta"),
+-                  work=Path("C:/ESA_ADB_RAW/work/arm"), run_dir=run_dir,
++    return Config(zip_path=RAW_ROOT / "ESA-Mission1.zip", meta_dir=RAW_ROOT / "work" / "meta",
++                  work=RAW_ROOT / "work" / "arm", run_dir=run_dir,
+                   channel_sets={"primary": primary, "light": light}, models=list(C.MODELS),
+                   freeze_record=run_dir / "freeze" / "PUBLIC_FREEZE_VERIFIED.json", timeouts=timeouts)
+ 
+--- code_prerefactor_20260926/esa_property_tests.py
++++ src/esa_property_tests.py
+@@ -27,9 +27,10 @@
+ import esa_arm as A  # noqa: E402
+ import esa_core as C  # noqa: E402
+ 
+-RUN = Path("<project>/experiments") / A.RUN_ID
++RUN = Path(__file__).resolve().parents[1]  # path-only refactor: same folder on the author host, no embedded path
++assert RUN.name == A.RUN_ID, RUN.name
+ PT = RUN / "property_tests"
+-WORK = Path("C:/ESA_ADB_RAW/work/pt")
++WORK = A.RAW_ROOT / "work" / "pt"
+ QUARANTINE_NOTE = ("QUARANTINED (protocol v3): this smoke directory holds scores, thresholds, flag rates, "
+                    "episode counts and masses of a bounded subset that includes test-period windows. Do not open "
+                    "its units/*.json, logs or work files before the public freeze; PT1_RESULT.json carries only hashes.")

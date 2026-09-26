@@ -1,0 +1,40 @@
+--- code_delta_reviewed_20260926/esa_core.py
++++ src/esa_core.py
+@@ -616,5 +616,5 @@
+     s2 = np.maximum(s, t0)
+     e2 = np.minimum(e, t1)
+-    keep = e2 > s2
++    keep = e2 >= s2
+     return s2[keep], e2[keep]
+ 
+--- code_delta_reviewed_20260926/esa_arm.py
++++ src/esa_arm.py
+@@ -938,5 +938,5 @@
+                         if events[i]["start_ns"] <= events[j]["end_ns"] and events[j]["start_ns"] <= events[i]["end_ns"])
+     maps = braw_maps(cfg, set_name, nwin)
+-    e1_rows, det_rows, year_rows, sub_rows, ep_rows_all, e2_rows, e3_rows, e3_summary = [], [], [], [], [], [], [], []
++    e1_rows, det_rows, year_rows, sub_rows, ep_frames, e2_rows, e3_rows, e3_summary = [], [], [], [], [], [], [], []
+     for model_name in cfg.models:
+         mi = C.MODELS.index(model_name)
+@@ -1080,4 +1080,5 @@
+                                                         [r["native_agg_win_deg"] for r in reps])
+             sources.append(("aggregated", "native", agg_nat, all_rows))
++        model_rows = []
+         for k in range(n_ep):
+             row = {"set": set_name, "model": model_name, "episode": k, "start_window": int(test_idx[ep_start[k]]),
+@@ -1091,5 +1092,7 @@
+                     row[f"top_{kind}_{src}"] = top
+                     row[f"top_{kind}_{src}_guarded"] = top in guarded_ch
+-            ep_rows_all.append(row)
++            model_rows.append(row)
++        ep_frames.append(pd.DataFrame(model_rows))
++        del model_rows
+         variants = {"all": np.ones(n_ep, bool), "stale_excluded": ~ep_stale, "pre_drift": ~ep_drift, "drift": ep_drift}
+         for kind, src, M, rows in sources:
+@@ -1134,5 +1137,5 @@
+     atomic_csv(outs[4], pd.DataFrame(sub_rows))
+     atomic_csv(outs[5], pd.DataFrame(e2_rows))
+-    atomic_csv(outs[6], pd.DataFrame(ep_rows_all))
++    atomic_csv(outs[6], pd.concat(ep_frames, ignore_index=True) if ep_frames else pd.DataFrame())
+     summary = {"set": set_name, "channels": nch, "test_events_total": len(events), "scoreable_events": n_events,
+                "scoreable_by_category": pd.Series([e["category"] for e in scoreable]).value_counts().to_dict(),

@@ -1,0 +1,88 @@
+{
+ "at": "2026-09-26T21:38:58+03:00",
+ "tool": "Cowork-Claude",
+ "model": "claude-opus-5-5 (editor)",
+ "operation_id": "f07-rb4-esa-adb-revision-20260926",
+ "reviewed_sha256": {
+  "esa_core.py": "7206F9587AC34FE2C94095EE828AE8CA328550DA75017B3A6604A0E6C1B85B24",
+  "esa_arm.py": "60D50EA9CA18867392225D5712F23C98794887C835A98EA898DD89E99D48E171",
+  "esa_property_tests.py": "78EA2DA958533C8026E58739211E569770E3707B2689D6E631B4F27B7E7BD662"
+ },
+ "fixed_sha256": {
+  "esa_core.py": "C9ED54434FEE8D9E84BDB26177ECFBB5B28EF58F600DD5A6400B9348EB2F1732",
+  "esa_arm.py": "938EBCE51A5C39D4A0DA4ACFAA87288E23FF695568AD23230AB926CCCF528FD5",
+  "esa_property_tests.py": "78EA2DA958533C8026E58739211E569770E3707B2689D6E631B4F27B7E7BD662"
+ },
+ "checks": {
+  "diff_esa_core.py": {
+   "removed": [
+    "    keep = e2 > s2"
+   ],
+   "added": [
+    "    keep = e2 >= s2"
+   ],
+   "matches_expected": true,
+   "lf_only": true,
+   "compiles": true
+  },
+  "diff_esa_arm.py": {
+   "removed": [
+    "    e1_rows, det_rows, year_rows, sub_rows, ep_rows_all, e2_rows, e3_rows, e3_summary = [], [], [], [], [], [], [], []",
+    "            ep_rows_all.append(row)",
+    "    atomic_csv(outs[6], pd.DataFrame(ep_rows_all))"
+   ],
+   "added": [
+    "    e1_rows, det_rows, year_rows, sub_rows, ep_frames, e2_rows, e3_rows, e3_summary = [], [], [], [], [], [], [], []",
+    "        model_rows = []",
+    "            model_rows.append(row)",
+    "        ep_frames.append(pd.DataFrame(model_rows))",
+    "        del model_rows",
+    "    atomic_csv(outs[6], pd.concat(ep_frames, ignore_index=True) if ep_frames else pd.DataFrame())"
+   ],
+   "matches_expected": true,
+   "lf_only": true,
+   "compiles": true
+  },
+  "diff_esa_property_tests.py": {
+   "removed": [],
+   "added": [],
+   "matches_expected": true,
+   "lf_only": true,
+   "compiles": true
+  },
+  "D-01_toy": {
+   "fixed": {
+    "TPe": 2,
+    "FNe": 1,
+    "FPe": 2,
+    "FPt_s": 170.0,
+    "Nt_s": 850.0,
+    "Pre": 0.4,
+    "Rece": 0.6666666666666666,
+    "F0.5e": 0.43478260869565216
+   },
+   "reviewed": {
+    "TPe": 2,
+    "FNe": 1,
+    "FPe": 3,
+    "FPt_s": 170.0,
+    "Nt_s": 850.0,
+    "Pre": 0.32000000000000006,
+    "Rece": 0.6666666666666666,
+    "F0.5e": 0.35714285714285726
+   },
+   "fixed_expected": true,
+   "reviewed_expected": true,
+   "fpt_nt_unchanged": true
+  },
+  "D-02_equivalence": {
+   "rows": 125,
+   "bytes_equal": true,
+   "sha_old": "0e0066df045a45d06078f732068cb301c257e76ef5aff7faa38e50cc64457c18",
+   "sha_new": "0e0066df045a45d06078f732068cb301c257e76ef5aff7faa38e50cc64457c18",
+   "empty_case_equal": true,
+   "header": "set,model,episode,start_window,tau,fa,n_events,subperiod,peak_stale,top_peak_raw,top_aggregated_native,top_peak_occlusion,top_peak_occlusion_guarded\r"
+  }
+ },
+ "verdict": "POST_REVIEW_FIXES_VERIFIED"
+}

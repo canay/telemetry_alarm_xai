@@ -1,0 +1,76 @@
+{
+ "schema_version": 1,
+ "check_id": "F07-ESA-ADB-F1-DELTA-CLOSURE-CHECK",
+ "checker_model": "claude-fable-5-1 (independent closure checker; not the editor)",
+ "checked_at": "2026-09-26T21:55:28+03:00",
+ "operation_id": "f07-rb4-esa-adb-revision-20260926",
+ "delta_review_sha256": "A73BFD8C104A1B19D85C43C37D9CA54BE8114EFDA7BF1099AAB7FC2F2660F05A",
+ "reviewed_code_sha256": {
+  "esa_core.py": "7206F9587AC34FE2C94095EE828AE8CA328550DA75017B3A6604A0E6C1B85B24",
+  "esa_arm.py": "60D50EA9CA18867392225D5712F23C98794887C835A98EA898DD89E99D48E171",
+  "esa_property_tests.py": "78EA2DA958533C8026E58739211E569770E3707B2689D6E631B4F27B7E7BD662"
+ },
+ "code_sha256": {
+  "esa_core.py": "C9ED54434FEE8D9E84BDB26177ECFBB5B28EF58F600DD5A6400B9348EB2F1732",
+  "esa_arm.py": "938EBCE51A5C39D4A0DA4ACFAA87288E23FF695568AD23230AB926CCCF528FD5",
+  "esa_property_tests.py": "78EA2DA958533C8026E58739211E569770E3707B2689D6E631B4F27B7E7BD662"
+ },
+ "candidate_sha256": "DCE48A36D693A843DE08582908907BF340DEB1E457276DB257C9179C2CB8B03A",
+ "decision_spec_sha256": "694A92DADDBCC309CDE047AE15273C5B253E9DEFC2E044BC83666ECC1678BACA",
+ "verdict": "CLOSED_WITH_NOTES",
+ "items": [
+  {
+   "id": "D-01",
+   "status": "CLOSED",
+   "evidence": "src/esa_core.py line 618 reads 'keep = e2 >= s2' (reviewed copy: 'keep = e2 > s2'). My unified diff of code_delta_reviewed_20260926/ against src/ shows this as the only change in esa_core.py, and an AST comparison of all 88 top-level nodes shows clip_intervals as the only changed one. clip_intervals is called only from vor_corrected_event_wise (esa_core.py lines 660 and 673), which is called only from unit_eval (esa_arm.py lines 1011-1012); esa_property_tests.py never reaches it and PT1 excludes eval units (esa_property_tests.py line 121). Both copies loaded from disk (no bytecode written): the reviewer's toy case gives TPe 2, FNe 1, FPe 2, FPt 170 s, Nt 850 s, Pre 0.40 with the fix and FPe 3, Pre 0.32 without it, identical to POST_REVIEW_FIXES_CHECK.json. Nine further cases (point event at t0, point event at t1, alarm touching a point event at its end and at its start, an excluded point event only, a zero-duration event with two point segments, a point touching a positive segment, points outside the test period, no alarms) give the protocol's FPe (endpoints.E4_vor_corrected_event_wise: episodes overlapping no included and no excluded event) with TPe, FNe, FPt and Nt identical between the copies. 3,000 random cases: the fixed function equals an independent brute-force implementation of the protocol definitions on all five quantities; TPe, FNe, FPt and Nt identical between the copies in every case; FPe differs in 640 cases, always reviewed > fixed and only when a zero-length segment exists after clipping."
+  },
+  {
+   "id": "D-02",
+   "status": "CLOSED",
+   "evidence": "src/esa_arm.py unit_eval: ep_rows_all replaced by ep_frames in the accumulator line (940); 'model_rows = []' before the episode loop (1082), 'model_rows.append(row)' (1094), 'ep_frames.append(pd.DataFrame(model_rows))' and 'del model_rows' after the loop (1095-1096); write: 'pd.concat(ep_frames, ignore_index=True) if ep_frames else pd.DataFrame()' (1139). These nine lines are the whole esa_arm.py diff, unit_eval is the only changed top-level node of 74, and the identifiers occur nowhere else. A model without episodes leaves the model loop at line 1061 before any frame is built, as it left before any row was appended in the reviewed code; light-set models append their frame before the 'set_name != primary' continue at line 1109. CSV bytes written with the same call as atomic_csv (frame.to_csv(path, index=False); Python 3.12.7, pandas 2.3.3, numpy 2.3.5): identical for a realistic six-model table (170 rows, capped native and occlusion keys, dtree without aggregated_native, hgb without episodes), a key first present in the last row of the last model, a column absent from every row of one model, mixed availability, a single model, one episode per model, no episodes in any model (2 bytes in both), and 300 random tables with random per-model key availability including 0 and 1; no pandas warning was emitted."
+  },
+  {
+   "id": "D-03",
+   "status": "CLOSED",
+   "evidence": "FINAL_TEXT_EDITS_PREVIEW.json /execution/code_snapshot: 'old' equals the current candidate v3 value (candidate SHA-256 DCE48A36... equals the delta review's), 'new' equals the DECISION_SPEC final value, and 'new' equals old + ' ' + the reviewer's sentence with exactly one insertion: 'and the two evaluation-only changes required by the delta review (D-01: clip_intervals keeps zero-length event segments; D-02: unit_eval builds episode rows as per-model frames; f1_review/POST_REVIEW_FIXES_20260926.diff, verified in POST_REVIEW_FIXES_CHECK.json and in the independent closure check f1_review/CLOSURE_CHECK.json)' placed between 'the delta review)' and 'produced the frozen code'. The three pre-refactor hashes, the refactor diff and check references and the ESA_ADB_RAW_ROOT clause are verbatim. The extension is acceptable and necessary: after D-01 and D-02 the refactor alone no longer produces the frozen code, both descriptions are accurate, and the reference to CLOSURE_CHECK.json is satisfied by this file. Inclusion of the diff and check files in the freeze package is asserted by the disposition; the package itself is outside this check's whitelist."
+  },
+  {
+   "id": "D-04",
+   "status": "CLOSED",
+   "evidence": "FINAL_TEXT_EDITS_PREVIEW.json /endpoints/E4: 'old' equals the candidate value; 'new' == old + ' ' + the required sentence, verbatim, and equals the DECISION_SPEC final value. The sentence matches unit_eval lines 1005-1006 (positives event_window_label, negatives the other windows of ~gap_mask_test | event_window_label). No code change, as required (esa_arm.py diff contains none)."
+  },
+  {
+   "id": "D-05",
+   "status": "CLOSED",
+   "evidence": "/public_freeze/when: the phrase 'and the PT1-PT3 smoke on the bounded 2006-07-01..2007-06-30 subset may precede the freeze' occurs exactly once in 'old' and 'new' == old.replace(phrase, 'and the property tests PT1 (smoke on the bounded 2006-07-01..2007-06-30 subset), PT2 and PT3 may precede the freeze'), verbatim. /property_tests_fail_closed_before_freeze/PT1_test_label_independence: 'one replicate' occurs once; 'new' == old with ', N_fit = 20,000 and N_bg = 5,000 for the smoke' inserted before the closing parenthesis of the existing parenthesis, content verbatim; a literal insertion would have read '... one replicate (N_fit = 20,000 and N_bg = 5,000 for the smoke))', so the placement is acceptable. Both 'old' values equal the candidate values and both 'new' values equal the DECISION_SPEC final values. A recursive scan of the candidate finds 'PT1-PT3 smoke' and 'smoke on the bounded' only in public_freeze.when, so no other field carries the slip."
+  }
+ ],
+ "findings": [
+  {
+   "id": "C-01",
+   "severity": "P3",
+   "issue": "The editor's src/verify_post_review_fixes.py imports both esa_core.py copies through importlib, which wrote a __pycache__ directory into the reviewed-code evidence folder code_delta_reviewed_20260926/ (directory timestamp 2026-09-26 21:38:58, the script's run time). Harmless: the three .py files keep the delta review's hashes and the diff ignores it.",
+   "evidence": "Directory listing of code_delta_reviewed_20260926/ (not opened); POST_REVIEW_FIXES_CHECK.json 'at' 21:38:58; verify_post_review_fixes.py load() at lines 52-56 and 91-92.",
+   "required_change": "Housekeeping only: remove or exclude __pycache__ from code_delta_reviewed_20260926/ before that folder is packaged. No change to code, protocol or dispositions.",
+   "blocking": false
+  }
+ ],
+ "checks_performed": [
+  "SHA-256 recomputed: DELTA_REVIEW.json A73BFD8C... (equals DECISION_SPEC expected_review_sha256); code_delta_reviewed_20260926/ esa_core.py 7206F958..., esa_arm.py 60D50EA9..., esa_property_tests.py 78EA2DA9... (equal to DELTA_REVIEW.json code_sha256); src/ esa_core.py C9ED5443..., esa_arm.py 938EBCE5..., esa_property_tests.py 78EA2DA9... (equal to POST_REVIEW_FIXES_CHECK.json fixed_sha256; property tests byte-identical); candidate DCE48A36... (equals the delta review and FINAL_TEXT_EDITS_PREVIEW.json); DECISION_SPEC 694A92DA....",
+  "Own unified diff (git diff --no-index, U2) of code_delta_reviewed_20260926/ against src/: esa_core.py 1 line changed (keep = e2 >= s2), esa_arm.py 3 lines removed and 6 added inside unit_eval, esa_property_tests.py identical; line-for-line the editor's POST_REVIEW_FIXES_20260926.diff. All six files LF-only, no BOM, trailing newline; src/ files compile (in-memory compile). AST comparison of every top-level node: only clip_intervals and unit_eval differ.",
+  "Caller search over src/esa_*.py: clip_intervals is called only at esa_core.py lines 660 and 673 (vor_corrected_event_wise); vor_corrected_event_wise only at esa_arm.py lines 1011-1012 (unit_eval); ep_rows_all/ep_frames/model_rows only inside unit_eval. esa_property_tests.py: PT1 filters out eval and decision units (line 121), PT2 runs prep units, PT3 reads stdz outputs; so prep/stdz checkpoints and PT1-PT3 are unaffected.",
+  "D-01: 10 toy cases and 3,000 random cases on both esa_core.py copies loaded with sys.dont_write_bytecode, against a brute-force reference of the protocol's E4_vor_corrected_event_wise definitions (closed-interval overlap for TPe/FNe/FPe, unit-lattice durations for FPt/Nt); results in the item evidence.",
+  "D-02: CSV byte equality (same to_csv call as atomic_csv) for 7 constructed tables and 300 random tables mirroring the unit_eval row construction (14 base keys plus top_<kind>_<source> and _guarded keys with per-row availability); warnings captured (none).",
+  "Protocol edits: JSON-pointer resolution of the four edited fields in ESA_ADB_PROTOCOL_CANDIDATE_V3.json, 'old' equality with the candidate, 'new' equality with DECISION_SPEC final_changes, character-level opcodes of old vs new, comparison with the required wording parsed from DELTA_REVIEW.json findings; recursive scan of the candidate for related phrases.",
+  "Dispositions: DECISION_SPEC_20260926.json lists D-01 to D-05 once each, all ACCEPT_APPLIED, with rationales consistent with the applied code and text; code_changes and code_change_evidence name the two files and the four evidence files.",
+  "Editor's POST_REVIEW_FIXES_CHECK.json cross-checked against my own independent runs (D-01 toy numbers identical; D-02 equivalence reproduced) without executing verify_post_review_fixes.py."
+ ],
+ "checks_not_run": [
+  "verify_post_review_fixes.py, esa_arm.py and esa_property_tests.py were not executed (prohibited; the verify script rewrites evidence files); the editor's check values were compared with independent scratch runs instead.",
+  "src/build_freeze.py and the freeze package are outside the whitelist: whether the four replacements reach the frozen protocol exactly as previewed, the declared execution.host pseudonymization and FINAL metadata edits, and the inclusion of the refactor and post-review diff, check and closure files in the package remain to be verified at freeze time.",
+  "No real data read and unit_eval not run on real episode files; D-02 equivalence is shown on synthetic rows under the interpreter on this host (Python 3.12.7, pandas 2.3.3, numpy 2.3.5).",
+  "Official ESA-ADB metric implementation not consulted (no network); D-01 is assessed against the protocol's own definitions.",
+  "PATH_REFACTOR_20260926.diff, PATH_REFACTOR_CHECK.json and the unit checkpoints (the factual basis of the D-03 sentence) were not re-read; outside the whitelist and already verified by the delta review."
+ ],
+ "summary": "All five required changes are applied faithfully. My diff of the reviewed copy against src/ is exactly D-01 (one line) and D-02 (nine lines in unit_eval); nothing else changed and the property-test file is byte-identical. Both changes are reached only from unit_eval, so prep/stdz checkpoints and PT1-PT3 are unaffected. The four protocol edits carry the required wording verbatim, with an accurate D-03 extension and an acceptable D-05 placement. One P3 housekeeping note."
+}

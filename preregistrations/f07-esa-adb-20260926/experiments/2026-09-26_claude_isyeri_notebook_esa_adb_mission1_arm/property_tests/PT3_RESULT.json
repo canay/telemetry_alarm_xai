@@ -1,0 +1,45 @@
+{
+ "pass": true,
+ "protocol": "v3",
+ "sets": {
+  "light": {
+   "expected_windows": 2945661,
+   "finite_stats": true,
+   "guard_violations": 0,
+   "guarded_feature_columns": [],
+   "guarded_raw_channels": [],
+   "invalid_windows": 1,
+   "n_windows": 2945661,
+   "nominal_fit": 1277341,
+   "nominal_val": 48818,
+   "nonfinite_in_valid_rows": 0,
+   "pass": true,
+   "raw_guard_ok": true,
+   "stale_valid_windows": 117,
+   "staleness_finite_nonnegative_on_valid": true,
+   "sup_neg": 1277341,
+   "sup_pos": 141528,
+   "window_count_ok": true
+  },
+  "primary": {
+   "expected_windows": 2945661,
+   "finite_stats": true,
+   "guard_violations": 0,
+   "guarded_feature_columns": [],
+   "guarded_raw_channels": [],
+   "invalid_windows": 3,
+   "n_windows": 2945661,
+   "nominal_fit": 1277339,
+   "nominal_val": 48818,
+   "nonfinite_in_valid_rows": 0,
+   "pass": true,
+   "raw_guard_ok": true,
+   "stale_valid_windows": 21067,
+   "staleness_finite_nonnegative_on_valid": true,
+   "sup_neg": 1277339,
+   "sup_pos": 141528,
+   "window_count_ok": true
+  }
+ },
+ "test": "PT3_invariants"
+}

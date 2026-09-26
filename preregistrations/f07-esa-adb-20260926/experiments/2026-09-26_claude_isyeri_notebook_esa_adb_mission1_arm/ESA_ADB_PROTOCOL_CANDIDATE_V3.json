@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "protocol_id": "F07-ESA-ADB-MISSION1-BOUNDED-ARM",
+  "version": "3.0-candidate",
+  "status": "CANDIDATE_PENDING_INDEPENDENT_DELTA_REVIEW",
+  "change_id": "MCC-F07-ESA-ADB-BOUNDED-ARM-20260925",
+  "operation_id": "f07-rb4-esa-adb-revision-20260926",
+  "at": "2026-09-26T14:42:07+03:00",
+  "tool": "Cowork-Claude",
+  "model": "claude-opus-5-5 (editor; not the protocol reviewer)",
+  "supersedes": {
+    "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V2.json",
+    "sha256": "7AC751A67F32CB1C79B4A33049D1A17EF9FF9570BC72EDA8BCDF24B99C9A7575",
+    "note": "v3 implements every required change of the F1 independent review (F07-ESA-ADB-F1-REVIEW, verdict APPROVE_WITH_REQUIRED_CHANGES, 16 findings); the finding-by-finding disposition is in f1_review/DISPOSITION_F1.json."
+  },
+  "prior_review": {
+    "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/REVIEW.json",
+    "reviewer_model": "claude-fable-5-1 / max (guarded CLI, safe mode)",
+    "verdict": "APPROVE_WITH_REQUIRED_CHANGES",
+    "editor_fact_check": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f1_review/EDITOR_FACT_CHECK.json"
+  },
+  "authority": {
+    "author_decisions": ["D10-a (bounded ESA-ADB arm selected)", "D11-a (Mission1 download approved)", "D11-b (public freeze delegated after independent review)"],
+    "decision_log": "MD/_state/DECISION_LOG.md",
+    "trigger_findings": ["RB3-S04 (P1)", "RB4-S01 (P1)"],
+    "independent_review_required_before_freeze": true,
+    "reviewer_constraint": "The editor model (claude-opus-5-5) cannot be the protocol reviewer; reviews run on claude-fable-5-1 through the guarded CLI with a restricted packet."
+  },
+  "scientific_questions": {
+    "Q-E1_channel_evidence_accuracy": "On real multichannel ESA spacecraft telemetry, do explanation-free channel masses (feature deviation, raw deviation) rank the channels annotated as affected by a detected event within a prespecified non-inferiority margin of the detectors' native explanations, with an occlusion reference beside them? This is the external counterpart of the synthetic tab:modelfree-salience comparison.",
+    "Q-E2_false_alarm_channel_load": "Is the channel mass of false-alarm episodes concentrated on a few channels, and does up-weighting one channel's criticality at fixed alarm load move false alarms forward in proportion to how often that channel dominates false-alarm masses? This tests on real telemetry the post hoc nuisance-channel reading of sec:mechanism.",
+    "Q-E3_equal_event_coverage": "Descriptive equal-event coverage of fixed alarm queues at 5/10/20/40 percent review load."
+  },
+  "non_claims": [
+    "Annotated affected channels are not causal drivers (ESA-ADB VOR Sections 2.1-2.2); no causal-driver or fault-localization claim is made.",
+    "No mission harm, fault severity, operator utility or criticality-weighted utility is estimated; the data carry no such labels and telecommand priority is not a severity label.",
+    "The synthetic C1-C4 endpoints are neither re-estimated nor validated by this arm.",
+    "No detector ranking is generalized and no hyperparameter is tuned; the arm's six detectors are not ESA-ADB benchmark competitors.",
+    "Only Mission1 is analysed; Mission2 and Mission3 are not used, not even as sensitivity analyses."
+  ],
+  "data": {
+    "source": "ESA Anomalies Dataset (ESA-AD), Zenodo record 15237121, version v2 (2025-04-17); Kotowski et al., DMLR 3(23), 2026 (reference key andrzejewski2024esaadb)",
+    "archive": {
+      "file": "ESA-Mission1.zip",
+      "size_bytes": 3776246073,
+      "md5": "9770ad12ed730238f37c42d5c27ab436",
+      "sha256": "ba28f761b1deab4dbba4728793bff139fea39dbf9cf0d9c559d619ffe75d5a72",
+      "local_path_outside_synced_tree": "C:/ESA_ADB_RAW/ESA-Mission1.zip",
+      "downloaded_at": "2026-09-26T13:37:52+03:00 to 13:57:34+03:00, curl rc=0"
+    },
+    "license_observation": "CC BY 3.0 IGO shown on the Zenodo record page immediately before download (2026-09-26); the Zenodo API omits the license field; the 2026-09-04 DOM observation is the same source at an earlier time, so the observation is single-source. Stop rule satisfied (license re-observed at download).",
+    "f3_facts": {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/f3_schema/F3_FACTS.json",
+      "sha256": "CEA577398906FE4BA3D23E2345B4D8D71CD4487A83ADFD4B706D73AB65287F16",
+      "model_fit_executed": false,
+      "summary": "76 channels (58 target, 18 non-target, all numerical); 200 annotated label IDs: 118 anomalies, 78 rare nominal events, 4 communication gaps; fit period 59 anomalies + 41 rare events + 4 gaps, validation 4 anomalies + 1 rare event, test 55 anomalies + 36 rare events; no event spans a split boundary; 91 scoreable test events, each touching at least one target channel; affected-target-set size in test events ranges 1-58 (median 12; 23 events touch 3 channels; 2 events touch all 58); channel sampling medians 0.375 s to 900 s, all channels span 2000-01-01 to 2013-12-31 on the anonymized timeline.",
+      "additional_label_structure_facts": "Recounted independently by the reviewer and by the editor (EDITOR_FACT_CHECK.json): test-event durations median 6.1 h, 75th percentile 77.7 h, 30 events last at least 24 h and 17 at least 7 days; 21 test events start on or after 2012-07-01 (2012: 10, 2013: 14); 21 of the 22 three-channel test anomalies affect exactly channels 14, 21 and 29 (group 4); 10 pairs of test events overlap in time; all four communication-gap labels end by 2002-10-16; of the 65 test events touching channels 41-46, 62 affect all six."
+    },
+    "channel_sets": {
+      "primary": "The 58 channels with Target == YES in channels.csv serve as inputs AND as the attribution universe; non-target channels and telecommands are not used. Rationale: every channel that can receive attribution mass must be scoreable against the channel-level annotation.",
+      "secondary_lightweight": "channel_41 ... channel_46, the official Mission1 lightweight subset (VOR Section 2.3), analysed with an independent refit of the same pipeline restricted to these six channels; descriptive detection context only (see S_L)."
+    },
+    "periods_utc_anonymized_timeline": {
+      "fit": "[grid_start, 2006-10-01T00:00:00)",
+      "validation": "[2006-10-01T00:00:00, 2007-01-01T00:00:00)",
+      "test": "[2007-01-01T00:00:00, grid_end]",
+      "window_period_rule": "A window belongs to a period iff its whole time span [t_s, t_s + 570 s] lies inside that period. A window straddling 2006-10-01 or 2007-01-01 belongs to no period and is excluded from every analysis (at most three windows per boundary). This keeps every validation window free of test-period samples and every fit window free of validation samples.",
+      "test_subperiods": "pre_drift = [2007-01-01, 2012-07-01) and drift = [2012-07-01, grid_end]. The boundary is fixed now from VOR Table 6 ('Last 18 months include a severe concept drift in channels from groups 4, 7, and 13') and the 2013-12-31 end of the anonymized timeline. Test windows, events (by first segment start) and episodes (by first window start) are assigned by start time.",
+      "provenance": "Official 84-month training split (test after 2007-01-01; constant test_data_split in the official Mission1 preparer, kplabs-pl/ESA-ADB notebooks/data-prep/Mission1_semisupervised_prep_from_raw.py); the last three months of training are reserved for validation as in VOR Section 2.3."
+    }
+  },
+  "preprocessing_label_free": {
+    "grid": "30 s, the official Mission1 target resolution (0.033 Hz, VOR Appendix C.3). grid_start = floor(min first timestamp over the analysed channels, 30 s); grid_end = ceil(max last timestamp, 30 s).",
+    "resampling": "Zero-order hold, forward only: the value at grid time g is the last original sample with timestamp <= g. No backward fill (the official preparer backfills leading values), no label-dependent point-anomaly correction (the official preparer lines 114-126 alter resampled samples by label) and no differencing that uses the next sample (official lines 88-89). Grid times before a channel's first sample are NaN. Duplicate timestamps, if any, keep the last occurrence.",
+    "windows": "W = 20 grid samples (10 min) and stride 5 (2.5 min), aligned to grid index 0, exactly the synthetic core's window rule at the same 30 s sampling. Window time span [t_s, t_s + 19*30 s]. A window is valid iff every analysed channel is finite at all 20 samples; invalid windows are removed from every analysis and are never scored.",
+    "features": "Per channel: mean, population standard deviation, least-squares slope against the centered within-window index, and last-minus-first delta; layout [mu(C), sd(C), slope(C), delta(C)], identical to github-telemetry_alarm_xai/code/common.py window_features with NCH = C. Features are computed in float64 and stored as float32; every later accumulation (statistics, standardization) is float64.",
+    "staleness": "Label-free per-window staleness, computed in prep:<channel> and stored beside the features: age_c = window end (t_s + 570 s) minus the timestamp of the last original sample of channel c at or before the window end (seconds; undefined, stored as +inf, when no such sample exists, which only occurs for invalid windows). staleness = max over the analysed channels of age_c. A window is stale iff staleness > 3,600 s (four times the slowest 900 s median cadence). Staleness never enters scoring, thresholds, episodes or masses; it is used only by the prespecified staleness diagnostics and sensitivities.",
+    "chunking": "Fixed deterministic chunk sizes: 200,000 windows in prep, 100,000 rows in standardization, 50,000 rows in scoring, 400 query windows in attribution batches, 1,000,000 grid samples in raw-deviation resampling.",
+    "label_isolation": "The grid, window, raw-feature and staleness stage receives no label input of any kind (property test PT2)."
+  },
+  "label_usage": {
+    "event_definition": "An event is a label ID whose anomaly_types Category is Anomaly or Rare Event. Its segments are all labels.csv rows with that ID (closed intervals [StartTime, EndTime], any channel). Its affected set is the set of analysed channels among those rows. Events with an empty affected set in the analysed channel set are excluded from scoring and counted.",
+    "communication_gaps": "Category Communication Gap is neither an event nor nominal: windows overlapping a gap segment are excluded from all nominal statistics. All four gap labels lie in the fit period (the latest ends 2002-10-16), so the test period carries no gap labels and the count of test episodes overlapping only non-event labels is 0 by construction; it is still computed and reported.",
+    "overlap_rule": "A window [ws, we] overlaps a segment [S, E] iff ws <= E and we >= S. A window overlaps an event iff it overlaps any of the event's segments on any channel. An event none of whose overlapping windows is valid stays in every denominator and cannot be detected.",
+    "nominal_windows": "Valid windows of the fit (respectively validation) period that overlap no labeled segment of any category on any channel.",
+    "raw_nominal_statistics": "Per channel, mean and population standard deviation of finite grid values at fit-period grid times that lie inside no labeled segment of any category on any channel.",
+    "supervised_training_labels": "Fit-period valid windows: y = 1 if the window overlaps an event (Anomaly or Rare Event); y = 0 if it is nominal; gap-overlapping windows are excluded.",
+    "test_label_lock": "Test-period label rows were read once before the freeze by the hash-bound F3 schema inspection (F3_FACTS.json sha256 CEA577398906FE4BA3D23E2345B4D8D71CD4487A83ADFD4B706D73AB65287F16) for category counts, affected-set sizes, split membership and event time ranges only; no preprocessing artifact, score or detector existed at that time. The facts changed the primary metric (Hit@3 to AUROC), the m = C exclusion, the S_L scope and the n >= 30 feasibility judgment, and nothing else; the F1 review's recount of the same tables (durations, overlaps, drift-era counts, lightweight evaluability) motivated the v3 changes and used no score. Every pre-evaluation stage (standardization, fitting, scoring, thresholding, episode construction, episode masses) receives only label rows with StartTime < 2007-01-01, clipped at 2007-01-01. Test-period labels are first read by the evaluation stage, after all pre-evaluation artifacts are written and hash-recorded, and after the public freeze. After the public freeze no choice in this protocol may change."
+  },
+  "property_tests_fail_closed_before_freeze": {
+    "PT1_test_label_independence": "On a bounded smoke subset (all 58 primary channels, grid restricted to 2006-07-01 .. 2007-06-30, all six detector families, one replicate), every pre-evaluation artifact must be byte-identical across three label tables: (a) the true table, (b) the true table with every test-period row removed, (c) the true table with the test-period rows' Channel values and (StartTime, EndTime) pairs shuffled among the test-period rows as whole values (a pair is never split). Compared artifacts: the output files of every prep, stdz, fit, episodes and attr_episode unit of the smoke run (standardized features, masks, statistics, fitted models, validation and test scores, threshold, flags, episodes, tau, peak and aggregated masses). Checkpoint JSON files, logs and heartbeat files carry timestamps and are excluded as provenance, not as evidence. QUARANTINE: the smoke's scores, thresholds, flag rates, episode counts and masses are hash-recorded in the freeze package and are not inspected by anyone before the freeze; PT1 reports only hashes and pass/fail.",
+    "PT2_label_free_preprocessing": "The window features, validity mask and per-window staleness ages of channels 12, 41 and 61 computed with the true label table and with an empty label table must be byte-identical.",
+    "PT3_invariants": "On the full standardization outputs of both channel sets: valid-window standardized features contain no NaN or Inf; the window count equals floor((n_grid - 20)/5) + 1; every standardized column has finite mean and scale; nominal fit and validation window counts and supervised positives are positive; staleness ages of valid windows are finite and non-negative; the zero-variance guard is applied consistently (every flagged feature column is exactly 0 in every window, every flagged raw-deviation channel has zero raw-deviation mass). PT3 reports the list of guarded columns and channels."
+  },
+  "models": {
+    "families": ["lr", "dtree", "iforest", "hgb", "pca", "ae"],
+    "model_index": "Position in models.families: lr 0, dtree 1, iforest 2, hgb 3, pca 4, ae 5. Every seed below that uses model_index uses this mapping.",
+    "primary_set": ["lr", "iforest", "hgb", "pca", "ae"],
+    "sensitivity": "dtree is the mandatory sixth-model sensitivity, as in the synthetic core.",
+    "settings": {
+      "lr": "LogisticRegression(C=1.0, penalty l2, lbfgs, max_iter=2000)",
+      "dtree": "DecisionTreeClassifier(max_depth=4, random_state=rep_seed)",
+      "hgb": "HistGradientBoostingClassifier(max_iter=150, max_depth=4, random_state=rep_seed, early_stopping=False). The explicit early_stopping=False keeps all 150 iterations, the behavior the synthetic core obtained by default because its labeled training sets had fewer than 10,000 windows.",
+      "iforest": "IsolationForest(n_estimators=150, contamination='auto', max_samples='auto', random_state=rep_seed)",
+      "pca": "PCA(n_components=10, svd_solver='covariance_eigh', random_state=rep_seed). In scikit-learn >= 1.5 svd_solver='auto' resolves to 'covariance_eigh' whenever n_features <= 1000 and n_samples >= 10 n_features, which holds for the synthetic core (2,277 x 48 in the fresh 1.7.2 replication) and for this fit (100,000 x 232); before 1.5 the same shapes resolved to 'randomized'. The solver is set explicitly and recorded in the run manifest; 'full', 'covariance_eigh' and the legacy 'randomized' default differ only numerically here, and random_state is inert for exact solvers.",
+      "ae": "MLP d-24-8-24-d with ReLU, Adam lr 1e-3, MSE, 60 epochs, batch 256, torch.manual_seed(rep_seed), one torch thread (identical to models.py AE with d = 4C)"
+    },
+    "replicates": "r in {0, 1, 2}; rep_seed = r (the synthetic formula 100*seed + r with seed = 0); bootstrap rng = numpy default_rng(1000*rep_seed + 7), as in models.fit_model.",
+    "bootstrap_size": "N_fit = 100,000 windows drawn with replacement per replicate: from nominal fit windows for iforest, pca and ae; from labeled fit windows (y in {0,1}) for lr, dtree and hgb. This fixed computational cap replaces the synthetic core's full-size bootstrap (2-5 thousand windows per seed there, about 1.4 million fit windows here) and was set before any model was fitted.",
+    "standardization": "z = (f - mean_nominal_fit) / (sd_nominal_fit + 1e-9) over all nominal fit windows, as in run_criticality_unit.unit_features. ZERO-VARIANCE GUARD (label-free given the pre-evaluation nominal mask): a raw feature column whose nominal-fit population standard deviation is <= 1e-8 x max(1, |mean|) is frozen at z = 0 in every window; the guarded columns are recorded in stats.json and the run manifest, and every mass of a channel with a guarded column is flagged in the per-event and per-episode tables. The same rule applies to the raw-deviation statistics: a channel whose nominal raw standard deviation is <= 1e-8 x max(1, |mean|) has its raw-deviation component frozen at 0 and is flagged.",
+    "background_set": "50,000 nominal fit windows drawn without replacement with numpy default_rng(20260926); used for LR centering and occlusion draws (the synthetic core used its full nominal training set, whose size here would be about 1.4 million windows).",
+    "scores": "models.score: positive-class probability (supervised), negated score_samples (iforest), mean squared standardized reconstruction error (pca, ae); ensemble score = mean over the three replicates.",
+    "threshold": "numpy.quantile(q = 0.99, default linear method) of the ensemble-mean score over nominal validation windows.",
+    "flags_and_episodes": "A valid test window is flagged iff its ensemble-mean score exceeds the threshold; an episode is a maximal run of flagged windows whose window-grid indices are consecutive (an invalid window therefore ends an episode).",
+    "tail_surprisal": "Eq. tail-refinement (criticality_analysis_v4.tail_surprisal) with the nominal validation ensemble-mean scores as reference. Episode urgency tau_e = tail surprisal of the episode's peak ensemble-mean score; window weight w_i = tail surprisal of flagged window i's ensemble-mean score (run_criticality_unit._tail_surprisal on the flagged windows), used only by the aggregated masses."
+  },
+  "channel_masses": {
+    "native": "models.native_attr: LR coefficient times (z - background mean); DT/HGB/IF TreeSHAP tree_path_dependent (check_additivity False), class-1 slice where applicable; PCA/AE squared standardized reconstruction error; channel aggregation = sum of absolute values over the four features.",
+    "occlusion": "models.occlusion_attr with 8 background draws, clipped at zero; rng = default_rng(1_000_003*s + 10_007*r + 29) with s = 700_001 for event-peak queries and s = 1_400_009 for episode-peak queries (the synthetic offsets with seed 0). The 8 draws are taken once per replicate and query set and shared by every query window and channel, as in the synthetic core where one call covered all queries; batching the queries for memory does not redraw them.",
+    "raw_deviation": "b_raw_c = mean over the window's 20 grid samples of |x - mu_raw_c| / (sd_raw_c + 1e-9), as in the matched-information preparer; guarded channels contribute 0.",
+    "feature_deviation": "b_feat_c = sum over the four features of |z_{f,c}| (guarded columns contribute 0).",
+    "normalization": "Each mass is normalized to sum one; a total <= 1e-12 becomes uniform and is counted as degenerate. Native and occlusion masses are normalized per replicate, averaged over the three replicates and renormalized (run_criticality_unit._mean_mass).",
+    "peak_window_masses": "E1 uses each detected event's peak window. E2 and E3 use each episode's peak window for all four sources (primary definition). PRESPECIFIED DEVIATION: the synthetic decision endpoint aggregated tau-weighted masses over all flagged windows of an episode; peak-window masses (already an artifact of the synthetic pipeline) bound the model-call cost of a seven-year test queue.",
+    "aggregated_masses_secondary": "Prespecified secondary with the synthetic aggregation (run_criticality_unit._aggregate_episode_attributions and prepare_inputs.py lines 72-77): for raw deviation, feature deviation and the closed-form natives of LR, PCA and AE, the per-window normalized masses of ALL flagged windows of an episode are averaged with weights w_i / sum(w_i) and renormalized; natives are aggregated per replicate, then averaged over replicates and renormalized. Occlusion and TreeSHAP natives stay peak-only. E2 reports peak and aggregated concentration separately; only aggregated values are compared with tab:mechanism.",
+    "model_call_cap": "If a set and model yield more than 20,000 episodes, the model-call masses of episode peaks (occlusion for every family and TreeSHAP natives for dtree, hgb and iforest) are computed for a fixed subsample of 20,000 episodes, numpy default_rng(20260926 + model_index).choice(n_episodes, 20000, replace=False), sorted; closed-form natives, raw and feature masses (peak and aggregated) are computed for every episode. When the cap binds, every E2/E3 quantity of a capped source is computed on the subsample, with the score-only comparator recomputed on the same subsample, and the cap is reported."
+  },
+  "endpoints": {
+    "E1_primary_metric": "Per detected scoreable event with 0 < m < C affected channels: channel-ranking AUROC of a mass vector against the affected set = Mann-Whitney U / (m (C - m)) with ties at average rank; chance = 0.5 for every m. Events with m = C (2 test events) are excluded from AUROC and counted.",
+    "E1_secondary_metrics": "Hit@1, Hit@3 (top-k intersects the affected set), best-affected rank, and R-precision (share of the top-m channels that are affected), each with its exact chance level (Hit@k chance = 1 - C(C-m,k)/C(C,k); R-precision chance = m/C); reported per detector and mass source as means over detected events, with the synthetic core's Hit@3 kept as the bridge metric. Per detector and source: the share of detected-event peak windows that are stale.",
+    "E1_reason_for_metric_change": "F3 showed a median affected-set size of 12 of 58 channels, so the v1 primary metric Hit@3 has a mean chance level of 0.477 over the 89 evaluable test events (0.508 at the median m = 12) and saturates near one for large sets, making a non-inferiority test on Hit@3 nearly uninformative. The change is decided from the label structure only, before any model fit or score.",
+    "E2": "Per detector and mass source over false-alarm episodes (episodes overlapping no labeled segment of any category on any channel): mean normalized Shannon entropy H(m)/ln C; dominant-channel share = max over channels of the fraction of false-alarm episodes whose top-mass channel is that channel (with the channel identifier); top-three share = fraction whose top channel is among the three most frequent top channels. The same quantities over true-alarm episodes (overlapping at least one event) are reported as the contrast. Peak masses (four sources) and aggregated masses (raw, feature, native LR/PCA/AE) are reported separately.",
+    "E3": "Per detector, mass source (peak masses) and analysed channel k: spike profile c_j = 4 for j = k and 1 otherwise; policy priority r_e = tau_e (m_e . c) / mean(c), score-only priority tau_e (numerically tau_e + 1e-12 in both). Outcomes: DeltaFA@f = false-alarm share among the first k_f alarms under the policy minus the same under score-only, f in {0.05, 0.10, 0.20, 0.40} with k_f = min(n, max(1, floor(f n))); DeltaMUC = equal-event MUC-AUC0.40(policy) - MUC-AUC0.40(score-only). Per detector and mass source: Spearman correlation across the channels between the channel's false-alarm top-channel frequency (E2) and DeltaFA@0.10. Exact float ties use 100 random orderings with tie seed 20260926 + 1000*model_index + k for the policy (k = channel index 0..C-1) and 20260926 + 1000*model_index + 999 for score-only.",
+    "E4": "Per detector: equal-event MUC-AUC0.40 of score-only ordering, the ordering-free attainable bound, event recall over scoreable events, the chance event recall expected under a label-independent Bernoulli flag model at the realized nominal flag rate p (share of flagged windows among valid test windows overlapping no labeled segment): mean over scoreable events of 1 - (1 - p)^(n_e), n_e = the event's count of valid overlapping test windows; episode count, false-alarm and non-event-labeled episode counts; window AUROC/AP against event-window labels; the corrected event-wise precision, recall and F0.5 of VOR Eq. 1-2 in the time domain (below). 10 pairs of test events overlap in time; an episode overlapping two events is matched to at most one event by the one-to-one matching, and the count of episodes overlapping more than one event is reported.",
+    "E4_vor_corrected_event_wise": "Descriptive, VOR Eq. 1-2 (Sehili and Zhang correction), time domain: an alarm is an episode's time span [first window start, last window end]; TPe = detected events, FNe = undetected scoreable events, FPe = episodes overlapping no included event and no excluded event; FPt = duration of the union of alarm spans outside every event segment; Nt = duration of the test period outside every event segment (union over channels); Pre = TPe/(TPe + FPe) x (1 - FPt/Nt); Rece = TPe/(TPe + FNe); F0.5e = 1.25 Pre Rece / (0.25 Pre + Rece). Reported for anomalies plus rare events (VOR main setting) and for anomalies only (rare events excluded: detections overlapping only rare events are ignored, a missed rare event is not a false negative, and rare-event time is not nominal time). The arm's detectors are not ESA-ADB competitors; the values give detection context only.",
+    "E4_period_and_year_context": "Per detector and per calendar test year: flag rate over valid test windows, episode count, episode length in windows (median, 90th percentile, maximum) and the number of episodes overlapping more than one event.",
+    "staleness_diagnostics": "Per test sub-period: share of stale valid test windows; per detector: share of flagged windows, episodes, false-alarm episodes and detected-event peaks that are stale.",
+    "equal_event_utility": "u_j = 1 for every scoreable test event (undetected events stay in the denominator); captured utility uses maximum-weight one-to-one alarm-event matching (scipy linear_sum_assignment), eq. matched-capture and eq. muc-area of the manuscript."
+  },
+  "prespecified_sensitivities_and_stratifications": {
+    "stale_peak_exclusion": "E2, E3 and E4 recomputed excluding episodes whose peak window is stale (E4: MUC-AUC and episode counts on the reduced queue; detection is unchanged). Primary definitions and H-E1 are unchanged.",
+    "drift_split": "Descriptive stratification of E1 (per-event AUROC means and counts), E2, E3 and E4 by the test sub-periods pre_drift and drift. For E3 and the E4 queue quantities each sub-period's episodes form their own queue. The pooled H-E1 decision is unchanged.",
+    "anomalies_only": "S_A: E1 and the VOR corrected event-wise quantities restricted to Category == Anomaly events."
+  },
+  "hypothesis_H_E1": {
+    "statement": "Feature-deviation mass is non-inferior, within delta = 0.06 AUROC, to native explanations for channel-ranking AUROC against annotated affected channels.",
+    "assay_sensitivity": "For each primary detector with n >= 30 detected scoreable events (0 < m < C): the native mean AUROC must exceed chance with a one-sided 95 percent lower bound (5th percentile of 2,000 event-resampled bootstrap means, numpy default_rng(20260926 + 100 + model_index)) above 0.5. A detector with n >= 30 that fails assay sensitivity is NOT_INFORMATIVE and does not count toward k; a detector with n < 30 is NOT_EVALUABLE_N. The assay statistic, bound and flag are persisted.",
+    "per_detector_test": "For each detector that passes assay sensitivity: D = mean over events of (AUROC_feature - AUROC_native); one-sided 95 percent lower bound LB = 5th percentile of 2,000 event-resampled bootstrap means (numpy default_rng(20260926 + model_index), resampling events with replacement; primary); pass iff LB > -delta. The one-sided 95 percent Student-t lower bound mean(d) - t(0.95, n-1) sd(d, ddof=1)/sqrt(n) is reported beside it as a sensitivity; if the two disagree on pass, both are reported and the verdict follows the primary bootstrap bound.",
+    "margin": "delta = 0.06. Derivation fixed before any ESA fit: the synthetic core's largest native advantage over feature mass on the rank-equivalent AUROC scale is (1.84 - 1.24)/(12 - 1) = 0.055 for HGB (tab:modelfree-salience mean primary ranks; exact for single-channel events, an approximation for the 153 two-channel events; the F1 review's recomputation gives HGB 0.0545, PCA 0.019, AE 0.013, LR 0.008), rounded up to 0.06. SUPPORTED is therefore compatible with native beating feature mass by as much as the synthetic worst case, and is reported with that meaning.",
+    "bootstrap_implementation": "Events are ordered by ID string. For a vector v of n per-event values and seed s: idx = numpy default_rng(s).integers(0, n, size=(2000, n)); bootstrap means = v[idx].mean(axis=1); the one-sided 95 percent bound is numpy.quantile(means, 0.05) with the default linear method (two-sided descriptive interval: quantiles 0.025 and 0.975). The class-cluster bootstrap draws default_rng(s).integers(0, K, size=(2000, K)) over the K sorted unique Class labels and takes, per resample, the sum of the drawn classes' event values divided by the sum of their event counts.",
+    "decision_rule": "k = number of primary detectors that are evaluable (n >= 30 and assay sensitivity passed). k < 3: NOT_EVALUABLE. Otherwise SUPPORTED iff the number of passing detectors >= ceil(0.8 k) (4 of 5, 4 of 4, 3 of 3); else NOT_SUPPORTED.",
+    "decision_artifact": "Persist per detector: n, the assay statistic (native mean AUROC), its lower bound and flag, D, the primary LB, the Student-t LB, pass, the distance LB + delta, the bootstrap seeds, plus k, the rule and the verdict.",
+    "descriptive_companions": "Per detector: the feature-mass mean AUROC and its one-sided 95 percent lower bound against 0.5 (seed 20260926 + 300 + model_index); two-sided 95 percent event-bootstrap intervals of D; a class-cluster bootstrap of D resampling anomaly_types Class values with replacement and taking all events of each drawn class (2,000 resamples, seed 20260926 + 200 + model_index). All descriptive; no multiplicity adjustment is applied outside H-E1."
+  },
+  "secondary_prespecified_descriptive": {
+    "S_A_anomalies_only": "E1 and the VOR corrected event-wise quantities restricted to Category == Anomaly events.",
+    "S_L_lightweight": "Descriptive detection context on the independent six-channel refit (channels 41-46): E4 quantities and E2 false-alarm concentration (false-alarm rule still using labeled segments on any channel). 62 of 65 lightweight test events affect all six channels; channel-ranking metrics are reported only for the 3 events with 0 < m < 6 (id_157, id_42, id_55) and carry no inference.",
+    "S_DT": "Decision tree reported beside the five primary models in every endpoint."
+  },
+  "minimum_samples": "A detector with fewer than 30 detected scoreable events (0 < m < C) is descriptive only for E1. No mission, channel set, seed, split or detector substitution is made when a count is low.",
+  "stop_rules_and_hard_stops": [
+    "license: re-observed at download (satisfied); a changed license stops the arm",
+    "integrity: archive MD5 and size must match (satisfied); any input hash drift stops the arm",
+    "leakage: any property test failure stops before the freeze and before any full-data fit",
+    "resource ceiling: a unit waits up to 20 min for available RAM >= 700 MB at unit start, then stops the run; free disk < 5 GB on C: stops the run; per-unit and whole-run watchdogs as in execution",
+    "invalid data: NaN/Inf in valid-window features or scores stops the unit",
+    "no test-period score, flag, threshold, episode count or flag rate is inspected before the public freeze",
+    "after the public freeze, no change to mission, channel set, split, windows, staleness rule, thresholds, masses, caps, metrics, margin, assay rule or decision rule",
+    "negative, null, NOT_INFORMATIVE or NOT_EVALUABLE outcomes are reported as observed; no rescue analysis"
+  ],
+  "post_gate_continuation": {
+    "confirmatory_on_primary_fail": "forbidden",
+    "primary_verdict_immutable": true,
+    "exploratory_result_may_upgrade_primary_verdict": false,
+    "exploratory_result_may_raise_claim_level": false,
+    "hard_stops": ["ethics", "license", "leakage", "invalid_data", "resource_ceiling", "hash_drift"],
+    "exploratory_non_rescue": {"authorization": "none"}
+  },
+  "evaluator_semantics": {
+    "applicability": "not_applicable",
+    "not_applicable_reason": "Fixed-queue alarm ordering and equal-event reference coverage on annotated real telemetry; no intervention, failure-aversion mechanism or averted-failure credit is modeled, and the policy cannot alter the data, the detector alarms or the reference events."
+  },
+  "execution": {
+    "host": "author-workstation (is-laptop), Windows 11, 12th Gen Intel i5-1235U (10 cores, 12 threads), 15.7 GB RAM, no GPU; available RAM is measured immediately before launch and recorded in the run manifest",
+    "runtime": "Python 3.12.7 (Anaconda), numpy 2.3.5, pandas 2.3.3, scipy 1.18.0, scikit-learn 1.9.0, shap 0.52.0, torch 2.11.0+cpu; OMP/OPENBLAS/MKL threads = 2; one worker process",
+    "large_artifacts_outside_synced_tree": "C:/ESA_ADB_RAW/work (features, staleness, scores, models, masses), each hash-recorded in the run manifest; the run folder holds code, configs, logs, per-event and per-episode tables, decision artifacts and summaries.",
+    "atomic_units": "Before the freeze: prep:<channel> (58; the lightweight set reuses the same channel files), stdz:<set> (2), PT1-PT3. After the freeze: fit:<set>:<model>:<rep> (36, each writing validation and test scores), episodes:<set>:<model> (12, threshold, flags, episodes, tau, window weights, raw and feature peak and aggregated masses, staleness of peaks), attr_episode:<set>:<model>:<rep> (36, peak natives and occlusion, capped per model_call_cap, plus aggregated closed-form natives), eval:<set> (2, the first readers of test labels, including event-peak attributions), decision (1).",
+    "durability": "Per-unit atomic outputs with SHA-256 checkpoints and completed status; validated resume (a checkpoint validates only if every output exists with the recorded size and SHA-256; a failing unit's outputs are quarantined and it reruns under a new attempt id); heartbeat JSON every 60 s from a background thread with run_id, unit, attempt_id, pid, phase, elapsed, completed and planned units, last checkpoint time, process CPU, RSS and available RAM; stall threshold 3 missed heartbeats (180 s); controlled-stop smoke (exit 75 after two units under the controlled-exit supervisor, resume, skipped_validated) completed on the real prep units before the long run; per-unit timeouts set from the measured PT1 smoke unit times scaled to the full data volume with a margin of 3 and recorded in the run manifest; whole-run watchdog 16 h.",
+    "notification": "No Telegram hook on this host; durable logs and status files only.",
+    "code_snapshot": "At the freeze, src/ (esa_core.py, esa_arm.py, esa_property_tests.py and the recompute scaffolding) is copied into code_snapshot/ inside the run folder with SHA-256 per file; the public freeze package carries the same hashes, and every unit checkpoint records the SHA-256 of the executing code."
+  },
+  "independent_recomputation": "After the run, the independent reviewer model (claude-fable-5-1 / max, guarded CLI), not the editor, writes and runs its own recomputation from this frozen protocol and the raw run artifacts (per-replicate scores, masses, label table) without reading the pipeline's evaluation code, and returns a verdict binding the path and SHA-256 of every analysis artifact it confirms and a digest of the raw inputs it reread (EXPERIMENT_EVIDENCE_REQUIREMENTS.md, independent recomputation binding). Minimum scope: test events and affected sets, detection, per-event AUROC, the H-E1 assay and decision, E2 dominant shares and the E4 VOR quantities.",
+  "public_freeze": {
+    "when": "After the independent delta review of this v3 candidate and the editor's decision, before any fit:<set>:<model>:<rep> unit on the full data and before any test-period window is scored. Only prep:<channel>, stdz:<set> and the PT1-PT3 smoke on the bounded 2006-07-01..2007-06-30 subset may precede the freeze; the smoke's scores, thresholds, flag rates and episode counts are quarantined (hash-recorded in the freeze package, not inspected).",
+    "what": "FINAL protocol JSON, the F1 review, the delta review and decision records, the F3 facts, the PT1-PT3 results (PT1 as hashes only), the code snapshot hashes and the freeze contract.",
+    "where": "Established public repository canay/telemetry_alarm_xai (precedent: f07-fresh-mta-prereg-20260920), with remote byte verification.",
+    "authority": "D11-b plus the RUN.md autonomous external-write test (reversible push, reviewed content, established target)."
+  },
+  "manuscript_boundary": "Integrated as an external real-telemetry arm on channel-evidence accuracy and false-alarm channel load. A SUPPORTED H-E1 is reported as 'feature-deviation mass ranks the annotated affected channels within 0.06 AUROC of native explanations (non-inferiority margin fixed before any fit)', never as 'as well as'; D and LB are reported beside the verdict. No decision-utility claim beyond equal-event coverage, no causal claim, and no statement that ESA-ADB validates the synthetic C1-C4 contrasts."
+}

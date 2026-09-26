@@ -1,0 +1,73 @@
+{
+ "at": "2026-09-26T18:51:31+03:00",
+ "tool": "Cowork-Claude",
+ "model": "claude-opus-5-5",
+ "operation_id": "f07-rb4-esa-adb-revision-20260926",
+ "owner": "EXPERIMENT_DURABILITY_AND_RECOVERY.md section 10",
+ "atomic_unit": "prep:<channel> (58), stdz:<set> (2), fit:<set>:<model>:<rep> (36), episodes:<set>:<model> (12), attr_episode:<set>:<model>:<rep> (36), eval:<set> (2), decision (1)",
+ "planned_unit_count": 147,
+ "checkpoint_path_and_schema": "RUN/units/<unit_id with ':' -> '__'>.json: unit_id, attempt_id, status=completed, started_at, ended_at, elapsed_seconds, outputs[{path, bytes, sha256}], code_sha256{file: sha256}, host, extra",
+ "atomic_write_strategy": "every output is written to a .tmp sibling and os.replace()d; the checkpoint JSON is written last, atomically",
+ "resume_command": "python RUN/src/esa_arm.py run  (under controlled_exit_supervisor.py for restarts)",
+ "resume_validation_rule": "a unit is skipped (skipped_validated) only if its checkpoint status is completed and every recorded output exists with the recorded size and SHA-256; otherwise existing outputs are moved to C:/ESA_ADB_RAW/work/arm/quarantine/<unit>_<id> and the unit reruns under a new attempt id",
+ "interruption_smoke_evidence": "v3 code on the real prep units: controlled stop after two units (exit 75, CONTROLLED_STOP, marker logs/controlled_stop_v3.marker), supervisor restart, skipped_validated for the two units, completion; transcript logs/prefreeze_cli.log, unit log logs/units.jsonl, terminal status run_status.json (final: COMPLETED/0); the v2-code smoke of 2026-09-26 11:21-11:28Z is kept in durability_smoke_v2code/",
+ "per_unit_timeout": {
+  "source": "RUN/TIMEOUTS.json",
+  "timeouts_s": {
+   "prep": 900,
+   "stdz": 3600,
+   "fit": 1800,
+   "episodes": 1800,
+   "attr_episode": 3600,
+   "eval": 14400,
+   "decision": 1800
+  },
+  "basis": {
+   "prep": "full-data max 12.2 s x margin 3.0 (floor 900 s)",
+   "stdz": "full-data max 440.8 s x margin 3.0 (floor 3600 s)",
+   "fit": "smoke max 36.4 s x scale 10.0 x margin 3.0 (floor 1800 s, ceiling 14400 s)",
+   "episodes": "smoke max 6.4 s x scale 14.0 x margin 3.0 (floor 1800 s, ceiling 7200 s)",
+   "attr_episode": "smoke max 21.9 s x scale 14.0 x margin 3.0 (floor 3600 s, ceiling 21600 s)",
+   "eval": "no smoke measurement (the eval unit opens test labels); fixed 240 min with heartbeat",
+   "decision": "fixed 30 min"
+  }
+ },
+ "whole_run_watchdog": "16 h from runner start (esa_arm.Config.whole_run_timeout_s), enforced by the heartbeat thread (terminal TIMED_OUT, exit 124)",
+ "eta_basis_and_margin": "prep and stdz measured on the full data; fit, episodes and attr_episode measured on the PT1 smoke and scaled by the design ratios in TIMEOUTS.json basis; expected wall-clock for the post-freeze units 3-8 h on this host, margin 3 on every unit timeout",
+ "max_workers_and_thread_limits": "one worker process; OMP_NUM_THREADS = OPENBLAS_NUM_THREADS = MKL_NUM_THREADS = 2; torch one thread",
+ "disk_ram_resource_preflight": {
+  "measured_at": "2026-09-26T18:51:31+03:00",
+  "available_ram_mb": 3872,
+  "total_ram_mb": 16057,
+  "free_disk_gb_C": 11.6,
+  "unit_start_rule": "wait up to 20 min for available RAM >= 700 MB, then stop; stop when free disk < 5 GB"
+ },
+ "progress_heartbeat_path_and_stall_threshold": "RUN/heartbeat.json (atomic) and RUN/logs/progress.jsonl (append); stall = 3 missed heartbeats (180 s)",
+ "heartbeat_cadence_schema_writer_and_atomicity": "60 s, background thread in the worker; fields run_id, unit_id, attempt_id, pid, phase, phase_started_at, unit_elapsed_seconds, completed_atomic_units, planned_atomic_units, last_durable_checkpoint_at, process_cpu_seconds, run_elapsed_seconds, rss_mb, available_mb; atomic_json (tmp + os.replace)",
+ "heartbeat_advancement_smoke_evidence": "logs/progress.jsonl rows of the pre-freeze run advance in timestamp, completed_atomic_units and phase",
+ "opaque_phase_supervisor_sampling_rule": "no opaque phase: every long loop updates the phase (batch index) and the heartbeat thread samples the worker's own PID; the controlled-exit supervisor only interprets exit code plus run_status.json",
+ "opaque_runtime_bound_admission": "mode=heartbeat; threshold_seconds=300; evidence=RUN/logs/progress.jsonl; overrun=heartbeat_or_fail_closed",
+ "raw_output_contract": "C:/ESA_ADB_RAW/work/arm/<set>/{Z.f32, stale.f32, meta.npz, stats.json, braw/, fits/, episodes/, attr/, eval/} and RUN/results/<set>/*.csv, RUN/results/DECISION_H_E1.json; every output hash-recorded in its unit checkpoint",
+ "aggregate_script_and_inputs": "eval:<set> and decision units read only saved unit outputs (scores, episodes, masses) plus the label table; no model refit",
+ "plot_script_and_inputs": "manuscript figures and tables are produced by a separate script from RUN/results CSV/JSON only; plotting never reruns a model",
+ "decision_artifact_path_and_criterion_schema": "RUN/results/DECISION_H_E1.json: per detector n, status, assay statistic and bound, D, primary LB, Student-t LB, pass flags, seeds; k, required passes, verdict, Student-t sensitivity",
+ "decision_discriminator_statistics_persisted": true,
+ "notification_lifecycle": "no Telegram hook on this host; terminal statuses COMPLETED/FAILED/TIMED_OUT/CONTROLLED_STOP are written to run_status.json on every path",
+ "terminal_status_paths": [
+  "RUN/run_status.json",
+  "RUN/logs/units.jsonl",
+  "RUN/logs/prefreeze_cli.log and the post-freeze CLI transcript"
+ ],
+ "predecessor_terminal_status_poll_rule": "the post-freeze launch requires run_status.json COMPLETED/0 from the pre-freeze run and the verified public-freeze record",
+ "container_image_layer_budget": "not applicable: no container; local Python environment",
+ "phased_engine_schedule_rule": "not applicable: single local worker, no image pulls; disk threshold 5 GB free stops the run",
+ "recovery_merge_equivalence_gate": "not applicable: no partial-run merge; validated resume reruns incomplete units in place",
+ "code_snapshot_path_and_sha256": "RUN/code_snapshot/ with SHA-256 per file, copied at the freeze; the freeze record names the same hashes and esa_arm.assert_frozen refuses a fit when the executing code differs",
+ "local_delivery_and_verification_rule": "local run: outputs are written in place; completeness is verified by checkpoint validation of every planned unit and by the independent recomputation's verified_artifacts binding",
+ "partial_result_promotion_policy": "prohibited",
+ "smoke_duration_reading_note": "only unit durations were read from the PT1 transcript; PT1 checkpoints, logs and work files remain quarantined until the freeze",
+ "inputs_sha256": {
+  "logs/units.jsonl": "F03807E0625F9510DA7FE12876EC62BD88085ED893FEA581C184A44DDF86A385",
+  "property_tests/pt1_cli.log": "399B3D06EE60680A80A2660B720139C6F35EC46C56E9B156F0CCC8F14EDF3C30"
+ }
+}

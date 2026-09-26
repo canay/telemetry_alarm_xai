@@ -1,0 +1,115 @@
+{
+ "at": "2026-09-26T14:38:25+03:00",
+ "tool": "Cowork-Claude",
+ "model": "claude-opus-5-5 (editor)",
+ "operation_id": "f07-rb4-esa-adb-revision-20260926",
+ "checks": {
+  "test_events": 91,
+  "events_total": 196,
+  "test_duration_h": {
+   "median": 6.08,
+   "p75": 77.66,
+   "n_ge_24h": 30,
+   "n_ge_7d": 17
+  },
+  "bernoulli_chance_detection": {
+   "0.005": {
+    "expected_detected": 49.5,
+    "n_prob_gt_0_95": 30
+   },
+   "0.01": {
+    "expected_detected": 58.0,
+    "n_prob_gt_0_95": 38
+   },
+   "0.05": {
+    "expected_detected": 74.9,
+    "n_prob_gt_0_95": 63
+   },
+   "0.2": {
+    "expected_detected": 85.9,
+    "n_prob_gt_0_95": 72
+   }
+  },
+  "overlapping_windows": {
+   "median": 143,
+   "min": 3,
+   "max": 23216
+  },
+  "lightweight": {
+   "events": 65,
+   "m_eq_6": 62,
+   "partial": [
+    "id_157:5",
+    "id_42:1",
+    "id_55:3"
+   ]
+  },
+  "drift_era": {
+   "start_ge_2012_07_01": 21,
+   "by_year": {
+    "2007": 16,
+    "2008": 12,
+    "2009": 12,
+    "2010": 12,
+    "2011": 15,
+    "2012": 10,
+    "2013": 14
+   }
+  },
+  "three_channel_test_anomalies": {
+   "n": 22,
+   "on_14_21_29": 21,
+   "groups_of_trio": [
+    4
+   ]
+  },
+  "affected_set_size": {
+   "median": 12.0,
+   "n_m_eq_58": 2
+  },
+  "chance_hit3": {
+   "n_events": 89,
+   "mean": 0.477,
+   "at_m_12": 0.508
+  },
+  "overlapping_test_event_pairs": {
+   "n": 10,
+   "pairs": [
+    "id_116~id_15",
+    "id_123~id_26",
+    "id_134~id_34",
+    "id_14~id_179",
+    "id_145~id_146",
+    "id_145~id_44",
+    "id_155~id_55",
+    "id_172~id_46",
+    "id_175~id_42",
+    "id_180~id_181"
+   ]
+  },
+  "gaps": {
+   "n": 4,
+   "in_test": 0,
+   "latest_end": "2002-10-16 11:55:07.620000"
+  },
+  "classes_test": {
+   "class_7": 23,
+   "class_3": 21,
+   "class_14": 16,
+   "class_8": 8,
+   "class_16": 5,
+   "class_4": 3,
+   "class_12": 2,
+   "class_2": 2,
+   "class_15": 2,
+   "class_17": 2,
+   "class_11": 1,
+   "class_22": 1,
+   "class_9": 1,
+   "class_10": 1,
+   "class_18": 1,
+   "class_1": 1,
+   "class_13": 1
+  }
+ }
+}

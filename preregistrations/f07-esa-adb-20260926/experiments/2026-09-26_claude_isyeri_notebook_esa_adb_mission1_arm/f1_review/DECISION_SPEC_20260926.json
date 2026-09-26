@@ -1,0 +1,78 @@
+{
+ "at": "2026-09-26T21:41:39+03:00",
+ "tool": "Cowork-Claude",
+ "model": "claude-opus-5-5 (editor)",
+ "operation_id": "f07-rb4-esa-adb-revision-20260926",
+ "expected_review_sha256": "a73bfd8c104a1b19d85c43c37d9ca54be8114efda7bf1099aab7fc2f2660f05a",
+ "dispositions": [
+  {
+   "id": "D-01",
+   "disposition": "ACCEPT_APPLIED",
+   "rationale": "Applied exactly as required: esa_core.clip_intervals keeps e2 >= s2. The function is called only by vor_corrected_event_wise, which only unit_eval calls, so no pre-freeze artifact depends on it. POST_REVIEW_FIXES_CHECK.json reproduces the reviewer's toy case (FPe 3 -> 2, Pre 0.32 -> 0.40, FPt and Nt unchanged); the independent closure check (CLOSURE_CHECK.json) verifies the change."
+  },
+  {
+   "id": "D-02",
+   "disposition": "ACCEPT_APPLIED",
+   "rationale": "Applied before the freeze as required: unit_eval builds one DataFrame per model and concatenates them at write time (empty frame when no model has episodes). A synthetic equivalence test writes identical CSV bytes, including late-appearing keys, a model without episodes and the empty case. Evaluation-only; verified by the independent closure check."
+  },
+  {
+   "id": "D-03",
+   "disposition": "ACCEPT_APPLIED",
+   "rationale": "The required sentence is added to execution.code_snapshot and extended to name the two post-review evaluation-only changes; the refactor diff and check and the post-review diff, check and closure-check files are in the freeze package."
+  },
+  {
+   "id": "D-04",
+   "disposition": "ACCEPT_APPLIED",
+   "rationale": "Sentence appended to endpoints.E4 verbatim; no code change."
+  },
+  {
+   "id": "D-05",
+   "disposition": "ACCEPT_APPLIED",
+   "rationale": "Both corrections applied. public_freeze.when takes the required wording verbatim; the PT1 sizes are inserted inside the existing parenthesis (', N_fit = 20,000 and N_bg = 5,000 for the smoke') rather than as a second parenthesis, which would have nested; the content is the reviewer's."
+  }
+ ],
+ "final_changes": [
+  {
+   "pointer": "/execution/code_snapshot",
+   "op": "replace",
+   "value": "At the freeze, src/ (esa_core.py, esa_arm.py, esa_property_tests.py and the recompute scaffolding) is copied into code_snapshot/ inside the run folder with SHA-256 per file; the public freeze package carries the same hashes, and every unit checkpoint records the SHA-256 of the executing code. Units prep:<channel>, stdz:<set> and PT1-PT3 ran under the pre-refactor code (esa_arm.py 5DDD177922C5A83765979FA736A6743F0C30EDE48C0D9780608B16E78F9A5C45, esa_core.py 7206F9587AC34FE2C94095EE828AE8CA328550DA75017B3A6604A0E6C1B85B24, esa_property_tests.py 4116C440E18C194080FBB6724D0B723A1B321DECC8EA65F23B4E0D4F07B977CE); the path-only refactor (f1_review/PATH_REFACTOR_20260926.diff, verified in PATH_REFACTOR_CHECK.json and the delta review) and the two evaluation-only changes required by the delta review (D-01: clip_intervals keeps zero-length event segments; D-02: unit_eval builds episode rows as per-model frames; f1_review/POST_REVIEW_FIXES_20260926.diff, verified in POST_REVIEW_FIXES_CHECK.json and in the independent closure check f1_review/CLOSURE_CHECK.json) produced the frozen code; ESA_ADB_RAW_ROOT is unset or equal to C:/ESA_ADB_RAW at launch.",
+   "finding": "D-03"
+  },
+  {
+   "pointer": "/endpoints/E4",
+   "op": "replace",
+   "value": "Per detector: equal-event MUC-AUC0.40 of score-only ordering, the ordering-free attainable bound, event recall over scoreable events, the chance event recall expected under a label-independent Bernoulli flag model at the realized nominal flag rate p (share of flagged windows among valid test windows overlapping no labeled segment): mean over scoreable events of 1 - (1 - p)^(n_e), n_e = the event's count of valid overlapping test windows; episode count, false-alarm and non-event-labeled episode counts; window AUROC/AP against event-window labels; the corrected event-wise precision, recall and F0.5 of VOR Eq. 1-2 in the time domain (below). 10 pairs of test events overlap in time; an episode overlapping two events is matched to at most one event by the one-to-one matching, and the count of episodes overlapping more than one event is reported. Window AUROC/AP: positives are valid test windows overlapping a scoreable event; negatives are all other valid test windows outside gap segments, which in S_L includes windows of test events that touch no lightweight channel.",
+   "finding": "D-04"
+  },
+  {
+   "pointer": "/public_freeze/when",
+   "op": "replace",
+   "value": "After the independent delta review of this v3 candidate and the editor's decision, before any fit:<set>:<model>:<rep> unit on the full data and before any test-period window is scored. Only prep:<channel>, stdz:<set> and the property tests PT1 (smoke on the bounded 2006-07-01..2007-06-30 subset), PT2 and PT3 may precede the freeze; the smoke's scores, thresholds, flag rates and episode counts are quarantined (hash-recorded in the freeze package, not inspected).",
+   "finding": "D-05"
+  },
+  {
+   "pointer": "/property_tests_fail_closed_before_freeze/PT1_test_label_independence",
+   "op": "replace",
+   "value": "On a bounded smoke subset (all 58 primary channels, grid restricted to 2006-07-01 .. 2007-06-30, all six detector families, one replicate, N_fit = 20,000 and N_bg = 5,000 for the smoke), every pre-evaluation artifact must be byte-identical across three label tables: (a) the true table, (b) the true table with every test-period row removed, (c) the true table with the test-period rows' Channel values and (StartTime, EndTime) pairs shuffled among the test-period rows as whole values (a pair is never split). Compared artifacts: the output files of every prep, stdz, fit, episodes and attr_episode unit of the smoke run (standardized features, masks, statistics, fitted models, validation and test scores, threshold, flags, episodes, tau, peak and aggregated masses). Checkpoint JSON files, logs and heartbeat files carry timestamps and are excluded as provenance, not as evidence. QUARANTINE: the smoke's scores, thresholds, flag rates, episode counts and masses are hash-recorded in the freeze package and are not inspected by anyone before the freeze; PT1 reports only hashes and pass/fail.",
+   "finding": "D-05"
+  }
+ ],
+ "code_changes": [
+  {
+   "finding": "D-01",
+   "file": "src/esa_core.py",
+   "summary": "clip_intervals: keep = e2 >= s2"
+  },
+  {
+   "finding": "D-02",
+   "file": "src/esa_arm.py",
+   "summary": "unit_eval: per-model episode-row frames, pd.concat at write"
+  }
+ ],
+ "code_change_evidence": {
+  "reviewed_copy": "code_delta_reviewed_20260926/",
+  "diff": "f1_review/POST_REVIEW_FIXES_20260926.diff",
+  "editor_check": "f1_review/POST_REVIEW_FIXES_CHECK.json",
+  "closure_check": "f1_review/CLOSURE_CHECK.json"
+ }
+}

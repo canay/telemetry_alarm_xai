@@ -1,0 +1,59 @@
+{
+ "at": "2026-09-26T18:51:31+03:00",
+ "operation_id": "f07-rb4-esa-adb-revision-20260926",
+ "timeouts_s": {
+  "prep": 900,
+  "stdz": 3600,
+  "fit": 1800,
+  "episodes": 1800,
+  "attr_episode": 3600,
+  "eval": 14400,
+  "decision": 1800
+ },
+ "basis": {
+  "prep": "full-data max 12.2 s x margin 3.0 (floor 900 s)",
+  "stdz": "full-data max 440.8 s x margin 3.0 (floor 3600 s)",
+  "fit": "smoke max 36.4 s x scale 10.0 x margin 3.0 (floor 1800 s, ceiling 14400 s)",
+  "episodes": "smoke max 6.4 s x scale 14.0 x margin 3.0 (floor 1800 s, ceiling 7200 s)",
+  "attr_episode": "smoke max 21.9 s x scale 14.0 x margin 3.0 (floor 3600 s, ceiling 21600 s)",
+  "eval": "no smoke measurement (the eval unit opens test labels); fixed 240 min with heartbeat",
+  "decision": "fixed 30 min"
+ },
+ "measured": {
+  "full:prep": {
+   "n": 58,
+   "max_s": 12.24,
+   "median_s": 7.89
+  },
+  "full:stdz": {
+   "n": 2,
+   "max_s": 440.83,
+   "median_s": 440.83
+  },
+  "smoke:attr_episode": {
+   "n": 18,
+   "max_s": 21.95,
+   "median_s": 2.16
+  },
+  "smoke:episodes": {
+   "n": 18,
+   "max_s": 6.38,
+   "median_s": 1.06
+  },
+  "smoke:fit": {
+   "n": 18,
+   "max_s": 36.39,
+   "median_s": 3.28
+  },
+  "smoke:prep": {
+   "n": 174,
+   "max_s": 5.5,
+   "median_s": 1.67
+  },
+  "smoke:stdz": {
+   "n": 3,
+   "max_s": 87.62,
+   "median_s": 85.91
+  }
+ }
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "review_id": "F07-ESA-ADB-F1-REVIEW",
+  "reviewer_model": "claude-fable-5-1 (independent protocol reviewer; not the editor)",
+  "reviewed_at": "2026-09-26T14:24:16+03:00",
+  "operation_id": "f07-rb4-esa-adb-revision-20260926",
+  "candidate_path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V2.json",
+  "candidate_sha256": "7AC751A67F32CB1C79B4A33049D1A17EF9FF9570BC72EDA8BCDF24B99C9A7575",
+  "f3_facts_sha256_observed": "CEA577398906FE4BA3D23E2345B4D8D71CD4487A83ADFD4B706D73AB65287F16",
+  "f3_facts_sha256_matches_protocol": true,
+  "verdict": "APPROVE_WITH_REQUIRED_CHANGES",
+  "finding_counts": {"P0": 0, "P1": 3, "P2": 10, "P3": 3, "blocking": 5},
+  "findings": [
+    {
+      "id": "F1-01",
+      "severity": "P1",
+      "section": "hypothesis_H_E1.per_detector_test / hypothesis_H_E1.decision_rule",
+      "issue": "The non-inferiority pass rule (LB > -0.06) has no assay-sensitivity condition, so H-E1 can be declared SUPPORTED when neither mass ranks affected channels. Detection is close to automatic for long events: 30 of the 91 test events last at least 24 h and 17 last at least 7 days, so under a label-independent Bernoulli flag model at the 1 percent nominal flag rate implied by the 0.99 threshold about 59 of 91 events are detected by chance (40 with probability above 0.95; about 51 at 0.5 percent). Their peak windows are maxima over thousands of near-nominal windows. If native and feature AUROC both sit near 0.5 with small variance, D is near 0, LB exceeds -0.06, and four of five detectors pass while the arm has learned nothing about channel evidence.",
+      "evidence": "ESA_ADB_PROTOCOL_CANDIDATE_V2.json fields hypothesis_H_E1.per_detector_test and decision_rule; f3_schema/event_schema_table.csv test-event durations recounted in the reviewer's scratch script (median 6.1 h, 75th percentile 77.7 h); models.threshold (0.99 quantile of nominal validation).",
+      "required_change": "Amend per_detector_test to: 'A detector is evaluable iff n >= 30 detected scoreable events with 0 < m < C AND its native mass passes assay sensitivity: the one-sided 95 percent lower bound of the native mean AUROC (5th percentile of 2,000 event-resampled means, numpy default_rng(20260926 + 100 + model_index)) exceeds 0.5. A detector that fails assay sensitivity is reported NOT_INFORMATIVE and does not count toward k. Among evaluable detectors, pass iff LB > -delta.' Persist the assay statistic, its bound and the pass flag in the decision artifact.",
+      "blocking": true
+    },
+    {
+      "id": "F1-02",
+      "severity": "P1",
+      "section": "public_freeze.when / stop_rules_and_hard_stops / execution.atomic_units",
+      "issue": "The public freeze is required only 'before the evaluation stage opens test labels', and the change prohibition is keyed to 'after test labels are opened'. The fit:<set>:<model>:<rep> units write validation AND test scores, and the episodes units write thresholds, flags and episode counts, all before that point. Flag rates, episode counts and threshold values are outcome-informative without any label (for example a 40 percent flag rate for a detector), so the threshold rule, mass definitions, margin or decision rule could be changed after seeing them while honoring the letter of the lock. The protocol nowhere forbids inspecting test-period scores before the freeze.",
+      "evidence": "ESA_ADB_PROTOCOL_CANDIDATE_V2.json public_freeze.when; stop_rules_and_hard_stops item 6; execution.atomic_units ('fit ... each writing validation and test scores'); v1 candidate Section 0 (freeze before any test label is opened) which the v2 wording weakens in practice.",
+      "required_change": "Set public_freeze.when to: 'After the independent review and the editor's decision, before any fit:<set>:<model>:<rep> unit on the full data and before any test-period window is scored. Only prep:<channel>, stdz:<set> and the PT1-PT3 smoke on the bounded 2006-07-01..2007-06-30 subset may precede the freeze; the smoke's scores, thresholds, flag rates and episode counts are quarantined (hash-recorded in the freeze package, not inspected).' Change stop rule 6 to 'after the public freeze, no change to mission, channel set, split, windows, thresholds, masses, metrics, margin or rule' and add 'no test-period score, flag, threshold, episode count or flag rate is inspected before the freeze'.",
+      "blocking": true
+    },
+    {
+      "id": "F1-03",
+      "severity": "P1",
+      "section": "preprocessing_label_free.resampling / preprocessing_label_free.windows / endpoints.E2 / endpoints.E3 / endpoints.E4",
+      "issue": "Zero-order-hold resampling turns every unlabeled data gap into windows of constant values (sd, slope and delta exactly zero in many channels at once), and these windows are 'valid' under the finiteness rule. Gaps are frequent and long: the 30 s channels have 0.2-0.5 percent of intervals above 30 s with maxima near 5.9 h, channels 64-66 reach 28 h, channels 70-76 reach 13 days and channels 61-63 reach 23 days (channel_sampling.csv). All four labeled communication gaps lie in the fit period, so every test-period gap is unlabeled and any episode it triggers is a false alarm attributed to whichever channel's frozen features are most unusual. The VOR (Appendix B.2) records that sampling-rate gaps are detected as anomalies by many algorithms. E2's concentration and dominant-channel statistics and E3's spike correlations could therefore be preprocessing artifacts of the arm itself, and the protocol has no staleness diagnostic and no sensitivity.",
+      "evidence": "f3_schema/channel_sampling.csv columns max_interval_s and share_intervals_gt_30s; F3_FACTS.json events_by_split_and_category (fit|Communication Gap 4, none in test); esa_adb_dmlr2026.txt Appendix B.2 and C.3; protocol preprocessing_label_free.windows ('valid iff every analysed channel is finite').",
+      "required_change": "Add a label-free per-window staleness feature computed in prep:<channel>: age_c = window end time minus the timestamp of the last original sample at or before the window end; window staleness = max over analysed channels of age_c; store it beside the features and cover it in PT2. Fix before freeze: a window is 'stale' iff staleness > 3,600 s (four times the slowest 900 s cadence). Prespecify: (i) report the share of stale windows per period and, per detector, the share of flagged windows, episodes, false-alarm episodes and detected-event peak windows that are stale; (ii) recompute E2, E3 and E4 excluding episodes whose peak window is stale as a prespecified sensitivity; (iii) leave the primary definitions and H-E1 unchanged.",
+      "blocking": true
+    },
+    {
+      "id": "F1-04",
+      "severity": "P2",
+      "section": "secondary_prespecified_descriptive.S_L_lightweight / data.channel_sets.secondary_lightweight",
+      "issue": "S_L promises E1 on the six-channel lightweight refit with chance levels for C = 6, but this analysis cannot be executed as written: of the 65 test events touching channels 41-46, 62 affect all six channels (m = C, AUROC undefined, Hit@k trivially 1) and only 3 have 0 < m < 6 (id_157 m = 5, id_42 m = 1, id_55 m = 3). A frozen protocol must not promise an analysis the F3 facts already show to be empty.",
+      "evidence": "Recount of f3_schema/meta_labels.csv against channels 41-46 (reviewer scratch script); F3_FACTS.json test_lightweight_scoreable_events = 65; protocol S_L_lightweight text.",
+      "required_change": "Either delete S_L's E1, or redefine S_L as descriptive detection context on the six-channel refit (the E4 quantities and the E2 false-alarm concentration, with the false-alarm rule still using labeled segments on any channel) and state: '62 of 65 lightweight test events affect all six channels; channel-ranking metrics are reported only for the 3 events with 0 < m < 6 and carry no inference.'",
+      "blocking": true
+    },
+    {
+      "id": "F1-05",
+      "severity": "P2",
+      "section": "endpoints (E1-E4) / secondary_prespecified_descriptive",
+      "issue": "The test period is seven years scored against a threshold calibrated on three months of 2006, and the VOR (Table 6, Mission1) documents severe concept drift in channel groups 4, 7 and 13 during the last 18 months, i.e. from about 2012-07-01. 21 of the 91 test events start in that window, and 21 of the 23 three-channel test anomalies affect channels 14, 21 and 29, which are group 4, a drift group. A fixed threshold can flag the drift era almost continuously, producing giant true-alarm episodes (the V5 failure pattern) and shifting the false-alarm set to the pre-drift years. Because exploratory authorization is 'none', a period split cannot be added after results exist.",
+      "evidence": "esa_adb_dmlr2026.txt Table 6 (Mission1 'Last 18 months include a severe concept drift in channels from groups 4, 7, and 13'); meta_channels.csv groups; event_schema_table.csv start times (2012: 10 events, 2013: 14 events); recount of the three-channel events' channel sets; protocol post_gate_continuation.exploratory_non_rescue.authorization = none.",
+      "required_change": "Prespecify a descriptive stratification of E1 (per-event AUROC means and counts), E2, E3 and E4 by test sub-period: [2007-01-01, 2012-07-01) versus [2012-07-01, grid_end], the boundary taken from VOR Table 6 and fixed now. Add per calendar year and per detector: flag rate, episode count, episode-length distribution (windows per episode, maximum) and number of episodes overlapping more than one event. The pooled H-E1 decision is unchanged.",
+      "blocking": true
+    },
+    {
+      "id": "F1-06",
+      "severity": "P2",
+      "section": "endpoints.E4",
+      "issue": "Detection context omits the two references a reviewer will ask for. First, raw event recall is not interpretable when most long events are detected by chance (see F1-01), and no chance-detection reference is planned. Second, the VOR's primary metric (corrected event-wise precision, recall and F0.5, Eq. 1-2) is what readers will compare against: its Table 4 reports event-wise precision below 0.001 for every unsupervised detector on the full Mission1 channel set, so the arm's detectors must be placed on that scale to show what queue the masses are being evaluated on.",
+      "evidence": "esa_adb_dmlr2026.txt Section 3.4 Eq. 1-2 and Table 4 (Mission1 full set); protocol endpoints.E4 list.",
+      "required_change": "Add to E4 per detector: (i) expected event recall under a label-independent Bernoulli flag model at the realized nominal flag rate, computed at evaluation from each event's count of overlapping valid windows, reported beside observed recall; (ii) corrected event-wise precision, recall and F0.5 (VOR Eq. 1-2) computed in the time domain from the arm's episodes, for anomalies plus rare events and for anomalies only, descriptive, with the note that the arm's detectors are not ESA-ADB competitors.",
+      "blocking": false
+    },
+    {
+      "id": "F1-07",
+      "severity": "P2",
+      "section": "models.settings.pca",
+      "issue": "The declared deviation rationale 'svd_solver=full is the solver the synthetic core resolved to by default' is false. In scikit-learn 1.5 and later, including the 1.7.2 runtime of the fresh replication and the planned 1.9.0, svd_solver='auto' resolves to 'covariance_eigh' whenever n_features <= 1000 and n_samples >= 10 x n_features, which holds for the synthetic core (2,277 x 48) and for the ESA fit (100,000 x 232); in scikit-learn before 1.5 the same shapes resolved to 'randomized'. The numerical consequence is small for 10 components, but a frozen protocol must not carry a false fidelity statement.",
+      "evidence": "Installed scikit-learn 1.9.0, sklearn/decomposition/_pca.py PCA._fit 'auto' branch read locally by the reviewer; manuscript Appendix app:custody (scikit-learn 1.7.2); github-telemetry_alarm_xai/code/models.py line 67 (PCA(n_components=10, random_state=rep_seed)).",
+      "required_change": "Replace the rationale. Either set svd_solver='covariance_eigh' (the resolved default of the fresh-replication runtime) or keep the default 'auto' and record the resolved _fit_svd_solver in the run manifest. In both cases state that 'full', 'covariance_eigh' and the legacy 'randomized' default differ only numerically for 10 components and that random_state is inert for the exact solvers.",
+      "blocking": false
+    },
+    {
+      "id": "F1-08",
+      "severity": "P2",
+      "section": "label_usage.test_label_lock / endpoints.E1_reason_for_metric_change",
+      "issue": "The lock says 'Test-period labels are first read by the evaluation stage', but F3 already read every test-period label row (category counts, affected-set sizes, per-event start and end in event_schema_table.csv), and that information changed the primary metric from Hit@3 to AUROC, introduced the m = C exclusion and sized S_L. This is label-structure use, not outcome use, and it is acceptable, but a prospectively frozen protocol must say exactly what was read and what it changed.",
+      "evidence": "f3_schema/event_schema_table.csv (per-event start/end/split for all 200 events); F3_FACTS.json test_affected_target_set_size_distribution; protocol test_label_lock and E1_reason_for_metric_change.",
+      "required_change": "Rewrite test_label_lock to begin: 'Test-period label rows were read once before the freeze by the hash-bound F3 schema inspection (F3_FACTS.json sha256 CEA577...) for category counts, affected-set sizes, split membership and event time ranges only; no preprocessing artifact, score or detector existed at that time. The facts changed the primary metric (Hit@3 to AUROC), the m = C exclusion, the S_L scope and the n >= 30 feasibility judgment, and nothing else.' Keep the pipeline-level lock sentence after it.",
+      "blocking": false
+    },
+    {
+      "id": "F1-09",
+      "severity": "P2",
+      "section": "channel_masses.query_windows / endpoints.E2",
+      "issue": "E2 entropy and dominant-channel shares are computed on episode-peak masses, whereas tab:mechanism and the matched-information policy inputs used tau-weighted aggregates over all flagged windows of an episode (prepare_inputs.py lines 72-77; run_criticality_unit._aggregate_episode_attributions). Peak-window masses are sharper than aggregates, so E2 concentration values are not comparable with the manuscript's 0.096-0.947 entropies, yet Q-E2 is framed as testing sec:mechanism. The declared deviation is justified only for occlusion and TreeSHAP cost; raw and feature masses over all flagged windows need no model call and native masses for LR, PCA and AE are closed form.",
+      "evidence": "protocol channel_masses.query_windows (PRESPECIFIED DEVIATION); experiments/2026-09-04_codex_vps_matched_information/prepare_inputs.py lines 66-80; run_criticality_unit.py lines 197-225; manuscript sec:mechanism and tab:mechanism notes.",
+      "required_change": "Add a prespecified secondary: tau-weighted episode masses under the synthetic rule for raw deviation, feature deviation and native LR/PCA/AE over all flagged windows of every episode; occlusion and TreeSHAP natives stay peak-only. State in E2 that peak-window and aggregated concentration are reported separately and that only the aggregated values are compared with tab:mechanism.",
+      "blocking": false
+    },
+    {
+      "id": "F1-10",
+      "severity": "P2",
+      "section": "execution",
+      "issue": "The resource plan is unmeasured and incomplete against EXPERIMENT_DURABILITY_AND_RECOVERY.md Section 10 (mandatory for plans dated on or after 2026-09-05). Full-grid features are about 2.9 million windows x 232 features (2.7 GB float32, 5.5 GB float64) against about 1.1 GB available RAM, with no dtype, memmap or chunked-scoring rule, and PT1's byte-identity requires deterministic chunking. Episode occlusion cost is unbounded (n_episodes x 58 channels x 8 draws scored rows per replicate); at a drift-era flag rate of 20 percent isolation-forest scoring alone exceeds the 90-minute unit timeout. Missing owner fields: eta_basis_and_margin (no measured unit time), opaque_runtime_bound_admission, code_snapshot_path_and_sha256, local_delivery_and_verification_rule, progress stall threshold, terminal_status_paths, resume_validation_rule detail, aggregate/plot entrypoints, max_workers; the heartbeat lacks run_id, attempt_id, pid, completed/planned units and last checkpoint time.",
+      "evidence": "protocol execution block; EXPERIMENT_DURABILITY_AND_RECOVERY.md Sections 4, 8.1, 10 and 13; channel_sampling.csv sample counts and the grid arithmetic (14 years at 30 s).",
+      "required_change": "Before launch (not required for the freeze): the experiment plan or RUN_MANIFEST carries every Section 10 field; features stored float32 on disk with float64 accumulation and a fixed chunk size for standardization and scoring; a prespecified occlusion cap: if a model has more than 20,000 episodes, E2/E3 occlusion is computed on a fixed-seed subsample of 20,000 episodes (numpy default_rng(20260926 + model_index)) while all other masses use every episode; per-unit timeout and the whole-run watchdog derived from measured smoke unit times with a stated margin; a measured available-RAM baseline before the run.",
+      "blocking": false
+    },
+    {
+      "id": "F1-11",
+      "severity": "P2",
+      "section": "hypothesis_H_E1.margin / manuscript_boundary",
+      "issue": "delta = 0.06 is the largest synthetic native advantage over feature mass on the rank-equivalent AUROC scale, rounded up (recomputed: HGB 0.0545, PCA 0.019, AE 0.013, LR 0.008). The derivation is transparent and prespecified, but it means a SUPPORTED verdict is compatible with native explanations beating feature mass by as much as the synthetic worst case. The manuscript boundary does not require the claim wording to carry the margin.",
+      "evidence": "manuscript tab:modelfree-salience mean primary ranks; protocol hypothesis_H_E1.margin and manuscript_boundary.",
+      "required_change": "Add to manuscript_boundary: 'A SUPPORTED H-E1 is reported as feature-deviation mass ranks the annotated affected channels within 0.06 AUROC of native explanations (non-inferiority margin fixed before any fit), and never as ranks as well as; D and LB are reported beside the verdict.'",
+      "blocking": false
+    },
+    {
+      "id": "F1-12",
+      "severity": "P2",
+      "section": "models.standardization / property_tests_fail_closed_before_any_fit.PT3_invariants",
+      "issue": "z = (f - mean)/(sd + 1e-9) inherited from the synthetic core assumes no nominal feature column is constant. Real telemetry can hold a channel constant for the whole fit period or make a feature degenerate, giving z of order 1e9 that dominates PCA and AE reconstruction error, every reconstruction-based native mass and the feature-deviation mass. PT3 checks only finiteness, which such a column passes.",
+      "evidence": "protocol models.standardization; run_criticality_unit.py lines 149-152; PT3 wording ('every standardized column has finite mean and scale').",
+      "required_change": "Extend PT3 with 'every raw feature column has nominal-fit standard deviation > 1e-8 x max(1, |mean|)'. Prespecify handling for a failing column: freeze its standardized value at 0, record the column and channel in the run manifest, and flag masses of that channel in the per-event and per-episode tables.",
+      "blocking": false
+    },
+    {
+      "id": "F1-13",
+      "severity": "P2",
+      "section": "property_tests_fail_closed_before_any_fit.PT1_test_label_independence",
+      "issue": "PT1 exercises only LR and PCA with one replicate, so the HGB, decision-tree, isolation-forest and autoencoder fit paths and the TreeSHAP attr_episode units are never checked for test-label independence. A family-specific label-dependent path (for example an internal validation split or a label-keyed cache) would pass PT1. The bounded one-year subset makes all six families cheap.",
+      "evidence": "protocol PT1 text ('two detectors LR and PCA, one replicate'); execution.atomic_units (attr_episode for the primary set).",
+      "required_change": "Run PT1 with all six families at one replicate on the bounded subset, including each family's episodes and episode-mass artifacts (native and occlusion), and require byte identity for all of them.",
+      "blocking": false
+    },
+    {
+      "id": "F1-14",
+      "severity": "P3",
+      "section": "hypothesis_H_E1.per_detector_test",
+      "issue": "The 5th percentile of 2,000 event-resampled means is a percentile bootstrap, the method the synthetic V4 protocol replaced with a one-sided Student-t bound as anticonservative; at n >= 30 the gap is small but the paired AUROC differences are bounded and can be skewed. Events of one class are near-replicates (21 class_7 anomalies on channels 14, 21 and 29), so the event bootstrap overstates the effective sample.",
+      "evidence": "criticality_analysis_v4.py confirmatory_decision docstring; f3_schema/meta_anomaly_types.csv Class column; recount of three-channel events.",
+      "required_change": "Report both the percentile LB and the one-sided 95 percent Student-t LB per detector and name which is primary (the bootstrap may remain primary); add a descriptive cluster bootstrap resampling anomaly_types Class clusters.",
+      "blocking": false
+    },
+    {
+      "id": "F1-15",
+      "severity": "P3",
+      "section": "endpoints.E1_reason_for_metric_change / label_usage.communication_gaps / endpoints.E4",
+      "issue": "Three factual slips: the mean chance Hit@3 over the 89 evaluable test events is 0.477 (0.508 at the median m = 12), not 'near 0.6'; all four communication-gap labels lie in the fit period, so E4's test gap-overlap episode count is 0 by construction and the 'gap-overlap episode' class is empty in test; 10 pairs of test events overlap in time (for example id_55 inside id_155, id_145 with id_146, id_180 with id_181), which the protocol does not mention.",
+      "evidence": "Reviewer recount from meta_labels.csv and meta_anomaly_types.csv; F3_FACTS.json events_by_split_and_category.",
+      "required_change": "Correct the chance value to 0.48; state that the test period carries no gap labels and that gap-overlap counts apply to fit and validation only; add the overlapping-event pair count to E4 and state that an episode overlapping two events is matched to at most one under equal-event utility.",
+      "blocking": false
+    },
+    {
+      "id": "F1-16",
+      "severity": "P3",
+      "section": "models.replicates / endpoints.E3 / label_usage.nominal_windows / property_tests PT1",
+      "issue": "Definitional gaps that would otherwise be resolved at implementation time: model_index is used in seeds but never defined; a window straddling 2006-10-01 or 2007-01-01 has no defined period; PT1 (c) does not say that channel and (StartTime, EndTime) are shuffled as paired units, and byte identity would fail if any pre-evaluation artifact records the label-table hash; the quantile interpolation method for the threshold is unnamed.",
+      "evidence": "protocol models.replicates, endpoints.E3 tie seed, hypothesis_H_E1.per_detector_test seed, label_usage.nominal_windows, PT1 text.",
+      "required_change": "Define model_index as the position in models.families; a window belongs to the period containing its start time; PT1 (c) shuffles (StartTime, EndTime) pairs across test rows and channels independently as whole values, and the byte comparison covers a named artifact list excluding provenance fields; the threshold uses numpy.quantile with the default linear method.",
+      "blocking": false
+    }
+  ],
+  "checks_performed": [
+    "Computed SHA-256 of the candidate file (7AC751A6...) and of F3_FACTS.json (CEA57739..., matches the protocol's declared hash); archive size, MD5 and SHA-256 in F3_FACTS.json match the protocol's data.archive block.",
+    "Recounted every F3 fact from meta_labels.csv, meta_anomaly_types.csv and meta_channels.csv: 3,589 label rows, all on target channels; 200 events; split counts fit 59/41/4, validation 4/1, test 55/36; no segment or event spans a split boundary; 91 scoreable test events, 2 with m = 58, 89 with 0 < m < 58; affected-set distribution identical to F3_FACTS.json.",
+    "Lightweight-subset evaluability: 65 test events touch channels 41-46, 62 affect all six, 3 have 0 < m < 6.",
+    "Channel composition of the 23 three-channel test events (21 on channels 14, 21, 29; one on 61-63; one on 41, 43, 45) and cross-check against VOR Table 6 drift groups.",
+    "Test-event duration distribution, overlapping-window counts and expected chance detection under a Bernoulli flag model at 0.5, 1, 5 and 20 percent flag rates.",
+    "Events per calendar year and events from 2012-07-01; labeled-time fraction per period (fit 10.0 percent, validation 7.8 percent, test 11.1 percent); window counts per period (about 1.42 M fit, 53 k validation, 1.47 M test).",
+    "Overlapping test-event pairs (10) and point events.",
+    "Chance levels: mean Hit@1 0.259, Hit@3 0.477, R-precision 0.259 over the 89 evaluable events; margin derivation recomputed from tab:modelfree-salience (HGB 0.0545 largest).",
+    "Fidelity of windows, features, layout, standardization, model settings, replicate and bootstrap seeds, occlusion seeds and draw sharing, mass normalization, tail surprisal, matching and MUC-AUC against common.py, models.py, run_criticality_unit.py, criticality_analysis_v4.py, prepare_inputs.py and the manuscript equations.",
+    "HGB early-stopping justification checked against the synthetic labeled-window count (4,937 windows per seed, below the 10,000 auto threshold).",
+    "scikit-learn 1.9.0 PCA svd_solver='auto' policy read from the installed source (covariance_eigh for n_features <= 1000 and n_samples >= 10 x n_features).",
+    "Leakage walk-through of every pre-evaluation stage (grid, windows, nominal masks, raw statistics, standardization, fit, scoring, threshold, episodes, episode masses) and of PT1-PT3 scope and satisfiability.",
+    "Sampling-cadence and gap facts from channel_sampling.csv (900 s channels, 23-day and 13-day maximum gaps, gap frequency in 30 s channels).",
+    "Owner-document conformance: STUDY_DESIGN_AND_EXPERIMENTS.md (post-gate continuation, evaluator semantics, protocol-argument preflight), EXPERIMENT_DURABILITY_AND_RECOVERY.md Section 10 field list, EXPERIMENT_EVIDENCE_REQUIREMENTS.md schema-v3 fields.",
+    "Manuscript claim-boundary check against the abstract, Related Work paragraph on ESA-ADB, tab:modelfree-salience, sec:mechanism and the Discussion."
+  ],
+  "checks_not_run": [
+    "License re-observation on the Zenodo page: no network access; the protocol's statement that CC BY 3.0 IGO was re-observed at download is taken as recorded, not verified.",
+    "Raw archive inspection (channel value constancy, location of the long gaps in the timeline, drift magnitude): forbidden by the packet; conclusions on gaps and drift rely on channel_sampling.csv and the VOR text.",
+    "Determinism of HistGradientBoosting and TreeSHAP under OMP threads = 2 required for PT1 byte identity across label tables: not executed (no fit allowed); flagged as a smoke-time check.",
+    "Behavior of scikit-learn 1.7.2 was inferred from the 1.9.0 source and the 1.5 release note introducing covariance_eigh; 1.7.2 was not installed locally.",
+    "ESA-ADB official metric implementation (kplabs-pl/ESA-ADB) not read (network forbidden); the corrected event-wise F0.5 recommendation follows VOR Eq. 1-2 only.",
+    "VOR Appendix D (anomalies-only and lightweight comparison tables) is not in the provided text extract, which ends in Appendix C.4.5."
+  ],
+  "summary": "The v2 candidate is faithful to the synthetic core, declares its deviations, keeps test labels out of every pre-evaluation stage, and its property tests can catch a plumbing leak. It cannot be frozen as written for five reasons: the non-inferiority rule has no assay-sensitivity gate and can return SUPPORTED at chance, since long events make detection near-automatic; the freeze may follow test-period scoring, so flag rates could be seen before rules lock; zero-order-hold staleness during unlabeled gaps can manufacture the false-alarm concentration Q-E2 measures; the lightweight E1 is empty (62 of 65 events affect all six channels); and the documented 2012-2013 drift needs a prespecified period split. Eleven further P2/P3 items are wording, fidelity or feasibility fixes."
+}

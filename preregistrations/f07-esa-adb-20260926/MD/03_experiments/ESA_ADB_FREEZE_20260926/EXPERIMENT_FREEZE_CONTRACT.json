@@ -1,0 +1,108 @@
+{
+  "at": "2026-09-26T22:14:21+03:00",
+  "tool": "Cowork-Claude",
+  "model": "claude-opus-5-5",
+  "operation_id": "f07-rb4-esa-adb-revision-20260926",
+  "schema_version": 3,
+  "freeze_id": "F07-ESA-ADB-MISSION1-20260926",
+  "run_id": "2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm",
+  "status": "PROSPECTIVE_FROZEN_PUBLICATION_PENDING",
+  "lineage": {
+    "candidate": {
+      "path": "experiments/2026-09-26_claude_isyeri_notebook_esa_adb_mission1_arm/ESA_ADB_PROTOCOL_CANDIDATE_V3.json",
+      "sha256": "dce48a36d693a843de08582908907bf340deb1e457276db257c9179c2cb8b03a",
+      "size_bytes": 38536
+    },
+    "review": {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/REVIEW.json",
+      "sha256": "a73bfd8c104a1b19d85c43c37d9ca54be8114efda7bf1099aab7fc2f2660f05a",
+      "size_bytes": 23300,
+      "binds_candidate_sha256": "dce48a36d693a843de08582908907bf340deb1e457276db257c9179c2cb8b03a"
+    },
+    "decision": {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/DECISION.json",
+      "sha256": "b1b6503315201935c297e97a6280b49da38d1439db8d71764e8560925a1aecfa",
+      "size_bytes": 9795,
+      "binds_review_sha256": "a73bfd8c104a1b19d85c43c37d9ca54be8114efda7bf1099aab7fc2f2660f05a"
+    },
+    "final": {
+      "path": "MD/03_experiments/ESA_ADB_FREEZE_20260926/FINAL.json",
+      "sha256": "bb15984da89c7763f3d0be44a02c5b758330207ecdd26b05ef274312fdcaed52",
+      "size_bytes": 43408,
+      "binds_candidate_sha256": "dce48a36d693a843de08582908907bf340deb1e457276db257c9179c2cb8b03a",
+      "binds_decision_sha256": "b1b6503315201935c297e97a6280b49da38d1439db8d71764e8560925a1aecfa"
+    }
+  },
+  "design_contract": {
+    "required_metrics": [
+      "E1_channel_ranking_auroc",
+      "E1_hit_at_1",
+      "E1_hit_at_3",
+      "E1_best_affected_rank",
+      "E1_r_precision",
+      "E2_normalized_entropy",
+      "E2_dominant_channel_share",
+      "E2_top3_share",
+      "E3_delta_false_alarm_share_at_f",
+      "E3_delta_muc_auc_0_40",
+      "E3_spearman_false_alarm_frequency",
+      "E4_muc_auc_0_40",
+      "E4_event_recall",
+      "E4_chance_event_recall",
+      "E4_window_auroc_ap",
+      "E4_vor_corrected_f0_5",
+      "H_E1_decision"
+    ],
+    "required_baselines": [
+      "native",
+      "occlusion",
+      "raw_nominal_deviation",
+      "feature_nominal_deviation",
+      "score_only",
+      "chance_level"
+    ],
+    "evaluator_semantics": {
+      "applicability": "not_applicable",
+      "not_applicable_reason": "Fixed-queue alarm ordering and equal-event reference coverage on annotated real telemetry; no intervention, failure-aversion mechanism or averted-failure credit is modeled, and the policy cannot alter the data, the detector alarms or the reference events."
+    }
+  },
+  "post_gate_continuation": {
+    "confirmatory_on_primary_fail": "forbidden",
+    "primary_verdict_immutable": true,
+    "exploratory_result_may_upgrade_primary_verdict": false,
+    "exploratory_result_may_raise_claim_level": false,
+    "hard_stops": [
+      "ethics",
+      "license",
+      "leakage",
+      "invalid_data",
+      "resource_ceiling",
+      "hash_drift"
+    ],
+    "exploratory_non_rescue": {
+      "authorization": "none"
+    },
+    "prospective_contract_sha256": "dce48a36d693a843de08582908907bf340deb1e457276db257c9179c2cb8b03a"
+  },
+  "confirmatory_binding": {
+    "source_artifact_id": "prospective_candidate",
+    "source_artifact_sha256": "dce48a36d693a843de08582908907bf340deb1e457276db257c9179c2cb8b03a",
+    "threshold_id": "H_E1_feature_deviation_noninferiority_to_native_auroc",
+    "threshold_value": "{\"assay_lower_bound_above\": 0.5, \"bootstrap_resamples\": 2000, \"decision\": \"SUPPORTED iff passes >= ceil(0.8 k) with k >= 3 evaluable primary detectors\", \"delta\": 0.06, \"min_detected_scoreable_events\": 30, \"one_sided_level\": 0.95}",
+    "locked_final_sha256": "bb15984da89c7763f3d0be44a02c5b758330207ecdd26b05ef274312fdcaed52",
+    "reuse_policy": "forbidden",
+    "reused_artifacts": []
+  },
+  "timebase_binding": {
+    "design_timebase": "esa_adb_mission1_anonymized_timeline_grid30s_window20_stride5"
+  },
+  "postrun_obligations_pending": [
+    "run_manifest",
+    "artifact_inventory_and_cardinality",
+    "produced_metrics_and_baselines",
+    "calibration_evidence",
+    "timebase_equivalence_evidence",
+    "terminal_status_and_registry"
+  ],
+  "scientific_execution_started": false
+}
